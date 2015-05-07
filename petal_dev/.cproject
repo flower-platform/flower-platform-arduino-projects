@@ -25,12 +25,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/DHT}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/Ethernet}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/Ethernet/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/MemoryFree-master}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/SD}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/SD/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/SdFat}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/SdFat/utility}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.1845043357" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
 							</tool>
@@ -42,12 +39,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/DHT}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/Ethernet}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/Ethernet/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/MemoryFree-master}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/SD}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/SD/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/SdFat}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/petal_dev/Libraries/SdFat/utility}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.c.sketch.input.1055965309" name="C Source Files" superClass="it.baeyens.arduino.compiler.c.sketch.input"/>
 							</tool>

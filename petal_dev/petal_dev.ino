@@ -5,11 +5,14 @@
 #include <HardwareSerial.h>
 #include <HttpServer.h>
 #include <Input.h>
+#include <LoggerSD.h>
 #include <Output.h>
+#include <pins_arduino.h>
 #include <stdbool.h>
 #include <string.h>
 #include <Timer.h>
 #include <UpdatesBuffer.h>
+#include <WString.h>
 
 class ApplicationGen {
 protected:
@@ -22,7 +25,7 @@ protected:
 	HttpServer* httpServer;
 	UpdatesBuffer* updatesBuffer;
 	Timer* timer;
-//	Logger* logger;
+	LoggerSD<int>* logger;
 
 	virtual void doorSwitch_ValueChanged_Handler(Event* event) {
 		ValueChangedEvent* valueChangedEvent = (ValueChangedEvent*) event;
@@ -32,7 +35,6 @@ protected:
 		}
 
 		updatesBuffer->updateEntry("doorSwitch", valueChangedEvent->currentValue);
-//		logger->log(valueChangedEvent->currentValue);
 	}
 
 	virtual void lightSwitch_ValueChanged_Handler(Event* event) {
@@ -50,7 +52,6 @@ protected:
 	void doorRelay_ValueChanged_Handler(Event* event) {
 		ValueChangedEvent* valueChangedEvent = (ValueChangedEvent*) event;
 		updatesBuffer->updateEntry("doorRelay", valueChangedEvent->currentValue);
-//		logger->log(valueChangedEvent->currentValue);
 	}
 
 	void light_ValueChanged_Handler(Event* event) {
@@ -62,6 +63,7 @@ protected:
 		ValueChangedEvent* valueChangedEvent = (ValueChangedEvent*) event;
 //		Serial.print("Temperature changed from "); Serial.print(valueChangedEvent->previousValue); Serial.print(" to "); Serial.println(valueChangedEvent->currentValue);
 		updatesBuffer->updateEntry("dhtSensor_temperature", valueChangedEvent->currentValue);
+		logger->log(valueChangedEvent->currentValue);
 	}
 
 	void dhtSensor_HumidityChanged_Handler(Event* event) {
@@ -97,7 +99,8 @@ protected:
 			httpCommandEvent->server->httpSuccess("application/json");
 			updatesBuffer->printEntriesAsJson(httpCommandEvent->client);
 		} else if (strcmp(httpCommandEvent->command, "") == 0) {
-			const __FlashStringHelper* html = F("\
+			httpCommandEvent->server->httpSuccess("text/html");
+			httpCommandEvent->client->print(F("\
 	<!DOCTYPE html> \n\
 	<html> \n\
 	<head> \n\
@@ -242,9 +245,7 @@ protected:
 	 \n\
 	</body> \n\
 	</html> \n\
-	");
-			httpCommandEvent->server->httpSuccess("text/html");
-			httpCommandEvent->client->print(html);
+	"));
 		}
 
 	}
@@ -264,7 +265,7 @@ public:
 		lightSwitch->setup();
 
 		dhtSensor = new DHTSensor();
-		dhtSensor->pin = 49;
+		dhtSensor->pin = A0;
 		dhtSensor->pollInterval = 1000;
 		dhtSensor->setup();
 
@@ -297,9 +298,8 @@ public:
 
 		httpServer->commandReceivedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_commandReceived_Handler);
 
-//		logger = new Logger(4);
-//		logger->fileName = "door1.txt";
-//		logger->timeInterval = 3 * 1000;
+		logger = new LoggerSD<int>(4, "temp.txt");
+		logger->timeInterval = 3 * 1000;
 
 	}
 
