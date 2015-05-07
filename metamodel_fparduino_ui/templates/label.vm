@@ -1,0 +1,17 @@
+#macro( Label $label )
+#if($label.properties.suffix)
+#set( $suffix = " $label.properties.suffix" )
+#else
+#set( $suffix = "" )
+#end
+#if( $label.properties.text.startsWith("{{") && $label.properties.text.endsWith("}}") )
+#set( $end = $label.properties.text.length() - 2 )
+#set( $field = $label.properties.text.substring(2, $end) )
+<div>
+	<span#printId($label)></span>$suffix
+	<script>addTextListener("$id", "$field")</script>
+</div>
+#else
+<div#printId($label)>$label.properties.text$suffix</div>
+#end
+#end

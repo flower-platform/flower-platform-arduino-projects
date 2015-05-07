@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script>
+#if( !$url )
+#set( $root = $NodeTemplateUtils.getParent($node.nodeUri) )
+#set( $httpServer = $NodeTemplateUtils.navigateByType($root.nodeUri, ["board", "HttpServer"]) )
+#set( $url = "${httpServer.properties.ipAddress}:${httpServer.properties.port}/" )
+#end
+var url = "$url";
+
+#jslib()
+</script>
+</head>
+
+<body>
+<br/>
+<div class="container-fluid lead">
+#set( $ids = {} )
+#set( $ids[$node.nodeUri] = "" )
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#@indent()
+	#callMacro($child)
+#end
+#end
+
+</div>
+
+</body>

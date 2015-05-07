@@ -1,0 +1,9 @@
+#macro( Row $row )
+<div class="row"#printId($row)>
+#foreach($child in $NodeTemplateUtils.getChildren($row.nodeUri))
+#@indent()
+	#callMacro($child)
+#end
+#end
+</div>
+#end

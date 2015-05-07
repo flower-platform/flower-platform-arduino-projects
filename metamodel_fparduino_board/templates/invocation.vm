@@ -1,0 +1,26 @@
+#macro( ValueChangedEvent_key_value_transferValue )
+{
+	const char* key = "${instanceName}";
+	int value = castedEvent->currentValue;
+	${targetInstance}->${targetMethodFull};
+}
+#end
+
+#macro( HttpCommandEvent__invokeAndReturnResult )
+{
+	castedEvent->server->httpSuccess("application/json");
+	castedEvent->client->print(${targetInstance}->${targetMethodFull});
+}
+#end
+
+#macro( ALL__plainInvocation )
+{
+	${targetInstance}->${targetMethodFull};
+}
+#end
+
+#macro( ValueChangedEvent__invokeIfHigh )
+if (castedEvent->currentValue == HIGH) {
+	${targetInstance}->${targetMethodFull};
+}
+#end

@@ -1,0 +1,3 @@
+#macro( ui $node )
+## Do not generate the UI now! It will be generated from the server handler.
+#end

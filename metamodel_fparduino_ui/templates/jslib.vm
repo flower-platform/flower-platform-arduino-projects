@@ -1,0 +1,89 @@
+#macro( jslib )
+var bindingManager = {
+
+	// Initialize bound object
+	data : {
+		temperature : 25,
+		humidity : 25
+	},
+
+	// Listeners map
+	listeners : {},
+
+	// Register a listener
+	addListener : function(property, listener) {
+		var list = this.listeners[property];
+		if (typeof list === "undefined") {
+			// init
+			list = [];
+			this.listeners[property] = list;
+		}
+		list.push(listener);
+	},
+
+	// Set the value and notify listeners
+	set : function(property, value) {
+		if (this.data[property] !== value) {
+			// only if different value
+			this.data[property] = value;
+
+			var list = this.listeners[property];
+			if (typeof list !== "undefined" && list !== null) {
+				// notify listeners
+				for (var i = 0; i < list.length; i++) {
+					list[i]();
+				}
+			}
+		}
+	}
+
+};
+
+var addTextListener = function(id, property, options) {
+	var listener = function() {
+		var elt = $("#" + id);
+		var value = bindingManager.data[property];
+		if (typeof options !== "undefined") {
+			value = options[value];
+		}
+		elt.text(value);
+	};
+	bindingManager.addListener(property, listener);
+	listener();
+};
+
+var addClassListener = function(id, property, options) {
+	var listener = function() {
+		var elt = $("#" + id);
+		var value = bindingManager.data[property];
+		for (var key in options) {
+			var cls = options[key];
+			if (key == value) {
+				elt.addClass(cls);
+			} else {
+				elt.removeClass(cls);
+			}
+		}
+	}
+	bindingManager.addListener(property, listener);
+	listener();
+};
+
+var invoke = function(path) {
+	$.get(url + path, function(data) {
+		for (var key in data) {
+			bindingManager.set(key, data[key]);
+		};
+	});
+};
+
+var refresh = function() {
+	bindingManager.set("temperature", (bindingManager.data.temperature - 1) % 50);
+	bindingManager.set("humidity", (bindingManager.data.humidity + 1) % 50);
+	invoke("getUpdates");
+};
+
+setInterval(function() {
+	refresh();
+}, 1000);
+#end

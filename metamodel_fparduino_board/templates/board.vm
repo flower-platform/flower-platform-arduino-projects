@@ -1,0 +1,32 @@
+#macro( board $node )
+class ApplicationGen : public ApplicationBase {
+protected:
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+	#callMacroWithSuffix( $child "_decl" )
+#end
+
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#@indent()
+	#callMacroWithSuffix( $child "_handlers" )
+#end
+#end
+
+public:
+	ApplicationGen() : ApplicationBase(16) { }
+	virtual ~ApplicationGen() { }
+
+	virtual void setup() {
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#@indent()
+		#callMacroWithSuffix( $child "_init" )
+
+#end
+#end
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#@indent()
+		#callMacroWithSuffix( $child "_addListeners" )
+#end
+#end
+	}
+};
+#end

@@ -1,0 +1,112 @@
+################################
+## Standard event
+################################
+
+#macro ( standardEvent_common )
+#set( $instanceName = "${instance.properties.name}" )
+#set( $instanceType = "${NodeTemplateUtils.stripDynamicPrefix(${instance.type})}" )
+#set( $simpleType = "${NodeTemplateUtils.stripDynamicPrefix(\${node.type})}" )
+#if ( ${simpleType.indexOf(":")} >= 0 )## i.e. MY_EVENT:MyEvent
+#set( $eventType = "${CommonsStringUtils.substringAfter(${simpleType}, ':')}" )
+#set( $eventConstant = "${CommonsStringUtils.substringBefore(${simpleType}, ':')}" )
+#else
+#set( $eventType = $simpleType )
+#end
+#end
+
+#macro ( standardEvent_handler $methodSuffix)
+#standardEvent_common()
+#if( !$methodSuffix )
+#set( $methodSuffix = $eventConstant )
+#end
+virtual void ${instanceName}_${methodSuffix}(Event* event) {
+	$eventType* castedEvent = ($eventType*) event;
+#foreach( $invocation in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#set( $targetMethodNode = $NodeTemplateUtils.getNode($invocation.properties.target) )
+#set( $targetInstance = $NodeTemplateUtils.getParent($targetMethodNode.nodeUri).properties.name )
+#set( $targetMethod = $CommonsStringUtils.substringBefore($targetMethodNode.properties.name, '(') )
+#set( $targetMethodFull = $targetMethodNode.properties.name )
+#@indent()
+	#evaluate( ${NodeTemplateUtils.callMacroWithSuffix(${invocation.properties.template}, "", "")} )## we don't use directly, to have the special chars replaced
+#end
+#end
+}
+#end
+
+#macro ( standardEvent_addListener )
+#standardEvent_common()
+${instanceName}->addEventListener(${instanceType}::${eventConstant}, new DelegatingListener<ApplicationGen>(this, &ApplicationGen::${instanceName}_${eventConstant}));
+#end
+
+################################
+## evenimente pr-zise/delegare; 
+################################
+
+#macro ( HttpCommandEvent_handler )
+#standardEvent_handler( $node.properties.mapping )
+#end
+
+#macro ( HttpCommandEvent_addListener )
+#standardEvent_common()
+${instanceName}->addUrlHandler("$node.properties.mapping", new DelegatingListener<ApplicationGen>(this, &ApplicationGen::${instanceName}_$node.properties.mapping));
+#end
+
+#macro ( TIMER_EVENT_TimerEvent_handler )
+#standardEvent_handler( false )
+#end
+
+#macro ( TIMER_EVENT_TimerEvent_addListener )
+#standardEvent_addListener( false )
+#end
+
+#macro ( TIMER_COMPLETE_EVENT_TimerEvent_handler )
+#standardEvent_handler( false )
+#end
+
+#macro ( TIMER_COMPLETE_EVENT_TimerEvent_addListener )
+#standardEvent_addListener( false )
+#end
+
+#macro ( VALUE_CHANGED_EVENT_ValueChangedEvent_handler )
+#standardEvent_handler( false )
+#end
+
+#macro ( VALUE_CHANGED_EVENT_ValueChangedEvent_addListener )
+#standardEvent_addListener()
+#end
+################################
+## initial/mariana
+################################
+
+#macro( INPUT_ON_EVENT_handler $node )
+#set( $event = ${node.properties.generatedLabel} )
+virtual void #eventFuncName($event "Handler")(#eventClsName($event)* event) {
+	Serial.println("hello from handler");
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+	#invocation($child)
+#end
+}
+#end
+
+#macro( INPUT_ON_EVENT_addListener $node )
+#set( $event = ${node.properties.generatedLabel} )
+#set( $name = "#eventFuncName(\$event 'Listener')" )
+#set( $Name = $StringUtils.capitalizeFirstLetter($name) )
+class $Name : public Listener {
+	void handleEvent(Event* event) {
+		self->#eventFuncName($event "Handler")((#eventClsName($event)*) event);
+	}
+} * $name = new ${Name}();
+#set( $eventCt = "${NodeTemplateUtils.stripDynamicPrefix(\${instance.properties.type})}::EVENT_TYPE_\${event}" )
+${instance.properties.name}->addEventListener($eventCt, $name);
+#end
+
+#macro( eventFuncName $event $suffix )${instance.properties.name}_${event}_${suffix}#end
+
+#macro( eventClsName $event )$StringUtils.removeAndHump(${event.toLowerCase()})#end
+
+#macro( invocation $node )
+#set( $method = $NodeTemplateUtils.getNode($node.properties.target) )
+#set( $target = $NodeTemplateUtils.getParent($method.nodeUri) )
+${target.properties.name}->${method.properties.name};
+#end

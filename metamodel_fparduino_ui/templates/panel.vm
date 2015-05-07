@@ -1,0 +1,15 @@
+#macro( Panel $panel )
+<div class="panel panel-primary text-center"#printId($panel)>
+	<div class="panel-heading">$panel.properties.title</div>
+	
+	<div class="panel-body">
+
+#foreach($child in $NodeTemplateUtils.getChildren($panel.nodeUri))
+#@indent()
+		#callMacro($child)
+#end
+#end
+
+	</div>
+</div>
+#end

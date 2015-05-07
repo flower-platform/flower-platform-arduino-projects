@@ -1,0 +1,32 @@
+#set( $root = $node )
+\#include <dht.h>
+
+\#include <Ethernet.h>
+\#include <SPI.h>
+
+\#include <FlowerPlatformArduinoRuntime.h>
+\#include <DHTSensor.h>
+\#include <Output.h>
+\#include <UpdatesBuffer.h>
+\#include <HttpServer.h>
+
+\#include <Input.h>
+\#include <Timer.h>
+//\#include <Logger.h>
+
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#callMacro($child)
+#end
+
+\#define SHOULD_INCLUDE_CUSTOM_CODE
+\#include "CustomCode.h"
+
+ApplicationGen* app = new ApplicationCustom();
+
+void setup() {
+	app->setup();
+}
+
+void loop() {
+	app->loop();
+}

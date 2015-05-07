@@ -1,0 +1,3 @@
+root = dynamic_metamodel.root
+label = Petal Documentation
+gen_files_from_children = petaldoc/$PROPERTY.name.html:main.vm

@@ -1,0 +1,9 @@
+#macro( Column $column )
+<div class="col-${column.properties.positions}"#printId($column)>
+#foreach($child in $NodeTemplateUtils.getChildren($column.nodeUri))
+#@indent()
+	#callMacro($child)
+#end
+#end
+</div>
+#end

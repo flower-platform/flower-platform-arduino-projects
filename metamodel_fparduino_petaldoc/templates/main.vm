@@ -1,0 +1,28 @@
+#belongsToCategory( $node, "category.instance" )
+#if( $belongsToCategoryResult )
+<html><body>
+<h1>${node.properties.name}</h1>
+$!node.properties.petaldoc
+
+<h2>Properties</h2>
+#set( $hasElements = false )
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#if( $child.type == "propertyDescriptor" )
+#set( $hasElements = true )
+<h3>$child.properties.name:#if( $child.properties.propertyType )$child.properties.propertyType #{else}String#end</h3>
+$!child.properties.petaldoc
+#end
+#end
+#if( !$hasElements )None.#end
+<h2>Methods</h2>
+#set( $hasElements = false )
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#if( $child.type == "virtualChild" )
+#set( $hasElements = true )
+<h3>${child.properties.name}</h3>
+$!child.properties.petaldoc
+#end
+#end
+#if( !$hasElements )None.#end
+</body></html>
+#end

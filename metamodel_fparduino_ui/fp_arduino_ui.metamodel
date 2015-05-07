@@ -1,0 +1,229 @@
+<map version="freeplane 1.3.0">
+<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<node TEXT="New Mindmap" FOLDED="false" ID="ID_53947153" CREATED="1429861686011" MODIFIED="1430911367747"><hook NAME="MapStyle">
+    <properties show_icon_for_attributes="true"/>
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node">
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right">
+<stylenode LOCALIZED_TEXT="default" MAX_WIDTH="600" COLOR="#000000" STYLE="as_parent">
+<font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.note"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
+<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.important">
+<icon BUILTIN="yes"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000">
+<font SIZE="18"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
+<font SIZE="16"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439">
+<font SIZE="14"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
+<font SIZE="12"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
+<font SIZE="10"/>
+</stylenode>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<attribute_layout NAME_WIDTH="59" VALUE_WIDTH="142"/>
+<attribute NAME="nodeType" VALUE="dynamic_metamodel.root"/>
+<attribute NAME="prefix" VALUE="fparduino"/>
+<node TEXT="" POSITION="right" ID="ID_937755059" CREATED="1429861931863" MODIFIED="1429861931863">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="cloudType" VALUE="ROUND_RECT"/>
+<attribute NAME="cloudColor" VALUE="#99ee99"/>
+<attribute NAME="name" VALUE="Row"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="icons" VALUE="forward"/>
+<node TEXT="" ID="ID_629861224" CREATED="1430124926822" MODIFIED="1430124926822">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.element"/>
+<attribute NAME="type" VALUE="containingCategory"/>
+</node>
+<node TEXT="" ID="ID_582658787" CREATED="1429862059027" MODIFIED="1429862059027">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="label" VALUE="Column"/>
+<attribute NAME="childType" VALUE="Column"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1112226784" CREATED="1429862026944" MODIFIED="1429862026944">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="cloudType" VALUE="ROUND_RECT"/>
+<attribute NAME="cloudColor" VALUE="#ee99ee"/>
+<attribute NAME="name" VALUE="Column"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="icons" VALUE="down"/>
+<attribute NAME="propertyForLabel" VALUE="positions"/>
+<node TEXT="" ID="ID_1741710132" CREATED="1429862087978" MODIFIED="1429862087978">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="positions"/>
+<attribute NAME="label" VALUE="Positions"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+</node>
+<node TEXT="" ID="ID_3588246" CREATED="1429862194444" MODIFIED="1429862194444">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.container"/>
+<attribute NAME="type" VALUE="containingCategory"/>
+</node>
+<node TEXT="" ID="ID_4410638" CREATED="1430124933151" MODIFIED="1430124933151">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.element"/>
+<attribute NAME="type" VALUE="containingCategory"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_660870078" CREATED="1429862185195" MODIFIED="1429862185195">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="category.container"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<node TEXT="" ID="ID_1213958715" CREATED="1429862218528" MODIFIED="1429862218528">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="label" VALUE="Row"/>
+<attribute NAME="childType" VALUE="Row"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
+<node TEXT="" ID="ID_1292222123" CREATED="1429862584310" MODIFIED="1429862584310">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="label" VALUE="Panel"/>
+<attribute NAME="childType" VALUE="Panel"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
+<node TEXT="" ID="ID_332309735" CREATED="1429862592643" MODIFIED="1429862592643">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="label" VALUE="Label"/>
+<attribute NAME="childType" VALUE="Label"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
+<node TEXT="" ID="ID_512719085" CREATED="1429862600561" MODIFIED="1429862600561">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="label" VALUE="Button"/>
+<attribute NAME="childType" VALUE="Button"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1217754697" CREATED="1429862240144" MODIFIED="1429862240144">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="Panel"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="propertyForLabel" VALUE="title"/>
+<node TEXT="" ID="ID_1936885101" CREATED="1430124940986" MODIFIED="1430124940986">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.element"/>
+<attribute NAME="type" VALUE="containingCategory"/>
+</node>
+<node TEXT="" ID="ID_1408151188" CREATED="1429873303735" MODIFIED="1429873303735">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="title"/>
+<attribute NAME="label" VALUE="Title"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+</node>
+<node TEXT="" ID="ID_852007138" CREATED="1429862310708" MODIFIED="1429862310708">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.container"/>
+<attribute NAME="type" VALUE="containingCategory"/>
+</node>
+</node>
+<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1872150564" CREATED="1429862365529" MODIFIED="1429862365529">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="Label"/>
+<attribute NAME="propertyForLabel" VALUE="text"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<node TEXT="" ID="ID_1164218714" CREATED="1430124947399" MODIFIED="1430124947399">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.element"/>
+<attribute NAME="type" VALUE="containingCategory"/>
+</node>
+<node TEXT="" ID="ID_389750607" CREATED="1429862456527" MODIFIED="1429862456527">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="text"/>
+<attribute NAME="label" VALUE="Text"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+</node>
+<node TEXT="" ID="ID_1901590243" CREATED="1429862470364" MODIFIED="1429862470364">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="suffix"/>
+<attribute NAME="label" VALUE="Suffix"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+</node>
+</node>
+<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1804295354" CREATED="1429862514229" MODIFIED="1429862514229">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="Button"/>
+<attribute NAME="propertyForLabel" VALUE="text"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<node TEXT="" ID="ID_1323442199" CREATED="1430124952016" MODIFIED="1430124952016">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.element"/>
+<attribute NAME="type" VALUE="containingCategory"/>
+</node>
+<node TEXT="" ID="ID_1677843903" CREATED="1429862523062" MODIFIED="1429862523062">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="text"/>
+<attribute NAME="label" VALUE="Text"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+</node>
+<node TEXT="" ID="ID_883724675" CREATED="1430127362148" MODIFIED="1430127362148">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="glyphicon"/>
+<attribute NAME="label" VALUE="Glyphicon"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+</node>
+<node TEXT="" ID="ID_1807592069" CREATED="1430127410598" MODIFIED="1430127410598">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="onclick"/>
+<attribute NAME="label" VALUE="On Click"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+</node>
+</node>
+<node TEXT="" FOLDED="true" POSITION="right" ID="ID_476122056" CREATED="1430124902201" MODIFIED="1430124902201">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="category.element"/>
+<attribute NAME="propertyForLabel" VALUE="id"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<node TEXT="" ID="ID_213301124" CREATED="1430124911020" MODIFIED="1430124911020">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="id"/>
+<attribute NAME="label" VALUE="Id"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+</node>
+</node>
+<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1953022306" CREATED="1429864149309" MODIFIED="1429864149309">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="ui"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<node TEXT="" ID="ID_1442098675" CREATED="1429864164145" MODIFIED="1429864164145">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="label" VALUE="Row"/>
+<attribute NAME="childType" VALUE="Row"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
+</node>
+</node>
+</map>
