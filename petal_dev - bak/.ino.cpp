@@ -1,7 +1,7 @@
 //This is a automatic generated file
 //Please do not modify this file
 //If you touch this file your change will be overwritten during the next build
-//This file has been generated on 2015-05-08 14:09:55
+//This file has been generated on 2015-05-08 14:14:52
 
 #include "Arduino.h"
 #include <avr/pgmspace.h>
@@ -16,7 +16,6 @@
 #include <Output.h>
 #include <pins_arduino.h>
 #include <stdbool.h>
-#include <string.h>
 #include <Timer.h>
 #include <WString.h>
 void setup() ;
