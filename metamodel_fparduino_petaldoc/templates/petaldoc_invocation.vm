@@ -1,0 +1,14 @@
+#macro( invocation )
+<body><html>
+#set( $sourceSignature = $CommonsStringUtils.substringAfter($node.properties.name, ".") )
+<h1>Event type: $sourceSignature</h1>
+Available "CONVERT and CALL"s:
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#set( $targetSignature = ${CommonsStringUtils.substringAfter($child.properties.behaviorType, ".")} )
+#set( $id = $sourceSignature + "_" + $targetSignature + "_" + $child.properties.value )
+#set( $id = $id.replaceAll("\W", "_") )
+<h2 id="$id">CONVERTS from $sourceSignature to ($targetSignature) and CALLS the method</h2>
+$!child.properties.petaldoc
+#end
+</body></html>	
+#end

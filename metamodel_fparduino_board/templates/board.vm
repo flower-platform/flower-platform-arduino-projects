@@ -1,5 +1,5 @@
 #macro( board $node )
-class ApplicationGen : public ApplicationBase {
+class ApplicationGen {
 protected:
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
 	#callMacroWithSuffix( $child "_decl" )
@@ -12,7 +12,6 @@ protected:
 #end
 
 public:
-	ApplicationGen() : ApplicationBase(16) { }
 	virtual ~ApplicationGen() { }
 
 	virtual void setup() {
@@ -27,6 +26,9 @@ public:
 		#callMacroWithSuffix( $child "_addListeners" )
 #end
 #end
+	}
+	
+	virtual void loop() {
 	}
 };
 #end

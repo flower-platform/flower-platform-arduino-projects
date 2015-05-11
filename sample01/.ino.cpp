@@ -14,7 +14,7 @@
 #include <HttpServer.h>
 #include <Input.h>
 #include <Timer.h>
-#include <Logger.h>
+//#include <Logger.h>
 #include "CustomCode.h"
 void setup() ;
 void loop() ;

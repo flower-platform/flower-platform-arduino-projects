@@ -1,6 +1,6 @@
 <map version="freeplane 1.3.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="New Mindmap" FOLDED="false" ID="ID_490504318" CREATED="1428507974283" MODIFIED="1430911293328"><hook NAME="MapStyle">
+<node TEXT="New Mindmap" ID="ID_490504318" CREATED="1428507974283" MODIFIED="1430911293328"><hook NAME="MapStyle">
     <properties show_icon_for_attributes="true"/>
 
 <map_styles>
@@ -74,7 +74,7 @@
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="propertyForLabel" VALUE="template"/>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_574154206" CREATED="1430405925082" MODIFIED="1430405925082">
+<node TEXT="" POSITION="right" ID="ID_574154206" CREATED="1430405925082" MODIFIED="1430405925082">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="textColor" VALUE="#ffffff"/>
 <attribute NAME="fontItalic" VALUE="true"/>
@@ -89,7 +89,7 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1582060286" CREATED="1428607752115" MODIFIED="1428607752115">
+<node TEXT="" POSITION="right" ID="ID_1582060286" CREATED="1428607752115" MODIFIED="1428607752115">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="board"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
@@ -129,7 +129,7 @@
 <attribute NAME="name" VALUE="root"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_164463813" CREATED="1429197136197" MODIFIED="1429197136197">
+<node TEXT="" POSITION="right" ID="ID_164463813" CREATED="1429197136197" MODIFIED="1429197136197">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Output"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
@@ -175,7 +175,7 @@
 <attribute NAME="childType" VALUE="VALUE_CHANGED_EVENT:ValueChangedEvent"/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1091130042" CREATED="1429716105568" MODIFIED="1429716105568">
+<node TEXT="" POSITION="right" ID="ID_1091130042" CREATED="1429716105568" MODIFIED="1429716105568">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Input"/>
 <attribute NAME="petaldoc" VALUE="&lt;p&gt;An analog or digital input, that corresponds to an input connected to the board.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for &lt;code&gt;Serial&lt;/code&gt; communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -&gt; 13 (for Arduino Uno) and 4, 10, 50 -&gt; 53 (for Arduino Mega). Etc.&lt;/p&gt;"/>
@@ -200,7 +200,7 @@
 <node TEXT="" ID="ID_1265255544" CREATED="1429716105578" MODIFIED="1429716105578">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
-<attribute NAME="childType" VALUE="VALUE_CHANGED_EVENT:ValueChangedEvent"/>
+<attribute NAME="childType" VALUE="onValueChanged(ValueChangedEvent)"/>
 </node>
 <node TEXT="" ID="ID_1587824592" CREATED="1429716203105" MODIFIED="1429716203105">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
@@ -211,7 +211,7 @@
 <attribute NAME="petaldoc" VALUE="&lt;i&gt;Default = false&lt;/i&gt;. Please note that not all pins can be used as analog pins."/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1247090144" CREATED="1430406047446" MODIFIED="1430406047446">
+<node TEXT="" POSITION="right" ID="ID_1247090144" CREATED="1430406047446" MODIFIED="1430406047446">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Timer"/>
 <node TEXT="" ID="ID_1365008271" CREATED="1430406047447" MODIFIED="1430406047447">
@@ -272,7 +272,7 @@
 <attribute NAME="childType" VALUE="method"/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_359008373" CREATED="1430406231324" MODIFIED="1430406231324">
+<node TEXT="" POSITION="right" ID="ID_359008373" CREATED="1430406231324" MODIFIED="1430406231324">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="UpdatesBuffer"/>
 <node TEXT="" ID="ID_311127305" CREATED="1430406231324" MODIFIED="1430406231324">
@@ -297,7 +297,7 @@
 <attribute NAME="childType" VALUE="method"/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_31552654" CREATED="1430406210574" MODIFIED="1430406210574">
+<node TEXT="" POSITION="right" ID="ID_31552654" CREATED="1430406210574" MODIFIED="1430406210574">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="HttpServer"/>
 <node TEXT="" ID="ID_41190890" CREATED="1430406210574" MODIFIED="1430406210574">
@@ -330,7 +330,7 @@
 <attribute NAME="label" VALUE=""/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_157529028" CREATED="1430406027900" MODIFIED="1430406027900">
+<node TEXT="" POSITION="right" ID="ID_157529028" CREATED="1430406027900" MODIFIED="1430406027900">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Logger"/>
 <node TEXT="" ID="ID_558120939" CREATED="1430406027901" MODIFIED="1430406027901">
@@ -362,7 +362,23 @@
 <attribute NAME="label" VALUE=""/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1187697734" CREATED="1429716263773" MODIFIED="1429716263773">
+<node TEXT="" POSITION="right" ID="ID_528003254" CREATED="1431010889991" MODIFIED="1431010889991">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="onValueChanged(ValueChangedEvent)"/>
+<attribute NAME="petaldoc" VALUE="Triggered when the value of the input changes. Contains the following information:&lt;ul&gt;&lt;li&gt;&lt;code&gt;previousValue:int&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;currentValue:int&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+<node TEXT="" ID="ID_433311496" CREATED="1431010890001" MODIFIED="1431010890001">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.event"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1077016049" CREATED="1431010890001" MODIFIED="1431010890001">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.subElement"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1187697734" CREATED="1429716263773" MODIFIED="1429716263773">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="VALUE_CHANGED_EVENT:ValueChangedEvent"/>
 <node TEXT="" ID="ID_647073031" CREATED="1429716263773" MODIFIED="1429716263773">
@@ -377,7 +393,7 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1208453621" CREATED="1429805985114" MODIFIED="1429805985114">
+<node TEXT="" POSITION="right" ID="ID_1208453621" CREATED="1429805985114" MODIFIED="1429805985114">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="invocationSourceSignature.ValueChangedEvent"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
@@ -388,6 +404,7 @@
 <attribute NAME="value" VALUE="invokeIfHigh"/>
 <attribute NAME="type" VALUE="genericDescriptor"/>
 <attribute NAME="extraInfo.description" VALUE="Invokes the function (without any arguments) only when the value from the event is HIGH."/>
+<attribute NAME="petaldoc" VALUE="Invokes the function (without any arguments) only when the value from the event is HIGH."/>
 </node>
 <node TEXT="" ID="ID_1204364150" CREATED="1430149964793" MODIFIED="1430149964793">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
@@ -399,9 +416,9 @@
 <attribute NAME="extraInfo.invocationType" VALUE="invocation_ConstantKey"/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1848188547" CREATED="1429882156105" MODIFIED="1429882156105">
+<node TEXT="" POSITION="right" ID="ID_1848188547" CREATED="1429882156105" MODIFIED="1429882156105">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="invocationSourceSignature.*"/>
+<attribute NAME="name" VALUE="invocationSourceSignature.ALL"/>
 <node TEXT="" ID="ID_1093761460" CREATED="1429882156105" MODIFIED="1429882156105">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="invocationTargetSignature."/>
@@ -411,7 +428,7 @@
 <attribute NAME="extraInfo.description" VALUE="Invokes the function, without any argument."/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1534616266" CREATED="1430142609431" MODIFIED="1430142609431">
+<node TEXT="" POSITION="right" ID="ID_1534616266" CREATED="1430142609431" MODIFIED="1430142609431">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="TIMER_EVENT:TimerEvent"/>
 <node TEXT="" ID="ID_1806566869" CREATED="1430142609431" MODIFIED="1430142609431">
@@ -426,7 +443,7 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1703602871" CREATED="1430142610282" MODIFIED="1430142610282">
+<node TEXT="" POSITION="right" ID="ID_1703602871" CREATED="1430142610282" MODIFIED="1430142610282">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="TIMER_COMPLETE_EVENT:TimerEvent"/>
 <node TEXT="" ID="ID_803850194" CREATED="1430142610282" MODIFIED="1430142610282">
@@ -441,7 +458,7 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1830975491" CREATED="1430148834834" MODIFIED="1430148834834">
+<node TEXT="" POSITION="right" ID="ID_1830975491" CREATED="1430148834834" MODIFIED="1430148834834">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="HttpCommandEvent"/>
 <node TEXT="" ID="ID_1698110713" CREATED="1430148834835" MODIFIED="1430148834835">
@@ -461,7 +478,7 @@
 <attribute NAME="type" VALUE="propertyDescriptor"/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1379519850" CREATED="1430149787669" MODIFIED="1430149787669">
+<node TEXT="" POSITION="right" ID="ID_1379519850" CREATED="1430149787669" MODIFIED="1430149787669">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="invocationSourceSignature.HttpCommandEvent"/>
 <node TEXT="" ID="ID_1174419311" CREATED="1430149787670" MODIFIED="1430149787670">
@@ -473,7 +490,7 @@
 <attribute NAME="extraInfo.description" VALUE="Invokes the function (without any arguments) and then returns its result."/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_735737433" CREATED="1430155130894" MODIFIED="1430155130894">
+<node TEXT="" POSITION="right" ID="ID_735737433" CREATED="1430155130894" MODIFIED="1430155130894">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="invocation_ConstantKey"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
@@ -489,7 +506,7 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
-<node TEXT="" FOLDED="true" POSITION="right" ID="ID_1595884711" CREATED="1430156328589" MODIFIED="1430156328589">
+<node TEXT="" POSITION="right" ID="ID_1595884711" CREATED="1430156328589" MODIFIED="1430156328589">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="invocation"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>

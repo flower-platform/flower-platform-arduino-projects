@@ -1,0 +1,28 @@
+#macro( Input_decl $node )
+#instance_decl($node)
+#end
+
+#macro( Input_init $node )
+#instance_create()
+${node.properties.name}->pin = ${node.properties.pin};
+#end
+
+#macro( Input_handlers $node )
+#instance_handlers($node)
+#end
+
+#macro( Input_addListeners $node )
+#instance_addListeners($node)
+#end
+
+################################
+## Events
+################################
+
+#macro ( onValueChanged_ValueChangedEvent__handler )
+#standardEvent_handler( false )
+#end
+
+#macro ( VALUE_CHANGED_EVENT_ValueChangedEvent_addListener )
+#standardEvent_addListener()
+#end
