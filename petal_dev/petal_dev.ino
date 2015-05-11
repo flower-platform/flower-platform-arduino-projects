@@ -16,22 +16,21 @@
 
 class ApplicationGen {
 protected:
-	Input* doorSwitch;
-	Input* lightSwitch;
-	Output* doorRelay;
-	Output* light;
-	Output* pwmLed;
-	DHTSensor* dhtSensor;
-	HttpServer* httpServer;
-//	UpdatesBuffer* updatesBuffer;
-	Timer* timer;
-	LoggerSD<int>* logger;
+	Input doorSwitch;
+	Input lightSwitch;
+	Output doorRelay;
+	Output light;
+	Output pwmLed;
+	DHTSensor dhtSensor;
+	HttpServer httpServer;
+	Timer timer;
+	LoggerSD<int> logger;
 
 	virtual void doorSwitch_ValueChanged_Handler(Event* event) {
 		ValueChangedEvent* valueChangedEvent = (ValueChangedEvent*) event;
 
 		if (valueChangedEvent->currentValue == LOW) {
-			doorRelay->toggleHighLow();
+			doorRelay.toggleHighLow();
 		}
 	}
 
@@ -39,9 +38,9 @@ protected:
 		ValueChangedEvent* valueChangedEvent = (ValueChangedEvent*) event;
 
 		if (valueChangedEvent->currentValue == LOW) {
-			light->toggleHighLow();
+			light.toggleHighLow();
 			int value = millis() % 256;
-			pwmLed->setValue(value);
+			pwmLed.setValue(value);
 		}
 	}
 
@@ -49,36 +48,35 @@ protected:
 		ValueChangedEvent* valueChangedEvent = (ValueChangedEvent*) event;
 //		Serial.print("Temperature changed from "); Serial.print(valueChangedEvent->previousValue); Serial.print(" to "); Serial.println(valueChangedEvent->currentValue);
 //		updatesBuffer->updateEntry("dhtSensor_temperature", valueChangedEvent->currentValue);
-		logger->log(valueChangedEvent->currentValue);
+		logger.log(valueChangedEvent->currentValue);
 	}
 
 	void myInput_ValueChanged_Handler(Event* event) {
-		doorRelay->setHigh();
+		doorRelay.setHigh();
 	}
 
 	void httpServer_commandReceived_Handler(Event* event) {
 		HttpCommandEvent* httpCommandEvent = (HttpCommandEvent*) event;
 
-		if (strcmp_P(httpCommandEvent->command, PSTR("getUpdates")) == 0) {
+		char command[32];
+		httpCommandEvent->server->getCommandFromUrl(httpCommandEvent->url, command);
+
+		if (strcmp_P(command, PSTR("getUpdates")) == 0) {
 			httpCommandEvent->server->httpSuccess();
 			printStateAsJson(httpCommandEvent->client);
-		} else if (strcmp_P(httpCommandEvent->command, PSTR("lightOn")) == 0) {
-			light->setHigh();
+		} else if (strcmp_P(command, PSTR("lightSwitchToggle")) == 0) {
+			light.toggleHighLow();
 			httpCommandEvent->server->httpSuccess();
 			printStateAsJson(httpCommandEvent->client);
-		} else if (strcmp_P(httpCommandEvent->command, PSTR("lightOff")) == 0) {
-			light->setLow();
+		} else if (strcmp_P(command, PSTR("curtainUp")) == 0) {
+			doorRelay.setHigh();
 			httpCommandEvent->server->httpSuccess();
 			printStateAsJson(httpCommandEvent->client);
-		} else if (strcmp_P(httpCommandEvent->command, PSTR("curtainUp")) == 0) {
-			doorRelay->setHigh();
+		} else if (strcmp_P(command, PSTR("curtainDown")) == 0) {
+			doorRelay.setLow();
 			httpCommandEvent->server->httpSuccess();
 			printStateAsJson(httpCommandEvent->client);
-		} else if (strcmp_P(httpCommandEvent->command, PSTR("curtainDown")) == 0) {
-			doorRelay->setLow();
-			httpCommandEvent->server->httpSuccess();
-			printStateAsJson(httpCommandEvent->client);
-		} else if (strcmp(httpCommandEvent->command, "") == 0) {
+		} else if (strcmp(command, "") == 0) {
 			httpCommandEvent->server->httpSuccess(HttpServer::CONTENT_TYPE_HTML);
 			httpCommandEvent->client->print(F("Please use local generated HTML file."));
 		}
@@ -88,11 +86,11 @@ protected:
 	void printStateAsJson(Print* print) {
 		print->print(F("{"));
 
-		lightSwitch->printStateAsJson(F("lightSwitch"), print);
+		lightSwitch.printStateAsJson(F("lightSwitch"), print);
 		print->print(F(","));
-		light->printStateAsJson(F("light"), print);
+		light.printStateAsJson(F("light"), print);
 		print->print(F(","));
-		dhtSensor->printStateAsJson(F("dhtSensor"), print);
+		dhtSensor.printStateAsJson(F("dhtSensor"), print);
 		print->print(F(","));
 
 		print->print(F("\"FREE_MEM\": "));
@@ -106,63 +104,56 @@ public:
 
 	virtual void setup() {
 
-		doorSwitch = new Input();
-		doorSwitch->pin = 2;
-		doorSwitch->setup();
+		doorSwitch.pin = 2;
+		doorSwitch.setup();
 
-		lightSwitch = new Input();
-		lightSwitch->pin = 3;
-		lightSwitch->setup();
+		lightSwitch.pin = 3;
+		lightSwitch.setup();
 
-		dhtSensor = new DHTSensor();
-		dhtSensor->pin = A0;
-		dhtSensor->pollInterval = 1000;
-		dhtSensor->setup();
+		dhtSensor.pin = A0;
+		dhtSensor.pollInterval = 1000;
+		dhtSensor.setup();
 
-		light = new Output();
-		light->pin = 13;
-		light->setup();
+		light.pin = 13;
+		light.setup();
 
-		pwmLed = new Output();
-		pwmLed->pin = 45;
-		pwmLed->isPwm = true;
-		pwmLed->setup();
+		pwmLed.pin = 45;
+		pwmLed.isPwm = true;
+		pwmLed.setup();
 
-		doorRelay = new Output();
-		doorRelay->pin = 6;
-		doorRelay->setup();
+		doorRelay.pin = 6;
+		doorRelay.setup();
 
-		httpServer = new HttpServer();
-		httpServer->port = 80;
-		httpServer->setup();
+		httpServer.port = 80;
+		httpServer.setup();
 
-		timer = new Timer();
-		timer->delay = 1500;
-		timer->repeatCount = 5;
-		timer->autostart = true;
-		timer->setup();
+		timer.delay = 1500;
+		timer.repeatCount = 5;
+		timer.autostart = true;
+		timer.setup();
 
-		logger = new LoggerSD<int>();
-		logger->slaveSelectPin = 4;
-		logger->fileName = "temp.txt";
-		logger->timeInterval = 3 * 1000;
-		logger->setup();
+		logger.slaveSelectPin = 4;
+		logger.fileName = "temp.txt";
+		logger.timeInterval = 3 * 1000;
+		logger.setup();
 
-		doorSwitch->valueChangedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::doorSwitch_ValueChanged_Handler);
+		doorSwitch.valueChangedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::doorSwitch_ValueChanged_Handler);
 
-		lightSwitch->valueChangedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::lightSwitch_ValueChanged_Handler);
+		lightSwitch.valueChangedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::lightSwitch_ValueChanged_Handler);
 
-		httpServer->commandReceivedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_commandReceived_Handler);
+		httpServer.commandReceivedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_commandReceived_Handler);
+
+		dhtSensor.temperatureChangedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::dhtSensor_TemperatureChanged_Handler);
 
 	}
 
 	virtual void loop() {
-		doorSwitch->loop();
-		lightSwitch->loop();
-		dhtSensor->loop();
-		httpServer->loop();
-		timer->loop();
-		logger->loop();
+		doorSwitch.loop();
+		lightSwitch.loop();
+		dhtSensor.loop();
+		httpServer.loop();
+		timer.loop();
+		logger.loop();
 	}
 
 };
