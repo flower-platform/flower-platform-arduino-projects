@@ -1,0 +1,37 @@
+.main {
+	padding: 5px
+}
+
+h4, .h4, h5, .h5 {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+h6, .h6 {
+	font-size: 16px;
+}
+
+h6 .label {
+	font-size: 80%;
+}
+
+p {
+	margin: 0px 0px 0px 0px
+}
+.panel-heading {
+	padding: 10px 7px;
+}
+.panel-body {
+	padding: 7px;
+}
+
+ul, ol {
+    margin-bottom: 0px;
+}
+
+hr {
+	margin-top: 2px;
+	margin-bottom: 4px;
+	margin-left: 0px;
+	margin-right: 0px;
+}

@@ -1,20 +1,51 @@
 
-<html><body>
-<h1>Input</h1>
-<p>
-Jump to: <a href="#properties">Properties</a> | <a href="#events">Events</a> | <a href="#methods">Methods</a>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+<link rel="stylesheet" href="petaldoc.css">
+</head><html><body><div class="main">
+<h4>Input</h4>
+<hr/>
+<p style="margin-bottom: 10px">
+Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> <a href="#events" class="btn btn-info btn-xs">Events</a> <a href="#methods" class="btn btn-primary btn-xs">Methods</a>
 </p>
-<p>An analog or digital input, that corresponds to an input connected to the board.</p><p><strong>WARNING:</strong> Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for <code>Serial</code> communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -> 13 (for Arduino Uno) and 4, 10, 50 -> 53 (for Arduino Mega). Etc.</p>
+<p>An analog or digital input, that corresponds to an input connected to the board.</p><p class="text-danger"><strong>WARNING:</strong> Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for <code>Serial</code> communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -> 13 (for Arduino Uno) and 4, 10, 50 -> 53 (for Arduino Mega). Etc.</p>
 
-<h2 id="properties">Properties</h2>
-<h3>pin:String</h3>
+<!-- Properties -->
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h5 id="properties" class="panel-title">Properties</h5>
+  </div>
+  <div class="panel-body">
+<h5>pin:String</h5>
 <b>Mandatory</b>. The pin of the input. When choosing pins, please see the remark above (about occupied pins). 
-<h3>isAnalog:Boolean </h3>
+<h5>isAnalog:Boolean </h5>
 <i>Default = false</i>. Please note that not all pins can be used as analog pins.
+</div></div>
 
-<h2 id="events">Events</h2>
-<h3 id="onValueChanged_ValueChangedEvent_">onValueChanged(ValueChangedEvent)</h3>
+<!-- Events -->
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h5 id="events" class="panel-title">Events</h5>
+  </div>
+  <div class="panel-body">
+<h5 id="onValueChanged_ValueChangedEvent_">onValueChanged(ValueChangedEvent)</h5>
 Triggered when the value of the input changes. Contains the following information:<ul><li><code>previousValue:int</code></li><li><code>currentValue:int</code></li></ul>
+</div></div>
 
-<h2 id="methods">Methods</h2>
-None.</body></html>
+<!-- Methods -->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h5 id="methods" class="panel-title">Methods</h5>
+  </div>
+  <div class="panel-body">
+None.</div></div>
+
+</div></body></html>

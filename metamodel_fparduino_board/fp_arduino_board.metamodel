@@ -178,7 +178,7 @@
 <node TEXT="" POSITION="right" ID="ID_1091130042" CREATED="1429716105568" MODIFIED="1429716105568">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Input"/>
-<attribute NAME="petaldoc" VALUE="&lt;p&gt;An analog or digital input, that corresponds to an input connected to the board.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for &lt;code&gt;Serial&lt;/code&gt; communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -&gt; 13 (for Arduino Uno) and 4, 10, 50 -&gt; 53 (for Arduino Mega). Etc.&lt;/p&gt;"/>
+<attribute NAME="petaldoc" VALUE="&lt;p&gt;An analog or digital input, that corresponds to an input connected to the board.&lt;/p&gt;&lt;p class=&quot;text-danger&quot;&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for &lt;code&gt;Serial&lt;/code&gt; communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -&gt; 13 (for Arduino Uno) and 4, 10, 50 -&gt; 53 (for Arduino Mega). Etc.&lt;/p&gt;"/>
 <node TEXT="" ID="ID_142141738" CREATED="1429716105568" MODIFIED="1429716105568">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.instance"/>
@@ -403,7 +403,6 @@
 <attribute NAME="extraInfo.label" VALUE="Invoke IF value == HIGH"/>
 <attribute NAME="value" VALUE="invokeIfHigh"/>
 <attribute NAME="type" VALUE="genericDescriptor"/>
-<attribute NAME="extraInfo.description" VALUE="Invokes the function (without any arguments) only when the value from the event is HIGH."/>
 <attribute NAME="petaldoc" VALUE="Invokes the function (without any arguments) only when the value from the event is HIGH."/>
 </node>
 <node TEXT="" ID="ID_1204364150" CREATED="1430149964793" MODIFIED="1430149964793">
