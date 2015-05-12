@@ -29,6 +29,28 @@ public:
 	}
 	
 	virtual void loop() {
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#@indent()
+		#callMacroWithSuffix( $child "_loop" )
+#end
+#end
 	}
+	
+	void printStateAsJson(Print* print) {
+		print->print(F("{"));
+	
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#if ( ${child.properties.contributesToState} )
+		${child.properties.name}.printStateAsJson(F("${child.properties.name}"), print);
+		print->print(F(","));
+#end
+#end
+
+		print->print(F("\"FREE_MEM\": "));
+		print->print(freeRam());
+		print->print(F("}"));
+	}	
+	
 };
+
 #end

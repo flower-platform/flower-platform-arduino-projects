@@ -2,7 +2,7 @@
 {
 	const char* key = "${instanceName}";
 	int value = castedEvent->currentValue;
-	${targetInstance}->${targetMethodFull};
+	${targetInstance}.${targetMethodFull};
 }
 #end
 
@@ -13,14 +13,15 @@
 }
 #end
 
+
 #macro( ALL__plainInvocation )
 {
-	${targetInstance}->${targetMethodFull};
+	${targetInstance}.${targetMethodFull};
 }
 #end
 
 #macro( ValueChangedEvent__invokeIfHigh )
 if (castedEvent->currentValue == HIGH) {
-	${targetInstance}->${targetMethodFull};
+	${targetInstance}.${targetMethodFull};
 }
 #end

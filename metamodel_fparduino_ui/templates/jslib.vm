@@ -78,9 +78,7 @@ var invoke = function(path) {
 };
 
 var refresh = function() {
-	bindingManager.set("temperature", (bindingManager.data.temperature - 1) % 50);
-	bindingManager.set("humidity", (bindingManager.data.humidity + 1) % 50);
-	invoke("getUpdates");
+	invoke("getState");
 };
 
 setInterval(function() {

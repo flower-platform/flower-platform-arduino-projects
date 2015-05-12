@@ -59,8 +59,9 @@
 <attribute NAME="name" VALUE="input2"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Input"/>
 <attribute NAME="isAnalog" VALUE="false" OBJECT="java.lang.Boolean|false"/>
-<attribute NAME="y" VALUE="74" OBJECT="java.lang.Integer|74"/>
-<attribute NAME="x" VALUE="49" OBJECT="java.lang.Integer|49"/>
+<attribute NAME="y" VALUE="55" OBJECT="java.lang.Integer|55"/>
+<attribute NAME="x" VALUE="96" OBJECT="java.lang.Integer|96"/>
+<attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <node TEXT="" ID="ID_1927790755" CREATED="1431010942685" MODIFIED="1431010942685">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onValueChanged(ValueChangedEvent)"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__onValueChanged(ValueChangedEvent)"/>
@@ -70,12 +71,6 @@
 <attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/sample01|dynamic_fparduino__method@toggleHighLow()_parentNodeUri=fpp:flower-platform-arduino-projects/sample01|sample01.fparduino#ID_1534021899"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
 </node>
-<node TEXT="" ID="ID_1784896813" CREATED="1431012442696" MODIFIED="1431012442696">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation_ConstantKey"/>
-<attribute NAME="template" VALUE="ValueChangedEvent_key,value_transferValue"/>
-<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/sample01|dynamic_fparduino__method@updateEntry(key, value)_parentNodeUri=fpp:flower-platform-arduino-projects/sample01|sample01.fparduino#ID_1107596850"/>
-<attribute NAME="type" VALUE="dynamic_fparduino__invocation_ConstantKey"/>
-</node>
 </node>
 </node>
 <node TEXT="" ID="ID_1534021899" CREATED="1431010231679" MODIFIED="1431010231679">
@@ -84,18 +79,112 @@
 <attribute NAME="name" VALUE="output5"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Output"/>
 <attribute NAME="y" VALUE="40" OBJECT="java.lang.Integer|40"/>
-<attribute NAME="x" VALUE="491" OBJECT="java.lang.Integer|491"/>
+<attribute NAME="x" VALUE="492" OBJECT="java.lang.Integer|492"/>
+<attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 </node>
-<node TEXT="" ID="ID_1107596850" CREATED="1431012058408" MODIFIED="1431012058408">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__UpdatesBuffer"/>
-<attribute NAME="name" VALUE="updatesBuffer"/>
-<attribute NAME="type" VALUE="dynamic_fparduino__UpdatesBuffer"/>
-<attribute NAME="y" VALUE="192" OBJECT="java.lang.Integer|192"/>
-<attribute NAME="x" VALUE="381" OBJECT="java.lang.Integer|381"/>
+<node TEXT="" ID="ID_1796185319" CREATED="1431418522576" MODIFIED="1431418522576">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__HttpServer"/>
+<attribute NAME="port" VALUE="80"/>
+<attribute NAME="name" VALUE="httpServer"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__HttpServer"/>
+<attribute NAME="y" VALUE="232" OBJECT="java.lang.Integer|232"/>
+<attribute NAME="ipAddress" VALUE="192.168.100.253"/>
+<attribute NAME="x" VALUE="114" OBJECT="java.lang.Integer|114"/>
+<node TEXT="" ID="ID_89132691" CREATED="1431418539538" MODIFIED="1431418539538">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="toggleLight"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_736334230" CREATED="1431421576930" MODIFIED="1431421576930">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/sample01|dynamic_fparduino__method@toggleHighLow()_parentNodeUri=fpp:flower-platform-arduino-projects/sample01|sample01.fparduino#ID_1534021899"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1049267727" CREATED="1431009512308" MODIFIED="1431009512308">
+</node>
+<node TEXT="" ID="ID_821787060" CREATED="1431426484081" MODIFIED="1431426484081">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__DHTSensor"/>
+<attribute NAME="pin" VALUE="A0"/>
+<attribute NAME="name" VALUE="dhtSensor"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__DHTSensor"/>
+<attribute NAME="y" VALUE="249" OBJECT="java.lang.Integer|249"/>
+<attribute NAME="x" VALUE="490" OBJECT="java.lang.Integer|490"/>
+<attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_733754221" CREATED="1429201407631" MODIFIED="1429201407631">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__ui"/>
+<node TEXT="" ID="ID_777203027" CREATED="1429865310870" MODIFIED="1429865310870">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Row"/>
+<node TEXT="" ID="ID_1736159382" CREATED="1429865864319" MODIFIED="1429865864319">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="md-3"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Column"/>
+<node TEXT="" ID="ID_1168218003" CREATED="1429865879318" MODIFIED="1429865879318">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Panel"/>
+<attribute NAME="title" VALUE="Bedroom"/>
+<attribute NAME="id" VALUE="bedroom"/>
+<node TEXT="" ID="ID_648543087" CREATED="1429865920950" MODIFIED="1429865920950">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Row"/>
+<node TEXT="" ID="ID_805902910" CREATED="1429865941616" MODIFIED="1429865941616">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="xs-6"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Column"/>
+<node TEXT="" ID="ID_180202055" CREATED="1429866037532" MODIFIED="1429866037532">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="text" VALUE="Temperature"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Label"/>
+</node>
+<node TEXT="" ID="ID_526438294" CREATED="1429866063482" MODIFIED="1429866063482">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="text" VALUE="{{dhtSensor_temperature}}"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="suffix" VALUE="&amp;#176;C"/>
+<attribute NAME="id" VALUE="temperature"/>
+</node>
+</node>
+<node TEXT="" ID="ID_1750513385" CREATED="1429865948401" MODIFIED="1429865948401">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="xs-6"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Column"/>
+<node TEXT="" ID="ID_125561660" CREATED="1429866082948" MODIFIED="1429866082948">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="text" VALUE="Humidity"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Label"/>
+</node>
+<node TEXT="" ID="ID_1205488289" CREATED="1429866097817" MODIFIED="1429866097817">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="text" VALUE="{{dhtSensor_humidity}}"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="suffix" VALUE="%RH"/>
+<attribute NAME="id" VALUE="humidity"/>
+</node>
+</node>
+</node>
+<node TEXT="" ID="ID_559214815" CREATED="1429866146901" MODIFIED="1429866146901">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="text" VALUE="Light"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Label"/>
+</node>
+<node TEXT="" ID="ID_1298536551" CREATED="1429867494374" MODIFIED="1429867494374">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="text" VALUE="{{output5}}"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="id" VALUE="light"/>
+</node>
+<node TEXT="" ID="ID_869419459" CREATED="1430127311067" MODIFIED="1430127311067">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="LIGHT"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="onclick" VALUE="invoke(&apos;toggleLight&apos;)"/>
+<attribute NAME="glyphicon" VALUE="flash"/>
+</node>
+</node>
+</node>
+</node>
 </node>
 </node>
 </map>

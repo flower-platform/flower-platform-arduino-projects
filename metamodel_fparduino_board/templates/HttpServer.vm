@@ -1,0 +1,98 @@
+################################
+## HttpServer
+################################
+
+#macro( HttpServer_decl $node )
+#instance_decl($node)
+#end
+
+#####
+
+#macro( HttpServer_init $node )
+${node.properties.name}.port = ${node.properties.port};
+${node.properties.name}.setup();
+#end
+
+#####
+
+#macro( HttpServer_loop $node )
+${node.properties.name}.loop();
+#end
+
+#####
+
+#macro( HttpServer_handlers $node )
+virtual void httpServer_onCommandReceived(Event* event) {
+	HttpCommandEvent* castedEvent = (HttpCommandEvent*) event;
+	
+	char command[32];
+	castedEvent->server->getCommandFromUrl(castedEvent->url, command);
+	
+	if (strcmp_P(command, PSTR("")) == 0) {
+#set( $url = "" )
+#@indent()
+	#HttpServer_ui( $NodeTemplateUtils.navigateByType($root.nodeUri, ["ui"]) )
+#end
+//	} else if (strcmp_P(command, PSTR("getState")) == 0) {
+//		castedEvent->server->httpSuccess();
+//		printStateAsJson(castedEvent->client);
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#if( $child.type.endsWith("onCommandReceived(HttpCommandEvent)") )
+	} else if (strcmp_P(command, PSTR("${child.properties.mapping}")) == 0) {
+#foreach( $invocation in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#set( $targetMethodNode = $NodeTemplateUtils.getNode($invocation.properties.target) )
+#set( $targetInstance = $NodeTemplateUtils.getParent($targetMethodNode.nodeUri).properties.name )
+#set( $targetMethod = $CommonsStringUtils.substringBefore($targetMethodNode.properties.name, '(') )
+#set( $targetMethodFull = $targetMethodNode.properties.name )
+#@indent()
+		#evaluate( ${NodeTemplateUtils.callMacroWithSuffix(${invocation.properties.template}, "", "")} )## we don't use directly, to have the special chars replaced
+#end
+#end
+#end
+#end
+	}
+
+	castedEvent->server->httpSuccess();
+	printStateAsJson(castedEvent->client);
+}
+#set( $instance = $node )
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#if( !$child.type.endsWith("onCommandReceived(HttpCommandEvent)") )
+#standardEvent_handler
+#end
+#end
+
+#end
+
+#####
+
+#macro( HttpServer_addListeners $node )
+httpServer.onCommandReceived = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_onCommandReceived);
+#set( $instance = $node )
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#if( !$child.type.endsWith("onCommandReceived(HttpCommandEvent)") )
+#standardEvent_addListener
+#end
+#end
+#end
+
+#####
+
+#macro( HttpServer_ui $node )
+#set( $ui = "#compressHtml()#parse('index.vm')#end" )
+	castedEvent->server->httpSuccess(HttpServer::CONTENT_TYPE_HTML);
+#foreach( $section in $TemplateUtils.split($ui) )
+castedEvent->client->print(F("$section"));
+#end
+return;
+#end
+
+################################
+## Events
+################################
+
+#macro ( onCommandReceived_HttpCommandEvent__handler )
+#standardEvent_handler( $node.properties.mapping )
+#end
+
+#####

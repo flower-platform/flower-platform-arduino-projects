@@ -3,7 +3,7 @@
 ################################
 
 #macro( instance_decl )
-${NodeTemplateUtils.stripDynamicPrefix(${node.type})}* ${node.properties.name};
+${NodeTemplateUtils.stripDynamicPrefix(${node.type})} ${node.properties.name};
 #end
 
 #macro( instance_init )
@@ -25,18 +25,14 @@ addComponent(${node.properties.name});
 #macro( instance_handlers $node )
 #set( $instance = $node )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
-#if( $child.type.toLowerCase().endsWith("event)") )
 #callMacroWithSuffix( $child "_handler" )
-#end
 #end
 #end
 
 #macro( instance_addListeners $node )
 #set( $instance = $node )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
-#if( $child.type.toLowerCase().endsWith("event)") )
 #callMacroWithSuffix( $child "_addListener" )
-#end
 #end
 #end
 
@@ -85,84 +81,5 @@ ${node.properties.name}->repeatCount = ${node.properties.repeatCount};
 #end
 
 #macro( Timer_addListeners $node )
-#instance_addListeners($node)
-#end
-
-################################
-## HttpServer
-################################
-
-#macro( HttpServer_decl $node )
-#instance_decl($node)
-#end
-
-#macro( HttpServer_init $node )
-#instance_create()
-#instance_addComponent()
-#end
-
-#macro( HttpServer_handlers $node )
-virtual void httpServer_getPage(Event* event) {
-	HttpCommandEvent* castedEvent = (HttpCommandEvent*) event;
-#set( $url = "" )
-#@indent()
-	#HttpServer_ui( $NodeTemplateUtils.navigateByType($root.nodeUri, ["ui"]) )
-#end
-}
-#instance_handlers($node)
-#end
-
-#macro( HttpServer_addListeners $node )
-httpServer->addUrlHandler("", new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_getPage));
-#instance_addListeners($node)
-#end
-
-#macro( HttpServer_ui $node )
-#set( $ui = "#compressHtml()#parse('index.vm')#end" )
-{
-	castedEvent->server->httpSuccess("text/html");
-#foreach( $section in $TemplateUtils.split($ui) )
-	castedEvent->client->print(F("$section"));
-#end
-}
-#end
-
-################################
-## UpdatesBuffer
-################################
-
-#macro( UpdatesBuffer_decl $node )
-#instance_decl($node)
-#end
-
-#macro( UpdatesBuffer_init $node )
-#instance_create(16)
-#end
-
-#macro( UpdatesBuffer_handlers $node )
-#instance_handlers($node)
-#end
-
-#macro( UpdatesBuffer_addListeners $node )
-#instance_addListeners($node)
-#end
-
-################################
-## Output
-################################
-
-#macro( Output_decl $node )
-#instance_decl()
-#end
-
-#macro( Output_init $node )
-#instance_create(${node.properties.pin})
-#end
-
-#macro( Output_handlers $node )
-#instance_handlers($node)
-#end
-
-#macro( Output_addListeners $node )
 #instance_addListeners($node)
 #end

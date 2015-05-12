@@ -74,6 +74,19 @@
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="propertyForLabel" VALUE="template"/>
 </node>
+<node TEXT="" POSITION="right" ID="ID_1158910033" CREATED="1431422297699" MODIFIED="1431422297699">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="category.contributesToState"/>
+<attribute NAME="propertyForLabel" VALUE="template"/>
+<node TEXT="" ID="ID_1159260952" CREATED="1431422371771" MODIFIED="1431422371771">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyType" VALUE="Boolean"/>
+<attribute NAME="name" VALUE="contributesToState"/>
+<attribute NAME="label" VALUE=""/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyDefaultValue" VALUE="true"/>
+</node>
+</node>
 <node TEXT="" POSITION="right" ID="ID_574154206" CREATED="1430405925082" MODIFIED="1430405925082">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="textColor" VALUE="#ffffff"/>
@@ -123,11 +136,58 @@
 <attribute NAME="childType" VALUE="Logger"/>
 <attribute NAME="type" VALUE="addChildDescriptor"/>
 </node>
+<node TEXT="" ID="ID_690891688" CREATED="1431424747032" MODIFIED="1431424747032">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="childType" VALUE="DHTSensor"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1667331062" CREATED="1429111771166" MODIFIED="1429111771166">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="root"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1091130042" CREATED="1431424335609" MODIFIED="1431424335609">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;p&gt;An analog or digital input, that corresponds to an input connected to the board.&lt;/p&gt;&lt;p class=&quot;text-danger&quot;&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for &lt;code&gt;Serial&lt;/code&gt; communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -&gt; 13 (for Arduino Uno) and 4, 10, 50 -&gt; 53 (for Arduino Mega). Etc.&lt;/p&gt;"/>
+<attribute NAME="name" VALUE="Input"/>
+<node TEXT="" ID="ID_142141738" CREATED="1431424335619" MODIFIED="1431424335619">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.instance"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_981526131" CREATED="1431424335619" MODIFIED="1431424335619">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.element"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1208299055" CREATED="1431424335619" MODIFIED="1431424335619">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.contributesToState"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_41222917" CREATED="1431424335619" MODIFIED="1431424335619">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. The pin of the input. When choosing pins, please see the remark above (about occupied pins). "/>
+<attribute NAME="name" VALUE="pin"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_1587824592" CREATED="1431424335619" MODIFIED="1431424335619">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;i&gt;Default = false&lt;/i&gt;. Please note that not all pins can be used as analog pins."/>
+<attribute NAME="propertyType" VALUE="Boolean"/>
+<attribute NAME="name" VALUE="isAnalog"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_1265255544" CREATED="1431424335619" MODIFIED="1431424335619">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="onValueChanged(ValueChangedEvent)"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_164463813" CREATED="1429197136197" MODIFIED="1429197136197">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -145,11 +205,22 @@
 <attribute NAME="name" VALUE="category.diagram.element"/>
 <attribute NAME="type" VALUE="containingCategory"/>
 </node>
+<node TEXT="" ID="ID_782870787" CREATED="1431422403590" MODIFIED="1431422403590">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.contributesToState"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
 <node TEXT="" ID="ID_1495924236" CREATED="1430852396398" MODIFIED="1430852396398">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="name" VALUE="pin"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_841019979" CREATED="1431424049350" MODIFIED="1431424049350">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="onValueChanged(ValueChangedEvent)"/>
 </node>
 <node TEXT="" ID="ID_1791844877" CREATED="1430852385091" MODIFIED="1430852385091">
 <attribute NAME="nodeType" VALUE="virtualChild"/>
@@ -169,46 +240,48 @@
 <attribute NAME="childType" VALUE="method"/>
 <attribute NAME="type" VALUE="virtualChild"/>
 </node>
-<node TEXT="" ID="ID_742497531" CREATED="1430852417486" MODIFIED="1430852417486">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
-<attribute NAME="childType" VALUE="VALUE_CHANGED_EVENT:ValueChangedEvent"/>
 </node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1091130042" CREATED="1429716105568" MODIFIED="1429716105568">
+<node TEXT="" POSITION="right" ID="ID_1019192354" CREATED="1431424332719" MODIFIED="1431424332719">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="Input"/>
-<attribute NAME="petaldoc" VALUE="&lt;p&gt;An analog or digital input, that corresponds to an input connected to the board.&lt;/p&gt;&lt;p class=&quot;text-danger&quot;&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for &lt;code&gt;Serial&lt;/code&gt; communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -&gt; 13 (for Arduino Uno) and 4, 10, 50 -&gt; 53 (for Arduino Mega). Etc.&lt;/p&gt;"/>
-<node TEXT="" ID="ID_142141738" CREATED="1429716105568" MODIFIED="1429716105568">
+<attribute NAME="name" VALUE="DHTSensor"/>
+<node TEXT="" ID="ID_1288001541" CREATED="1431424332729" MODIFIED="1431424332729">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.instance"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_41222917" CREATED="1429716105568" MODIFIED="1429716105568">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="name" VALUE="pin"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
-<attribute NAME="label" VALUE=""/>
-<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. The pin of the input. When choosing pins, please see the remark above (about occupied pins). "/>
-</node>
-<node TEXT="" ID="ID_981526131" CREATED="1429716105578" MODIFIED="1429716105578">
+<node TEXT="" ID="ID_1227334424" CREATED="1431424332729" MODIFIED="1431424332729">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="name" VALUE="category.diagram.element"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_1265255544" CREATED="1429716105578" MODIFIED="1429716105578">
+<node TEXT="" ID="ID_590935206" CREATED="1431424352875" MODIFIED="1431424352875">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.contributesToState"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_182584912" CREATED="1431424332729" MODIFIED="1431424332729">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="pin"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_368217844" CREATED="1431426678670" MODIFIED="1431426678670">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="pollInterval"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_780437875" CREATED="1431424332729" MODIFIED="1431424332729">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
-<attribute NAME="childType" VALUE="onValueChanged(ValueChangedEvent)"/>
+<attribute NAME="childType" VALUE="onTemperatureChanged(ValueChangedEvent)"/>
 </node>
-<node TEXT="" ID="ID_1587824592" CREATED="1429716203105" MODIFIED="1429716203105">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="propertyType" VALUE="Boolean"/>
-<attribute NAME="name" VALUE="isAnalog"/>
-<attribute NAME="label" VALUE=""/>
-<attribute NAME="type" VALUE="propertyDescriptor"/>
-<attribute NAME="petaldoc" VALUE="&lt;i&gt;Default = false&lt;/i&gt;. Please note that not all pins can be used as analog pins."/>
+<node TEXT="" ID="ID_1024251279" CREATED="1431424332739" MODIFIED="1431424332739">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="onHumidityChanged(HumidityChangedEvent)"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1247090144" CREATED="1430406047446" MODIFIED="1430406047446">
@@ -231,35 +304,35 @@
 <attribute NAME="name" VALUE="category.diagram.element"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_1698015878" CREATED="1430406047448" MODIFIED="1430406047448">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
-<attribute NAME="childType" VALUE="TIMER_EVENT:TimerEvent"/>
-</node>
-<node TEXT="" ID="ID_647753254" CREATED="1430406047449" MODIFIED="1430406047449">
+<node TEXT="" ID="ID_647753254" CREATED="1431424030836" MODIFIED="1431424030836">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="propertyType" VALUE="String"/>
 <attribute NAME="name" VALUE="repeatCount"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
 </node>
-<node TEXT="" ID="ID_964936523" CREATED="1430406047449" MODIFIED="1430406047449">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
-<attribute NAME="childType" VALUE="TIMER_COMPLETE_EVENT:TimerEvent"/>
-</node>
-<node TEXT="" ID="ID_47780142" CREATED="1430406047450" MODIFIED="1430406047450">
-<attribute NAME="nodeType" VALUE="virtualChild"/>
-<attribute NAME="name" VALUE="start()"/>
-<attribute NAME="childType" VALUE="method"/>
-</node>
-<node TEXT="" ID="ID_579669218" CREATED="1430406047450" MODIFIED="1430406047450">
+<node TEXT="" ID="ID_579669218" CREATED="1431424034147" MODIFIED="1431424034147">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="propertyType" VALUE="Boolean"/>
 <attribute NAME="name" VALUE="autostart"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
 <attribute NAME="propertyDefaultValue" VALUE="false"/>
+</node>
+<node TEXT="" ID="ID_1698015878" CREATED="1430406047448" MODIFIED="1430406047448">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="onTimer(TimerEvent)"/>
+</node>
+<node TEXT="" ID="ID_964936523" CREATED="1431424024674" MODIFIED="1431424024674">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="onTimerComplete(TimerEvent)"/>
+</node>
+<node TEXT="" ID="ID_47780142" CREATED="1430406047450" MODIFIED="1430406047450">
+<attribute NAME="nodeType" VALUE="virtualChild"/>
+<attribute NAME="name" VALUE="start()"/>
+<attribute NAME="childType" VALUE="method"/>
 </node>
 <node TEXT="" ID="ID_1047181794" CREATED="1430406047451" MODIFIED="1430406047451">
 <attribute NAME="nodeType" VALUE="virtualChild"/>
@@ -272,31 +345,6 @@
 <attribute NAME="childType" VALUE="method"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_359008373" CREATED="1430406231324" MODIFIED="1430406231324">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="UpdatesBuffer"/>
-<node TEXT="" ID="ID_311127305" CREATED="1430406231324" MODIFIED="1430406231324">
-<attribute NAME="nodeType" VALUE="containingCategory"/>
-<attribute NAME="name" VALUE="category.instance"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
-</node>
-<node TEXT="" ID="ID_411938" CREATED="1430406231325" MODIFIED="1430406231325">
-<attribute NAME="nodeType" VALUE="containingCategory"/>
-<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="name" VALUE="category.diagram.element"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
-</node>
-<node TEXT="" ID="ID_442862764" CREATED="1430406231326" MODIFIED="1430406231326">
-<attribute NAME="nodeType" VALUE="virtualChild"/>
-<attribute NAME="name" VALUE="updateEntry(key, value)"/>
-<attribute NAME="childType" VALUE="method"/>
-</node>
-<node TEXT="" ID="ID_730966000" CREATED="1430406231327" MODIFIED="1430406231327">
-<attribute NAME="nodeType" VALUE="virtualChild"/>
-<attribute NAME="name" VALUE="getEntriesAsJson()"/>
-<attribute NAME="childType" VALUE="method"/>
-</node>
-</node>
 <node TEXT="" POSITION="right" ID="ID_31552654" CREATED="1430406210574" MODIFIED="1430406210574">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="HttpServer"/>
@@ -305,29 +353,29 @@
 <attribute NAME="name" VALUE="category.instance"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_793521639" CREATED="1430406210575" MODIFIED="1430406210575">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="name" VALUE="ipAddress"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
-<attribute NAME="label" VALUE=""/>
-</node>
-<node TEXT="" ID="ID_1879585900" CREATED="1430406210575" MODIFIED="1430406210575">
+<node TEXT="" ID="ID_1879585900" CREATED="1431417646856" MODIFIED="1431417646856">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="name" VALUE="category.diagram.element"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_957071484" CREATED="1430406210575" MODIFIED="1430406210575">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
-<attribute NAME="childType" VALUE="HttpCommandEvent"/>
+<node TEXT="" ID="ID_793521639" CREATED="1431417649657" MODIFIED="1431417649657">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="ipAddress"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
 </node>
-<node TEXT="" ID="ID_1357205942" CREATED="1430406210576" MODIFIED="1430406210576">
+<node TEXT="" ID="ID_1357205942" CREATED="1431417643125" MODIFIED="1431417643125">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="propertyType" VALUE="String"/>
 <attribute NAME="name" VALUE="port"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_957071484" CREATED="1430406210575" MODIFIED="1430406210575">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="onCommandReceived(HttpCommandEvent)"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_157529028" CREATED="1430406027900" MODIFIED="1430406027900">
@@ -344,11 +392,6 @@
 <attribute NAME="name" VALUE="category.diagram.element"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_248257075" CREATED="1430406027901" MODIFIED="1430406027901">
-<attribute NAME="nodeType" VALUE="virtualChild"/>
-<attribute NAME="name" VALUE="log(value)"/>
-<attribute NAME="childType" VALUE="method"/>
-</node>
 <node TEXT="" ID="ID_1392696809" CREATED="1430406027902" MODIFIED="1430406027902">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="name" VALUE="chipSelectPin"/>
@@ -360,6 +403,11 @@
 <attribute NAME="name" VALUE="fileName"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_248257075" CREATED="1431424066735" MODIFIED="1431424066735">
+<attribute NAME="nodeType" VALUE="virtualChild"/>
+<attribute NAME="name" VALUE="log(value)"/>
+<attribute NAME="childType" VALUE="method"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_528003254" CREATED="1431010889991" MODIFIED="1431010889991">
@@ -378,15 +426,50 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1187697734" CREATED="1429716263773" MODIFIED="1429716263773">
+<node TEXT="" POSITION="right" ID="ID_1830975491" CREATED="1431424889003" MODIFIED="1431424889003">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="VALUE_CHANGED_EVENT:ValueChangedEvent"/>
-<node TEXT="" ID="ID_647073031" CREATED="1429716263773" MODIFIED="1429716263773">
+<attribute NAME="name" VALUE="onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_1698110713" CREATED="1431424889003" MODIFIED="1431424889003">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.event"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_1026258762" CREATED="1429716263773" MODIFIED="1429716263773">
+<node TEXT="" ID="ID_1538404011" CREATED="1431424889003" MODIFIED="1431424889003">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.subElement"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_775756424" CREATED="1431424889003" MODIFIED="1431424889003">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="mapping"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1534616266" CREATED="1431424882179" MODIFIED="1431424882179">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="onTimer(TimerEvent)"/>
+<node TEXT="" ID="ID_1806566869" CREATED="1431424882179" MODIFIED="1431424882179">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.event"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1478682240" CREATED="1431424882179" MODIFIED="1431424882179">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.subElement"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1703602871" CREATED="1431424883841" MODIFIED="1431424883841">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="onTimerComplete(TimerEvent)"/>
+<node TEXT="" ID="ID_803850194" CREATED="1431424883841" MODIFIED="1431424883841">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.event"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1371610777" CREATED="1431424883841" MODIFIED="1431424883841">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="name" VALUE="category.diagram.subElement"/>
@@ -425,56 +508,6 @@
 <attribute NAME="name" VALUE="invocationTargetSignature., plainInvocation:genericDescriptor"/>
 <attribute NAME="value" VALUE="plainInvocation"/>
 <attribute NAME="extraInfo.description" VALUE="Invokes the function, without any argument."/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1534616266" CREATED="1430142609431" MODIFIED="1430142609431">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="TIMER_EVENT:TimerEvent"/>
-<node TEXT="" ID="ID_1806566869" CREATED="1430142609431" MODIFIED="1430142609431">
-<attribute NAME="nodeType" VALUE="containingCategory"/>
-<attribute NAME="name" VALUE="category.event"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
-</node>
-<node TEXT="" ID="ID_1478682240" CREATED="1430142609431" MODIFIED="1430142609431">
-<attribute NAME="nodeType" VALUE="containingCategory"/>
-<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="name" VALUE="category.diagram.subElement"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1703602871" CREATED="1430142610282" MODIFIED="1430142610282">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="TIMER_COMPLETE_EVENT:TimerEvent"/>
-<node TEXT="" ID="ID_803850194" CREATED="1430142610282" MODIFIED="1430142610282">
-<attribute NAME="nodeType" VALUE="containingCategory"/>
-<attribute NAME="name" VALUE="category.event"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
-</node>
-<node TEXT="" ID="ID_1371610777" CREATED="1430142610282" MODIFIED="1430142610282">
-<attribute NAME="nodeType" VALUE="containingCategory"/>
-<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="name" VALUE="category.diagram.subElement"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1830975491" CREATED="1430148834834" MODIFIED="1430148834834">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="HttpCommandEvent"/>
-<node TEXT="" ID="ID_1698110713" CREATED="1430148834835" MODIFIED="1430148834835">
-<attribute NAME="nodeType" VALUE="containingCategory"/>
-<attribute NAME="name" VALUE="category.event"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
-</node>
-<node TEXT="" ID="ID_1538404011" CREATED="1430148834836" MODIFIED="1430148834836">
-<attribute NAME="nodeType" VALUE="containingCategory"/>
-<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="name" VALUE="category.diagram.subElement"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
-</node>
-<node TEXT="" ID="ID_775756424" CREATED="1430149251928" MODIFIED="1430149251928">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="name" VALUE="mapping"/>
-<attribute NAME="type" VALUE="propertyDescriptor"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1379519850" CREATED="1430149787669" MODIFIED="1430149787669">

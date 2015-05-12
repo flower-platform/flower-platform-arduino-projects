@@ -6,20 +6,13 @@
 #set( $instanceName = "${instance.properties.name}" )
 #set( $instanceType = "${NodeTemplateUtils.stripDynamicPrefix(${instance.type})}" )
 #set( $simpleType = "${NodeTemplateUtils.stripDynamicPrefix(\${node.type})}" )
-#if ( ${simpleType.indexOf(":")} >= 0 )## i.e. MY_EVENT:MyEvent
-#set( $eventType = "${CommonsStringUtils.substringAfter(${simpleType}, ':')}" )
-#set( $eventConstant = "${CommonsStringUtils.substringBefore(${simpleType}, ':')}" )
-#else
-#set( $eventType = $simpleType )
-#end
+#set( $eventType = "${CommonsStringUtils.substringBetween(${simpleType}, '(', ')')}" )
+#set( $eventName = "${CommonsStringUtils.substringBefore(${simpleType}, '(')}" )
 #end
 
-#macro ( standardEvent_handler $methodSuffix)
+#macro ( standardEvent_handler)
 #standardEvent_common()
-#if( !$methodSuffix )
-#set( $methodSuffix = $eventConstant )
-#end
-virtual void ${instanceName}_${methodSuffix}(Event* event) {
+virtual void ${instanceName}_${eventName}(Event* event) {
 	$eventType* castedEvent = ($eventType*) event;
 #foreach( $invocation in $NodeTemplateUtils.getChildren($node.nodeUri) )
 #set( $targetMethodNode = $NodeTemplateUtils.getNode($invocation.properties.target) )
@@ -35,20 +28,19 @@ virtual void ${instanceName}_${methodSuffix}(Event* event) {
 
 #macro ( standardEvent_addListener )
 #standardEvent_common()
-${instanceName}->addEventListener(${instanceType}::${eventConstant}, new DelegatingListener<ApplicationGen>(this, &ApplicationGen::${instanceName}_${eventConstant}));
+${instanceName}.${eventName} = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::${instanceName}_${eventName});
 #end
 
 ################################
 ## evenimente pr-zise/delegare; 
 ################################
 
-#macro ( HttpCommandEvent_handler )
-#standardEvent_handler( $node.properties.mapping )
+#macro ( onValueChanged_ValueChangedEvent__handler )
+#standardEvent_handler( false )
 #end
 
-#macro ( HttpCommandEvent_addListener )
-#standardEvent_common()
-${instanceName}->addUrlHandler("$node.properties.mapping", new DelegatingListener<ApplicationGen>(this, &ApplicationGen::${instanceName}_$node.properties.mapping));
+#macro ( onValueChanged_ValueChangedEvent__addListener )
+#standardEvent_addListener()
 #end
 
 #macro ( TIMER_EVENT_TimerEvent_handler )

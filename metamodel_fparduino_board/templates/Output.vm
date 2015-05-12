@@ -1,24 +1,20 @@
 ################################
-## Input
+## Output
 ################################
 
-#macro( Input_decl $node )
+#macro( Output_decl $node )
 #instance_decl()
 #end
 
-#macro( Input_init $node )
+#macro( Output_init $node )
 ${node.properties.name}.pin = ${node.properties.pin};
 ${node.properties.name}.setup();
 #end
 
-#macro( Input_handlers $node )
+#macro( Output_handlers $node )
 #instance_handlers($node)
 #end
 
-#macro( Input_addListeners $node )
+#macro( Output_addListeners $node )
 #instance_addListeners($node)
-#end
-
-#macro( Input_loop $node )
-${node.properties.name}.loop();
 #end

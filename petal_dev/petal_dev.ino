@@ -26,7 +26,7 @@ protected:
 	Timer timer;
 	LoggerSD<int> logger;
 
-	virtual void doorSwitch_ValueChanged_Handler(Event* event) {
+	virtual void doorSwitch_onValueChanged(Event* event) {
 		ValueChangedEvent* valueChangedEvent = (ValueChangedEvent*) event;
 
 		if (valueChangedEvent->currentValue == LOW) {
@@ -34,7 +34,7 @@ protected:
 		}
 	}
 
-	virtual void lightSwitch_ValueChanged_Handler(Event* event) {
+	virtual void lightSwitch_onValueChanged(Event* event) {
 		ValueChangedEvent* valueChangedEvent = (ValueChangedEvent*) event;
 
 		if (valueChangedEvent->currentValue == LOW) {
@@ -44,24 +44,24 @@ protected:
 		}
 	}
 
-	void dhtSensor_TemperatureChanged_Handler(Event* event) {
+	void dhtSensor_onTemperatureChanged(Event* event) {
 		ValueChangedEvent* valueChangedEvent = (ValueChangedEvent*) event;
 //		Serial.print("Temperature changed from "); Serial.print(valueChangedEvent->previousValue); Serial.print(" to "); Serial.println(valueChangedEvent->currentValue);
 //		updatesBuffer->updateEntry("dhtSensor_temperature", valueChangedEvent->currentValue);
 		logger.log(valueChangedEvent->currentValue);
 	}
 
-	void myInput_ValueChanged_Handler(Event* event) {
+	void myInput_onValueChanged(Event* event) {
 		doorRelay.setHigh();
 	}
 
-	void httpServer_commandReceived_Handler(Event* event) {
+	void httpServer_onCommandReceived(Event* event) {
 		HttpCommandEvent* httpCommandEvent = (HttpCommandEvent*) event;
 
 		char command[32];
 		httpCommandEvent->server->getCommandFromUrl(httpCommandEvent->url, command);
 
-		if (strcmp_P(command, PSTR("getUpdates")) == 0) {
+		if (strcmp_P(command, PSTR("getState")) == 0) {
 			httpCommandEvent->server->httpSuccess();
 			printStateAsJson(httpCommandEvent->client);
 		} else if (strcmp_P(command, PSTR("lightSwitchToggle")) == 0) {
@@ -137,13 +137,13 @@ public:
 		logger.timeInterval = 3 * 1000;
 		logger.setup();
 
-		doorSwitch.valueChangedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::doorSwitch_ValueChanged_Handler);
+		doorSwitch.onValueChanged = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::doorSwitch_onValueChanged);
 
-		lightSwitch.valueChangedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::lightSwitch_ValueChanged_Handler);
+		lightSwitch.onValueChanged = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::lightSwitch_onValueChanged);
 
-		httpServer.commandReceivedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_commandReceived_Handler);
+		dhtSensor.onTemperatureChanged = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::dhtSensor_onTemperatureChanged);
 
-		dhtSensor.temperatureChangedListener = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::dhtSensor_TemperatureChanged_Handler);
+		httpServer.onCommandReceived = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_onCommandReceived);
 
 	}
 
@@ -169,8 +169,8 @@ public:
 
 protected:
 
-	virtual void doorSwitch_ValueChanged_Handler(ValueChangedEvent* event) {
-		ApplicationGen::doorSwitch_ValueChanged_Handler(event);
+	virtual void doorSwitch_onValueChanged(Event* event) {
+		ApplicationGen::doorSwitch_onValueChanged(event);
 //		Serial.println("event fired2");
 	}
 
