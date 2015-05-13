@@ -9,6 +9,10 @@
 #####
 
 #macro( HttpServer_init $node )
+uint8_t macAddress[] = { 0x${node.properties.macAddress.replaceAll(":", ", 0x")} };
+uint8_t ipAddress[] = { ${node.properties.ipAddress.replaceAll("\.", ", ")} };
+memcpy(${node.properties.name}.macAddress, macAddress, 6);
+memcpy(${node.properties.name}.ipAddress, ipAddress, 4);
 ${node.properties.name}.port = ${node.properties.port};
 ${node.properties.name}.setup();
 #end
@@ -67,7 +71,7 @@ virtual void httpServer_onCommandReceived(Event* event) {
 #####
 
 #macro( HttpServer_addListeners $node )
-httpServer.onCommandReceived = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_onCommandReceived);
+${node.properties.name}.onCommandReceived = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_onCommandReceived);
 #set( $instance = $node )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
 #if( !$child.type.endsWith("onCommandReceived(HttpCommandEvent)") )

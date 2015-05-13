@@ -129,7 +129,7 @@ public:
 
 		timer.delay = 1500;
 		timer.repeatCount = 5;
-		timer.autostart = true;
+		timer.autoStart = true;
 		timer.setup();
 
 		logger.slaveSelectPin = 4;

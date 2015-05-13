@@ -43,29 +43,6 @@ ${instanceName}.${eventName} = new DelegatingListener<ApplicationGen>(this, &App
 #standardEvent_addListener()
 #end
 
-#macro ( TIMER_EVENT_TimerEvent_handler )
-#standardEvent_handler( false )
-#end
-
-#macro ( TIMER_EVENT_TimerEvent_addListener )
-#standardEvent_addListener( false )
-#end
-
-#macro ( TIMER_COMPLETE_EVENT_TimerEvent_handler )
-#standardEvent_handler( false )
-#end
-
-#macro ( TIMER_COMPLETE_EVENT_TimerEvent_addListener )
-#standardEvent_addListener( false )
-#end
-
-#macro ( VALUE_CHANGED_EVENT_ValueChangedEvent_handler )
-#standardEvent_handler( false )
-#end
-
-#macro ( VALUE_CHANGED_EVENT_ValueChangedEvent_addListener )
-#standardEvent_addListener()
-#end
 ################################
 ## initial/mariana
 ################################

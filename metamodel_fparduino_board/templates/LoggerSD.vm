@@ -1,0 +1,21 @@
+################################
+## LoggerSD
+################################
+
+#macro( LoggerSD_decl $node )
+LoggerSD<${node.properties.valueType}> ${node.properties.name};
+#end
+
+#macro( LoggerSD_init $node )
+${node.properties.name}.slaveSelectPin = ${node.properties.slaveSelectPin};
+${node.properties.name}.timeInterval = ${node.properties.timeInterval};
+${node.properties.name}.setup();
+#end
+
+#macro( LoggerSD_handlers $node )
+#instance_handlers($node)
+#end
+
+#macro( LoggerSD_addListeners $node )
+#instance_addListeners($node)
+#end

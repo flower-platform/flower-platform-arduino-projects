@@ -59,8 +59,8 @@
 <attribute NAME="name" VALUE="input2"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Input"/>
 <attribute NAME="isAnalog" VALUE="false" OBJECT="java.lang.Boolean|false"/>
-<attribute NAME="y" VALUE="55" OBJECT="java.lang.Integer|55"/>
-<attribute NAME="x" VALUE="96" OBJECT="java.lang.Integer|96"/>
+<attribute NAME="y" VALUE="41" OBJECT="java.lang.Integer|41"/>
+<attribute NAME="x" VALUE="95" OBJECT="java.lang.Integer|95"/>
 <attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <node TEXT="" ID="ID_1927790755" CREATED="1431010942685" MODIFIED="1431010942685">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onValueChanged(ValueChangedEvent)"/>
@@ -87,9 +87,10 @@
 <attribute NAME="port" VALUE="80"/>
 <attribute NAME="name" VALUE="httpServer"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__HttpServer"/>
-<attribute NAME="y" VALUE="232" OBJECT="java.lang.Integer|232"/>
+<attribute NAME="y" VALUE="41" OBJECT="java.lang.Integer|41"/>
 <attribute NAME="ipAddress" VALUE="192.168.100.253"/>
-<attribute NAME="x" VALUE="114" OBJECT="java.lang.Integer|114"/>
+<attribute NAME="x" VALUE="755" OBJECT="java.lang.Integer|755"/>
+<attribute NAME="macAddress" VALUE="DE:AD:BE:EF:FE:ED"/>
 <node TEXT="" ID="ID_89132691" CREATED="1431418539538" MODIFIED="1431418539538">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
 <attribute NAME="mapping" VALUE="toggleLight"/>
@@ -107,9 +108,59 @@
 <attribute NAME="pin" VALUE="A0"/>
 <attribute NAME="name" VALUE="dhtSensor"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__DHTSensor"/>
-<attribute NAME="y" VALUE="249" OBJECT="java.lang.Integer|249"/>
-<attribute NAME="x" VALUE="490" OBJECT="java.lang.Integer|490"/>
+<attribute NAME="y" VALUE="558" OBJECT="java.lang.Integer|558"/>
+<attribute NAME="x" VALUE="76" OBJECT="java.lang.Integer|76"/>
 <attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<node TEXT="" ID="ID_136305828" CREATED="1431512362237" MODIFIED="1431512362237">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onTemperatureChanged(ValueChangedEvent)"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onTemperatureChanged(ValueChangedEvent)"/>
+<node TEXT="" ID="ID_735369298" CREATED="1431514333734" MODIFIED="1431514333734">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation_ConstantKey"/>
+<attribute NAME="template" VALUE="ValueChangedEvent_value_transferValue"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/sample01|dynamic_fparduino__method@log(value)_parentNodeUri=fpp:flower-platform-arduino-projects/sample01|sample01.fparduino#ID_1912475797"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation_ConstantKey"/>
+</node>
+</node>
+</node>
+<node TEXT="" ID="ID_1509552486" CREATED="1431509144868" MODIFIED="1431509144868">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Output"/>
+<attribute NAME="pin" VALUE="8"/>
+<attribute NAME="name" VALUE="blueLed"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Output"/>
+<attribute NAME="y" VALUE="354" OBJECT="java.lang.Integer|354"/>
+<attribute NAME="x" VALUE="523" OBJECT="java.lang.Integer|523"/>
+</node>
+<node TEXT="" ID="ID_1131641971" CREATED="1431509180186" MODIFIED="1431509180186">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Timer"/>
+<attribute NAME="name" VALUE="blueLedTimer"/>
+<attribute NAME="repeatCount" VALUE="0"/>
+<attribute NAME="delay" VALUE="500"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Timer"/>
+<attribute NAME="y" VALUE="354" OBJECT="java.lang.Integer|354"/>
+<attribute NAME="autostart" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="x" VALUE="165" OBJECT="java.lang.Integer|165"/>
+<node TEXT="" ID="ID_893549011" CREATED="1431509191015" MODIFIED="1431509191015">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onTimer(TimerEvent)"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onTimer(TimerEvent)"/>
+<node TEXT="" ID="ID_1620990697" CREATED="1431509200281" MODIFIED="1431509200281">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/sample01|dynamic_fparduino__method@toggleHighLow()_parentNodeUri=fpp:flower-platform-arduino-projects/sample01|sample01.fparduino#ID_1509552486"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+</node>
+<node TEXT="" ID="ID_1912475797" CREATED="1431514323163" MODIFIED="1431514323163">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__LoggerSD"/>
+<attribute NAME="chipSelectPin" VALUE="4"/>
+<attribute NAME="name" VALUE="loggerTemperature"/>
+<attribute NAME="fileName" VALUE="temp.txt"/>
+<attribute NAME="valueType" VALUE="int"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__LoggerSD"/>
+<attribute NAME="y" VALUE="558" OBJECT="java.lang.Integer|558"/>
+<attribute NAME="x" VALUE="554" OBJECT="java.lang.Integer|554"/>
+<attribute NAME="slaveSelectPin" VALUE="4"/>
+<attribute NAME="timeInterval" VALUE="3000"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_733754221" CREATED="1429201407631" MODIFIED="1429201407631">
@@ -181,6 +232,12 @@
 <attribute NAME="type" VALUE="dynamic_fparduino__Button"/>
 <attribute NAME="onclick" VALUE="invoke(&apos;toggleLight&apos;)"/>
 <attribute NAME="glyphicon" VALUE="flash"/>
+</node>
+<node TEXT="" ID="ID_1925960635" CREATED="1431515092324" MODIFIED="1431515092324">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="text" VALUE="{{FREE_MEM}}"/>
+<attribute NAME="suffix" VALUE="bytes free RAM"/>
+<attribute NAME="id" VALUE="freeRam"/>
 </node>
 </node>
 </node>
