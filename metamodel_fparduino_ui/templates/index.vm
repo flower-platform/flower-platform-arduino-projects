@@ -32,6 +32,8 @@ var url = "$url";
 #end
 #end
 
-</div>
+	<div class="row"><div class="lead col-md-12"><span class="label label-default"><span class="glyphicon glyphicon-dashboard"></span> Free memory (SRAM): <span id="FREE_MEM"></span> bytes</label></div>
+	<script>addTextListener("FREE_MEM", "FREE_MEM")</script>
 
+</div>
 </body>
