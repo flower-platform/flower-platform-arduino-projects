@@ -141,6 +141,12 @@
 <attribute NAME="childType" VALUE="DHTSensor"/>
 <attribute NAME="type" VALUE="addChildDescriptor"/>
 </node>
+<node TEXT="" ID="ID_146304146" CREATED="1431680995795" MODIFIED="1431680995795">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="value" VALUE="dependentLibrary.fp-arduino-runtime"/>
+<attribute NAME="type" VALUE="genericDescriptor"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1667331062" CREATED="1429111771166" MODIFIED="1429111771166">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -283,6 +289,12 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
 <attribute NAME="childType" VALUE="onHumidityChanged(HumidityChangedEvent)"/>
 </node>
+<node TEXT="" ID="ID_1236409877" CREATED="1431674854128" MODIFIED="1431674854128">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="value" VALUE="dependentLibrary.DHT"/>
+<attribute NAME="type" VALUE="genericDescriptor"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1247090144" CREATED="1430406047446" MODIFIED="1430406047446">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -343,6 +355,12 @@
 <attribute NAME="nodeType" VALUE="virtualChild"/>
 <attribute NAME="name" VALUE="reset()"/>
 <attribute NAME="childType" VALUE="method"/>
+</node>
+<node TEXT="" ID="ID_814222365" CREATED="1431701004213" MODIFIED="1431701004213">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="value" VALUE="dependentLibrary.Timer"/>
+<attribute NAME="type" VALUE="genericDescriptor"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_31552654" CREATED="1430406210574" MODIFIED="1430406210574">
@@ -548,6 +566,58 @@
 <attribute NAME="name" VALUE="category.invocation"/>
 <attribute NAME="type" VALUE="containingCategory"/>
 </node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1132425227" CREATED="1431674569415" MODIFIED="1431674569415">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.DHT"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<node TEXT="" ID="ID_141955360" CREATED="1431674741460" MODIFIED="1431674741460">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="value" VALUE="DHT.h,DHTSensor.h"/>
+<attribute NAME="type" VALUE="genericDescriptor"/>
+<attribute NAME="extraInfo.description" VALUE="DHT library"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
+<attribute NAME="extraInfo.name" VALUE="DHT"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_964092602" CREATED="1431701028079" MODIFIED="1431701028079">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Timer"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<node TEXT="" ID="ID_1899509768" CREATED="1431701044296" MODIFIED="1431701044296">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="value" VALUE="Timer.h"/>
+<attribute NAME="type" VALUE="genericDescriptor"/>
+<attribute NAME="extraInfo.name" VALUE="Timer"/>
+<attribute NAME="extraInfo.description" VALUE="Timer bla bla"/>
+<attribute NAME="extraInfo.url" VALUE="http://google.com"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1341004428" CREATED="1431681034044" MODIFIED="1431681034044">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.fp-arduino-runtime"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<node TEXT="" ID="ID_671482101" CREATED="1431681110826" MODIFIED="1431681110826">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="value" VALUE="FlowerPlatformArduinoRuntime.h"/>
+<attribute NAME="type" VALUE="genericDescriptor"/>
+<attribute NAME="extraInfo.name" VALUE="Flower Platform Arduino Runtime"/>
+<attribute NAME="extraInfo.description" VALUE="FP Arduino does this and that"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1324326737" CREATED="1431695354609" MODIFIED="1431695354609">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="metadata"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1225897255" CREATED="1431695608311" MODIFIED="1431695608311">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 </node>
 </node>
 </map>
