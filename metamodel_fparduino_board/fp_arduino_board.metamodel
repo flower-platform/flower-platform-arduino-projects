@@ -56,7 +56,7 @@
 <attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_PETALDOC"/>
 <node TEXT="" POSITION="right" ID="ID_641264834" CREATED="1428508245715" MODIFIED="1428508245715">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="backgroundColor" VALUE="#cccdfc"/>
+<attribute NAME="backgroundColor" VALUE="#CFD5FA"/>
 <attribute NAME="name" VALUE="category.instance"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="propertyForLabel" VALUE="name;EXTRA_INFO_ENTRIES:(valueConverter=addTypeSuffix)"/>
@@ -649,7 +649,7 @@
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="value" VALUE="DHT.h,DHTSensor.h"/>
 <attribute NAME="type" VALUE="genericDescriptor"/>
-<attribute NAME="extraInfo.description" VALUE="DHT library"/>
+<attribute NAME="extraInfo.description" VALUE="The GitHub repository contains several libs. Copy/paste the &quot;DHTLib&quot; folder"/>
 <attribute NAME="extraInfo.url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
 <attribute NAME="extraInfo.name" VALUE="DHT"/>
 </node>
