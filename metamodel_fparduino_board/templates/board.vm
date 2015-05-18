@@ -49,8 +49,8 @@ public:
 		print->print(F("\"FREE_MEM\": "));
 		print->print(freeRam());
 		print->print(F("}"));
-	}	
-	
+	}
+
 };
 
 #end

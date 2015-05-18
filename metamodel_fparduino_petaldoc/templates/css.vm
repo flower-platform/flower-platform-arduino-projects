@@ -4,7 +4,11 @@
 
 h4, .h4, h5, .h5 {
 	margin-top: 3px;
-	margin-bottom: 3px;
+	margin-bottom: 6px;
+}
+
+h4 .label {
+	padding: 0.05em 0.4em 0.2em
 }
 
 h6, .h6 {

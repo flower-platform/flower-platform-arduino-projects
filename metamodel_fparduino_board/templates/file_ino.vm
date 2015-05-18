@@ -3,6 +3,7 @@
 
 \#include <Ethernet.h>
 \#include <SPI.h>
+\#include <SD.h>
 
 \#include <FlowerPlatformArduinoRuntime.h>
 \#include <DHTSensor.h>
@@ -12,7 +13,7 @@
 
 \#include <Input.h>
 \#include <Timer.h>
-//\#include <Logger.h>
+\#include <LoggerSD.h>
 
 #foreach( $import in $imports )
 \#include <$import>

@@ -1,0 +1,51 @@
+################################
+## Timer
+################################
+
+#macro( Timer_decl $node )
+#instance_decl($node)
+#end
+
+#macro( Timer_init $node )
+#if( ${node.properties.autostart} )## if false, this seems to return ""
+#set( $autoStart = "true" )
+#else
+#set( $autoStart = "false" )
+#end
+${node.properties.name}.delay = ${node.properties.delay};
+${node.properties.name}.repeatCount = ${node.properties.repeatCount};
+${node.properties.name}.autoStart = ${autoStart};
+${node.properties.name}.setup();
+#end
+
+#macro( Timer_handlers $node )
+#instance_handlers($node)
+#end
+
+#macro( Timer_addListeners $node )
+#instance_addListeners($node)
+#end
+
+#macro( Timer_loop $node )
+${node.properties.name}.loop();
+#end
+
+################################
+## Events
+################################
+
+#macro ( onTimer_TimerEvent__handler )
+#standardEvent_handler( false )
+#end
+
+#macro ( onTimer_TimerEvent__addListener )
+#standardEvent_addListener( false )
+#end
+
+#macro ( onTimerComplete_TimerEvent__handler )
+#standardEvent_handler( false )
+#end
+
+#macro ( onTimerComplete_TimerEvent__addListener )
+#standardEvent_addListener( false )
+#end

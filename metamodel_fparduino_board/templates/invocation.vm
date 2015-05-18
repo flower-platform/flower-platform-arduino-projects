@@ -6,6 +6,13 @@
 }
 #end
 
+#macro( ValueChangedEvent_value_transferValue )
+{
+	int value = castedEvent->currentValue;
+	${targetInstance}.${targetMethodFull};
+}
+#end
+
 #macro( HttpCommandEvent__invokeAndReturnResult )
 {
 	castedEvent->server->httpSuccess("application/json");

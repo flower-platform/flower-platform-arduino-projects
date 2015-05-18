@@ -25,3 +25,24 @@ ${node.properties.name}.setup();
 #macro( DHTSensor_loop $node )
 ${node.properties.name}.loop();
 #end
+
+################################
+## Events
+################################
+
+#macro ( onTemperatureChanged_ValueChangedEvent__handler )
+#standardEvent_handler
+#end
+
+#macro ( onTemperatureChanged_ValueChangedEvent__addListener )
+#standardEvent_addListener
+#end
+
+#macro ( onHumidityChanged_ValueChangedEvent__handler )
+#standardEvent_handler
+#end
+
+#macro ( onHumidityChanged_ValueChangedEvent__addListener )
+#standardEvent_addListener
+#end
+
