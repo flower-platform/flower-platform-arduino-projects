@@ -1,20 +1,5 @@
+#macro( metadata $node )#end
 #set( $root = $node )
-\#include <dht.h>
-
-\#include <Ethernet.h>
-\#include <SPI.h>
-\#include <SD.h>
-
-\#include <FlowerPlatformArduinoRuntime.h>
-\#include <DHTSensor.h>
-\#include <Output.h>
-\#include <UpdatesBuffer.h>
-\#include <HttpServer.h>
-
-\#include <Input.h>
-\#include <Timer.h>
-\#include <LoggerSD.h>
-
 #foreach( $import in $imports )
 \#include <$import>
 #end

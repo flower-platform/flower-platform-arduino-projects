@@ -3,9 +3,9 @@
 #end
 
 #macro( printClass $elt )
-#if( "$!elt.properties.class" != "" ) class="$elt.properties.class"#end
+#if( "$!elt.properties.cssClass" != "" ) class="$elt.properties.cssClass"#end
 #end
 
 #macro( printClassNoAttr $elt )
-#if( "$!elt.properties.class" != "" ) $elt.properties.class#end
+#if( "$!elt.properties.cssClass" != "" ) $elt.properties.cssClass#end
 #end
