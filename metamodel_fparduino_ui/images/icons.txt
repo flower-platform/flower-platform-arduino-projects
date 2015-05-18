@@ -1,0 +1,10 @@
+== Icons to be mentioned in license file ==
+
+== Icons allowed for commercial use (NO link required) ==
+
+Column.png -> https://www.iconfinder.com/icons/3962/column_hide_shrink_table_icon#size=16
+Row.png -> https://www.iconfinder.com/icons/18697/hide_row_table_icon#size=16
+Button.png -> https://www.iconfinder.com/icons/18185/power_switch_switch_off_icon#size=16
+Panel.png -> https://www.iconfinder.com/icons/28660/applications_panel_window_windows_icon#size=16
+Label.png -> https://www.iconfinder.com/icons/290145/label_price_sale_shopping_tag_icon#size=16
+UI.png -> https://www.iconfinder.com/icons/20942/display_video_icon#size=16

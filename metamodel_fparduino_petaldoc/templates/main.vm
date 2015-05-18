@@ -1,7 +1,11 @@
-#belongsToCategory( $node, "category.instance" )
-#if( $belongsToCategoryResult )
 #set( $root = $NodeTemplateUtils.getParent($node.nodeUri) )
-#instance()
+#set( $result = "#belongsToCategory( $node, 'category.instance' )" )
+#if( $result == "true" )
+#instance(true)
 #elseif( $node.properties.name.startsWith("invocationSourceSignature") )
 #invocation()
+#end
+#set( $result = "#belongsToCategory( $node, 'category.element' )" )
+#if( $result == "true" )
+#instance(false)
 #end

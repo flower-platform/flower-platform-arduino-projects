@@ -53,10 +53,11 @@
 <attribute_layout NAME_WIDTH="59" VALUE_WIDTH="142"/>
 <attribute NAME="nodeType" VALUE="dynamic_metamodel.root"/>
 <attribute NAME="prefix" VALUE="fparduino"/>
+<attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_PETALDOC"/>
 <node TEXT="" POSITION="right" ID="ID_476122056" CREATED="1431686767859" MODIFIED="1431686767859">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="category.element"/>
-<attribute NAME="propertyForLabel" VALUE="id:VALUES_CONVERTER=addTypeSuffix"/>
+<attribute NAME="propertyForLabel" VALUE="id;EXTRA_INFO_ENTRIES:(valueConverter=addTypeSuffix)"/>
 <node TEXT="" ID="ID_213301124" CREATED="1431686767860" MODIFIED="1431686767860">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="name" VALUE="id"/>
@@ -101,9 +102,10 @@
 <node TEXT="" POSITION="right" ID="ID_937755059" CREATED="1431686780834" MODIFIED="1431686780834">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="cloudType" VALUE="ROUND_RECT"/>
-<attribute NAME="cloudColor" VALUE="#99ee99"/>
+<attribute NAME="cloudColor" VALUE="#D0E9C6"/>
 <attribute NAME="name" VALUE="Row"/>
-<attribute NAME="icons" VALUE="forward"/>
+<attribute NAME="icons" VALUE="images/Row.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<attribute NAME="petaldoc" VALUE="&lt;p&gt;A row is a container of columns (cf. Bootstrap responsive grid mechanism).&lt;/p&gt;"/>
 <node TEXT="" ID="ID_629861224" CREATED="1431686780837" MODIFIED="1431686780837">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.element"/>
@@ -119,10 +121,10 @@
 <node TEXT="" POSITION="right" ID="ID_1112226784" CREATED="1431686774334" MODIFIED="1431686774334">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="cloudType" VALUE="ROUND_RECT"/>
-<attribute NAME="cloudColor" VALUE="#ee99ee"/>
+<attribute NAME="cloudColor" VALUE="#F7A6A4"/>
 <attribute NAME="name" VALUE="Column"/>
-<attribute NAME="icons" VALUE="down"/>
-<attribute NAME="propertyForLabel" VALUE="positions:VALUES_CONVERTER=addTypeSuffix"/>
+<attribute NAME="icons" VALUE="images/Column.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<attribute NAME="propertyForLabel" VALUE="positions;EXTRA_INFO_ENTRIES:(valueConverter=addTypeSuffix)"/>
 <node TEXT="" ID="ID_1741710132" CREATED="1431686774336" MODIFIED="1431686774336">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="name" VALUE="positions"/>
@@ -145,7 +147,10 @@
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Panel"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="propertyForLabel" VALUE="title:VALUES_CONVERTER=addTypeSuffix"/>
+<attribute NAME="propertyForLabel" VALUE="title;EXTRA_INFO_ENTRIES:(valueConverter=addTypeSuffix)"/>
+<attribute NAME="icons" VALUE="images/Panel.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<attribute NAME="cloudColor" VALUE="#FFD699"/>
+<attribute NAME="cloudType" VALUE="ROUND_RECT"/>
 <node TEXT="" ID="ID_1936885101" CREATED="1430124940986" MODIFIED="1430124940986">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.element"/>
@@ -167,8 +172,9 @@
 <node TEXT="" POSITION="right" ID="ID_1872150564" CREATED="1429862365529" MODIFIED="1429862365529">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Label"/>
-<attribute NAME="propertyForLabel" VALUE="text:VALUES_CONVERTER=addTypeSuffix"/>
+<attribute NAME="propertyForLabel" VALUE="text;EXTRA_INFO_ENTRIES:(valueConverter=addTypeSuffix)"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="icons" VALUE="images/Label.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 <node TEXT="" ID="ID_1164218714" CREATED="1430124947399" MODIFIED="1430124947399">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.element"/>
@@ -190,8 +196,9 @@
 <node TEXT="" POSITION="right" ID="ID_1804295354" CREATED="1429862514229" MODIFIED="1429862514229">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Button"/>
-<attribute NAME="propertyForLabel" VALUE="text:VALUES_CONVERTER=addTypeSuffix"/>
+<attribute NAME="propertyForLabel" VALUE="name;EXTRA_INFO_ENTRIES:(valueConverter=addTypeSuffix)"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="icons" VALUE="images/Button.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 <node TEXT="" ID="ID_1323442199" CREATED="1430124952016" MODIFIED="1430124952016">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.element"/>
@@ -220,6 +227,8 @@
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="ui"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="backgroundColor" VALUE="#D0E9C6"/>
+<attribute NAME="icons" VALUE="images/UI.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 <node TEXT="" ID="ID_1442098675" CREATED="1429864164145" MODIFIED="1429864164145">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
 <attribute NAME="label" VALUE="Row"/>

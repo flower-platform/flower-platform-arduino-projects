@@ -1,4 +1,4 @@
-#macro( instance )
+#macro( instance $hasEventsAndMethods )
 ##
 ## split the children into categories
 ##
@@ -21,7 +21,10 @@
 <h4><span class="label label-success"><img src="../$CommonsStringUtils.substringBefore($node.properties.icons, ';')"/></span> ${node.properties.name}</h4>
 <hr/>
 <p style="margin-bottom: 10px">
-Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> <a href="#events" class="btn btn-info btn-xs">Events</a> <a href="#methods" class="btn btn-primary btn-xs">Methods</a>
+Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> 
+#if( $hasEventsAndMethods )
+<a href="#events" class="btn btn-info btn-xs">Events</a> <a href="#methods" class="btn btn-primary btn-xs">Methods</a>
+#end
 </p>
 $!node.properties.petaldoc
 
@@ -40,6 +43,7 @@ $!child.properties.petaldoc
 #if( !$hasElements )None.#end
 </div></div>
 
+#if( $hasEventsAndMethods )
 <!-- Events -->
 <div class="panel panel-info">
   <div class="panel-heading">
@@ -56,7 +60,9 @@ $!eventNode.properties.petaldoc
 #end
 #if( !$hasElements )None.#end
 </div></div>
+#end
 
+#if( $hasEventsAndMethods )
 <!-- Methods -->
 <div class="panel panel-primary">
   <div class="panel-heading">
@@ -71,6 +77,7 @@ $!child.properties.petaldoc
 #end
 #if( !$hasElements )None.#end
 </div></div>
+#end
 
 #htmlEnd()
 #end

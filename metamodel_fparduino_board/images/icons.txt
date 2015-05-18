@@ -7,3 +7,5 @@ Output.png -> https://www.iconfinder.com/icons/14667/upload_icon#size=16 (rotate
 HttpServer.png -> https://www.iconfinder.com/icons/7891/earth_hosting_internet_network_world_icon#size=16
 Timer.png -> https://www.iconfinder.com/icons/16162/clock_pending_soon_time_icon#size=16
 DHTSensor.png -> https://www.iconfinder.com/icons/183498/full_half_thermometer_icon#size=16
+Board.png -> https://www.iconfinder.com/icons/1301/chip_microchip_processor_ram_icon#size=16
+Metadata.png -> https://www.iconfinder.com/icons/16301/key_password_icon#size=16

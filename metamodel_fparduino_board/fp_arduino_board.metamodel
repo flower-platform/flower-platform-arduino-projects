@@ -114,6 +114,8 @@
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="board"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="backgroundColor" VALUE="#CFD5FA"/>
+<attribute NAME="icons" VALUE="images/Board.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 <node TEXT="" ID="ID_1817568176" CREATED="1429197574128" MODIFIED="1429197574128">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
 <attribute NAME="childType" VALUE="Output"/>
@@ -686,6 +688,8 @@
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="metadata"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="backgroundColor" VALUE="#CFCFCF"/>
+<attribute NAME="icons" VALUE="images/Metadata.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1225897255" CREATED="1431695608311" MODIFIED="1431695608311">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>

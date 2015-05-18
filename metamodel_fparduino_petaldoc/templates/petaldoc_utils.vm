@@ -1,9 +1,9 @@
 #macro( belongsToCategory $typeDescriptor $category)
-#set( $belongsToCategoryResult = false )
+##set( $belongsToCategoryResult = false )
 #foreach( $child in $NodeTemplateUtils.getChildren($typeDescriptor.nodeUri) )
 #if( $child.type == "containingCategory" && $child.properties.name == $category )
-#set( $belongsToCategoryResult = true )
-#break;
+##set( $belongsToCategoryResult = true )
+true#{break};
 #end
 #end
 #end
