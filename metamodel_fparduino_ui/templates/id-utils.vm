@@ -1,20 +1,11 @@
 #macro( printId $elt )
-## GET PARENT ID
-#set( $parent = $NodeTemplateUtils.getParent($elt.nodeUri) )
-#set( $id = $ids[$parent.nodeUri] )
-## APPEND ELEMENT ID
-#if( "$!elt.properties.id" == "" )## CHECK IF NULL OR EMPTY
-#set( $hasId = false )
-#else
-#*	*##if( "$!id" == "" )
-#*	*##set( $hyphen = "" )
-#*	*##else
-#*	*##set( $hyphen = "-" )
-#*	*##end
-#set( $id = "$!{id}${hyphen}${elt.properties.id}" )
-#set( $hasId = true )
+#if( "$!elt.properties.id" != "" ) id="$elt.properties.id"#end
 #end
-## KEEP ELEMENT ID
-#set ( $ids[$elt.nodeUri] = $id )
-#if( $hasId ) id="$id"#end
+
+#macro( printClass $elt )
+#if( "$!elt.properties.cssClass" != "" ) class="$elt.properties.cssClass"#end
+#end
+
+#macro( printClassNoAttr $elt )
+#if( "$!elt.properties.cssClass" != "" ) $elt.properties.cssClass#end
 #end

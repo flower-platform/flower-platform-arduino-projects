@@ -205,6 +205,21 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
 <attribute NAME="childType" VALUE="onValueChanged(ValueChangedEvent)"/>
 </node>
+<node TEXT="" ID="ID_1556431105" CREATED="1431946526560" MODIFIED="1431946526560">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.DHT:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.Input"/>
+</node>
+<node TEXT="" ID="ID_717846314" CREATED="1431950316310" MODIFIED="1431950316310">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. The pin of the input. When choosing pins, please see the remark above (about occupied pins). "/>
+<attribute NAME="name" VALUE="internalPullUp"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+<attribute NAME="propertyType" VALUE="Boolean"/>
+<attribute NAME="propertyDefaultValue" VALUE="false"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_164463813" CREATED="1429197136197" MODIFIED="1429197136197">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -257,6 +272,12 @@
 <attribute NAME="name" VALUE="setLow()"/>
 <attribute NAME="childType" VALUE="method"/>
 <attribute NAME="type" VALUE="virtualChild"/>
+</node>
+<node TEXT="" ID="ID_472915006" CREATED="1431946544504" MODIFIED="1431946544504">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.DHT:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.Output"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1019192354" CREATED="1431424332719" MODIFIED="1431424332719">
@@ -416,6 +437,12 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
 <attribute NAME="childType" VALUE="onCommandReceived(HttpCommandEvent)"/>
 </node>
+<node TEXT="" ID="ID_1285151740" CREATED="1431946578738" MODIFIED="1431946578738">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.DHT:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.HttpServer"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_157529028" CREATED="1430406027900" MODIFIED="1430406027900">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -459,6 +486,12 @@
 <attribute NAME="nodeType" VALUE="virtualChild"/>
 <attribute NAME="name" VALUE="log(value)"/>
 <attribute NAME="childType" VALUE="method"/>
+</node>
+<node TEXT="" ID="ID_104403861" CREATED="1431946787069" MODIFIED="1431946787069">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.DHT:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.LoggerSD"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_528003254" CREATED="1431010889991" MODIFIED="1431010889991">
@@ -642,6 +675,18 @@
 <attribute NAME="type" VALUE="containingCategory"/>
 </node>
 </node>
+<node TEXT="" POSITION="right" ID="ID_1341004428" CREATED="1431946994191" MODIFIED="1431946994191">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.fp-arduino-runtime"/>
+<node TEXT="" ID="ID_671482101" CREATED="1431946994194" MODIFIED="1431946994194">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, FlowerPlatformArduinoRuntime.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="FlowerPlatformArduinoRuntime.h"/>
+<attribute NAME="extraInfo.name" VALUE="Flower Platform Arduino Runtime"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime"/>
+</node>
+</node>
 <node TEXT="" POSITION="right" ID="ID_1132425227" CREATED="1431674569415" MODIFIED="1431674569415">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="dependentLibrary.DHT"/>
@@ -670,31 +715,61 @@
 <attribute NAME="extraInfo.url" VALUE="http://google.com"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1341004428" CREATED="1431681034044" MODIFIED="1431681034044">
+<node TEXT="" POSITION="right" ID="ID_1967632752" CREATED="1431945793582" MODIFIED="1431945793582">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.fp-arduino-runtime"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<node TEXT="" ID="ID_671482101" CREATED="1431681110826" MODIFIED="1431681110826">
+<attribute NAME="name" VALUE="dependentLibrary.HttpServer"/>
+<node TEXT="" ID="ID_1936073410" CREATED="1431945793587" MODIFIED="1431945793587">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="value" VALUE="FlowerPlatformArduinoRuntime.h"/>
-<attribute NAME="type" VALUE="genericDescriptor"/>
-<attribute NAME="extraInfo.name" VALUE="Flower Platform Arduino Runtime"/>
-<attribute NAME="extraInfo.description" VALUE="FP Arduino does this and that"/>
-<attribute NAME="extraInfo.url" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime"/>
+<attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Ethernet.h,SPI.h,HttpServer.h"/>
+<attribute NAME="extraInfo.name" VALUE="HttpServer"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
+<attribute NAME="isDirty" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1324326737" CREATED="1431695354609" MODIFIED="1431695354609">
+<node TEXT="" POSITION="right" ID="ID_1705561900" CREATED="1431945920114" MODIFIED="1431945920114">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Input"/>
+<node TEXT="" ID="ID_1526327693" CREATED="1431945920119" MODIFIED="1431945920119">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Input.h"/>
+<attribute NAME="extraInfo.name" VALUE="Input"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_720251765" CREATED="1431945970840" MODIFIED="1431945970840">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Output"/>
+<node TEXT="" ID="ID_148746734" CREATED="1431945970843" MODIFIED="1431945970843">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Output.h"/>
+<attribute NAME="extraInfo.name" VALUE="Output"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1897624332" CREATED="1431946038263" MODIFIED="1431946038263">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.LoggerSD"/>
+<node TEXT="" ID="ID_1750234584" CREATED="1431946038271" MODIFIED="1431946038271">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="SD.h,SPI.h,LoggerSD.h"/>
+<attribute NAME="extraInfo.name" VALUE="LoggerSD"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1324326737" CREATED="1431946245462" MODIFIED="1431946245462">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="metadata"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="backgroundColor" VALUE="#CFCFCF"/>
 <attribute NAME="icons" VALUE="images/Metadata.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1225897255" CREATED="1431695608311" MODIFIED="1431695608311">
+<node TEXT="" POSITION="right" ID="ID_1225897255" CREATED="1431946220421" MODIFIED="1431946220421">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="dependentLibrary"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 </node>
 </node>
 </map>

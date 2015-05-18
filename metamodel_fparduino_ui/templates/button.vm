@@ -1,5 +1,5 @@
 #macro( Button $button )
-<button class="btn btn-block btn-lg"#printId($button) type="button" onclick="$button.properties.onclick">
+<button class="btn btn-block btn-lg#printClassNoAttr($button)"#printId($button) type="button" onclick="invoke('$button.properties.onclick')">
 	#if( "$!button.properties.glyphicon" == "" )#else<span class="glyphicon glyphicon-$button.properties.glyphicon"></span>#end ##
 $button.properties.text
 </button>

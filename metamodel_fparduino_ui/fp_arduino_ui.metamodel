@@ -66,7 +66,7 @@
 </node>
 <node TEXT="" ID="ID_141414203" CREATED="1431686826282" MODIFIED="1431686826282">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="name" VALUE="class"/>
+<attribute NAME="name" VALUE="cssClass"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
 </node>
@@ -186,11 +186,29 @@
 <attribute NAME="label" VALUE="Text"/>
 <attribute NAME="type" VALUE="propertyDescriptor"/>
 </node>
-<node TEXT="" ID="ID_1901590243" CREATED="1429862470364" MODIFIED="1429862470364">
+<node TEXT="" ID="ID_522807179" CREATED="1431685058738" MODIFIED="1431685058738">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="name" VALUE="suffix"/>
-<attribute NAME="label" VALUE="Suffix"/>
-<attribute NAME="type" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="textIfHigh"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="Text if HIGH"/>
+</node>
+<node TEXT="" ID="ID_441492279" CREATED="1431685066799" MODIFIED="1431685066799">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="textIfLow"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="Text if LOW"/>
+</node>
+<node TEXT="" ID="ID_49847113" CREATED="1431685067540" MODIFIED="1431685067540">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="classIfHigh"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="Class if HIGH"/>
+</node>
+<node TEXT="" ID="ID_1543958609" CREATED="1431685069980" MODIFIED="1431685069980">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="classIfLow"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="Class if LOW"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1804295354" CREATED="1429862514229" MODIFIED="1429862514229">
@@ -220,6 +238,18 @@
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="name" VALUE="onclick"/>
 <attribute NAME="label" VALUE="On Click"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_787558667" CREATED="1430124902201" MODIFIED="1430124902201">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="category.element"/>
+<attribute NAME="propertyForLabel" VALUE="id"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<node TEXT="" ID="ID_139139047" CREATED="1430124911020" MODIFIED="1430124911020">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="id"/>
+<attribute NAME="label" VALUE="Id"/>
 <attribute NAME="type" VALUE="propertyDescriptor"/>
 </node>
 </node>

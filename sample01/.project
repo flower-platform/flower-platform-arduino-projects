@@ -52,16 +52,6 @@
 			<locationURI>ArduinoHardwareLibPath/SPI</locationURI>
 		</link>
 		<link>
-			<name>Libraries/StandardCplusplus</name>
-			<type>2</type>
-			<locationURI>ArduinoPivateLibPath/StandardCplusplus</locationURI>
-		</link>
-		<link>
-			<name>Libraries/Webduino</name>
-			<type>2</type>
-			<locationURI>ArduinoPivateLibPath/Webduino</locationURI>
-		</link>
-		<link>
 			<name>arduino/core</name>
 			<type>2</type>
 			<locationURI>ArduinoPlatformPath/cores/arduino</locationURI>

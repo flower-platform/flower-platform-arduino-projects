@@ -55,26 +55,42 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__metadata"/>
 <attribute NAME="fullProjectDownloadedAtLeastOnce" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="name" VALUE="Metadata"/>
-<node TEXT="" ID="ID_1272878140" CREATED="1431944333499" MODIFIED="1431944333499">
+<node TEXT="" ID="ID_1145037943" CREATED="1431949741095" MODIFIED="1431949741095">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibraries"/>
 <attribute NAME="name" VALUE="Dependent Libraries"/>
-<node TEXT="" ID="ID_975592669" CREATED="1431944333501" MODIFIED="1431944333501">
+<node TEXT="" ID="ID_700139328" CREATED="1431949741097" MODIFIED="1431949741097">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
-<attribute NAME="description" VALUE="FP Arduino does this and that"/>
 <attribute NAME="name" VALUE="Flower Platform Arduino Runtime"/>
 <attribute NAME="url" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime"/>
 </node>
-<node TEXT="" ID="ID_367662809" CREATED="1431944333504" MODIFIED="1431944333504">
+<node TEXT="" ID="ID_1426366374" CREATED="1431949741099" MODIFIED="1431949741099">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
-<attribute NAME="description" VALUE="DHT library"/>
+<attribute NAME="name" VALUE="Input"/>
+</node>
+<node TEXT="" ID="ID_1700512873" CREATED="1431949741100" MODIFIED="1431949741100">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="Output"/>
+</node>
+<node TEXT="" ID="ID_1985486279" CREATED="1431949741101" MODIFIED="1431949741101">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="HttpServer"/>
+<attribute NAME="url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
+</node>
+<node TEXT="" ID="ID_1186934583" CREATED="1431949741102" MODIFIED="1431949741102">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="description" VALUE="The GitHub repository contains several libs. Copy/paste the &quot;DHTLib&quot; folder"/>
 <attribute NAME="name" VALUE="DHT"/>
 <attribute NAME="url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
 </node>
-<node TEXT="" ID="ID_453470824" CREATED="1431944333506" MODIFIED="1431944333506">
+<node TEXT="" ID="ID_1076277525" CREATED="1431949741104" MODIFIED="1431949741104">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
 <attribute NAME="description" VALUE="Timer bla bla"/>
 <attribute NAME="name" VALUE="Timer"/>
 <attribute NAME="url" VALUE="http://google.com"/>
+</node>
+<node TEXT="" ID="ID_1367740008" CREATED="1431949741105" MODIFIED="1431949741105">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="LoggerSD"/>
 </node>
 </node>
 </node>
@@ -89,6 +105,7 @@
 <attribute NAME="y" VALUE="41" OBJECT="java.lang.Integer|41"/>
 <attribute NAME="x" VALUE="95" OBJECT="java.lang.Integer|95"/>
 <attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="internalPullUp" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <node TEXT="" ID="ID_1927790755" CREATED="1431010942685" MODIFIED="1431010942685">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onValueChanged(ValueChangedEvent)"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__onValueChanged(ValueChangedEvent)"/>
@@ -242,215 +259,23 @@
 </node>
 </node>
 </node>
-<node TEXT="" ID="ID_559214815" CREATED="1429866146901" MODIFIED="1429866146901">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="Light"/>
-<attribute NAME="type" VALUE="dynamic_fparduino__Label"/>
-</node>
 <node TEXT="" ID="ID_1298536551" CREATED="1429867494374" MODIFIED="1429867494374">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="{{output5}}"/>
+<attribute NAME="text" VALUE="Light is {{output5}}"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Label"/>
 <attribute NAME="id" VALUE="light"/>
+<attribute NAME="classIfLow" VALUE="text-danger"/>
+<attribute NAME="classIfHigh" VALUE="text-success"/>
+<attribute NAME="textIfHigh" VALUE="ON"/>
+<attribute NAME="textIfLow" VALUE="OFF"/>
 </node>
 <node TEXT="" ID="ID_869419459" CREATED="1430127311067" MODIFIED="1430127311067">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
 <attribute NAME="text" VALUE="LIGHT"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Button"/>
-<attribute NAME="onclick" VALUE="invoke(&apos;toggleLight&apos;)"/>
+<attribute NAME="onclick" VALUE="toggleLight"/>
 <attribute NAME="glyphicon" VALUE="flash"/>
-</node>
-<node TEXT="" ID="ID_1925960635" CREATED="1431515092324" MODIFIED="1431515092324">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="{{FREE_MEM}}"/>
-<attribute NAME="suffix" VALUE="bytes free RAM"/>
-<attribute NAME="id" VALUE="freeRam"/>
-</node>
-</node>
-</node>
-<node TEXT="" ID="ID_1026990586" CREATED="1431695671266" MODIFIED="1431695671266">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_530658308" CREATED="1431695671269" MODIFIED="1431695671269">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
-<attribute NAME="id" VALUE="bedroom"/>
-<attribute NAME="title" VALUE="Bedroom"/>
-<node TEXT="" ID="ID_1239632433" CREATED="1431695671272" MODIFIED="1431695671272">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
-<node TEXT="" ID="ID_1788516714" CREATED="1431695671274" MODIFIED="1431695671274">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="xs-6"/>
-<node TEXT="" ID="ID_1970314089" CREATED="1431695671277" MODIFIED="1431695671277">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="Temperature"/>
-</node>
-<node TEXT="" ID="ID_1056702159" CREATED="1431695671279" MODIFIED="1431695671279">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="temperature"/>
-<attribute NAME="text" VALUE="{{dhtSensor_temperature}}"/>
-<attribute NAME="suffix" VALUE="&amp;#176;C"/>
-</node>
-</node>
-<node TEXT="" ID="ID_1186027211" CREATED="1431695671281" MODIFIED="1431695671281">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="xs-6"/>
-<node TEXT="" ID="ID_993428571" CREATED="1431695671283" MODIFIED="1431695671283">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="Humidity"/>
-</node>
-<node TEXT="" ID="ID_639019924" CREATED="1431695671285" MODIFIED="1431695671285">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="humidity"/>
-<attribute NAME="text" VALUE="{{dhtSensor_humidity}}"/>
-<attribute NAME="suffix" VALUE="%RH"/>
-</node>
-</node>
-</node>
-<node TEXT="" ID="ID_91282149" CREATED="1431695671287" MODIFIED="1431695671287">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="Light"/>
-</node>
-<node TEXT="" ID="ID_493315422" CREATED="1431695671289" MODIFIED="1431695671289">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="light"/>
-<attribute NAME="text" VALUE="{{output5}}"/>
-</node>
-<node TEXT="" ID="ID_498330491" CREATED="1431695671291" MODIFIED="1431695671291">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
-<attribute NAME="text" VALUE="LIGHT"/>
-<attribute NAME="glyphicon" VALUE="flash"/>
-<attribute NAME="onclick" VALUE="invoke(&apos;toggleLight&apos;)"/>
-</node>
-<node TEXT="" ID="ID_1071091840" CREATED="1431695671293" MODIFIED="1431695671293">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="freeRam"/>
-<attribute NAME="text" VALUE="{{FREE_MEM}}"/>
-<attribute NAME="suffix" VALUE="bytes free RAM"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="" ID="ID_739832372" CREATED="1431695656431" MODIFIED="1431695656431">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
-<node TEXT="" ID="ID_173374922" CREATED="1431695656434" MODIFIED="1431695656434">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_1079863710" CREATED="1431695656436" MODIFIED="1431695656436">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
-<attribute NAME="id" VALUE="bedroom"/>
-<attribute NAME="title" VALUE="Bedroom"/>
-<node TEXT="" ID="ID_403439369" CREATED="1431695656439" MODIFIED="1431695656439">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
-<node TEXT="" ID="ID_1969318011" CREATED="1431695656441" MODIFIED="1431695656441">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="xs-6"/>
-<node TEXT="" ID="ID_1599117429" CREATED="1431695656444" MODIFIED="1431695656444">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="Temperature"/>
-</node>
-<node TEXT="" ID="ID_1429641793" CREATED="1431695656446" MODIFIED="1431695656446">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="temperature"/>
-<attribute NAME="text" VALUE="{{dhtSensor_temperature}}"/>
-<attribute NAME="suffix" VALUE="&amp;#176;C"/>
-</node>
-</node>
-<node TEXT="" ID="ID_736610616" CREATED="1431695656448" MODIFIED="1431695656448">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="xs-6"/>
-<node TEXT="" ID="ID_1744511799" CREATED="1431695656450" MODIFIED="1431695656450">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="Humidity"/>
-</node>
-<node TEXT="" ID="ID_696592710" CREATED="1431695656453" MODIFIED="1431695656453">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="humidity"/>
-<attribute NAME="text" VALUE="{{dhtSensor_humidity}}"/>
-<attribute NAME="suffix" VALUE="%RH"/>
-</node>
-</node>
-</node>
-<node TEXT="" ID="ID_566862514" CREATED="1431695656455" MODIFIED="1431695656455">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="Light"/>
-</node>
-<node TEXT="" ID="ID_551891802" CREATED="1431695656457" MODIFIED="1431695656457">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="light"/>
-<attribute NAME="text" VALUE="{{output5}}"/>
-</node>
-<node TEXT="" ID="ID_1300136798" CREATED="1431695656459" MODIFIED="1431695656459">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
-<attribute NAME="text" VALUE="LIGHT"/>
-<attribute NAME="glyphicon" VALUE="flash"/>
-<attribute NAME="onclick" VALUE="invoke(&apos;toggleLight&apos;)"/>
-</node>
-<node TEXT="" ID="ID_1319824273" CREATED="1431695656462" MODIFIED="1431695656462">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="freeRam"/>
-<attribute NAME="text" VALUE="{{FREE_MEM}}"/>
-<attribute NAME="suffix" VALUE="bytes free RAM"/>
-</node>
-</node>
-</node>
-<node TEXT="" ID="ID_1354894057" CREATED="1431695674360" MODIFIED="1431695674360">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_1057272227" CREATED="1431695674362" MODIFIED="1431695674362">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
-<attribute NAME="id" VALUE="bedroom"/>
-<attribute NAME="title" VALUE="Bedroom"/>
-<node TEXT="" ID="ID_1015010905" CREATED="1431695674364" MODIFIED="1431695674364">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
-<node TEXT="" ID="ID_1338530563" CREATED="1431695674366" MODIFIED="1431695674366">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="xs-6"/>
-<node TEXT="" ID="ID_748500052" CREATED="1431695674368" MODIFIED="1431695674368">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="Temperature"/>
-</node>
-<node TEXT="" ID="ID_563986495" CREATED="1431695674370" MODIFIED="1431695674370">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="temperature"/>
-<attribute NAME="text" VALUE="{{dhtSensor_temperature}}"/>
-<attribute NAME="suffix" VALUE="&amp;#176;C"/>
-</node>
-</node>
-<node TEXT="" ID="ID_1788283657" CREATED="1431695674372" MODIFIED="1431695674372">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="xs-6"/>
-<node TEXT="" ID="ID_1428548916" CREATED="1431695674374" MODIFIED="1431695674374">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="Humidity"/>
-</node>
-<node TEXT="" ID="ID_1288175447" CREATED="1431695674376" MODIFIED="1431695674376">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="humidity"/>
-<attribute NAME="text" VALUE="{{dhtSensor_humidity}}"/>
-<attribute NAME="suffix" VALUE="%RH"/>
-</node>
-</node>
-</node>
-<node TEXT="" ID="ID_496299124" CREATED="1431695674378" MODIFIED="1431695674378">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="Light"/>
-</node>
-<node TEXT="" ID="ID_1733589630" CREATED="1431695674379" MODIFIED="1431695674379">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="light"/>
-<attribute NAME="text" VALUE="{{output5}}"/>
-</node>
-<node TEXT="" ID="ID_475328112" CREATED="1431695674381" MODIFIED="1431695674381">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
-<attribute NAME="text" VALUE="LIGHT"/>
-<attribute NAME="glyphicon" VALUE="flash"/>
-<attribute NAME="onclick" VALUE="invoke(&apos;toggleLight&apos;)"/>
-</node>
-<node TEXT="" ID="ID_725087428" CREATED="1431695674383" MODIFIED="1431695674383">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="id" VALUE="freeRam"/>
-<attribute NAME="text" VALUE="{{FREE_MEM}}"/>
-<attribute NAME="suffix" VALUE="bytes free RAM"/>
+<attribute NAME="cssClass" VALUE="lightButton"/>
 </node>
 </node>
 </node>

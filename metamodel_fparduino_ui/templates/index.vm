@@ -24,16 +24,12 @@ var url = "$url";
 <body>
 <br/>
 <div class="container-fluid lead">
-#set( $ids = {} )
-#set( $ids[$node.nodeUri] = "" )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
 #@indent()
 	#callMacro($child)
 #end
 #end
 
-	<div class="row"><div class="lead col-md-12"><span class="label label-default"><span class="glyphicon glyphicon-dashboard"></span> Free memory (SRAM): <span id="FREE_MEM"></span> bytes</label></div>
-	<script>addTextListener("FREE_MEM", "FREE_MEM")</script>
-
+	<div class="row"><div class="lead col-md-12"><span class="label label-default"><span class="glyphicon glyphicon-dashboard"></span> Free memory (SRAM): <span bindToProperty="FREE_MEM"></span> bytes</span></div></div>
 </div>
 </body>

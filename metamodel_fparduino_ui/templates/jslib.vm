@@ -1,24 +1,25 @@
 #macro( jslib )
 var bindingManager = {
-
-	// Initialize bound object
-	data : {
-		temperature : 25,
-		humidity : 25
-	},
-
+	
+	data : {},
+	
 	// Listeners map
 	listeners : {},
 
 	// Register a listener
-	addListener : function(property, listener) {
+	addListener : function(property, elt, handler, options) {
 		var list = this.listeners[property];
 		if (typeof list === "undefined") {
 			// init
 			list = [];
 			this.listeners[property] = list;
 		}
+		var listener = function() {
+			var propertyValue = bindingManager.data[property];
+			handler(elt, propertyValue, options);
+		}
 		list.push(listener);
+		listener();
 	},
 
 	// Set the value and notify listeners
@@ -39,35 +40,25 @@ var bindingManager = {
 
 };
 
-var addTextListener = function(id, property, options) {
-	var listener = function() {
-		var elt = $("#" + id);
-		var value = bindingManager.data[property];
-		if (typeof options !== "undefined") {
-			value = options[value];
-		}
-		elt.text(value);
-	};
-	bindingManager.addListener(property, listener);
-	listener();
-};
-
-var addClassListener = function(id, property, options) {
-	var listener = function() {
-		var elt = $("#" + id);
-		var value = bindingManager.data[property];
-		for (var key in options) {
-			var cls = options[key];
-			if (key == value) {
-				elt.addClass(cls);
-			} else {
-				elt.removeClass(cls);
-			}
+var toggleClass = function(elt, propertyValue, options) {
+	for (var key in options) {
+		var cls = options[key];
+		if (key != propertyValue) {
+			elt.parent().removeClass(cls);
 		}
 	}
-	bindingManager.addListener(property, listener);
-	listener();
-};
+	if (options[propertyValue]) {
+		elt.parent().addClass(options[propertyValue]);
+	}
+	
+}
+
+var setText = function(elt, propertyValue, options) {
+	if (typeof options !== "undefined" && options[propertyValue]) {
+		propertyValue = options[propertyValue];
+	}
+	elt.text(propertyValue);
+}
 
 var invoke = function(path) {
 	$.get(url + path, function(data) {
@@ -77,11 +68,27 @@ var invoke = function(path) {
 	});
 };
 
-var refresh = function() {
-	invoke("getState");
-};
-
 setInterval(function() {
-	refresh();
+	invoke("getState");
 }, 1000);
+
+
+$(function() {
+	$("[bindToProperty]").each(function() {
+		var elt = $(this);
+		var property = elt.attr("bindToProperty");
+		var textToggler = elt.attr("textToggler");
+		if (textToggler) {
+			textToggler = JSON.parse(textToggler);
+		}
+		bindingManager.addListener(property, elt, setText, textToggler);
+
+		var classToggler = elt.attr("classToggler");
+		if (classToggler) {
+			classToggler = JSON.parse(classToggler);
+			bindingManager.addListener(property, elt, toggleClass, classToggler);
+		}
+
+	});
+});
 #end

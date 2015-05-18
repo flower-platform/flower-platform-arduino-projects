@@ -1,17 +1,14 @@
-#include <dht.h>
-
+#include <FlowerPlatformArduinoRuntime.h>
+#include <Input.h>
+#include <Output.h>
 #include <Ethernet.h>
 #include <SPI.h>
-#include <SD.h>
-
-#include <FlowerPlatformArduinoRuntime.h>
-#include <DHTSensor.h>
-#include <Output.h>
-#include <UpdatesBuffer.h>
 #include <HttpServer.h>
-
-#include <Input.h>
+#include <DHT.h>
+#include <DHTSensor.h>
 #include <Timer.h>
+#include <SD.h>
+#include <SPI.h>
 #include <LoggerSD.h>
 
 class ApplicationGen {
@@ -40,16 +37,15 @@ protected:
 		if (strcmp_P(command, PSTR("")) == 0) {
 			urlFound = true;
 			castedEvent->server->httpSuccess(HttpServer::CONTENT_TYPE_HTML);
-			castedEvent->client->print(F("<!DOCTYPE html> <html> <head> <meta charset=\"ISO-8859-1\"> <script src=\"http:\/\/code.jquery.com\/jquery-1.11.2.min.js\"><\/script> <link rel=\"stylesheet\" href=\"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.4\/css\/bootstrap.min.css\"> <script src=\"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.4\/js\/bootstrap"));
-			castedEvent->client->print(F(".min.js\"><\/script> <link rel=\"stylesheet\" href=\"http:\/\/bootswatch.com\/paper\/bootstrap.min.css\"> <link href='http:\/\/fonts.googleapis.com\/css?family=Roboto' rel='stylesheet' type='text\/css'> <script>var url=\"\";var bindingManager={data:{temperature:25,humidity:25},listeners:{},addListener:function(c,b)"));
-			castedEvent->client->print(F("{var a=this.listeners[c];if(typeof a===\"undefined\"){a=[];this.listeners[c]=a}a.push(b)},set:function(d,c){if(this.data[d]!==c){this.data[d]=c;var b=this.listeners[d];if(typeof b!==\"undefined\"&&b!==null){for(var a=0;a<b.length;a++){b[a]()}}}}};var addTextListener=function(d,c,a){var b=function(){var "));
-			castedEvent->client->print(F("e=$(\"#\"+d);var f=bindingManager.data[c];if(typeof a!==\"undefined\"){f=a[f]}e.text(f)};bindingManager.addListener(c,b);b()};var addClassListener=function(d,c,a){var b=function(){var f=$(\"#\"+d);var h=bindingManager.data[c];for(var g in a){var e=a[g];if(g==h){f.addClass(e)}else{f.removeClass(e)}}};bindi"));
-			castedEvent->client->print(F("ngManager.addListener(c,b);b()};var invoke=function(a){$.get(url+a,function(c){for(var b in c){bindingManager.set(b,c[b])}})};var refresh=function(){invoke(\"getState\")};setInterval(function(){refresh()},1000);<\/script> <\/head> <body> <br\/> <div class=\"container-fluid lead\"> <div class=\"row\"> <div cl"));
-			castedEvent->client->print(F("ass=\"col-md-3\"> <div class=\"panel panel-primary text-center\" id=\"bedroom\"> <div class=\"panel-heading\">Bedroom<\/div> <div class=\"panel-body\"> <div class=\"row\"> <div class=\"col-xs-6\"> <div>Temperature<\/div> <div> <span id=\"bedroom-temperature\"><\/span> &#176;C <script>addTextListener(\"bedroom-temperatu"));
-			castedEvent->client->print(F("re\",\"dhtSensor_temperature\");<\/script> <\/div> <\/div> <div class=\"col-xs-6\"> <div>Humidity<\/div> <div> <span id=\"bedroom-humidity\"><\/span> %RH <script>addTextListener(\"bedroom-humidity\",\"dhtSensor_humidity\");<\/script> <\/div> <\/div> <\/div> <div>Light<\/div> <div> <span id=\"bedroom-light\"><\/span> <scrip"));
-			castedEvent->client->print(F("t>addTextListener(\"bedroom-light\",\"output5\");<\/script> <\/div> <button class=\"btn btn-block btn-lg\" type=\"button\" onclick=\"invoke('toggleLight')\"> <span class=\"glyphicon glyphicon-flash\"><\/span> LIGHT <\/button> <div> <span id=\"bedroom-freeRam\"><\/span> bytes free RAM <script>addTextListener(\"bedroom-f"));
-			castedEvent->client->print(F("reeRam\",\"FREE_MEM\");<\/script> <\/div> <\/div> <\/div> <\/div> <\/div> <div class=\"row\"><div class=\"lead col-md-12\"><span class=\"label label-default\"><span class=\"glyphicon glyphicon-dashboard\"><\/span> Free memory (SRAM): <span id=\"FREE_MEM\"><\/span> bytes<\/label><\/div> <script>addTextListener(\"FREE_MEM\",\""));
-			castedEvent->client->print(F("FREE_MEM\");<\/script> <\/div> <\/body>"));
+			castedEvent->client->print(F("<!DOCTYPE html><html><head><meta charset=\"ISO-8859-1\"><script src=\"http:\/\/code.jquery.com\/jquery-1.11.2.min.js\"><\/script><link rel=\"stylesheet\" href=\"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.4\/css\/bootstrap.min.css\"><script src=\"https:\/\/maxcdn.bootstrapcdn.com\/bootstrap\/3.3.4\/js\/bootstrap.min.j"));
+			castedEvent->client->print(F("s\"><\/script><link rel=\"stylesheet\" href=\"http:\/\/bootswatch.com\/paper\/bootstrap.min.css\"><link href='http:\/\/fonts.googleapis.com\/css?family=Roboto' rel='stylesheet' type='text\/css'><script>var url=\"\";var bindingManager={data:{},listeners:{},addListener:function(f,b,c,a){var e=this.listeners[f];if(typ"));
+			castedEvent->client->print(F("eof e===\"undefined\"){e=[];this.listeners[f]=e}var d=function(){var g=bindingManager.data[f];c(b,g,a)};e.push(d);d()},set:function(d,c){if(this.data[d]!==c){this.data[d]=c;var b=this.listeners[d];if(typeof b!==\"undefined\"&&b!==null){for(var a=0;a<b.length;a++){b[a]()}}}}};var toggleClass=function(d,b"));
+			castedEvent->client->print(F(",c){for(var e in c){var a=c[e];if(e!=b){d.parent().removeClass(a)}}if(c[b]){d.parent().addClass(c[b])}};var setText=function(c,a,b){if(typeof b!==\"undefined\"&&b[a]){a=b[a]}c.text(a)};var invoke=function(a){$.get(url+a,function(c){for(var b in c){bindingManager.set(b,c[b])}})};setInterval(function(){"));
+			castedEvent->client->print(F("invoke(\"getState\")},1000);$(function(){$(\"[bindToProperty]\").each(function(){var b=$(this);var d=b.attr(\"bindToProperty\");var c=b.attr(\"textToggler\");if(c){c=JSON.parse(c)}bindingManager.addListener(d,b,setText,c);var a=b.attr(\"classToggler\");if(a){a=JSON.parse(a);bindingManager.addListener(d,b,togg"));
+			castedEvent->client->print(F("leClass,a)}})});<\/script><\/head><body><br\/><div class=\"container-fluid lead\"><div class=\"row\"><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\" id=\"bedroom\"><div class=\"panel-heading\">Bedroom<\/div><div class=\"panel-body\"><div class=\"row\"><div class=\"col-xs-6\"><div> Temperature <\/div"));
+			castedEvent->client->print(F("><div id=\"temperature\"><span classToggler='{}' bindToProperty=\"dhtSensor_temperature\" textToggler='{}'><\/span><\/div><\/div><div class=\"col-xs-6\"><div> Humidity <\/div><div id=\"humidity\"><span classToggler='{}' bindToProperty=\"dhtSensor_humidity\" textToggler='{}'><\/span><\/div><\/div><\/div><div id=\"light"));
+			castedEvent->client->print(F("\"> Light is <span classToggler='{\"1\":\"text-success\",\"0\":\"text-danger\"}' bindToProperty=\"output5\" textToggler='{\"1\":\"ON\",\"0\":\"OFF\"}'><\/span><\/div><button class=\"btn btn-block btn-lg lightButton\" type=\"button\" onclick=\"invoke('toggleLight')\"><span class=\"glyphicon glyphicon-flash\"><\/span> LIGHT <\/butt"));
+			castedEvent->client->print(F("on><\/div><\/div><\/div><\/div><div class=\"row\"><div class=\"lead col-md-12\"><span class=\"label label-default\"><span class=\"glyphicon glyphicon-dashboard\"><\/span> Free memory (SRAM): <span bindToProperty=\"FREE_MEM\"><\/span> bytes<\/span><\/div><\/div><\/div><\/body>"));
 			return;
 		} else if (strcmp_P(command, PSTR("getState")) == 0) {
 			urlFound = true;
@@ -88,6 +84,7 @@ public:
 
 	virtual void setup() {
 		input2.pin = 2;
+		input2.internalPullUp = true;
 		input2.setup();
 		
 		output5.pin = 5;
