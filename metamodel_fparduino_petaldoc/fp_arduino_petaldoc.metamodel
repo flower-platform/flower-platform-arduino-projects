@@ -1,6 +1,6 @@
 <map version="freeplane 1.3.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="New Mindmap" FOLDED="false" ID="ID_490504318" CREATED="1428507974283" MODIFIED="1430911375121"><hook NAME="MapStyle">
+<node TEXT="New Mindmap" ID="ID_490504318" CREATED="1428507974283" MODIFIED="1430911375121"><hook NAME="MapStyle">
     <properties show_icon_for_attributes="true"/>
 
 <map_styles>

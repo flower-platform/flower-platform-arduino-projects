@@ -53,85 +53,99 @@
 <attribute_layout NAME_WIDTH="59" VALUE_WIDTH="142"/>
 <attribute NAME="nodeType" VALUE="dynamic_metamodel.root"/>
 <attribute NAME="prefix" VALUE="fparduino"/>
-<node TEXT="" POSITION="right" ID="ID_937755059" CREATED="1429861931863" MODIFIED="1429861931863">
+<node TEXT="" POSITION="right" ID="ID_476122056" CREATED="1431686767859" MODIFIED="1431686767859">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="category.element"/>
+<attribute NAME="propertyForLabel" VALUE="id:VALUES_CONVERTER=addTypeSuffix"/>
+<node TEXT="" ID="ID_213301124" CREATED="1431686767860" MODIFIED="1431686767860">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="id"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="Id"/>
+</node>
+<node TEXT="" ID="ID_141414203" CREATED="1431686826282" MODIFIED="1431686826282">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="class"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_660870078" CREATED="1431686791502" MODIFIED="1431686791502">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="category.container"/>
+<node TEXT="" ID="ID_1213958715" CREATED="1431686791503" MODIFIED="1431686791503">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="label" VALUE="Row"/>
+<attribute NAME="childType" VALUE="Row"/>
+</node>
+<node TEXT="" ID="ID_1292222123" CREATED="1431686791504" MODIFIED="1431686791504">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="label" VALUE="Panel"/>
+<attribute NAME="childType" VALUE="Panel"/>
+</node>
+<node TEXT="" ID="ID_332309735" CREATED="1431686791505" MODIFIED="1431686791505">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="label" VALUE="Label"/>
+<attribute NAME="childType" VALUE="Label"/>
+</node>
+<node TEXT="" ID="ID_512719085" CREATED="1431686791506" MODIFIED="1431686791506">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="label" VALUE="Button"/>
+<attribute NAME="childType" VALUE="Button"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_937755059" CREATED="1431686780834" MODIFIED="1431686780834">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="cloudType" VALUE="ROUND_RECT"/>
 <attribute NAME="cloudColor" VALUE="#99ee99"/>
 <attribute NAME="name" VALUE="Row"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="icons" VALUE="forward"/>
-<node TEXT="" ID="ID_629861224" CREATED="1430124926822" MODIFIED="1430124926822">
+<node TEXT="" ID="ID_629861224" CREATED="1431686780837" MODIFIED="1431686780837">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.element"/>
-<attribute NAME="type" VALUE="containingCategory"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_582658787" CREATED="1429862059027" MODIFIED="1429862059027">
+<node TEXT="" ID="ID_582658787" CREATED="1431686780839" MODIFIED="1431686780839">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
 <attribute NAME="label" VALUE="Column"/>
 <attribute NAME="childType" VALUE="Column"/>
-<attribute NAME="type" VALUE="addChildDescriptor"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1112226784" CREATED="1429862026944" MODIFIED="1429862026944">
+<node TEXT="" POSITION="right" ID="ID_1112226784" CREATED="1431686774334" MODIFIED="1431686774334">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="cloudType" VALUE="ROUND_RECT"/>
 <attribute NAME="cloudColor" VALUE="#ee99ee"/>
 <attribute NAME="name" VALUE="Column"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="icons" VALUE="down"/>
-<attribute NAME="propertyForLabel" VALUE="positions"/>
-<node TEXT="" ID="ID_1741710132" CREATED="1429862087978" MODIFIED="1429862087978">
+<attribute NAME="propertyForLabel" VALUE="positions:VALUES_CONVERTER=addTypeSuffix"/>
+<node TEXT="" ID="ID_1741710132" CREATED="1431686774336" MODIFIED="1431686774336">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="name" VALUE="positions"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE="Positions"/>
-<attribute NAME="type" VALUE="propertyDescriptor"/>
 </node>
-<node TEXT="" ID="ID_3588246" CREATED="1429862194444" MODIFIED="1429862194444">
+<node TEXT="" ID="ID_3588246" CREATED="1431686774338" MODIFIED="1431686774338">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
 <attribute NAME="name" VALUE="category.container"/>
-<attribute NAME="type" VALUE="containingCategory"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_4410638" CREATED="1430124933151" MODIFIED="1430124933151">
+<node TEXT="" ID="ID_4410638" CREATED="1431686774340" MODIFIED="1431686774340">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.element"/>
-<attribute NAME="type" VALUE="containingCategory"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_660870078" CREATED="1429862185195" MODIFIED="1429862185195">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="category.container"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<node TEXT="" ID="ID_1213958715" CREATED="1429862218528" MODIFIED="1429862218528">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="label" VALUE="Row"/>
-<attribute NAME="childType" VALUE="Row"/>
-<attribute NAME="type" VALUE="addChildDescriptor"/>
-</node>
-<node TEXT="" ID="ID_1292222123" CREATED="1429862584310" MODIFIED="1429862584310">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="label" VALUE="Panel"/>
-<attribute NAME="childType" VALUE="Panel"/>
-<attribute NAME="type" VALUE="addChildDescriptor"/>
-</node>
-<node TEXT="" ID="ID_332309735" CREATED="1429862592643" MODIFIED="1429862592643">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="label" VALUE="Label"/>
-<attribute NAME="childType" VALUE="Label"/>
-<attribute NAME="type" VALUE="addChildDescriptor"/>
-</node>
-<node TEXT="" ID="ID_512719085" CREATED="1429862600561" MODIFIED="1429862600561">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="label" VALUE="Button"/>
-<attribute NAME="childType" VALUE="Button"/>
-<attribute NAME="type" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1217754697" CREATED="1429862240144" MODIFIED="1429862240144">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Panel"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="propertyForLabel" VALUE="title"/>
+<attribute NAME="propertyForLabel" VALUE="title:VALUES_CONVERTER=addTypeSuffix"/>
 <node TEXT="" ID="ID_1936885101" CREATED="1430124940986" MODIFIED="1430124940986">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.element"/>
@@ -153,7 +167,7 @@
 <node TEXT="" POSITION="right" ID="ID_1872150564" CREATED="1429862365529" MODIFIED="1429862365529">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Label"/>
-<attribute NAME="propertyForLabel" VALUE="text"/>
+<attribute NAME="propertyForLabel" VALUE="text:VALUES_CONVERTER=addTypeSuffix"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <node TEXT="" ID="ID_1164218714" CREATED="1430124947399" MODIFIED="1430124947399">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
@@ -194,7 +208,7 @@
 <node TEXT="" POSITION="right" ID="ID_1804295354" CREATED="1429862514229" MODIFIED="1429862514229">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Button"/>
-<attribute NAME="propertyForLabel" VALUE="text"/>
+<attribute NAME="propertyForLabel" VALUE="text:VALUES_CONVERTER=addTypeSuffix"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <node TEXT="" ID="ID_1323442199" CREATED="1430124952016" MODIFIED="1430124952016">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
