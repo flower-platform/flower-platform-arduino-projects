@@ -13,9 +13,15 @@
 var url = "http://192.168.100.253:80/";
 
 var bindingManager = {
-	
-	data : {},
-	
+
+	// Initialize bound object
+	data : {
+		dhtSensor_temperature : 25,
+		dhtSensor_humidity : 65,
+		output5: 0,
+		FREE_MEM: 8192
+	},
+
 	// Listeners map
 	listeners : {},
 
@@ -53,17 +59,14 @@ var bindingManager = {
 
 };
 
-var toggleClass = function(elt, propertyValue, options) {
+var setClass = function(elt, propertyValue, options) {
 	for (var key in options) {
 		var cls = options[key];
 		if (key != propertyValue) {
 			elt.parent().removeClass(cls);
 		}
 	}
-	if (options[propertyValue]) {
-		elt.parent().addClass(options[propertyValue]);
-	}
-	
+	elt.parent().addClass(options[propertyValue]);
 }
 
 var setText = function(elt, propertyValue, options) {
@@ -82,7 +85,7 @@ var invoke = function(path) {
 };
 
 setInterval(function() {
-	invoke("getState");
+	//invoke("getState");
 }, 1000);
 
 
@@ -99,7 +102,7 @@ $(function() {
 		var classToggler = elt.attr("classToggler");
 		if (classToggler) {
 			classToggler = JSON.parse(classToggler);
-			bindingManager.addListener(property, elt, toggleClass, classToggler);
+			bindingManager.addListener(property, elt, setClass, classToggler);
 		}
 
 	});
@@ -123,7 +126,7 @@ $(function() {
 								Temperature
 							</div>
 							<div id="temperature">
-								<span classToggler='{}' bindToProperty="dhtSensor_temperature" textToggler='{}'></span>&#176;C  SRAM: <span bindToProperty="FREE_MEM" textToggler='{}'></span>
+								<span classesToggler='{}' bindToProperty="dhtSensor_temperature" textToggler='{}'></span>&#176;C Free mem: <span bindToProperty="FREE_MEM" textToggler='{}'></span>
 							</div>
 						</div>
 						<div class="col-xs-6">
@@ -131,12 +134,15 @@ $(function() {
 								Humidity
 							</div>
 							<div id="humidity">
-								<span classToggler='{}' bindToProperty="dhtSensor_humidity" textToggler='{}'></span>
+								<span classesToggler='{}' bindToProperty="dhtSensor_humidity" textToggler='{}'></span>
 							</div>
 						</div>
 					</div>
+					<div>
+						Light
+					</div>
 					<div id="light">
-						Light <span classToggler='{"1":"text-success","0":"text-danger"}' bindToProperty="output5" textToggler='{"1":"ON","0":"OFF"}'></span>
+						<span classesToggler='{"1":"glow"}' bindToProperty="output5" textToggler='{"1":"ON","0":"OFF"}'></span>
 					</div>
 					<button class="btn btn-block btn-lg" type="button" onclick="invoke('toggleLight')">
 						<span class="glyphicon glyphicon-flash"></span> LIGHT
@@ -148,5 +154,7 @@ $(function() {
 	</div>
 
 	<div class="row"><div class="lead col-md-12"><span class="label label-default"><span class="glyphicon glyphicon-dashboard"></span> Free memory (SRAM): <span bindToProperty="FREE_MEM"></span> bytes</span></div></div>
+	<script>addTextListener("FREE_MEM", "FREE_MEM")</script>
+
 </div>
 </body>

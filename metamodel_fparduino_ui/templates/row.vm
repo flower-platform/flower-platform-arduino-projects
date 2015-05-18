@@ -1,5 +1,5 @@
 #macro( Row $row )
-<div class="row"#printId($row)>
+<div class="row#printClassNoAttr($row)"#printId($row)>
 #foreach($child in $NodeTemplateUtils.getChildren($row.nodeUri))
 #@indent()
 	#callMacro($child)

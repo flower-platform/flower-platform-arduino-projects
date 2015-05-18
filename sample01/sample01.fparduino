@@ -191,9 +191,8 @@
 </node>
 <node TEXT="" ID="ID_526438294" CREATED="1429866063482" MODIFIED="1429866063482">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="{{dhtSensor_temperature}}"/>
+<attribute NAME="text" VALUE="{{dhtSensor_temperature}}&amp;#176;C  SRAM: {{FREE_MEM}}"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="suffix" VALUE="&amp;#176;C"/>
 <attribute NAME="id" VALUE="temperature"/>
 </node>
 </node>
@@ -215,29 +214,24 @@
 </node>
 </node>
 </node>
-<node TEXT="" ID="ID_559214815" CREATED="1429866146901" MODIFIED="1429866146901">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="Light"/>
-<attribute NAME="type" VALUE="dynamic_fparduino__Label"/>
-</node>
 <node TEXT="" ID="ID_1298536551" CREATED="1429867494374" MODIFIED="1429867494374">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="{{output5}}"/>
+<attribute NAME="text" VALUE="Light {{output5}}"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Label"/>
 <attribute NAME="id" VALUE="light"/>
+<attribute NAME="classesIfHigh" VALUE="text-success"/>
+<attribute NAME="textIfHigh" VALUE="ON"/>
+<attribute NAME="textIfLow" VALUE="OFF"/>
+<attribute NAME="classesIfLow" VALUE="text-danger"/>
+<attribute NAME="classIfHigh" VALUE="text-success"/>
+<attribute NAME="classIfLow" VALUE="text-danger"/>
 </node>
 <node TEXT="" ID="ID_869419459" CREATED="1430127311067" MODIFIED="1430127311067">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
 <attribute NAME="text" VALUE="LIGHT"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Button"/>
-<attribute NAME="onclick" VALUE="invoke(&apos;toggleLight&apos;)"/>
+<attribute NAME="onclick" VALUE="toggleLight"/>
 <attribute NAME="glyphicon" VALUE="flash"/>
-</node>
-<node TEXT="" ID="ID_1925960635" CREATED="1431515092324" MODIFIED="1431515092324">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
-<attribute NAME="text" VALUE="{{FREE_MEM}}"/>
-<attribute NAME="suffix" VALUE="bytes free RAM"/>
-<attribute NAME="id" VALUE="freeRam"/>
 </node>
 </node>
 </node>

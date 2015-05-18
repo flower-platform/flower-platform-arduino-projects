@@ -13,26 +13,27 @@
 var url = "http://192.168.100.253:80/";
 
 var bindingManager = {
-	
-	data : {},
-	
+
+	// Initialize bound object
+	data : {
+		dhtSensor_temperature : 25,
+		dhtSensor_humidity : 65,
+		output5: 0,
+		FREE_MEM: 8192
+	},
+
 	// Listeners map
 	listeners : {},
 
 	// Register a listener
-	addListener : function(property, elt, handler, options) {
+	addListener : function(property, listener) {
 		var list = this.listeners[property];
 		if (typeof list === "undefined") {
 			// init
 			list = [];
 			this.listeners[property] = list;
 		}
-		var listener = function() {
-			var propertyValue = bindingManager.data[property];
-			handler(elt, propertyValue, options);
-		}
 		list.push(listener);
-		listener();
 	},
 
 	// Set the value and notify listeners
@@ -53,25 +54,31 @@ var bindingManager = {
 
 };
 
-var toggleClass = function(elt, propertyValue, options) {
-	for (var key in options) {
-		var cls = options[key];
-		if (key != propertyValue) {
-			elt.parent().removeClass(cls);
+var addTextListener = function($element, property, options) {
+	var listener = function() {
+		var value = bindingManager.data[property];
+		if (typeof options !== "undefined") {
+			value = options[value];
+		}
+		$element.text(value);
+	};
+	bindingManager.addListener(property, listener);
+	listener();
+};
+
+var addClassListener = function($element, property, options) {
+	var listener = function() {
+		var value = bindingManager.data[property];
+		for (var key in options) {
+			var cls = options[key];
+			if (key != value) {
+				$element.removeClass(cls);
+			}
 		}
 	}
-	if (options[propertyValue]) {
-		elt.parent().addClass(options[propertyValue]);
-	}
-	
-}
-
-var setText = function(elt, propertyValue, options) {
-	if (typeof options !== "undefined" && options[propertyValue]) {
-		propertyValue = options[propertyValue];
-	}
-	elt.text(propertyValue);
-}
+	bindingManager.addListener(property, listener);
+	listener();
+};
 
 var invoke = function(path) {
 	$.get(url + path, function(data) {
@@ -85,25 +92,12 @@ setInterval(function() {
 	invoke("getState");
 }, 1000);
 
-
 $(function() {
 	$("[bindToProperty]").each(function() {
-		var elt = $(this);
-		var property = elt.attr("bindToProperty");
-		var textToggler = elt.attr("textToggler");
-		if (textToggler) {
-			textToggler = JSON.parse(textToggler);
-		}
-		bindingManager.addListener(property, elt, setText, textToggler);
-
-		var classToggler = elt.attr("classToggler");
-		if (classToggler) {
-			classToggler = JSON.parse(classToggler);
-			bindingManager.addListener(property, elt, toggleClass, classToggler);
-		}
-
+		
 	});
 });
+
 </script>
 </head>
 
@@ -119,34 +113,38 @@ $(function() {
 			
 					<div class="row">
 						<div class="col-xs-6">
+							<div>Temperature</div>
 							<div>
-								Temperature
-							</div>
-							<div id="temperature">
-								<span classToggler='{}' bindToProperty="dhtSensor_temperature" textToggler='{}'></span>&#176;C  SRAM: <span bindToProperty="FREE_MEM" textToggler='{}'></span>
+								<span bindToProperty="dhtSensor_temperature"></span> &#176;C
 							</div>
 						</div>
 						<div class="col-xs-6">
+							<div>Humidity</div>
 							<div>
-								Humidity
-							</div>
-							<div id="humidity">
-								<span classToggler='{}' bindToProperty="dhtSensor_humidity" textToggler='{}'></span>
+								<span bindToProperty="dhtSensor_humidity"></span> %RH
+								<script>addTextListener("bedroom-humidity", "dhtSensor_humidity")</script>
 							</div>
 						</div>
 					</div>
-					<div id="light">
-						Light <span classToggler='{"1":"text-success","0":"text-danger"}' bindToProperty="output5" textToggler='{"1":"ON","0":"OFF"}'></span>
+					<div>Light</div>
+					<div>
+						<span bindToProperty="output5"></span>
 					</div>
 					<button class="btn btn-block btn-lg" type="button" onclick="invoke('toggleLight')">
 						<span class="glyphicon glyphicon-flash"></span> LIGHT
 					</button>
+					<div>
+						<span id="bedroom-freeRam"></span> bytes free RAM
+						<script>addTextListener("bedroom-freeRam", "FREE_MEM")</script>
+					</div>
 			
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="row"><div class="lead col-md-12"><span class="label label-default"><span class="glyphicon glyphicon-dashboard"></span> Free memory (SRAM): <span bindToProperty="FREE_MEM"></span> bytes</span></div></div>
+	<div class="row"><div class="lead col-md-12"><span class="label label-default"><span class="glyphicon glyphicon-dashboard"></span> Free memory (SRAM): <span id="FREE_MEM"></span> bytes</span></div>
+	<script>addTextListener("FREE_MEM", "FREE_MEM")</script>
+
 </div>
 </body>
