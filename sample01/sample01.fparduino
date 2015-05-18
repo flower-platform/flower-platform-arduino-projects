@@ -162,6 +162,14 @@
 <attribute NAME="slaveSelectPin" VALUE="4"/>
 <attribute NAME="timeInterval" VALUE="3000"/>
 </node>
+<node TEXT="" ID="ID_1127119209" CREATED="1431701095296" MODIFIED="1431701095296">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Timer"/>
+<attribute NAME="repeatCount" VALUE="4"/>
+<attribute NAME="delay" VALUE="4"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Timer"/>
+<attribute NAME="autostart" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="timer"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_733754221" CREATED="1429201407631" MODIFIED="1429201407631">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__ui"/>
@@ -420,6 +428,34 @@
 <attribute NAME="suffix" VALUE="bytes free RAM"/>
 </node>
 </node>
+</node>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_911974585" CREATED="1431695392196" MODIFIED="1431695392196">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__metadata"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__metadata"/>
+<attribute NAME="name" VALUE="Metadata"/>
+<attribute NAME="fullProjectDownloadedAtLeastOnce" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<node TEXT="" ID="ID_1272878140" CREATED="1431705251078" MODIFIED="1431705251078">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibraries"/>
+<attribute NAME="name" VALUE="Dependent Libraries"/>
+<node TEXT="" ID="ID_975592669" CREATED="1431705251079" MODIFIED="1431705251079">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="description" VALUE="FP Arduino does this and that"/>
+<attribute NAME="name" VALUE="Flower Platform Arduino Runtime"/>
+<attribute NAME="url" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime"/>
+</node>
+<node TEXT="" ID="ID_367662809" CREATED="1431705251081" MODIFIED="1431705251081">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="description" VALUE="DHT library"/>
+<attribute NAME="name" VALUE="DHT"/>
+<attribute NAME="url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
+</node>
+<node TEXT="" ID="ID_453470824" CREATED="1431705251082" MODIFIED="1431705251082">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="description" VALUE="Timer bla bla"/>
+<attribute NAME="name" VALUE="Timer"/>
+<attribute NAME="url" VALUE="http://google.com"/>
 </node>
 </node>
 </node>

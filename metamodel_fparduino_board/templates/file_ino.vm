@@ -15,6 +15,10 @@
 \#include <Timer.h>
 \#include <LoggerSD.h>
 
+#foreach( $import in $imports )
+\#include <$import>
+#end
+
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
 #callMacro($child)
 #end
