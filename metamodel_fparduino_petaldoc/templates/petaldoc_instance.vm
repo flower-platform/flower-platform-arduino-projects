@@ -18,7 +18,7 @@
 #end
 
 #htmlBegin()
-<h4>${node.properties.name}</h4>
+<h4><span class="label label-success"><img src="../$CommonsStringUtils.substringBefore($node.properties.icons, ';')"/></span> ${node.properties.name}</h4>
 <hr/>
 <p style="margin-bottom: 10px">
 Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> <a href="#events" class="btn btn-info btn-xs">Events</a> <a href="#methods" class="btn btn-primary btn-xs">Methods</a>

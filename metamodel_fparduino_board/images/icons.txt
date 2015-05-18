@@ -1,0 +1,9 @@
+== Icons to be mentioned in license file ==
+
+== Icons allowed for commercial use (NO link required) ==
+
+Input.png -> https://www.iconfinder.com/icons/14411/arrow_down_download_icon#size=16 (rotated)
+Output.png -> https://www.iconfinder.com/icons/14667/upload_icon#size=16 (rotated)
+HttpServer.png -> https://www.iconfinder.com/icons/7891/earth_hosting_internet_network_world_icon#size=16
+Timer.png -> https://www.iconfinder.com/icons/16162/clock_pending_soon_time_icon#size=16
+DHTSensor.png -> https://www.iconfinder.com/icons/183498/full_half_thermometer_icon#size=16

@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <script>
-var url = "192.168.100.253:80/";
+var url = "http://192.168.100.253:80/";
 
 var bindingManager = {
 
@@ -115,31 +115,153 @@ setInterval(function() {
 							<div>Temperature</div>
 							<div>
 								<span id="bedroom-temperature"></span> &#176;C
-								<script>addTextListener("bedroom-temperature", "temperature")</script>
+								<script>addTextListener("bedroom-temperature", "dhtSensor_temperature")</script>
 							</div>
 						</div>
 						<div class="col-xs-6">
 							<div>Humidity</div>
 							<div>
 								<span id="bedroom-humidity"></span> %RH
-								<script>addTextListener("bedroom-humidity", "humidity")</script>
+								<script>addTextListener("bedroom-humidity", "dhtSensor_humidity")</script>
 							</div>
 						</div>
 					</div>
 					<div>Light</div>
 					<div>
 						<span id="bedroom-light"></span>
-						<script>addTextListener("bedroom-light", "relay1")</script>
+						<script>addTextListener("bedroom-light", "output5")</script>
 					</div>
-					<button class="btn btn-block btn-lg" type="button" onclick="invoke('relay1Toggle')">
+					<button class="btn btn-block btn-lg" type="button" onclick="invoke('toggleLight')">
 						<span class="glyphicon glyphicon-flash"></span> LIGHT
 					</button>
+					<div>
+						<span id="bedroom-freeRam"></span> bytes free RAM
+						<script>addTextListener("bedroom-freeRam", "FREE_MEM")</script>
+					</div>
+			
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-primary text-center" id="bedroom">
+				<div class="panel-heading">Bedroom</div>
+				
+				<div class="panel-body">
+			
+					<div class="row">
+						<div class="col-xs-6">
+							<div>Temperature</div>
+							<div>
+								<span id="bedroom-temperature"></span> &#176;C
+								<script>addTextListener("bedroom-temperature", "dhtSensor_temperature")</script>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div>Humidity</div>
+							<div>
+								<span id="bedroom-humidity"></span> %RH
+								<script>addTextListener("bedroom-humidity", "dhtSensor_humidity")</script>
+							</div>
+						</div>
+					</div>
+					<div>Light</div>
+					<div>
+						<span id="bedroom-light"></span>
+						<script>addTextListener("bedroom-light", "output5")</script>
+					</div>
+					<button class="btn btn-block btn-lg" type="button" onclick="invoke('toggleLight')">
+						<span class="glyphicon glyphicon-flash"></span> LIGHT
+					</button>
+					<div>
+						<span id="bedroom-freeRam"></span> bytes free RAM
+						<script>addTextListener("bedroom-freeRam", "FREE_MEM")</script>
+					</div>
+			
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-primary text-center" id="bedroom">
+				<div class="panel-heading">Bedroom</div>
+				
+				<div class="panel-body">
+			
+					<div class="row">
+						<div class="col-xs-6">
+							<div>Temperature</div>
+							<div>
+								<span id="bedroom-temperature"></span> &#176;C
+								<script>addTextListener("bedroom-temperature", "dhtSensor_temperature")</script>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div>Humidity</div>
+							<div>
+								<span id="bedroom-humidity"></span> %RH
+								<script>addTextListener("bedroom-humidity", "dhtSensor_humidity")</script>
+							</div>
+						</div>
+					</div>
+					<div>Light</div>
+					<div>
+						<span id="bedroom-light"></span>
+						<script>addTextListener("bedroom-light", "output5")</script>
+					</div>
+					<button class="btn btn-block btn-lg" type="button" onclick="invoke('toggleLight')">
+						<span class="glyphicon glyphicon-flash"></span> LIGHT
+					</button>
+					<div>
+						<span id="bedroom-freeRam"></span> bytes free RAM
+						<script>addTextListener("bedroom-freeRam", "FREE_MEM")</script>
+					</div>
+			
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-primary text-center" id="bedroom">
+				<div class="panel-heading">Bedroom</div>
+				
+				<div class="panel-body">
+			
+					<div class="row">
+						<div class="col-xs-6">
+							<div>Temperature</div>
+							<div>
+								<span id="bedroom-temperature"></span> &#176;C
+								<script>addTextListener("bedroom-temperature", "dhtSensor_temperature")</script>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div>Humidity</div>
+							<div>
+								<span id="bedroom-humidity"></span> %RH
+								<script>addTextListener("bedroom-humidity", "dhtSensor_humidity")</script>
+							</div>
+						</div>
+					</div>
+					<div>Light</div>
+					<div>
+						<span id="bedroom-light"></span>
+						<script>addTextListener("bedroom-light", "output5")</script>
+					</div>
+					<button class="btn btn-block btn-lg" type="button" onclick="invoke('toggleLight')">
+						<span class="glyphicon glyphicon-flash"></span> LIGHT
+					</button>
+					<div>
+						<span id="bedroom-freeRam"></span> bytes free RAM
+						<script>addTextListener("bedroom-freeRam", "FREE_MEM")</script>
+					</div>
 			
 				</div>
 			</div>
 		</div>
 	</div>
 
-</div>
+	<div class="row"><div class="lead col-md-12"><span class="label label-default"><span class="glyphicon glyphicon-dashboard"></span> Free memory (SRAM): <span id="FREE_MEM"></span> bytes</label></div>
+	<script>addTextListener("FREE_MEM", "FREE_MEM")</script>
 
+</div>
 </body>
