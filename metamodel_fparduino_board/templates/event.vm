@@ -2,7 +2,7 @@
 ## Standard event
 ################################
 
-#macro ( standardEvent_common )
+#macro ( standardEvent_common $node )
 #set( $instanceName = "${instance.properties.name}" )
 #set( $instanceType = "${NodeTemplateUtils.stripDynamicPrefix(${instance.type})}" )
 #set( $simpleType = "${NodeTemplateUtils.stripDynamicPrefix(\${node.type})}" )
@@ -10,7 +10,7 @@
 #set( $eventName = "${CommonsStringUtils.substringBefore(${simpleType}, '(')}" )
 #end
 
-#macro ( standardEvent_handler)
+#macro ( default_handler $node )
 #standardEvent_common()
 virtual void ${instanceName}_${eventName}(Event* event) {
 	$eventType* castedEvent = ($eventType*) event;
@@ -26,56 +26,7 @@ virtual void ${instanceName}_${eventName}(Event* event) {
 }
 #end
 
-#macro ( standardEvent_addListener )
+#macro ( default_addListener $node )
 #standardEvent_common()
 ${instanceName}.${eventName} = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::${instanceName}_${eventName});
-#end
-
-################################
-## evenimente pr-zise/delegare; 
-################################
-
-#macro ( onValueChanged_ValueChangedEvent__handler )
-#standardEvent_handler( false )
-#end
-
-#macro ( onValueChanged_ValueChangedEvent__addListener )
-#standardEvent_addListener()
-#end
-
-################################
-## initial/mariana
-################################
-
-#macro( INPUT_ON_EVENT_handler $node )
-#set( $event = ${node.properties.generatedLabel} )
-virtual void #eventFuncName($event "Handler")(#eventClsName($event)* event) {
-	Serial.println("hello from handler");
-#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
-	#invocation($child)
-#end
-}
-#end
-
-#macro( INPUT_ON_EVENT_addListener $node )
-#set( $event = ${node.properties.generatedLabel} )
-#set( $name = "#eventFuncName(\$event 'Listener')" )
-#set( $Name = $StringUtils.capitalizeFirstLetter($name) )
-class $Name : public Listener {
-	void handleEvent(Event* event) {
-		self->#eventFuncName($event "Handler")((#eventClsName($event)*) event);
-	}
-} * $name = new ${Name}();
-#set( $eventCt = "${NodeTemplateUtils.stripDynamicPrefix(\${instance.properties.type})}::EVENT_TYPE_\${event}" )
-${instance.properties.name}->addEventListener($eventCt, $name);
-#end
-
-#macro( eventFuncName $event $suffix )${instance.properties.name}_${event}_${suffix}#end
-
-#macro( eventClsName $event )$StringUtils.removeAndHump(${event.toLowerCase()})#end
-
-#macro( invocation $node )
-#set( $method = $NodeTemplateUtils.getNode($node.properties.target) )
-#set( $target = $NodeTemplateUtils.getParent($method.nodeUri) )
-${target.properties.name}->${method.properties.name};
 #end

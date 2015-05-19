@@ -27,6 +27,7 @@ protected:
 			output5.toggleHighLow();
 		}
 	}
+	
 	virtual void httpServer_onCommandReceived(Event* event) {
 		HttpCommandEvent* castedEvent = (HttpCommandEvent*) event;
 		
@@ -78,7 +79,7 @@ protected:
 			blueLed.toggleHighLow();
 		}
 	}
-
+	
 public:
 	virtual ~ApplicationGen() { }
 
@@ -86,36 +87,35 @@ public:
 		input2.pin = 2;
 		input2.internalPullUp = true;
 		input2.setup();
-		
+
 		output5.pin = 5;
 		output5.setup();
-		
+
 		uint8_t macAddress[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 		uint8_t ipAddress[] = { 192, 168, 100, 253 };
 		memcpy(httpServer.macAddress, macAddress, 6);
 		memcpy(httpServer.ipAddress, ipAddress, 4);
 		httpServer.port = 80;
 		httpServer.setup();
-		
+
 		dhtSensor.pin = A0;
 		dhtSensor.setup();
-		
+
 		blueLed.pin = 8;
 		blueLed.setup();
-		
+
 		blueLedTimer.delay = 500;
 		blueLedTimer.repeatCount = 0;
 		blueLedTimer.autoStart = true;
 		blueLedTimer.setup();
-		
+
 		loggerTemperature.slaveSelectPin = 4;
 		loggerTemperature.timeInterval = 3000;
 		loggerTemperature.setup();
-		
+
 		input2.onValueChanged = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::input2_onValueChanged);
 		httpServer.onCommandReceived = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_onCommandReceived);
 		dhtSensor.onTemperatureChanged = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::dhtSensor_onTemperatureChanged);
-		
 		blueLedTimer.onTimer = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::blueLedTimer_onTimer);
 	}
 	

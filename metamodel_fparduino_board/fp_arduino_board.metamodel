@@ -218,7 +218,6 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
 <attribute NAME="propertyType" VALUE="Boolean"/>
-<attribute NAME="propertyDefaultValue" VALUE="false"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_164463813" CREATED="1429197136197" MODIFIED="1429197136197">

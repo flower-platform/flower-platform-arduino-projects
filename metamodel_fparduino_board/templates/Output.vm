@@ -2,19 +2,7 @@
 ## Output
 ################################
 
-#macro( Output_decl $node )
-#instance_decl()
-#end
-
 #macro( Output_init $node )
 ${node.properties.name}.pin = ${node.properties.pin};
 ${node.properties.name}.setup();
-#end
-
-#macro( Output_handlers $node )
-#instance_handlers($node)
-#end
-
-#macro( Output_addListeners $node )
-#instance_addListeners($node)
 #end

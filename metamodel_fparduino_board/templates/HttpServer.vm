@@ -2,13 +2,7 @@
 ## HttpServer
 ################################
 
-#macro( HttpServer_decl $node )
-#instance_decl($node)
-#end
-
-#####
-
-#macro( HttpServer_init $node )
+#macro( HttpServer_init)
 uint8_t macAddress[] = { 0x${node.properties.macAddress.replaceAll(":", ", 0x")} };
 uint8_t ipAddress[] = { ${node.properties.ipAddress.replaceAll("\.", ", ")} };
 memcpy(${node.properties.name}.macAddress, macAddress, 6);
@@ -19,13 +13,13 @@ ${node.properties.name}.setup();
 
 #####
 
-#macro( HttpServer_loop $node )
+#macro( HttpServer_loop )
 ${node.properties.name}.loop();
 #end
 
 #####
 
-#macro( HttpServer_handlers $node )
+#macro( HttpServer_handlers )
 virtual void httpServer_onCommandReceived(Event* event) {
 	HttpCommandEvent* castedEvent = (HttpCommandEvent*) event;
 	
@@ -45,7 +39,7 @@ virtual void httpServer_onCommandReceived(Event* event) {
 #if( $child.type.endsWith("onCommandReceived(HttpCommandEvent)") )
 	} else if (strcmp_P(command, PSTR("${child.properties.mapping}")) == 0) {
 		urlFound = true;
-#foreach( $invocation in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#foreach( $invocation in $NodeTemplateUtils.getChildren($child.nodeUri) )
 #set( $targetMethodNode = $NodeTemplateUtils.getNode($invocation.properties.target) )
 #set( $targetInstance = $NodeTemplateUtils.getParent($targetMethodNode.nodeUri).properties.name )
 #set( $targetMethod = $CommonsStringUtils.substringBefore($targetMethodNode.properties.name, '(') )
@@ -65,13 +59,13 @@ virtual void httpServer_onCommandReceived(Event* event) {
 		castedEvent->server->httpError404();
 	}
 }
+
 #set( $instance = $node )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
 #if( !$child.type.endsWith("onCommandReceived(HttpCommandEvent)") )
-#standardEvent_handler
+#default_handler( $child )
 #end
 #end
-
 #end
 
 #####
@@ -96,13 +90,3 @@ castedEvent->client->print(F("$section"));
 #end
 return;
 #end
-
-################################
-## Events
-################################
-
-#macro ( onCommandReceived_HttpCommandEvent__handler )
-#standardEvent_handler( $node.properties.mapping )
-#end
-
-#####

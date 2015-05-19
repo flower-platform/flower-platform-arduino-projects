@@ -2,36 +2,27 @@
 ## Instance
 ################################
 
-#macro( instance_decl )
+#macro( default_declaration $node )
 ${NodeTemplateUtils.stripDynamicPrefix(${node.type})} ${node.properties.name};
 #end
 
-#macro( instance_init )
-#instance_create()
-#instance_addComponent()
-#end
-
-#macro( instance_create $params )
-#if( !$params )
-#set( $params = "" )
-#end
-${node.properties.name} = new ${NodeTemplateUtils.stripDynamicPrefix(${node.type})}(${params});
-#end
-
-#macro( instance_addComponent )
-addComponent(${node.properties.name});
-#end
-
-#macro( instance_handlers $node )
+#macro( default_handlers $node )
 #set( $instance = $node )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#if (!$child.type.endsWith("method"))
 #callMacroWithSuffix( $child "_handler" )
+
+#end
 #end
 #end
 
-#macro( instance_addListeners $node )
+#macro( default_addListeners $node )
 #set( $instance = $node )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#if (!$child.type.endsWith("method"))
 #callMacroWithSuffix( $child "_addListener" )
 #end
 #end
+#end
+
+#macro( default_loop $node )#end
