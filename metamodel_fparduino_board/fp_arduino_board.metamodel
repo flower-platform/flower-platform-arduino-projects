@@ -605,15 +605,6 @@
 <attribute NAME="type" VALUE="genericDescriptor"/>
 <attribute NAME="petaldoc" VALUE="Invokes the function (without any arguments) only when the value from the event is HIGH."/>
 </node>
-<node TEXT="" ID="ID_1204364150" CREATED="1430149964793" MODIFIED="1430149964793">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="invocationTargetSignature.key,value"/>
-<attribute NAME="extraInfo.label" VALUE="Transfers &quot;value&quot;"/>
-<attribute NAME="name" VALUE="invocationTargetSignature., invokeIfHigh:genericDescriptor"/>
-<attribute NAME="value" VALUE="transferValue"/>
-<attribute NAME="extraInfo.description" VALUE="Invokes using the constant key (given at design time) and the value from the event."/>
-<attribute NAME="extraInfo.invocationType" VALUE="invocation_ConstantKey"/>
-</node>
 <node TEXT="" ID="ID_133073038" CREATED="1431513383921" MODIFIED="1431513383921">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="invocationTargetSignature.value"/>
@@ -639,14 +630,6 @@
 <node TEXT="" POSITION="right" ID="ID_1379519850" CREATED="1430149787669" MODIFIED="1430149787669">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="invocationSourceSignature.HttpCommandEvent"/>
-<node TEXT="" ID="ID_1174419311" CREATED="1430149787670" MODIFIED="1430149787670">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="invocationTargetSignature."/>
-<attribute NAME="extraInfo.label" VALUE="Invoke and return result"/>
-<attribute NAME="name" VALUE="invocationTargetSignature., invokeIfHigh:genericDescriptor"/>
-<attribute NAME="value" VALUE="invokeAndReturnResult"/>
-<attribute NAME="extraInfo.description" VALUE="Invokes the function (without any arguments) and then returns its result."/>
-</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_735737433" CREATED="1430155130894" MODIFIED="1430155130894">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>

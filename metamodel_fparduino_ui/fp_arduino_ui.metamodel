@@ -241,18 +241,6 @@
 <attribute NAME="type" VALUE="propertyDescriptor"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_787558667" CREATED="1430124902201" MODIFIED="1430124902201">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="category.element"/>
-<attribute NAME="propertyForLabel" VALUE="id"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<node TEXT="" ID="ID_139139047" CREATED="1430124911020" MODIFIED="1430124911020">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="name" VALUE="id"/>
-<attribute NAME="label" VALUE="Id"/>
-<attribute NAME="type" VALUE="propertyDescriptor"/>
-</node>
-</node>
 <node TEXT="" POSITION="right" ID="ID_1953022306" CREATED="1429864149309" MODIFIED="1429864149309">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="ui"/>
