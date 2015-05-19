@@ -2,22 +2,10 @@
 ## Input
 ################################
 
-#macro( Input_decl $node )
-#instance_decl()
-#end
-
 #macro( Input_init $node )
 ${node.properties.name}.pin = ${node.properties.pin};
 ${node.properties.name}.internalPullUp = ${node.properties.internalPullUp};
 ${node.properties.name}.setup();
-#end
-
-#macro( Input_handlers $node )
-#instance_handlers($node)
-#end
-
-#macro( Input_addListeners $node )
-#instance_addListeners($node)
 #end
 
 #macro( Input_loop $node )

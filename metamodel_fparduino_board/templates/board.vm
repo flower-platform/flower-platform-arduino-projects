@@ -2,7 +2,7 @@
 class ApplicationGen {
 protected:
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
-	#callMacroWithSuffix( $child "_decl" )
+	#callMacroWithSuffix( $child "_declaration" )
 #end
 
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
@@ -10,7 +10,6 @@ protected:
 	#callMacroWithSuffix( $child "_handlers" )
 #end
 #end
-
 public:
 	virtual ~ApplicationGen() { }
 
@@ -18,8 +17,8 @@ public:
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
 #@indent()
 		#callMacroWithSuffix( $child "_init" )
-
 #end
+
 #end
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
 #@indent()
