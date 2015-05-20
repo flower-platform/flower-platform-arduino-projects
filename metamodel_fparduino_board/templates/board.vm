@@ -1,11 +1,14 @@
 #macro( board $node )
+#set ( $board = $node )
 class ApplicationGen {
 protected:
-#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#foreach( $child in $NodeTemplateUtils.getChildren($board.nodeUri) )
+#@indent()
 	#callMacroWithSuffix( $child "_declaration" )
 #end
+#end
 
-#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#foreach( $child in $NodeTemplateUtils.getChildren($board.nodeUri) )
 #@indent()
 	#callMacroWithSuffix( $child "_handlers" )
 #end
@@ -14,13 +17,13 @@ public:
 	virtual ~ApplicationGen() { }
 
 	virtual void setup() {
-#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#foreach( $child in $NodeTemplateUtils.getChildren($board.nodeUri) )
 #@indent()
 		#callMacroWithSuffix( $child "_init" )
 #end
 
 #end
-#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#foreach( $child in $NodeTemplateUtils.getChildren($board.nodeUri) )
 #@indent()
 		#callMacroWithSuffix( $child "_addListeners" )
 #end
@@ -28,7 +31,7 @@ public:
 	}
 	
 	virtual void loop() {
-#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#foreach( $child in $NodeTemplateUtils.getChildren($board.nodeUri) )
 #@indent()
 		#callMacroWithSuffix( $child "_loop" )
 #end
@@ -38,7 +41,7 @@ public:
 	void printStateAsJson(Print* print) {
 		print->print(F("{"));
 	
-#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#foreach( $child in $NodeTemplateUtils.getChildren($board.nodeUri) )
 #if ( ${child.properties.contributesToState} )
 		${child.properties.name}.printStateAsJson(F("${child.properties.name}"), print);
 		print->print(F(","));

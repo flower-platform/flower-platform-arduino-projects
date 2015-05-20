@@ -6,6 +6,15 @@
 ${NodeTemplateUtils.stripDynamicPrefix(${node.type})} ${node.properties.name};
 #end
 
+#macro( default_init $node )
+#foreach( $entry in $node.properties.entrySet() )
+#if ($entry.key != "name" && $entry.key != "contributesToState" && $NodeTemplateUtils.hasPropertyDescriptor($node, $entry.key) && "$!entry.value" != "")
+${node.properties.name}.${entry.key} = ${entry.value};
+#end
+#end
+${node.properties.name}.setup();
+#end
+
 #macro( default_handlers $node )
 #set( $instance = $node )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )

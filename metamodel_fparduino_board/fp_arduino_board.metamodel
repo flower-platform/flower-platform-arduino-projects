@@ -360,7 +360,7 @@
 <node TEXT="" ID="ID_579669218" CREATED="1431424034147" MODIFIED="1431424034147">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="propertyType" VALUE="Boolean"/>
-<attribute NAME="name" VALUE="autostart"/>
+<attribute NAME="name" VALUE="autoStart"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
 <attribute NAME="propertyDefaultValue" VALUE="false"/>

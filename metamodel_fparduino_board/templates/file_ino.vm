@@ -5,7 +5,7 @@
 #end
 
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
-#callMacro($child)
+#callMacroWithSuffix( $child, "")
 #end
 
 \#define SHOULD_INCLUDE_CUSTOM_CODE

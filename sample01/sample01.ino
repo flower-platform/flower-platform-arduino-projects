@@ -43,10 +43,8 @@ protected:
 			castedEvent->client->print(F("eof e===\"undefined\"){e=[];this.listeners[f]=e}var d=function(){var g=bindingManager.data[f];c(b,g,a)};e.push(d);d()},set:function(d,c){if(this.data[d]!==c){this.data[d]=c;var b=this.listeners[d];if(typeof b!==\"undefined\"&&b!==null){for(var a=0;a<b.length;a++){b[a]()}}}}};var toggleClass=function(d,b"));
 			castedEvent->client->print(F(",c){for(var e in c){var a=c[e];if(e!=b){d.parent().removeClass(a)}}if(c[b]){d.parent().addClass(c[b])}};var setText=function(c,a,b){if(typeof b!==\"undefined\"&&b[a]){a=b[a]}c.text(a)};var invoke=function(a){$.get(url+a,function(c){for(var b in c){bindingManager.set(b,c[b])}})};setInterval(function(){"));
 			castedEvent->client->print(F("invoke(\"getState\")},1000);$(function(){$(\"[bindToProperty]\").each(function(){var b=$(this);var d=b.attr(\"bindToProperty\");var c=b.attr(\"textToggler\");if(c){c=JSON.parse(c)}bindingManager.addListener(d,b,setText,c);var a=b.attr(\"classToggler\");if(a){a=JSON.parse(a);bindingManager.addListener(d,b,togg"));
-			castedEvent->client->print(F("leClass,a)}})});<\/script><\/head><body><br\/><div class=\"container-fluid lead\"><div class=\"row\"><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\" id=\"bedroom\"><div class=\"panel-heading\">Bedroom<\/div><div class=\"panel-body\"><div class=\"row\"><div class=\"col-xs-6\"><div> Temperature <\/div"));
-			castedEvent->client->print(F("><div id=\"temperature\"><span classToggler='{}' bindToProperty=\"dhtSensor_temperature\" textToggler='{}'><\/span><\/div><\/div><div class=\"col-xs-6\"><div> Humidity <\/div><div id=\"humidity\"><span classToggler='{}' bindToProperty=\"dhtSensor_humidity\" textToggler='{}'><\/span><\/div><\/div><\/div><div id=\"light"));
-			castedEvent->client->print(F("\"> Light is <span classToggler='{\"1\":\"text-success\",\"0\":\"text-danger\"}' bindToProperty=\"output5\" textToggler='{\"1\":\"ON\",\"0\":\"OFF\"}'><\/span><\/div><button class=\"btn btn-block btn-lg lightButton\" type=\"button\" onclick=\"invoke('toggleLight')\"><span class=\"glyphicon glyphicon-flash\"><\/span> LIGHT <\/butt"));
-			castedEvent->client->print(F("on><\/div><\/div><\/div><\/div><div class=\"row\"><div class=\"lead col-md-12\"><span class=\"label label-default\"><span class=\"glyphicon glyphicon-dashboard\"><\/span> Free memory (SRAM): <span bindToProperty=\"FREE_MEM\"><\/span> bytes<\/span><\/div><\/div><\/div><\/body>"));
+			castedEvent->client->print(F("leClass,a)}})});<\/script><\/head><body><br\/><div class=\"container-fluid lead\"> #callMacro($child) <div class=\"row\"><div class=\"lead col-md-12\"><span class=\"label label-default\"><span class=\"glyphicon glyphicon-dashboard\"><\/span> Free memory (SRAM): <span bindToProperty=\"FREE_MEM\"><\/span> bytes<\/span>"));
+			castedEvent->client->print(F("<\/div><\/div><\/div><\/body>"));
 			return;
 		} else if (strcmp_P(command, PSTR("getState")) == 0) {
 			urlFound = true;
@@ -84,8 +82,9 @@ public:
 	virtual ~ApplicationGen() { }
 
 	virtual void setup() {
-		input2.pin = 2;
 		input2.internalPullUp = true;
+		input2.pin = 2;
+		input2.isAnalog = false;
 		input2.setup();
 
 		output5.pin = 5;
@@ -104,9 +103,9 @@ public:
 		blueLed.pin = 8;
 		blueLed.setup();
 
-		blueLedTimer.delay = 500;
-		blueLedTimer.repeatCount = 0;
 		blueLedTimer.autoStart = true;
+		blueLedTimer.repeatCount = 0;
+		blueLedTimer.delay = 500;
 		blueLedTimer.setup();
 
 		loggerTemperature.slaveSelectPin = 4;

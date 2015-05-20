@@ -11,7 +11,7 @@
 #end
 
 #macro ( default_handler $node )
-#standardEvent_common()
+#standardEvent_common( $node )
 virtual void ${instanceName}_${eventName}(Event* event) {
 	$eventType* castedEvent = ($eventType*) event;
 #foreach( $invocation in $NodeTemplateUtils.getChildren($node.nodeUri) )
@@ -20,7 +20,7 @@ virtual void ${instanceName}_${eventName}(Event* event) {
 #set( $targetMethod = $CommonsStringUtils.substringBefore($targetMethodNode.properties.name, '(') )
 #set( $targetMethodFull = $targetMethodNode.properties.name )
 #@indent()
-	#evaluate( ${NodeTemplateUtils.callMacroWithSuffix(${invocation.properties.template}, "", "")} )## we don't use directly, to have the special chars replaced
+	#evaluate( "#${invocation.properties.template}" )
 #end
 #end
 }

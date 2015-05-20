@@ -2,18 +2,6 @@
 ## Timer
 ################################
 
-#macro( Timer_init $node )
-#if( ${node.properties.autostart} )## if false, this seems to return ""
-#set( $autoStart = "true" )
-#else
-#set( $autoStart = "false" )
-#end
-${node.properties.name}.delay = ${node.properties.delay};
-${node.properties.name}.repeatCount = ${node.properties.repeatCount};
-${node.properties.name}.autoStart = ${autoStart};
-${node.properties.name}.setup();
-#end
-
 #macro( Timer_loop $node )
 ${node.properties.name}.loop();
 #end

@@ -2,12 +2,6 @@
 ## Input
 ################################
 
-#macro( Input_init $node )
-${node.properties.name}.pin = ${node.properties.pin};
-${node.properties.name}.internalPullUp = ${node.properties.internalPullUp};
-${node.properties.name}.setup();
-#end
-
 #macro( Input_loop $node )
 ${node.properties.name}.loop();
 #end

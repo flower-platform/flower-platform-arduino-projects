@@ -2,7 +2,7 @@
 ## HttpServer
 ################################
 
-#macro( HttpServer_init)
+#macro( HttpServer_init $node )
 uint8_t macAddress[] = { 0x${node.properties.macAddress.replaceAll(":", ", 0x")} };
 uint8_t ipAddress[] = { ${node.properties.ipAddress.replaceAll("\.", ", ")} };
 memcpy(${node.properties.name}.macAddress, macAddress, 6);
@@ -13,13 +13,13 @@ ${node.properties.name}.setup();
 
 #####
 
-#macro( HttpServer_loop )
+#macro( HttpServer_loop $node )
 ${node.properties.name}.loop();
 #end
 
 #####
 
-#macro( HttpServer_handlers )
+#macro( HttpServer_handlers $node )
 virtual void httpServer_onCommandReceived(Event* event) {
 	HttpCommandEvent* castedEvent = (HttpCommandEvent*) event;
 	
@@ -45,7 +45,7 @@ virtual void httpServer_onCommandReceived(Event* event) {
 #set( $targetMethod = $CommonsStringUtils.substringBefore($targetMethodNode.properties.name, '(') )
 #set( $targetMethodFull = $targetMethodNode.properties.name )
 #@indent()
-		#evaluate( ${NodeTemplateUtils.callMacroWithSuffix(${invocation.properties.template}, "", "")} )## we don't use directly, to have the special chars replaced
+		#evaluate( "#${invocation.properties.template}" )
 #end
 #end
 #end

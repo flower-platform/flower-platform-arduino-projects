@@ -181,8 +181,9 @@
 <attribute NAME="delay" VALUE="500"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Timer"/>
 <attribute NAME="y" VALUE="219" OBJECT="java.lang.Integer|219"/>
-<attribute NAME="autostart" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="autostart" VALUE="false" OBJECT="java.lang.Boolean|false"/>
 <attribute NAME="x" VALUE="116" OBJECT="java.lang.Integer|116"/>
+<attribute NAME="autoStart" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <node TEXT="" ID="ID_893549011" CREATED="1431509191015" MODIFIED="1431509191015">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onTimer(TimerEvent)"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__onTimer(TimerEvent)"/>

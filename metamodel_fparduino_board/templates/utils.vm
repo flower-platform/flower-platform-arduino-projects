@@ -1,5 +1,1 @@
 #macro( indent )$TemplateUtils.indent( "$bodyContent" )#end
-
-#macro( callMacro $node )
-#evaluate("$NodeTemplateUtils.callMacro($node, '$node')")
-#end
