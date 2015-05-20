@@ -20,6 +20,7 @@ ${node.properties.name}.loop();
 #####
 
 #macro( HttpServer_handlers $node )
+#set ($serverNode = $node)
 virtual void httpServer_onCommandReceived(Event* event) {
 	HttpCommandEvent* castedEvent = (HttpCommandEvent*) event;
 	
@@ -35,7 +36,7 @@ virtual void httpServer_onCommandReceived(Event* event) {
 #end
 	} else if (strcmp_P(command, PSTR("getState")) == 0) {
 		urlFound = true;
-#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#foreach( $child in $NodeTemplateUtils.getChildren($serverNode.nodeUri) )
 #if( $child.type.endsWith("onCommandReceived(HttpCommandEvent)") )
 	} else if (strcmp_P(command, PSTR("${child.properties.mapping}")) == 0) {
 		urlFound = true;
@@ -61,7 +62,7 @@ virtual void httpServer_onCommandReceived(Event* event) {
 }
 
 #set( $instance = $node )
-#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#foreach( $child in $NodeTemplateUtils.getChildren($serverNode.nodeUri) )
 #if( !$child.type.endsWith("onCommandReceived(HttpCommandEvent)") )
 #default_handler( $child )
 #end
