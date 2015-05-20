@@ -1,15 +1,14 @@
-#include <FlowerPlatformArduinoRuntime.h>
-#include <Input.h>
-#include <Output.h>
+#include <Timer.h>
+#include <LoggerSD.h>
+#include <DHTSensor.h>
 #include <Ethernet.h>
+#include <FlowerPlatformArduinoRuntime.h>
+#include <SD.h>
+#include <DHT.h>
 #include <SPI.h>
 #include <HttpServer.h>
-#include <DHT.h>
-#include <DHTSensor.h>
-#include <Timer.h>
-#include <SD.h>
-#include <SPI.h>
-#include <LoggerSD.h>
+#include <Output.h>
+#include <Input.h>
 
 class ApplicationGen {
 protected:
@@ -46,12 +45,7 @@ protected:
 			castedEvent->client->print(F("leClass,a)}})});<\/script><\/head><body><br\/><div class=\"container-fluid lead\"><div class=\"row\"><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\" id=\"bedroom\"><div class=\"panel-heading\">Bedroom<\/div><div class=\"panel-body\"><div class=\"row\"><div class=\"col-xs-6\"><div> Temperature <\/div"));
 			castedEvent->client->print(F("><div id=\"temperature\"><span classToggler='{}' bindToProperty=\"dhtSensor_temperature\" textToggler='{}'><\/span><\/div><\/div><div class=\"col-xs-6\"><div> Humidity <\/div><div id=\"humidity\"><span classToggler='{}' bindToProperty=\"dhtSensor_humidity\" textToggler='{}'><\/span><\/div><\/div><\/div><div id=\"light"));
 			castedEvent->client->print(F("\"> Light is <span classToggler='{\"1\":\"text-success\",\"0\":\"text-danger\"}' bindToProperty=\"output5\" textToggler='{\"1\":\"ON\",\"0\":\"OFF\"}'><\/span><\/div><button class=\"btn btn-block btn-lg lightButton\" type=\"button\" onclick=\"invoke('toggleLight')\"><span class=\"glyphicon glyphicon-flash\"><\/span> LIGHT <\/butt"));
-			castedEvent->client->print(F("on><\/div><\/div><\/div><\/div><div class=\"row\"><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\"><div class=\"panel-heading\">Panel 1<\/div><div class=\"panel-body\"><\/div><\/div><\/div><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\"><div class=\"panel-heading\"><\/div><div cl"));
-			castedEvent->client->print(F("ass=\"panel-body\"><\/div><\/div><\/div><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\"><div class=\"panel-heading\"><\/div><div class=\"panel-body\"><\/div><\/div><\/div><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\"><div class=\"panel-heading\"><\/div><div class=\"panel-body\""));
-			castedEvent->client->print(F("><div class=\"row\"><div class=\"col-md-6\"><\/div><div class=\"col-md-6\"><\/div><\/div><div class=\"row\"><div class=\"col-md-6\"><\/div><div class=\"col-md-6\"><\/div><\/div><\/div><\/div><\/div><\/div><div class=\"row\"><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\"><div class=\"panel-heading\"><\/div>"));
-			castedEvent->client->print(F("<div class=\"panel-body\"><\/div><\/div><\/div><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\"><div class=\"panel-heading\"><\/div><div class=\"panel-body\"><\/div><\/div><\/div><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\"><div class=\"panel-heading\"><\/div><div class=\"pane"));
-			castedEvent->client->print(F("l-body\"><\/div><\/div><\/div><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\"><div class=\"panel-heading\"><\/div><div class=\"panel-body\"><\/div><\/div><\/div><\/div><div class=\"row\"><div class=\"lead col-md-12\"><span class=\"label label-default\"><span class=\"glyphicon glyphicon-dashboard\"><\/s"));
-			castedEvent->client->print(F("pan> Free memory (SRAM): <span bindToProperty=\"FREE_MEM\"><\/span> bytes<\/span><\/div><\/div><\/div><\/body>"));
+			castedEvent->client->print(F("on><\/div><\/div><\/div><\/div><div class=\"row\"><div class=\"lead col-md-12\"><span class=\"label label-default\"><span class=\"glyphicon glyphicon-dashboard\"><\/span> Free memory (SRAM): <span bindToProperty=\"FREE_MEM\"><\/span> bytes<\/span><\/div><\/div><\/div><\/body>"));
 			return;
 		} else if (strcmp_P(command, PSTR("getState")) == 0) {
 			urlFound = true;

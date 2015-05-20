@@ -692,9 +692,7 @@
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="value" VALUE="Timer.h"/>
 <attribute NAME="type" VALUE="genericDescriptor"/>
-<attribute NAME="extraInfo.name" VALUE="Timer"/>
 <attribute NAME="extraInfo.description" VALUE="Timer bla bla"/>
-<attribute NAME="extraInfo.url" VALUE="http://google.com"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1967632752" CREATED="1431945793582" MODIFIED="1431945793582">
@@ -706,7 +704,6 @@
 <attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="Ethernet.h,SPI.h,HttpServer.h"/>
 <attribute NAME="extraInfo.name" VALUE="HttpServer"/>
-<attribute NAME="extraInfo.url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
 <attribute NAME="isDirty" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 </node>
 </node>
@@ -718,7 +715,6 @@
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="Input.h"/>
-<attribute NAME="extraInfo.name" VALUE="Input"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_720251765" CREATED="1431945970840" MODIFIED="1431945970840">
@@ -729,7 +725,6 @@
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="Output.h"/>
-<attribute NAME="extraInfo.name" VALUE="Output"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1897624332" CREATED="1431946038263" MODIFIED="1431946038263">
@@ -740,7 +735,6 @@
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="SD.h,SPI.h,LoggerSD.h"/>
-<attribute NAME="extraInfo.name" VALUE="LoggerSD"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1324326737" CREATED="1431946245462" MODIFIED="1431946245462">

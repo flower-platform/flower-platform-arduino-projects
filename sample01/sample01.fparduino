@@ -55,42 +55,36 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__metadata"/>
 <attribute NAME="fullProjectDownloadedAtLeastOnce" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="name" VALUE="Metadata"/>
-<node TEXT="" ID="ID_1145037943" CREATED="1431949741095" MODIFIED="1431949741095">
+<node TEXT="" ID="ID_1310797360" CREATED="1432134883416" MODIFIED="1432134883416">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibraries"/>
 <attribute NAME="name" VALUE="Dependent Libraries"/>
-<node TEXT="" ID="ID_700139328" CREATED="1431949741097" MODIFIED="1431949741097">
+<node TEXT="" ID="ID_1031526787" CREATED="1432134885210" MODIFIED="1432134885210">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
-<attribute NAME="name" VALUE="Flower Platform Arduino Runtime"/>
-<attribute NAME="url" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.Input"/>
 </node>
-<node TEXT="" ID="ID_1426366374" CREATED="1431949741099" MODIFIED="1431949741099">
+<node TEXT="" ID="ID_1591582112" CREATED="1432134885222" MODIFIED="1432134885222">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
-<attribute NAME="name" VALUE="Input"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.Output"/>
 </node>
-<node TEXT="" ID="ID_1700512873" CREATED="1431949741100" MODIFIED="1431949741100">
+<node TEXT="" ID="ID_1045815768" CREATED="1432134885241" MODIFIED="1432134885241">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
-<attribute NAME="name" VALUE="Output"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.DHT"/>
 </node>
-<node TEXT="" ID="ID_1985486279" CREATED="1431949741101" MODIFIED="1431949741101">
+<node TEXT="" ID="ID_1808476189" CREATED="1432134885254" MODIFIED="1432134885254">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
-<attribute NAME="name" VALUE="HttpServer"/>
-<attribute NAME="url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.HttpServer"/>
 </node>
-<node TEXT="" ID="ID_1186934583" CREATED="1431949741102" MODIFIED="1431949741102">
+<node TEXT="" ID="ID_1261020142" CREATED="1432134885258" MODIFIED="1432134885258">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
-<attribute NAME="description" VALUE="The GitHub repository contains several libs. Copy/paste the &quot;DHTLib&quot; folder"/>
-<attribute NAME="name" VALUE="DHT"/>
-<attribute NAME="url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.Timer"/>
 </node>
-<node TEXT="" ID="ID_1076277525" CREATED="1431949741104" MODIFIED="1431949741104">
+<node TEXT="" ID="ID_977268313" CREATED="1432134913558" MODIFIED="1432134913558">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
-<attribute NAME="description" VALUE="Timer bla bla"/>
-<attribute NAME="name" VALUE="Timer"/>
-<attribute NAME="url" VALUE="http://google.com"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.LoggerSD"/>
 </node>
-<node TEXT="" ID="ID_1367740008" CREATED="1431949741105" MODIFIED="1431949741105">
+<node TEXT="" ID="ID_675103057" CREATED="1432134913563" MODIFIED="1432134913563">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
-<attribute NAME="name" VALUE="LoggerSD"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.fp-arduino-runtime"/>
 </node>
 </node>
 </node>
@@ -278,99 +272,6 @@
 <attribute NAME="glyphicon" VALUE="flash"/>
 <attribute NAME="cssClass" VALUE="lightButton"/>
 </node>
-</node>
-</node>
-</node>
-<node TEXT="" ID="ID_1955415012" CREATED="1432119272539" MODIFIED="1432119272539">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
-<node TEXT="" ID="ID_122079531" CREATED="1432119272543" MODIFIED="1432119272543">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_294704745" CREATED="1432119272546" MODIFIED="1432119272546">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<attribute NAME="title" VALUE="Panel 1"/>
-</node>
-</node>
-<node TEXT="" ID="ID_435507635" CREATED="1432119272549" MODIFIED="1432119272549">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_726325891" CREATED="1432119272552" MODIFIED="1432119272552">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
-<attribute NAME="positions" VALUE="md-3"/>
-</node>
-</node>
-<node TEXT="" ID="ID_906140369" CREATED="1432119272555" MODIFIED="1432119272555">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_841603875" CREATED="1432119272559" MODIFIED="1432119272559">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
-<attribute NAME="positions" VALUE="md-3"/>
-</node>
-</node>
-<node TEXT="" ID="ID_1784993889" CREATED="1432119272562" MODIFIED="1432119272562">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_224113029" CREATED="1432119272565" MODIFIED="1432119272565">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_1443384543" CREATED="1432119338520" MODIFIED="1432119338520">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
-<node TEXT="" ID="ID_271657169" CREATED="1432119338524" MODIFIED="1432119338524">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-6"/>
-</node>
-<node TEXT="" ID="ID_659632191" CREATED="1432119338527" MODIFIED="1432119338527">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-6"/>
-</node>
-</node>
-<node TEXT="" ID="ID_373962947" CREATED="1432119338530" MODIFIED="1432119338530">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
-<node TEXT="" ID="ID_859117429" CREATED="1432119338532" MODIFIED="1432119338532">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-6"/>
-</node>
-<node TEXT="" ID="ID_1306525694" CREATED="1432119338535" MODIFIED="1432119338535">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-6"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="" ID="ID_1606897794" CREATED="1432119272568" MODIFIED="1432119272568">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
-<node TEXT="" ID="ID_724588249" CREATED="1432119272573" MODIFIED="1432119272573">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_135843557" CREATED="1432119272577" MODIFIED="1432119272577">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
-<attribute NAME="positions" VALUE="md-3"/>
-</node>
-</node>
-<node TEXT="" ID="ID_1181499692" CREATED="1432119272580" MODIFIED="1432119272580">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_680800742" CREATED="1432119272583" MODIFIED="1432119272583">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
-<attribute NAME="positions" VALUE="md-3"/>
-</node>
-</node>
-<node TEXT="" ID="ID_1275557167" CREATED="1432119272587" MODIFIED="1432119272587">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_140737307" CREATED="1432119272591" MODIFIED="1432119272591">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
-<attribute NAME="positions" VALUE="md-3"/>
-</node>
-</node>
-<node TEXT="" ID="ID_1669571045" CREATED="1432119272594" MODIFIED="1432119272594">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
-<node TEXT="" ID="ID_267726345" CREATED="1432119272597" MODIFIED="1432119272597">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
-<attribute NAME="positions" VALUE="md-3"/>
 </node>
 </node>
 </node>
