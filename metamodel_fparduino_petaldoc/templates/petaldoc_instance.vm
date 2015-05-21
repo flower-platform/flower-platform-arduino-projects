@@ -7,7 +7,7 @@
 #set( $methods = [] )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
 #if( $child.type == "propertyDescriptor" )
-#set( $dummy = $properties.add($child) )
+#set( $dummy = $getPropertyValue('add')($child) )
 #end
 #if( $child.type == "addChildDescriptor" )
 #set( $dummy = $events.add($child) )
@@ -18,7 +18,7 @@
 #end
 
 #htmlBegin()
-<h4><span class="label label-success"><img src="../$CommonsStringUtils.substringBefore($node.properties.icons, ';')"/></span> ${node.properties.name}</h4>
+<h4><span class="label label-success"><img src="../$CommonsStringUtils.substringBefore($node.getPropertyValue('icons'), ';')"/></span> ${node.getPropertyValue('name')}</h4>
 <hr/>
 <p style="margin-bottom: 10px">
 Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> 
@@ -26,7 +26,7 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
 <a href="#events" class="btn btn-info btn-xs">Events</a> <a href="#methods" class="btn btn-primary btn-xs">Methods</a>
 #end
 </p>
-$!node.properties.petaldoc
+$!node.getPropertyValue('petaldoc')
 
 <!-- Properties -->
 <div class="panel panel-warning">
@@ -37,8 +37,8 @@ $!node.properties.petaldoc
 #set( $hasElements = false )
 #foreach( $child in $properties )
 #set( $hasElements = true )
-<h5>$child.properties.name:#if( $child.properties.propertyType )$child.properties.propertyType #{else}String#end</h5>
-$!child.properties.petaldoc
+<h5>$child.getPropertyValue('name'):#if( $child.getPropertyValue('propertyType') )$child.getPropertyValue('propertyType') #{else}String#end</h5>
+$!child.getPropertyValue('petaldoc')
 #end
 #if( !$hasElements )None.#end
 </div></div>
@@ -53,10 +53,10 @@ $!child.properties.petaldoc
 #set( $hasElements = false )
 #foreach( $child in $events )
 #set( $hasElements = true )
-#set( $eventType = ${child.properties.childType} )
+#set( $eventType = ${child.getPropertyValue('childType')} )
 #set( $eventNode = $NodeTemplateUtils.navigate($root.nodeUri, ["name", $eventType]) )
 <h5 id="$eventType.replaceAll("\W", "_")">$eventType</h5>
-$!eventNode.properties.petaldoc
+$!eventNode.getPropertyValue('petaldoc')
 #end
 #if( !$hasElements )None.#end
 </div></div>
@@ -72,8 +72,8 @@ $!eventNode.properties.petaldoc
 #set( $hasElements = false )
 #foreach( $child in $methods )
 #set( $hasElements = true )
-<h5 id="$child.properties.name.replaceAll("\W", "_")">${child.properties.name}</h5>
-$!child.properties.petaldoc
+<h5 id="$child.getPropertyValue('name').replaceAll("\W", "_")">${child.getPropertyValue('name')}</h5>
+$!child.getPropertyValue('petaldoc')
 #end
 #if( !$hasElements )None.#end
 </div></div>

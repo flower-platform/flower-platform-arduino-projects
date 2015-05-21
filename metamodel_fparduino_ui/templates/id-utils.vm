@@ -1,11 +1,11 @@
 #macro( printId $elt )
-#if( "$!elt.properties.id" != "" ) id="$elt.properties.id"#end
+#if( "$!elt.getPropertyValue('id')" != "" ) id="$elt.getPropertyValue('id')"#end
 #end
 
 #macro( printClass $elt )
-#if( "$!elt.properties.cssClass" != "" ) class="$elt.properties.cssClass"#end
+#if( "$!elt.getPropertyValue('cssClass')" != "" ) class="$elt.getPropertyValue('cssClass')"#end
 #end
 
 #macro( printClassNoAttr $elt )
-#if( "$!elt.properties.cssClass" != "" ) $elt.properties.cssClass#end
+#if( "$!elt.getPropertyValue('cssClass')" != "" ) $elt.getPropertyValue('cssClass')#end
 #end

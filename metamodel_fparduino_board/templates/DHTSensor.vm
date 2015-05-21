@@ -2,14 +2,6 @@
 ## DHTSensor
 ################################
 
-#macro( DHTSensor_init $node )
-${node.properties.name}.pin = ${node.properties.pin};
-#if ( ${node.properties.pollInterval} ) 
-${node.properties.name}.pollInterval = ${node.properties.pollInterval};
-#end
-${node.properties.name}.setup();
-#end
-
 #macro( DHTSensor_loop $node )
-${node.properties.name}.loop();
+${node.getPropertyValue('name')}.loop();
 #end

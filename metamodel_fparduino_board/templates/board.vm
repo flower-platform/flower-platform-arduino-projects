@@ -42,8 +42,8 @@ public:
 		print->print(F("{"));
 	
 #foreach( $child in $NodeTemplateUtils.getChildren($board.nodeUri) )
-#if ( ${child.properties.contributesToState} )
-		${child.properties.name}.printStateAsJson(F("${child.properties.name}"), print);
+#if ( ${child.getPropertyValue('contributesToState')} )
+		${child.getPropertyValue('name')}.printStateAsJson(F("${child.getPropertyValue('name')}"), print);
 		print->print(F(","));
 #end
 #end

@@ -3,11 +3,11 @@
 ################################
 
 #macro( LoggerSD_declaration $node )
-LoggerSD<${node.properties.valueType}> ${node.properties.name};
+LoggerSD<${node.getPropertyValue('valueType')}> ${node.getPropertyValue('name')};
 #end
 
 #macro( LoggerSD_init $node )
-${node.properties.name}.slaveSelectPin = ${node.properties.slaveSelectPin};
-${node.properties.name}.timeInterval = ${node.properties.timeInterval};
-${node.properties.name}.setup();
+${node.getPropertyValue('name')}.slaveSelectPin = ${node.getPropertyValue('slaveSelectPin')};
+${node.getPropertyValue('name')}.timeInterval = ${node.getPropertyValue('timeInterval')};
+${node.getPropertyValue('name')}.setup();
 #end

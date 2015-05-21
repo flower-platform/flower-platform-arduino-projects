@@ -2,7 +2,7 @@
 #set( $result = "#belongsToCategory( $node, 'category.instance' )" )
 #if( $result == "true" )
 #instance(true)
-#elseif( $node.properties.name.startsWith("invocationSourceSignature") )
+#elseif( $node.getPropertyValue('name').startsWith("invocationSourceSignature") )
 #invocation()
 #end
 #set( $result = "#belongsToCategory( $node, 'category.element' )" )
