@@ -131,6 +131,12 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE="Positions"/>
 </node>
+<node TEXT="" ID="ID_1384991074" CREATED="1432288227848" MODIFIED="1432288227848">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="mobileModeIfLessThan"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="Mobile mode if screen resolution &lt;"/>
+</node>
 <node TEXT="" ID="ID_3588246" CREATED="1431686774338" MODIFIED="1431686774338">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
@@ -156,17 +162,17 @@
 <attribute NAME="name" VALUE="category.element"/>
 <attribute NAME="type" VALUE="containingCategory"/>
 </node>
+<node TEXT="" ID="ID_852007138" CREATED="1432292255768" MODIFIED="1432292255768">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.container"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
 <node TEXT="" ID="ID_1408151188" CREATED="1429873303735" MODIFIED="1429873303735">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="name" VALUE="title"/>
 <attribute NAME="label" VALUE="Title"/>
 <attribute NAME="type" VALUE="propertyDescriptor"/>
-</node>
-<node TEXT="" ID="ID_852007138" CREATED="1429862310708" MODIFIED="1429862310708">
-<attribute NAME="nodeType" VALUE="containingCategory"/>
-<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
-<attribute NAME="name" VALUE="category.container"/>
-<attribute NAME="type" VALUE="containingCategory"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1872150564" CREATED="1429862365529" MODIFIED="1429862365529">
