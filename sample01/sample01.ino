@@ -83,9 +83,9 @@ public:
 	virtual ~ApplicationGen() { }
 
 	virtual void setup() {
-		input2.internalPullUp = true;
 		input2.pin = 2;
 		input2.isAnalog = false;
+		input2.internalPullUp = true;
 		input2.setup();
 
 		output5.pin = 5;
@@ -104,9 +104,9 @@ public:
 		blueLed.pin = 8;
 		blueLed.setup();
 
-		blueLedTimer.autoStart = true;
-		blueLedTimer.repeatCount = 0;
 		blueLedTimer.delay = 500;
+		blueLedTimer.repeatCount = 0;
+		blueLedTimer.autoStart = true;
 		blueLedTimer.setup();
 
 		loggerTemperature.slaveSelectPin = 4;
@@ -134,6 +134,8 @@ public:
 		output5.printStateAsJson(F("output5"), print);
 		print->print(F(","));
 		dhtSensor.printStateAsJson(F("dhtSensor"), print);
+		print->print(F(","));
+		blueLed.printStateAsJson(F("blueLed"), print);
 		print->print(F(","));
 
 		print->print(F("\"FREE_MEM\": "));

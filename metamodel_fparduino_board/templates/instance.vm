@@ -3,16 +3,16 @@
 ################################
 
 #macro( default_declaration $node )
-${NodeTemplateUtils.stripDynamicPrefix(${node.type})} ${node.properties.name};
+${NodeTemplateUtils.stripDynamicPrefix(${node.type})} ${node.getPropertyValue('name')};
 #end
 
 #macro( default_init $node )
-#foreach( $entry in $node.properties.entrySet() )
-#if ($entry.key != "name" && $entry.key != "contributesToState" && $NodeTemplateUtils.hasPropertyDescriptor($node, $entry.key) && "$!entry.value" != "")
-${node.properties.name}.${entry.key} = ${entry.value};
+#foreach( $key in $NodeTemplateUtils.getPropertyNames($node) )
+#if ($key != "name" && $key != "contributesToState" && "$!{node.getPropertyValue($key)}" != "")
+${node.getPropertyValue('name')}.$key = ${node.getPropertyValue($key)};
 #end
 #end
-${node.properties.name}.setup();
+${node.getPropertyValue('name')}.setup();
 #end
 
 #macro( default_handlers $node )

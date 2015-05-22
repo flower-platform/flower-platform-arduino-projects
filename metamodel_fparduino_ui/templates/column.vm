@@ -1,5 +1,5 @@
 #macro( Column $column )
-<div class="col-${column.properties.positions}#printClassNoAttr($button)"#printId($column)>
+<div class="col-${column.getPropertyValue('positions')}#printClassNoAttr($button)"#printId($column)>
 #foreach($child in $NodeTemplateUtils.getChildren($column.nodeUri))
 #@indent()
 	#callMacroWithSuffix( $child, "")

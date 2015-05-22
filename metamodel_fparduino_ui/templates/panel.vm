@@ -1,6 +1,6 @@
 #macro( Panel $panel )
 <div class="panel panel-primary text-center#printClassNoAttr($panel)"#printId($panel)>
-	<div class="panel-heading">$!panel.properties.title</div>
+	<div class="panel-heading">$!panel.getPropertyValue('title')</div>
 	
 	<div class="panel-body">
 

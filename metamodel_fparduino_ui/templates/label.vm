@@ -1,10 +1,10 @@
 #macro( Label $label )
 #set( $textToggler = "{" )
-#if( "$!label.properties.textIfHigh" != "" )
-#set( $textToggler = $textToggler + """1"":""${label.properties.textIfHigh}""," )
+#if( "$!label.getPropertyValue('textIfHigh')" != "" )
+#set( $textToggler = $textToggler + """1"":""${label.getPropertyValue('textIfHigh')}""," )
 #end
-#if( "$!label.properties.textIfLow" != "" )
-#set( $textToggler = $textToggler + """0"":""${label.properties.textIfLow}""," )
+#if( "$!label.getPropertyValue('textIfLow')" != "" )
+#set( $textToggler = $textToggler + """0"":""${label.getPropertyValue('textIfLow')}""," )
 #end
 #if( $textToggler.length() > 1 )
 #set ( $len = $textToggler.length() )
@@ -13,11 +13,11 @@
 #end
 #set( $textToggler = $textToggler + "}" )
 #set( $classToggler = "{" )
-#if( "$!label.properties.classIfHigh" != "" )
-#set( $classToggler = $classToggler + """1"":""${label.properties.classIfHigh}""," )
+#if( "$!label.getPropertyValue('classIfHigh')" != "" )
+#set( $classToggler = $classToggler + """1"":""${label.getPropertyValue('classIfHigh')}""," )
 #end
-#if( "$!label.properties.classIfLow" != "" )
-#set( $classToggler = $classToggler + """0"":""${label.properties.classIfLow}""," )
+#if( "$!label.getPropertyValue('classIfLow')" != "" )
+#set( $classToggler = $classToggler + """0"":""${label.getPropertyValue('classIfLow')}""," )
 #end
 #if( $classToggler.length() > 1 )
 #set ( $len = $classToggler.length() )
@@ -26,6 +26,6 @@
 #end
 #set( $classToggler = $classToggler + "}" )
 <div#printId($label)#printClass($label)>
-	$label.properties.text.replaceAll("\{\{(.*?)\}\}", "<span bindToProperty=""$1"" textToggler='$textToggler'></span>").replaceFirst("<span", "<span classToggler='$classToggler'")
+	$label.getPropertyValue('text').replaceAll("\{\{(.*?)\}\}", "<span bindToProperty=""$1"" textToggler='$textToggler'></span>").replaceFirst("<span", "<span classToggler='$classToggler'")
 </div>
 #end

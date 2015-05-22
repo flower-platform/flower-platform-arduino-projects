@@ -3,5 +3,5 @@
 ################################
 
 #macro( Timer_loop $node )
-${node.properties.name}.loop();
+${node.getPropertyValue('name')}.loop();
 #end

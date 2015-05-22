@@ -3,7 +3,7 @@
 ################################
 
 #macro ( standardEvent_common $node )
-#set( $instanceName = "${instance.properties.name}" )
+#set( $instanceName = "${instance.getPropertyValue('name')}" )
 #set( $instanceType = "${NodeTemplateUtils.stripDynamicPrefix(${instance.type})}" )
 #set( $simpleType = "${NodeTemplateUtils.stripDynamicPrefix(\${node.type})}" )
 #set( $eventType = "${CommonsStringUtils.substringBetween(${simpleType}, '(', ')')}" )
@@ -15,12 +15,12 @@
 virtual void ${instanceName}_${eventName}(Event* event) {
 	$eventType* castedEvent = ($eventType*) event;
 #foreach( $invocation in $NodeTemplateUtils.getChildren($node.nodeUri) )
-#set( $targetMethodNode = $NodeTemplateUtils.getNode($invocation.properties.target) )
-#set( $targetInstance = $NodeTemplateUtils.getParent($targetMethodNode.nodeUri).properties.name )
-#set( $targetMethod = $CommonsStringUtils.substringBefore($targetMethodNode.properties.name, '(') )
-#set( $targetMethodFull = $targetMethodNode.properties.name )
+#set( $targetMethodNode = $NodeTemplateUtils.getNode($invocation.getPropertyValue('target')) )
+#set( $targetInstance = $NodeTemplateUtils.getParent($targetMethodNode.nodeUri).getPropertyValue('name') )
+#set( $targetMethod = $CommonsStringUtils.substringBefore($targetMethodNode.getPropertyValue('name'), '(') )
+#set( $targetMethodFull = $targetMethodNode.getPropertyValue('name') )
 #@indent()
-	#evaluate( "#${invocation.properties.template}" )
+	#evaluate( "#${invocation.getPropertyValue('template')}" )
 #end
 #end
 }

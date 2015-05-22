@@ -1,15 +1,15 @@
 #macro( invocation )
 #htmlBegin()
-#set( $sourceSignature = $CommonsStringUtils.substringAfter($node.properties.name, ".") )
+#set( $sourceSignature = $CommonsStringUtils.substringAfter($node.getPropertyValue('name'), ".") )
 <h4>Event type: $sourceSignature</h4>
 <hr/>
 Available "<span class="text-success">CONVERT and CALL</span>"s:
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
-#set( $targetSignature = ${CommonsStringUtils.substringAfter($child.properties.behaviorType, ".")} )
-#set( $id = $sourceSignature + "_" + $targetSignature + "_" + $child.properties.value )
+#set( $targetSignature = ${CommonsStringUtils.substringAfter($child.getPropertyValue('behaviorType'), ".")} )
+#set( $id = $sourceSignature + "_" + $targetSignature + "_" + $child.getPropertyValue('value') )
 #set( $id = $id.replaceAll("\W", "_") )
 <h6 id="$id"><b>${child.properties["extraInfo.label"]}:</b> <span class="text-success">coverts</span> from <span class="label label-primary">$sourceSignature</span> to <span class="label label-primary">($targetSignature)</span> and <span class="text-success">calls</span> the function</h5>
-$!child.properties.petaldoc
+$!child.getPropertyValue('petaldoc')
 <hr/>
 #end
 #htmlEnd()	

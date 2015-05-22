@@ -3,18 +3,18 @@
 ################################
 
 #macro( HttpServer_init $node )
-uint8_t macAddress[] = { 0x${node.properties.macAddress.replaceAll(":", ", 0x")} };
-uint8_t ipAddress[] = { ${node.properties.ipAddress.replaceAll("\.", ", ")} };
-memcpy(${node.properties.name}.macAddress, macAddress, 6);
-memcpy(${node.properties.name}.ipAddress, ipAddress, 4);
-${node.properties.name}.port = ${node.properties.port};
-${node.properties.name}.setup();
+uint8_t macAddress[] = { 0x${node.getPropertyValue('macAddress').replaceAll(":", ", 0x")} };
+uint8_t ipAddress[] = { ${node.getPropertyValue('ipAddress').replaceAll("\.", ", ")} };
+memcpy(${node.getPropertyValue('name')}.macAddress, macAddress, 6);
+memcpy(${node.getPropertyValue('name')}.ipAddress, ipAddress, 4);
+${node.getPropertyValue('name')}.port = ${node.getPropertyValue('port')};
+${node.getPropertyValue('name')}.setup();
 #end
 
 #####
 
 #macro( HttpServer_loop $node )
-${node.properties.name}.loop();
+${node.getPropertyValue('name')}.loop();
 #end
 
 #####
@@ -38,15 +38,15 @@ virtual void httpServer_onCommandReceived(Event* event) {
 		urlFound = true;
 #foreach( $child in $NodeTemplateUtils.getChildren($serverNode.nodeUri) )
 #if( $child.type.endsWith("onCommandReceived(HttpCommandEvent)") )
-	} else if (strcmp_P(command, PSTR("${child.properties.mapping}")) == 0) {
+	} else if (strcmp_P(command, PSTR("${child.getPropertyValue('mapping')}")) == 0) {
 		urlFound = true;
 #foreach( $invocation in $NodeTemplateUtils.getChildren($child.nodeUri) )
-#set( $targetMethodNode = $NodeTemplateUtils.getNode($invocation.properties.target) )
-#set( $targetInstance = $NodeTemplateUtils.getParent($targetMethodNode.nodeUri).properties.name )
-#set( $targetMethod = $CommonsStringUtils.substringBefore($targetMethodNode.properties.name, '(') )
-#set( $targetMethodFull = $targetMethodNode.properties.name )
+#set( $targetMethodNode = $NodeTemplateUtils.getNode($invocation.getPropertyValue('target')) )
+#set( $targetInstance = $NodeTemplateUtils.getParent($targetMethodNode.nodeUri).getPropertyValue('name') )
+#set( $targetMethod = $CommonsStringUtils.substringBefore($targetMethodNode.getPropertyValue('name'), '(') )
+#set( $targetMethodFull = $targetMethodNode.getPropertyValue('name') )
 #@indent()
-		#evaluate( "#${invocation.properties.template}" )
+		#evaluate( "#${invocation.getPropertyValue('template')}" )
 #end
 #end
 #end
@@ -72,7 +72,7 @@ virtual void httpServer_onCommandReceived(Event* event) {
 #####
 
 #macro( HttpServer_addListeners $node )
-${node.properties.name}.onCommandReceived = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_onCommandReceived);
+${node.getPropertyValue('name')}.onCommandReceived = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_onCommandReceived);
 #set( $instance = $node )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
 #if( !$child.type.endsWith("onCommandReceived(HttpCommandEvent)") )
