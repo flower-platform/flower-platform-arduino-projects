@@ -209,8 +209,9 @@
 <attribute NAME="type" VALUE="dynamic_fparduino__Row"/>
 <node TEXT="" ID="ID_1736159382" CREATED="1429865864319" MODIFIED="1429865864319">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="md-3"/>
+<attribute NAME="positions" VALUE="3"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="md"/>
 <node TEXT="" ID="ID_1168218003" CREATED="1429865879318" MODIFIED="1429865879318">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Panel"/>
@@ -221,8 +222,9 @@
 <attribute NAME="type" VALUE="dynamic_fparduino__Row"/>
 <node TEXT="" ID="ID_805902910" CREATED="1429865941616" MODIFIED="1429865941616">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="xs-6"/>
+<attribute NAME="positions" VALUE="6"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="xs"/>
 <node TEXT="" ID="ID_180202055" CREATED="1429866037532" MODIFIED="1429866037532">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
 <attribute NAME="text" VALUE="Temperature"/>
@@ -238,8 +240,9 @@
 </node>
 <node TEXT="" ID="ID_1750513385" CREATED="1429865948401" MODIFIED="1429865948401">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
-<attribute NAME="positions" VALUE="xs-6"/>
+<attribute NAME="positions" VALUE="6"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="xs"/>
 <node TEXT="" ID="ID_125561660" CREATED="1429866082948" MODIFIED="1429866082948">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
 <attribute NAME="text" VALUE="Humidity"/>
