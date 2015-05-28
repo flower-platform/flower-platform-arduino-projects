@@ -7,7 +7,7 @@
 #set( $methods = [] )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
 #if( $child.type == "propertyDescriptor" )
-#set( $dummy = $getPropertyValue('add')($child) )
+#set( $dummy = $properties.add($child) )
 #end
 #if( $child.type == "addChildDescriptor" )
 #set( $dummy = $events.add($child) )

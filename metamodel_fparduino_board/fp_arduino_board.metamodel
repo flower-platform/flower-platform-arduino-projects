@@ -64,6 +64,8 @@
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="name" VALUE="name"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="orderIndex" VALUE="-100" OBJECT="java.lang.Integer|-100"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1718329561" CREATED="1428508292817" MODIFIED="1428508292817">
@@ -93,6 +95,7 @@
 <attribute NAME="label" VALUE=""/>
 <attribute NAME="type" VALUE="propertyDescriptor"/>
 <attribute NAME="propertyDefaultValue" VALUE="true"/>
+<attribute NAME="orderIndex" VALUE="100" OBJECT="java.lang.Integer|100"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_574154206" CREATED="1430405925082" MODIFIED="1430405925082">
@@ -116,15 +119,15 @@
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="backgroundColor" VALUE="#CFD5FA"/>
 <attribute NAME="icons" VALUE="images/Board.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<node TEXT="" ID="ID_165662632" CREATED="1432723452791" MODIFIED="1432723452791">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="Input"/>
+</node>
 <node TEXT="" ID="ID_1817568176" CREATED="1429197574128" MODIFIED="1429197574128">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
 <attribute NAME="childType" VALUE="Output"/>
 <attribute NAME="type" VALUE="addChildDescriptor"/>
-</node>
-<node TEXT="" ID="ID_165662632" CREATED="1429716243370" MODIFIED="1429716243370">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
-<attribute NAME="childType" VALUE="Input"/>
 </node>
 <node TEXT="" ID="ID_690891688" CREATED="1431513771754" MODIFIED="1431513771754">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
@@ -191,6 +194,8 @@
 <attribute NAME="name" VALUE="pin"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyType" VALUE="String"/>
 </node>
 <node TEXT="" ID="ID_1587824592" CREATED="1431424335619" MODIFIED="1431424335619">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
@@ -248,6 +253,8 @@
 <attribute NAME="name" VALUE="pin"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="orderIndex" VALUE="1" OBJECT="java.lang.Integer|1"/>
 </node>
 <node TEXT="" ID="ID_841019979" CREATED="1431424049350" MODIFIED="1431424049350">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
