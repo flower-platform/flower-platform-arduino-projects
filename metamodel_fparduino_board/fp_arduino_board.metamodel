@@ -66,6 +66,7 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="orderIndex" VALUE="-100" OBJECT="java.lang.Integer|-100"/>
+<attribute NAME="propertyInitialValue" VALUE="$SIMPLE_TYPE_FIRST_LOWERCASE$#"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1718329561" CREATED="1428508292817" MODIFIED="1428508292817">
