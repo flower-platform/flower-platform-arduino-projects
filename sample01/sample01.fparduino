@@ -116,7 +116,7 @@
 <attribute NAME="pin" VALUE="5"/>
 <attribute NAME="name" VALUE="output5"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Output"/>
-<attribute NAME="y" VALUE="142" OBJECT="java.lang.Integer|142"/>
+<attribute NAME="y" VALUE="135" OBJECT="java.lang.Integer|135"/>
 <attribute NAME="x" VALUE="498" OBJECT="java.lang.Integer|498"/>
 <attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 </node>
@@ -197,7 +197,7 @@
 <attribute NAME="valueType" VALUE="int"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__LoggerSD"/>
 <attribute NAME="y" VALUE="223" OBJECT="java.lang.Integer|223"/>
-<attribute NAME="x" VALUE="692" OBJECT="java.lang.Integer|692"/>
+<attribute NAME="x" VALUE="715" OBJECT="java.lang.Integer|715"/>
 <attribute NAME="slaveSelectPin" VALUE="4"/>
 <attribute NAME="timeInterval" VALUE="3000"/>
 </node>

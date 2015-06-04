@@ -139,7 +139,7 @@
 <attribute NAME="propertyType" VALUE="DropDownList"/>
 <node TEXT="" ID="ID_379471831" CREATED="1432558112745" MODIFIED="1432558112745">
 <attribute NAME="nodeType" VALUE="propertyPossibleValue"/>
-<attribute NAME="name" VALUE="xs"/>
+<attribute NAME="value" VALUE="xs"/>
 <attribute NAME="label" VALUE="None (i.e. col-xs cf. Bootstrap)"/>
 <attribute NAME="type" VALUE="propertyPossibleValue"/>
 </node>
@@ -147,19 +147,19 @@
 <attribute NAME="nodeType" VALUE="propertyPossibleValue"/>
 <attribute NAME="label" VALUE="~768px (i.e. col-sm cf. Bootstrap)"/>
 <attribute NAME="type" VALUE="propertyPossibleValue"/>
-<attribute NAME="name" VALUE="sm"/>
+<attribute NAME="value" VALUE="sm"/>
 </node>
 <node TEXT="" ID="ID_587709845" CREATED="1432558135427" MODIFIED="1432558135427">
 <attribute NAME="nodeType" VALUE="propertyPossibleValue"/>
 <attribute NAME="label" VALUE="~992px (i.e. col-md cf. Bootstrap)"/>
 <attribute NAME="type" VALUE="propertyPossibleValue"/>
-<attribute NAME="name" VALUE="md"/>
+<attribute NAME="value" VALUE="md"/>
 </node>
 <node TEXT="" ID="ID_98755407" CREATED="1432558149808" MODIFIED="1432558149808">
 <attribute NAME="nodeType" VALUE="propertyPossibleValue"/>
 <attribute NAME="label" VALUE="~1200px (i.e. col-lg cf. Bootstrap)"/>
 <attribute NAME="type" VALUE="propertyPossibleValue"/>
-<attribute NAME="name" VALUE="lg"/>
+<attribute NAME="value" VALUE="lg"/>
 </node>
 </node>
 <node TEXT="" ID="ID_3588246" CREATED="1431686774338" MODIFIED="1431686774338">
