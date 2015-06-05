@@ -137,6 +137,7 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE="Mobile mode if screen resolution &lt;"/>
 <attribute NAME="propertyType" VALUE="DropDownList"/>
+<attribute NAME="propertyDefaultValue" VALUE="md"/>
 <node TEXT="" ID="ID_379471831" CREATED="1432558112745" MODIFIED="1432558112745">
 <attribute NAME="nodeType" VALUE="propertyPossibleValue"/>
 <attribute NAME="value" VALUE="xs"/>
@@ -198,6 +199,7 @@
 <attribute NAME="name" VALUE="title"/>
 <attribute NAME="label" VALUE="Title"/>
 <attribute NAME="type" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyInitialValue" VALUE="$SIMPLE_TYPE_FIRST_LOWERCASE$#"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1872150564" CREATED="1429862365529" MODIFIED="1429862365529">
