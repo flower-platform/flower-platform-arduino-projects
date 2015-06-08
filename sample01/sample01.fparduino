@@ -129,6 +129,7 @@
 <attribute NAME="ipAddress" VALUE="192.168.100.253"/>
 <attribute NAME="x" VALUE="743" OBJECT="java.lang.Integer|743"/>
 <attribute NAME="macAddress" VALUE="DE:AD:BE:EF:FE:ED"/>
+<attribute NAME="color" VALUE="#00ff00"/>
 <node TEXT="" ID="ID_89132691" CREATED="1431418539538" MODIFIED="1431418539538">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
 <attribute NAME="mapping" VALUE="toggleLight"/>
@@ -200,6 +201,7 @@
 <attribute NAME="x" VALUE="715" OBJECT="java.lang.Integer|715"/>
 <attribute NAME="slaveSelectPin" VALUE="4"/>
 <attribute NAME="timeInterval" VALUE="3000"/>
+<attribute NAME="color" VALUE="#ff0000"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_733754221" CREATED="1429201407631" MODIFIED="1429201407631">

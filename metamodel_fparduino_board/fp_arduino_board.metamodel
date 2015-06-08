@@ -56,7 +56,7 @@
 <attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_PETALDOC"/>
 <node TEXT="" POSITION="right" ID="ID_641264834" CREATED="1428508245715" MODIFIED="1428508245715">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="backgroundColor" VALUE="#CFD5FA"/>
+<attribute NAME="backgroundColor" VALUE="color;EXTRA_INFO_ENTRIES:(useAsValue=false)"/>
 <attribute NAME="name" VALUE="category.instance"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="propertyForLabel" VALUE="name;EXTRA_INFO_ENTRIES:(valueConverter=addTypeSuffix)"/>
@@ -67,6 +67,17 @@
 <attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="orderIndex" VALUE="-100" OBJECT="java.lang.Integer|-100"/>
 <attribute NAME="propertyInitialValue" VALUE="$SIMPLE_TYPE_FIRST_LOWERCASE$#"/>
+</node>
+<node TEXT="" ID="ID_824418799" CREATED="1433762358070" MODIFIED="1433762358070">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyType" VALUE="String"/>
+<attribute NAME="propertyGroup" VALUE=""/>
+<attribute NAME="orderIndex" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<attribute NAME="name" VALUE="color"/>
+<attribute NAME="label" VALUE="Color"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1718329561" CREATED="1428508292817" MODIFIED="1428508292817">
