@@ -167,6 +167,13 @@
 <attribute NAME="value" VALUE="dependentLibrary.fp-arduino-runtime"/>
 <attribute NAME="type" VALUE="genericDescriptor"/>
 </node>
+<node TEXT="" ID="ID_1259521471" CREATED="1435151731441" MODIFIED="1435151731441">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="1000" OBJECT="java.lang.Integer|1000"/>
+<attribute NAME="label" VALUE="Note"/>
+<attribute NAME="childType" VALUE="note"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1667331062" CREATED="1429111771166" MODIFIED="1429111771166">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -242,6 +249,7 @@
 <attribute NAME="name" VALUE="Output"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="icons" VALUE="images/Output.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<attribute NAME="orderForBehaviors" VALUE="1" OBJECT="java.lang.Integer|1"/>
 <node TEXT="" ID="ID_1512338974" CREATED="1429197179740" MODIFIED="1429197179740">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
@@ -352,6 +360,7 @@
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="Timer"/>
 <attribute NAME="icons" VALUE="images/Timer.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<attribute NAME="orderForBehaviors" VALUE="1" OBJECT="java.lang.Integer|1"/>
 <node TEXT="" ID="ID_1365008271" CREATED="1430406047447" MODIFIED="1430406047447">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.instance"/>
@@ -465,6 +474,7 @@
 <node TEXT="" POSITION="right" ID="ID_157529028" CREATED="1430406027900" MODIFIED="1430406027900">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="LoggerSD"/>
+<attribute NAME="orderForBehaviors" VALUE="1" OBJECT="java.lang.Integer|1"/>
 <node TEXT="" ID="ID_558120939" CREATED="1430406027901" MODIFIED="1430406027901">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.instance"/>
