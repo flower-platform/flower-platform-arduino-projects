@@ -1,0 +1,7 @@
+== Icons to be mentioned in license file ==
+
+== Icons allowed for commercial use (NO link required) ==
+
+Doc.png -> https://www.iconfinder.com/icons/5607/page_picture_white_icon#size=16
+Heading.png -> https://www.iconfinder.com/icons/26264/edit_heading_icon#size=16
+Block.png -> https://www.iconfinder.com/icons/4129/block_justify_text_icon#size=16

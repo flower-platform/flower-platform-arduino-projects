@@ -1,0 +1,3 @@
+#macro(Heading $node)
+#sections($sections)
+#end

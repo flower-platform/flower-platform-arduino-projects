@@ -1,0 +1,3 @@
+root = dynamic_fparduino__Doc
+label = Presentation Page
+gen_files = content.html:content.vm,header.html:header.vm

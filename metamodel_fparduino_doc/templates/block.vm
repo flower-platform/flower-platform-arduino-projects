@@ -1,0 +1,5 @@
+#macro(Block $node) 
+<div class="panel-group">
+	<div>$TemplateUtils.sanitize($node.getPropertyValue("text"))</div>
+</div>
+#end

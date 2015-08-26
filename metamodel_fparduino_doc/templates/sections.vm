@@ -1,0 +1,7 @@
+#macro(sections $sections)
+<ul class="nav nav-tabs nav-justified" id="section${currentIndex}">
+#foreach($section in $sections)
+	<li#if( $foreach.count == $currentIndex ) class="active"#end><a href="" onclick="document.getElementById('section${foreach.count}').scrollIntoView()"><div class="section-title">$TemplateUtils.sanitize($section.getPropertyValue("text"))</div></a></li>
+#end
+</ul>
+#end

@@ -1,0 +1,13 @@
+#set( $sections = [] )
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#if( $child.type.endsWith("Heading") )
+#set( $add = $sections.add($child) )
+#end
+#end
+#set( $currentIndex = 0 )
+#foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
+#if( $child.type.endsWith("Heading") )
+#set( $currentIndex = $currentIndex + 1 )
+#end
+#callMacroWithSuffix( $child, "" )
+#end
