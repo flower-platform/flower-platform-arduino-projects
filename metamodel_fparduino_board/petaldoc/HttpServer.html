@@ -15,9 +15,9 @@
 <hr/>
 <p style="margin-bottom: 10px">
 Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> 
-<a href="#events" class="btn btn-info btn-xs">Events</a> <a href="#methods" class="btn btn-primary btn-xs">Methods</a>
+<a href="#methods" class="btn btn-primary btn-xs">Operations</a> <a href="#events" class="btn btn-info btn-xs">Events</a>
 </p>
-
+It has 3 main responsibilities: <ul><li>Serves an HTML page with the contents generated from the User Interface Diagram.</li><li>Serves state updates for the connected clients. I.e. the clients periodically request state updates; when they do, the server sends a JSON containing information about all the objects that contribute to the state (i.e. their <code>contributesToState</code> property = <code>true</code>).</li><li>Receives commands (configured from the User Interface Diagram as well). When a command is received, an event is dispatched and operations can be invoked.</li></ul>
 
 <!-- Properties -->
 <div class="panel panel-warning">
@@ -25,13 +25,23 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
     <h5 id="properties" class="panel-title">Properties</h5>
   </div>
   <div class="panel-body">
-<h5>ipAddress:String</h5>
-
-<h5>port:String </h5>
-
-<h5>macAddress:String</h5>
-
+<h5>name:String </h5>
+<b>Mandatory</b>. <i>E.g.: <code>myNewObject</code></i>.<br> The name of the object, which needs to be a valid C++ identifier.
+<h5>ipAddress:String </h5>
+<b>Mandatory.</b> <i>E.g.: <code>192.168.1.100</code>.</i><br>The IP address that will be assigned to the server. It should be unique in the network. We select an IP that is compatible with our network settings (e.g. subnet mask). E.g. if our computer has an IP like: 192.168.1.4, with a subnet mask of 255.255.255.0, then we can assign something like 192.168.1.100.
+<h5>port:Number </h5>
+<b>Mandatory.</b> <i>Initial: <code>80</code>.</i><br>The server port. 
+<h5>macAddress:String </h5>
+<b>Mandatory.</b> <i>Initial: <code>AA:BB:CC:DD:EE:FF</code>.</i><br>Some network boards/shields have a label with the MAC address. In this case, we can use it. Otherwise, we can leave the default value (which is very probably unique in our network).
 </div></div>
+
+<!-- Methods -->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h5 id="methods" class="panel-title">Operations</h5>
+  </div>
+  <div class="panel-body">
+None.</div></div>
 
 <!-- Events -->
 <div class="panel panel-info">
@@ -40,15 +50,7 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
   </div>
   <div class="panel-body">
 <h5 id="onCommandReceived_HttpCommandEvent_">onCommandReceived(HttpCommandEvent)</h5>
-
+Dispatched when the server receives a command for the specified <code>mapping</code>. E.g. for <code>mapping</code> = <code>myCommand</code>, when an URL like http://SERVER_URL:SERVER_PORT/myCommand (e.g. http://192.168.1.100/myCommand) is called by a client, then the corresponding event is dispatched (so the linked operations are invoked).
 </div></div>
-
-<!-- Methods -->
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h5 id="methods" class="panel-title">Methods</h5>
-  </div>
-  <div class="panel-body">
-None.</div></div>
 
 </div></body></html>

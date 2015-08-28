@@ -56,7 +56,7 @@
 <attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_PETALDOC"/>
 <node TEXT="" POSITION="right" ID="ID_641264834" CREATED="1428508245715" MODIFIED="1428508245715">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="backgroundColor" VALUE="color;EXTRA_INFO_ENTRIES:(useAsValue=false)"/>
+<attribute NAME="backgroundColor" VALUE="#C6DDF5"/>
 <attribute NAME="name" VALUE="category.instance"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="propertyForLabel" VALUE="name;EXTRA_INFO_ENTRIES:(valueConverter=addTypeSuffix)"/>
@@ -65,19 +65,9 @@
 <attribute NAME="name" VALUE="name"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="orderIndex" VALUE="-100" OBJECT="java.lang.Integer|-100"/>
+<attribute NAME="orderIndex" VALUE="-10000" OBJECT="java.lang.Integer|-10000"/>
 <attribute NAME="propertyInitialValue" VALUE="$SIMPLE_TYPE_FIRST_LOWERCASE$#"/>
-</node>
-<node TEXT="" ID="ID_824418799" CREATED="1433762358070" MODIFIED="1433762358070">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="propertyType" VALUE="String"/>
-<attribute NAME="propertyGroup" VALUE=""/>
-<attribute NAME="orderIndex" VALUE="0" OBJECT="java.lang.Integer|0"/>
-<attribute NAME="name" VALUE="color"/>
-<attribute NAME="label" VALUE="Color"/>
-<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="propertyLineRenderer" VALUE="Default"/>
-<attribute NAME="type" VALUE="propertyDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. &lt;i&gt;E.g.: &lt;code&gt;myNewObject&lt;/code&gt;&lt;/i&gt;.&lt;br&gt; The name of the object, which needs to be a valid C++ identifier."/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1718329561" CREATED="1428508292817" MODIFIED="1428508292817">
@@ -107,7 +97,22 @@
 <attribute NAME="label" VALUE=""/>
 <attribute NAME="type" VALUE="propertyDescriptor"/>
 <attribute NAME="propertyDefaultValue" VALUE="true"/>
-<attribute NAME="orderIndex" VALUE="100" OBJECT="java.lang.Integer|100"/>
+<attribute NAME="orderIndex" VALUE="10000" OBJECT="java.lang.Integer|10000"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. &lt;i&gt;Default = &lt;code&gt;true&lt;/code&gt;&lt;/i&gt;.&lt;br&gt;If &lt;code&gt;true&lt;/code&gt;, it means this object&apos;s state belongs to the global state of the application, which is sent periodically (e.g. to the web interface). I.e. we&apos;ll be able to use this object&apos;s state (e.g. is it on?) from within the web interface."/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_268216405" CREATED="1440661557923" MODIFIED="1440661557923">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="category.hasPin"/>
+<attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<node TEXT="" ID="ID_1581742543" CREATED="1440661557923" MODIFIED="1440661557923">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="orderIndex" VALUE="1" OBJECT="java.lang.Integer|1"/>
+<attribute NAME="name" VALUE="pin"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. &lt;i&gt;E.g. &lt;code&gt;3&lt;/code&gt; or &lt;code&gt;A3&lt;/code&gt;&lt;/i&gt;.&lt;br&gt;The pin of the input. When choosing pins, please see the remark above (about occupied pins). "/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_574154206" CREATED="1430405925082" MODIFIED="1430405925082">
@@ -141,11 +146,6 @@
 <attribute NAME="childType" VALUE="Output"/>
 <attribute NAME="type" VALUE="addChildDescriptor"/>
 </node>
-<node TEXT="" ID="ID_690891688" CREATED="1431513771754" MODIFIED="1431513771754">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
-<attribute NAME="childType" VALUE="DHTSensor"/>
-</node>
 <node TEXT="" ID="ID_160215966" CREATED="1430142587771" MODIFIED="1430142587771">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
 <attribute NAME="childType" VALUE="Timer"/>
@@ -155,11 +155,6 @@
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
 <attribute NAME="childType" VALUE="HttpServer"/>
-</node>
-<node TEXT="" ID="ID_487728271" CREATED="1430296001096" MODIFIED="1430296001096">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="childType" VALUE="LoggerSD"/>
-<attribute NAME="type" VALUE="addChildDescriptor"/>
 </node>
 <node TEXT="" ID="ID_146304146" CREATED="1431680995795" MODIFIED="1431680995795">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
@@ -187,7 +182,7 @@
 </node>
 <node TEXT="" POSITION="right" ID="ID_1091130042" CREATED="1431424335609" MODIFIED="1431424335609">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="petaldoc" VALUE="&lt;p&gt;An analog or digital input, that corresponds to an input connected to the board.&lt;/p&gt;&lt;p class=&quot;text-danger&quot;&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for &lt;code&gt;Serial&lt;/code&gt; communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -&gt; 13 (for Arduino Uno) and 4, 10, 50 -&gt; 53 (for Arduino Mega). Etc.&lt;/p&gt;"/>
+<attribute NAME="petaldoc" VALUE="&lt;p&gt;Corresponds to an input connected to the board (digital or analog).&lt;/p&gt;&lt;p class=&quot;text-danger&quot;&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for &lt;code&gt;Serial&lt;/code&gt; communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -&gt; 13 (for Arduino Uno) and 4, 10, 50 -&gt; 53 (for Arduino Mega). Etc.&lt;/p&gt;"/>
 <attribute NAME="name" VALUE="Input"/>
 <attribute NAME="icons" VALUE="images/Input.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 <node TEXT="" ID="ID_142141738" CREATED="1431424335619" MODIFIED="1431424335619">
@@ -207,22 +202,20 @@
 <attribute NAME="name" VALUE="category.contributesToState"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_41222917" CREATED="1431424335619" MODIFIED="1431424335619">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. The pin of the input. When choosing pins, please see the remark above (about occupied pins). "/>
-<attribute NAME="name" VALUE="pin"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
-<attribute NAME="label" VALUE=""/>
-<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="propertyType" VALUE="String"/>
+<node TEXT="" ID="ID_1734474268" CREATED="1440662256856" MODIFIED="1440662256856">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.hasPin"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 <node TEXT="" ID="ID_1587824592" CREATED="1431424335619" MODIFIED="1431424335619">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="petaldoc" VALUE="&lt;i&gt;Default = false&lt;/i&gt;. Please note that not all pins can be used as analog pins."/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory.&lt;/b&gt; &lt;i&gt;Default = &lt;code&gt;false&lt;/code&gt;&lt;/i&gt;. Whether this pin is analog or not. Please note that not all pins can be used as analog pins."/>
 <attribute NAME="propertyType" VALUE="Boolean"/>
 <attribute NAME="name" VALUE="isAnalog"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
+<attribute NAME="orderIndex" VALUE="100" OBJECT="java.lang.Integer|100"/>
 </node>
 <node TEXT="" ID="ID_1265255544" CREATED="1431424335619" MODIFIED="1431424335619">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
@@ -237,11 +230,12 @@
 </node>
 <node TEXT="" ID="ID_717846314" CREATED="1431950316310" MODIFIED="1431950316310">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. The pin of the input. When choosing pins, please see the remark above (about occupied pins). "/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. &lt;i&gt;Default = &lt;code&gt;false&lt;/code&gt;&lt;/i&gt;.&lt;br&gt;E.g. for a push button, if our input has a pull-up or pull-down resistor, then we use &lt;code&gt;false&lt;/code&gt;. Else, if we don&apos;t have a resistor, we&apos;ll select&lt;code&gt;true&lt;/code&gt; (i.e. we&apos;ll use an internal pull-up). In this case, when closing the circuit (e.g. pushing the button), we&apos;ll connect the input to ground.&lt;br&gt;&lt;b&gt;Note:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;With a pull-up resistor or internal pull-up: if button is NOT pressed =&gt; state is &lt;code&gt;HIGH&lt;/code&gt; (hence the name, &quot;pull up&quot;); else, if button is pressed =&gt; state is &lt;code&gt;LOW&lt;/code&gt;.&lt;/li&gt;&lt;li&gt;With a pull-down resistor, the logic is opposite: if button is NOT pressed =&gt; state is &lt;code&gt;LOW&lt;/code&gt; (hence the name, &quot;pull down&quot;); else, if button is pressed =&gt; state is &lt;code&gt;HIGH&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;"/>
 <attribute NAME="name" VALUE="internalPullUp"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
 <attribute NAME="propertyType" VALUE="Boolean"/>
+<attribute NAME="orderIndex" VALUE="200" OBJECT="java.lang.Integer|200"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_164463813" CREATED="1429197136197" MODIFIED="1429197136197">
@@ -250,6 +244,7 @@
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="icons" VALUE="images/Output.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 <attribute NAME="orderForBehaviors" VALUE="1" OBJECT="java.lang.Integer|1"/>
+<attribute NAME="petaldoc" VALUE="&lt;p&gt;Corresponds to an output connected to the board (digital).&lt;/p&gt;&lt;p class=&quot;text-danger&quot;&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for &lt;code&gt;Serial&lt;/code&gt; communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -&gt; 13 (for Arduino Uno) and 4, 10, 50 -&gt; 53 (for Arduino Mega). Etc.&lt;/p&gt;"/>
 <node TEXT="" ID="ID_1512338974" CREATED="1429197179740" MODIFIED="1429197179740">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
@@ -268,13 +263,11 @@
 <attribute NAME="name" VALUE="category.contributesToState"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_1495924236" CREATED="1430852396398" MODIFIED="1430852396398">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="name" VALUE="pin"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
-<attribute NAME="label" VALUE=""/>
-<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="orderIndex" VALUE="1" OBJECT="java.lang.Integer|1"/>
+<node TEXT="" ID="ID_718626094" CREATED="1440662292415" MODIFIED="1440662292415">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.hasPin"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 <node TEXT="" ID="ID_841019979" CREATED="1431424049350" MODIFIED="1431424049350">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
@@ -285,19 +278,21 @@
 <attribute NAME="nodeType" VALUE="virtualChild"/>
 <attribute NAME="name" VALUE="toggleHighLow()"/>
 <attribute NAME="childType" VALUE="method"/>
-<attribute NAME="petaldoc" VALUE="If the output is digital, toggles the state (i.e. if was HIGH =&gt; LOW; if was LOW =&gt; HIGH)."/>
+<attribute NAME="petaldoc" VALUE="Toggles the state (i.e. if was &lt;code&gt;HIGH&lt;/code&gt; =&gt; &lt;code&gt;LOW&lt;/code&gt;; if was &lt;code&gt;LOW&lt;/code&gt; =&gt; &lt;code&gt;HIGH&lt;/code&gt;)."/>
 </node>
 <node TEXT="" ID="ID_775247616" CREATED="1429197237243" MODIFIED="1429197237243">
 <attribute NAME="nodeType" VALUE="virtualChild"/>
 <attribute NAME="name" VALUE="setHigh()"/>
 <attribute NAME="childType" VALUE="method"/>
 <attribute NAME="type" VALUE="virtualChild"/>
+<attribute NAME="petaldoc" VALUE="Sets the state to &lt;code&gt;HIGH&lt;/code&gt;."/>
 </node>
 <node TEXT="" ID="ID_117767835" CREATED="1429197246784" MODIFIED="1429197246784">
 <attribute NAME="nodeType" VALUE="virtualChild"/>
 <attribute NAME="name" VALUE="setLow()"/>
 <attribute NAME="childType" VALUE="method"/>
 <attribute NAME="type" VALUE="virtualChild"/>
+<attribute NAME="petaldoc" VALUE="Sets the state to &lt;code&gt;LOW&lt;/code&gt;."/>
 </node>
 <node TEXT="" ID="ID_472915006" CREATED="1431946544504" MODIFIED="1431946544504">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
@@ -327,11 +322,11 @@
 <attribute NAME="name" VALUE="category.contributesToState"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_182584912" CREATED="1431424332729" MODIFIED="1431424332729">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="name" VALUE="pin"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
-<attribute NAME="label" VALUE=""/>
+<node TEXT="" ID="ID_701373868" CREATED="1440662318423" MODIFIED="1440662318423">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.hasPin"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 <node TEXT="" ID="ID_368217844" CREATED="1431426678670" MODIFIED="1431426678670">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
@@ -361,6 +356,7 @@
 <attribute NAME="name" VALUE="Timer"/>
 <attribute NAME="icons" VALUE="images/Timer.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 <attribute NAME="orderForBehaviors" VALUE="1" OBJECT="java.lang.Integer|1"/>
+<attribute NAME="petaldoc" VALUE="&lt;p&gt;The timer allows us to execute operations after a certain &lt;code&gt;delay&lt;/code&gt; passes.&lt;/p&gt;&lt;p&gt;The timer can run once, it can repeat several times, or an infinity of times, cf. &lt;code&gt;repeatCount&lt;/code&gt;.&lt;/p&gt;"/>
 <node TEXT="" ID="ID_1365008271" CREATED="1430406047447" MODIFIED="1430406047447">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.instance"/>
@@ -377,13 +373,21 @@
 <attribute NAME="name" VALUE="delay"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
+<attribute NAME="orderIndex" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. &lt;i&gt;E.g. &lt;code&gt;1000&lt;/code&gt;, i.e. one second.&lt;/i&gt;&lt;br&gt;The delay, in milliseconds, between timer events."/>
+<attribute NAME="propertyType" VALUE="Number"/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 </node>
 <node TEXT="" ID="ID_647753254" CREATED="1431424030836" MODIFIED="1431424030836">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="propertyType" VALUE="String"/>
+<attribute NAME="propertyType" VALUE="Number"/>
 <attribute NAME="name" VALUE="repeatCount"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
+<attribute NAME="orderIndex" VALUE="100" OBJECT="java.lang.Integer|100"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. &lt;i&gt;Default = &lt;code&gt;0&lt;/code&gt;&lt;/i&gt;.&lt;br&gt;The total number of times the timer is set to run. If the repeat count is set to 0, the timer continues indefinitely, or until the &lt;code&gt;stop()&lt;/code&gt; operation is invoked or the program stops. If the repeat count is nonzero, the timer runs the specified number of times. "/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyDefaultValue" VALUE="0"/>
 </node>
 <node TEXT="" ID="ID_579669218" CREATED="1431424034147" MODIFIED="1431424034147">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
@@ -392,6 +396,8 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
 <attribute NAME="propertyDefaultValue" VALUE="false"/>
+<attribute NAME="orderIndex" VALUE="200" OBJECT="java.lang.Integer|200"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. &lt;i&gt;Default = &lt;code&gt;true&lt;/code&gt;.&lt;/i&gt;&lt;br&gt;If &lt;code&gt;true&lt;/code&gt; then the timer begins to run when the object is created (i.e. on program start). If &lt;code&gt;false&lt;/code&gt; then we need to call explicitly the &lt;code&gt;start()&lt;/code&gt; operation."/>
 </node>
 <node TEXT="" ID="ID_1698015878" CREATED="1430406047448" MODIFIED="1430406047448">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
@@ -407,16 +413,19 @@
 <attribute NAME="nodeType" VALUE="virtualChild"/>
 <attribute NAME="name" VALUE="start()"/>
 <attribute NAME="childType" VALUE="method"/>
+<attribute NAME="petaldoc" VALUE="Starts the timer, if it is not already running. "/>
 </node>
 <node TEXT="" ID="ID_1047181794" CREATED="1430406047451" MODIFIED="1430406047451">
 <attribute NAME="nodeType" VALUE="virtualChild"/>
 <attribute NAME="name" VALUE="stop()"/>
 <attribute NAME="childType" VALUE="method"/>
+<attribute NAME="petaldoc" VALUE="Stops the timer. When &lt;code&gt;start()&lt;/code&gt; is called after &lt;code&gt;stop()&lt;/code&gt;, the timer instance runs for the remaining number of repetitions, as set by the &lt;code&gt;repeatCount&lt;/code&gt; property. "/>
 </node>
 <node TEXT="" ID="ID_962826377" CREATED="1430406047451" MODIFIED="1430406047451">
 <attribute NAME="nodeType" VALUE="virtualChild"/>
 <attribute NAME="name" VALUE="reset()"/>
 <attribute NAME="childType" VALUE="method"/>
+<attribute NAME="petaldoc" VALUE="Stops the timer, if it is running, and sets the &lt;code&gt;currentCount&lt;/code&gt; property back to 0, like the reset button of a stopwatch. Then, when &lt;code&gt;start()&lt;/code&gt; is called, the timer instance runs for the specified number of repetitions, as set by the &lt;code&gt;repeatCount&lt;/code&gt; value. "/>
 </node>
 <node TEXT="" ID="ID_814222365" CREATED="1431701004213" MODIFIED="1431701004213">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
@@ -429,6 +438,7 @@
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="HttpServer"/>
 <attribute NAME="icons" VALUE="images/HttpServer.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<attribute NAME="petaldoc" VALUE="It has 3 main responsibilities: &lt;ul&gt;&lt;li&gt;Serves an HTML page with the contents generated from the User Interface Diagram.&lt;/li&gt;&lt;li&gt;Serves state updates for the connected clients. I.e. the clients periodically request state updates; when they do, the server sends a JSON containing information about all the objects that contribute to the state (i.e. their &lt;code&gt;contributesToState&lt;/code&gt; property = &lt;code&gt;true&lt;/code&gt;).&lt;/li&gt;&lt;li&gt;Receives commands (configured from the User Interface Diagram as well). When a command is received, an event is dispatched and operations can be invoked.&lt;/li&gt;&lt;/ul&gt;"/>
 <node TEXT="" ID="ID_41190890" CREATED="1430406210574" MODIFIED="1430406210574">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.instance"/>
@@ -445,19 +455,30 @@
 <attribute NAME="name" VALUE="ipAddress"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
+<attribute NAME="orderIndex" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory.&lt;/b&gt; &lt;i&gt;E.g.: &lt;code&gt;192.168.1.100&lt;/code&gt;.&lt;/i&gt;&lt;br&gt;The IP address that will be assigned to the server. It should be unique in the network. We select an IP that is compatible with our network settings (e.g. subnet mask). E.g. if our computer has an IP like: 192.168.1.4, with a subnet mask of 255.255.255.0, then we can assign something like 192.168.1.100."/>
 </node>
 <node TEXT="" ID="ID_1357205942" CREATED="1431417643125" MODIFIED="1431417643125">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="propertyType" VALUE="String"/>
+<attribute NAME="propertyType" VALUE="Number"/>
 <attribute NAME="name" VALUE="port"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
+<attribute NAME="orderIndex" VALUE="100" OBJECT="java.lang.Integer|100"/>
+<attribute NAME="propertyInitialValue" VALUE="80"/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory.&lt;/b&gt; &lt;i&gt;Initial: &lt;code&gt;80&lt;/code&gt;.&lt;/i&gt;&lt;br&gt;The server port. "/>
 </node>
 <node TEXT="" ID="ID_195749888" CREATED="1431506380061" MODIFIED="1431506380061">
 <attribute NAME="nodeType" VALUE="propertyDescriptor"/>
 <attribute NAME="name" VALUE="macAddress"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
+<attribute NAME="orderIndex" VALUE="200" OBJECT="java.lang.Integer|200"/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyInitialValue" VALUE="AA:BB:CC:DD:EE:FF"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory.&lt;/b&gt; &lt;i&gt;Initial: &lt;code&gt;AA:BB:CC:DD:EE:FF&lt;/code&gt;.&lt;/i&gt;&lt;br&gt;Some network boards/shields have a label with the MAC address. In this case, we can use it. Otherwise, we can leave the default value (which is very probably unique in our network)."/>
 </node>
 <node TEXT="" ID="ID_957071484" CREATED="1430406210575" MODIFIED="1430406210575">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
@@ -525,7 +546,7 @@
 <node TEXT="" POSITION="right" ID="ID_528003254" CREATED="1431010889991" MODIFIED="1431010889991">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="onValueChanged(ValueChangedEvent)"/>
-<attribute NAME="petaldoc" VALUE="Triggered when the value of the input changes. Contains the following information:&lt;ul&gt;&lt;li&gt;&lt;code&gt;previousValue:int&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;currentValue:int&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+<attribute NAME="petaldoc" VALUE="Triggered when the value of the input changes. Contains the following information: &lt;ul&gt;&lt;li&gt;&lt;code&gt;previousValue:int&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;currentValue:int&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;If digital, then &lt;code&gt;previousValue&lt;/code&gt; and &lt;code&gt;currentValue&lt;/code&gt; may be &lt;code&gt;HIGH&lt;/code&gt; or &lt;code&gt;LOW&lt;/code&gt;."/>
 <node TEXT="" ID="ID_433311496" CREATED="1431010890001" MODIFIED="1431010890001">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.event"/>
@@ -574,6 +595,7 @@
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="onCommandReceived(HttpCommandEvent)"/>
 <attribute NAME="propertyForLabel" VALUE="mapping;EXTRA_INFO_ENTRIES:(valueConverter=addTypeSuffix)"/>
+<attribute NAME="petaldoc" VALUE="Dispatched when the server receives a command for the specified &lt;code&gt;mapping&lt;/code&gt;. E.g. for &lt;code&gt;mapping&lt;/code&gt; = &lt;code&gt;myCommand&lt;/code&gt;, when an URL like http://SERVER_URL:SERVER_PORT/myCommand (e.g. http://192.168.1.100/myCommand) is called by a client, then the corresponding event is dispatched (so the linked operations are invoked)."/>
 <node TEXT="" ID="ID_1698110713" CREATED="1431424889003" MODIFIED="1431424889003">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.event"/>
@@ -594,6 +616,7 @@
 <node TEXT="" POSITION="right" ID="ID_1534616266" CREATED="1431424882179" MODIFIED="1431424882179">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="onTimer(TimerEvent)"/>
+<attribute NAME="petaldoc" VALUE="Dispatched whenever the &lt;code&gt;Timer&lt;/code&gt; object reaches an interval specified according to the &lt;code&gt;delay&lt;/code&gt; property. "/>
 <node TEXT="" ID="ID_1806566869" CREATED="1431424882179" MODIFIED="1431424882179">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.event"/>
@@ -609,6 +632,7 @@
 <node TEXT="" POSITION="right" ID="ID_1703602871" CREATED="1431424883841" MODIFIED="1431424883841">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="onTimerComplete(TimerEvent)"/>
+<attribute NAME="petaldoc" VALUE="Dispatched whenever the &lt;code&gt;Timer&lt;/code&gt; object has completed the number of repeats set by &lt;code&gt;repeatCount&lt;/code&gt;. If &lt;code&gt;repeatCount&lt;/code&gt; is set to 0, this event is never dispatched, as the timer runs an infinity of times."/>
 <node TEXT="" ID="ID_803850194" CREATED="1431424883841" MODIFIED="1431424883841">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.event"/>
@@ -628,19 +652,19 @@
 <node TEXT="" ID="ID_1118409312" CREATED="1429806143117" MODIFIED="1429806143117">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="invocationTargetSignature."/>
-<attribute NAME="extraInfo.label" VALUE="Invoke IF value == HIGH"/>
+<attribute NAME="extraInfo.label" VALUE="IF value == HIGH =&gt; Invoke"/>
 <attribute NAME="value" VALUE="invokeIfHigh"/>
 <attribute NAME="type" VALUE="genericDescriptor"/>
-<attribute NAME="petaldoc" VALUE="Invokes the function (without any arguments) only when the value from the event is HIGH."/>
+<attribute NAME="petaldoc" VALUE="Invokes the operation only when the value from the event is HIGH."/>
 </node>
 <node TEXT="" ID="ID_133073038" CREATED="1431513383921" MODIFIED="1431513383921">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="invocationTargetSignature.value"/>
-<attribute NAME="extraInfo.label" VALUE="Transfers &quot;value&quot;"/>
+<attribute NAME="extraInfo.label" VALUE="Always =&gt; Invoke (relaying &quot;value&quot;)"/>
 <attribute NAME="name" VALUE="invocationTargetSignature.value, transferValue:genericDescriptor"/>
 <attribute NAME="value" VALUE="transferValue"/>
-<attribute NAME="extraInfo.description" VALUE="Invokes using the constant key (given at design time) and the value from the event."/>
 <attribute NAME="extraInfo.invocationType" VALUE="invocation_ConstantKey"/>
+<attribute NAME="petaldoc" VALUE="Invokes passing the &lt;code&gt;value&lt;/code&gt; from the event. I.e. the &lt;code&gt;value&lt;/code&gt; is relayed without any processing."/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1848188547" CREATED="1429882156105" MODIFIED="1429882156105">
@@ -649,10 +673,10 @@
 <node TEXT="" ID="ID_1093761460" CREATED="1429882156105" MODIFIED="1429882156105">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="invocationTargetSignature."/>
-<attribute NAME="extraInfo.label" VALUE="Plain Invocation"/>
+<attribute NAME="extraInfo.label" VALUE="Always =&gt; Invoke"/>
 <attribute NAME="name" VALUE="invocationTargetSignature., plainInvocation:genericDescriptor"/>
 <attribute NAME="value" VALUE="plainInvocation"/>
-<attribute NAME="extraInfo.description" VALUE="Invokes the function, without any argument."/>
+<attribute NAME="petaldoc" VALUE="Doesn&apos;t perform any other logic."/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1379519850" CREATED="1430149787669" MODIFIED="1430149787669">
@@ -775,6 +799,23 @@
 <node TEXT="" POSITION="right" ID="ID_1225897255" CREATED="1431946220421" MODIFIED="1431946220421">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="dependentLibrary"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1725217673" CREATED="1440595394402" MODIFIED="1440595394402">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="work-in-progress"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<node TEXT="" ID="ID_1918677827" CREATED="1440595431282" MODIFIED="1440595431282">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyType" VALUE="String"/>
+<attribute NAME="propertyGroup" VALUE=""/>
+<attribute NAME="orderIndex" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<attribute NAME="name" VALUE="color"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="Color"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+</node>
 </node>
 </node>
 </map>

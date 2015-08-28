@@ -11,11 +11,11 @@
 <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
 <link rel="stylesheet" href="petaldoc.css">
 </head><html><body><div class="main">
-<h4><span class="label label-success"><img src="../$CommonsStringUtils.substringBefore($node.properties.icons, ';')"/></span> LoggerSD</h4>
+<h4><span class="label label-success"><img src="../$CommonsStringUtils.substringBefore($node.getPropertyValue('icons'), ';')"/></span> LoggerSD</h4>
 <hr/>
 <p style="margin-bottom: 10px">
 Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> 
-<a href="#events" class="btn btn-info btn-xs">Events</a> <a href="#methods" class="btn btn-primary btn-xs">Methods</a>
+<a href="#methods" class="btn btn-primary btn-xs">Operations</a> <a href="#events" class="btn btn-info btn-xs">Events</a>
 </p>
 
 
@@ -25,13 +25,25 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
     <h5 id="properties" class="panel-title">Properties</h5>
   </div>
   <div class="panel-body">
-<h5>valueType:String</h5>
+<h5>valueType:String </h5>
 
-<h5>slaveSelectPin:String</h5>
+<h5>slaveSelectPin:String </h5>
 
-<h5>fileName:String</h5>
+<h5>fileName:String </h5>
 
-<h5>timeInterval:String</h5>
+<h5>timeInterval:String </h5>
+
+<h5>name:String </h5>
+<b>Mandatory</b>. <i>E.g.: <code>myNewObject</code></i>.<br> The name of the object, which needs to be a valid C++ identifier.
+</div></div>
+
+<!-- Methods -->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h5 id="methods" class="panel-title">Operations</h5>
+  </div>
+  <div class="panel-body">
+<h5 id="log_value_">log(value)</h5>
 
 </div></div>
 
@@ -42,15 +54,5 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
   </div>
   <div class="panel-body">
 None.</div></div>
-
-<!-- Methods -->
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h5 id="methods" class="panel-title">Methods</h5>
-  </div>
-  <div class="panel-body">
-<h5 id="log_value_">log(value)</h5>
-
-</div></div>
 
 </div></body></html>

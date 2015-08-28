@@ -15,9 +15,9 @@
 <hr/>
 <p style="margin-bottom: 10px">
 Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> 
-<a href="#events" class="btn btn-info btn-xs">Events</a> <a href="#methods" class="btn btn-primary btn-xs">Methods</a>
+<a href="#methods" class="btn btn-primary btn-xs">Operations</a> <a href="#events" class="btn btn-info btn-xs">Events</a>
 </p>
-
+<p>Corresponds to an output connected to the board (digital).</p><p class="text-danger"><strong>WARNING:</strong> Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for <code>Serial</code> communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -> 13 (for Arduino Uno) and 4, 10, 50 -> 53 (for Arduino Mega). Etc.</p>
 
 <!-- Properties -->
 <div class="panel panel-warning">
@@ -25,8 +25,26 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
     <h5 id="properties" class="panel-title">Properties</h5>
   </div>
   <div class="panel-body">
-<h5>pin:String</h5>
+<h5>name:String </h5>
+<b>Mandatory</b>. <i>E.g.: <code>myNewObject</code></i>.<br> The name of the object, which needs to be a valid C++ identifier.
+<h5>pin:String </h5>
+<b>Mandatory</b>. <i>E.g. <code>3</code> or <code>A3</code></i>.<br>The pin of the input. When choosing pins, please see the remark above (about occupied pins). 
+<h5>contributesToState:Boolean </h5>
+<b>Mandatory</b>. <i>Default = <code>true</code></i>.<br>If <code>true</code>, it means this object's state belongs to the global state of the application, which is sent periodically (e.g. to the web interface). I.e. we'll be able to use this object's state (e.g. is it on?) from within the web interface.
+</div></div>
 
+<!-- Methods -->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h5 id="methods" class="panel-title">Operations</h5>
+  </div>
+  <div class="panel-body">
+<h5 id="toggleHighLow__">toggleHighLow()</h5>
+Toggles the state (i.e. if was <code>HIGH</code> => <code>LOW</code>; if was <code>LOW</code> => <code>HIGH</code>).
+<h5 id="setHigh__">setHigh()</h5>
+Sets the state to <code>HIGH</code>.
+<h5 id="setLow__">setLow()</h5>
+Sets the state to <code>LOW</code>.
 </div></div>
 
 <!-- Events -->
@@ -36,21 +54,7 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
   </div>
   <div class="panel-body">
 <h5 id="onValueChanged_ValueChangedEvent_">onValueChanged(ValueChangedEvent)</h5>
-Triggered when the value of the input changes. Contains the following information:<ul><li><code>previousValue:int</code></li><li><code>currentValue:int</code></li></ul>
-</div></div>
-
-<!-- Methods -->
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h5 id="methods" class="panel-title">Methods</h5>
-  </div>
-  <div class="panel-body">
-<h5 id="toggleHighLow__">toggleHighLow()</h5>
-If the output is digital, toggles the state (i.e. if was HIGH => LOW; if was LOW => HIGH).
-<h5 id="setHigh__">setHigh()</h5>
-
-<h5 id="setLow__">setLow()</h5>
-
+Triggered when the value of the input changes. Contains the following information: <ul><li><code>previousValue:int</code></li><li><code>currentValue:int</code></li></ul>If digital, then <code>previousValue</code> and <code>currentValue</code> may be <code>HIGH</code> or <code>LOW</code>.
 </div></div>
 
 </div></body></html>

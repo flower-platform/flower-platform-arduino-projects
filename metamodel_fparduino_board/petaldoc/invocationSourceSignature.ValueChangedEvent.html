@@ -12,14 +12,11 @@
 </head><html><body><div class="main">
 <h4>Event type: ValueChangedEvent</h4>
 <hr/>
-Available "<span class="text-success">CONVERT and CALL</span>"s:
-<h6 id="ValueChangedEvent__invokeIfHigh"><b>Invoke IF value == HIGH:</b> <span class="text-success">coverts</span> from <span class="label label-primary">ValueChangedEvent</span> to <span class="label label-primary">()</span> and <span class="text-success">calls</span> the function</h5>
-Invokes the function (without any arguments) only when the value from the event is HIGH.
+Available "<span class="text-success">invocations</span>":
+<h6 id="ValueChangedEvent__invokeIfHigh"><b>"IF value == HIGH => Invoke":</b> converts from <span class="label label-primary">ValueChangedEvent</span> to <span class="label label-primary">()</span> and <span class="text-success">invokes</span> the operation</h5>
+Invokes the operation only when the value from the event is HIGH.
 <hr/>
-<h6 id="ValueChangedEvent_key_value_transferValue"><b>Transfers "value":</b> <span class="text-success">coverts</span> from <span class="label label-primary">ValueChangedEvent</span> to <span class="label label-primary">(key,value)</span> and <span class="text-success">calls</span> the function</h5>
-
-<hr/>
-<h6 id="ValueChangedEvent_value_transferValue"><b>Transfers "value":</b> <span class="text-success">coverts</span> from <span class="label label-primary">ValueChangedEvent</span> to <span class="label label-primary">(value)</span> and <span class="text-success">calls</span> the function</h5>
-
+<h6 id="ValueChangedEvent_value_transferValue"><b>"Always => Invoke (relaying "value")":</b> converts from <span class="label label-primary">ValueChangedEvent</span> to <span class="label label-primary">(value)</span> and <span class="text-success">invokes</span> the operation</h5>
+Invokes passing the <code>value</code> from the event. I.e. the <code>value</code> is relayed without any processing.
 <hr/>
 </div></body></html>

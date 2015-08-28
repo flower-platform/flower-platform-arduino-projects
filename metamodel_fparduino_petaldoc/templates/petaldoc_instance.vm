@@ -1,10 +1,4 @@
-#macro( instance $hasEventsAndMethods )
-##
-## split the children into categories
-##
-#set( $properties = [] )
-#set( $events = [] )
-#set( $methods = [] )
+#macro( getMembers $node $properties $events $methods )
 #foreach( $child in $NodeTemplateUtils.getChildren($node.nodeUri) )
 #if( $child.type == "propertyDescriptor" )
 #set( $dummy = $properties.add($child) )
@@ -15,7 +9,24 @@
 #if( $child.type == "virtualChild" )
 #set( $dummy = $methods.add($child) )
 #end
+#if( $child.type == "containingCategory" && !$child.getPropertyValue("doNotAddMetamodelPrefix"))
+#set( $categoryNode = $NodeTemplateUtils.navigate($root.nodeUri, ["name", $child.getPropertyValue("name")]) )
+#getMembers( $categoryNode $properties $events $methods)
 #end
+#end
+#end
+##
+##
+##
+#macro( instance $hasEventsAndMethods )
+##
+## split the children into categories
+##
+#set( $properties = [] )
+#set( $events = [] )
+#set( $methods = [] )
+#getMembers( $node $properties $events $methods )
+#set( $dummy = $NodeTemplateUtils.sortNodesListOnProperty($properties, "orderIndex") )
 
 #htmlBegin()
 <h4><span class="label label-success"><img src="../$CommonsStringUtils.substringBefore($node.getPropertyValue('icons'), ';')"/></span> ${node.getPropertyValue('name')}</h4>
@@ -23,7 +34,7 @@
 <p style="margin-bottom: 10px">
 Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> 
 #if( $hasEventsAndMethods )
-<a href="#events" class="btn btn-info btn-xs">Events</a> <a href="#methods" class="btn btn-primary btn-xs">Methods</a>
+<a href="#methods" class="btn btn-primary btn-xs">Operations</a> <a href="#events" class="btn btn-info btn-xs">Events</a>
 #end
 </p>
 $!node.getPropertyValue('petaldoc')
@@ -44,6 +55,23 @@ $!child.getPropertyValue('petaldoc')
 </div></div>
 
 #if( $hasEventsAndMethods )
+<!-- Methods -->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h5 id="methods" class="panel-title">Operations</h5>
+  </div>
+  <div class="panel-body">
+#set( $hasElements = false )
+#foreach( $child in $methods )
+#set( $hasElements = true )
+<h5 id="$child.getPropertyValue('name').replaceAll("\W", "_")">${child.getPropertyValue('name')}</h5>
+$!child.getPropertyValue('petaldoc')
+#end
+#if( !$hasElements )None.#end
+</div></div>
+#end
+
+#if( $hasEventsAndMethods )
 <!-- Events -->
 <div class="panel panel-info">
   <div class="panel-heading">
@@ -57,23 +85,6 @@ $!child.getPropertyValue('petaldoc')
 #set( $eventNode = $NodeTemplateUtils.navigate($root.nodeUri, ["name", $eventType]) )
 <h5 id="$eventType.replaceAll("\W", "_")">$eventType</h5>
 $!eventNode.getPropertyValue('petaldoc')
-#end
-#if( !$hasElements )None.#end
-</div></div>
-#end
-
-#if( $hasEventsAndMethods )
-<!-- Methods -->
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h5 id="methods" class="panel-title">Methods</h5>
-  </div>
-  <div class="panel-body">
-#set( $hasElements = false )
-#foreach( $child in $methods )
-#set( $hasElements = true )
-<h5 id="$child.getPropertyValue('name').replaceAll("\W", "_")">${child.getPropertyValue('name')}</h5>
-$!child.getPropertyValue('petaldoc')
 #end
 #if( !$hasElements )None.#end
 </div></div>

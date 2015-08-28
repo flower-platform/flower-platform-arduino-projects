@@ -15,9 +15,9 @@
 <hr/>
 <p style="margin-bottom: 10px">
 Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> 
-<a href="#events" class="btn btn-info btn-xs">Events</a> <a href="#methods" class="btn btn-primary btn-xs">Methods</a>
+<a href="#methods" class="btn btn-primary btn-xs">Operations</a> <a href="#events" class="btn btn-info btn-xs">Events</a>
 </p>
-
+<p>The timer allows us to execute operations after a certain <code>delay</code> passes.</p><p>The timer can run once, it can repeat several times, or an infinity of times, cf. <code>repeatCount</code>.</p>
 
 <!-- Properties -->
 <div class="panel panel-warning">
@@ -25,12 +25,28 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
     <h5 id="properties" class="panel-title">Properties</h5>
   </div>
   <div class="panel-body">
-<h5>delay:String</h5>
+<h5>name:String </h5>
+<b>Mandatory</b>. <i>E.g.: <code>myNewObject</code></i>.<br> The name of the object, which needs to be a valid C++ identifier.
+<h5>delay:Number </h5>
+<b>Mandatory</b>. <i>E.g. <code>1000</code>, i.e. one second.</i><br>The delay, in milliseconds, between timer events.
+<h5>repeatCount:Number </h5>
+<b>Mandatory</b>. <i>Default = <code>0</code></i>.<br>The total number of times the timer is set to run. If the repeat count is set to 0, the timer continues indefinitely, or until the <code>stop()</code> operation is invoked or the program stops. If the repeat count is nonzero, the timer runs the specified number of times. 
+<h5>autoStart:Boolean </h5>
+<b>Mandatory</b>. <i>Default = <code>true</code>.</i><br>If <code>true</code> then the timer begins to run when the object is created (i.e. on program start). If <code>false</code> then we need to call explicitly the <code>start()</code> operation.
+</div></div>
 
-<h5>repeatCount:String </h5>
-
-<h5>autostart:Boolean </h5>
-
+<!-- Methods -->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h5 id="methods" class="panel-title">Operations</h5>
+  </div>
+  <div class="panel-body">
+<h5 id="start__">start()</h5>
+Starts the timer, if it is not already running. 
+<h5 id="stop__">stop()</h5>
+Stops the timer. When <code>start()</code> is called after <code>stop()</code>, the timer instance runs for the remaining number of repetitions, as set by the <code>repeatCount</code> property. 
+<h5 id="reset__">reset()</h5>
+Stops the timer, if it is running, and sets the <code>currentCount</code> property back to 0, like the reset button of a stopwatch. Then, when <code>start()</code> is called, the timer instance runs for the specified number of repetitions, as set by the <code>repeatCount</code> value. 
 </div></div>
 
 <!-- Events -->
@@ -40,23 +56,9 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
   </div>
   <div class="panel-body">
 <h5 id="onTimer_TimerEvent_">onTimer(TimerEvent)</h5>
-
+Dispatched whenever the <code>Timer</code> object reaches an interval specified according to the <code>delay</code> property. 
 <h5 id="onTimerComplete_TimerEvent_">onTimerComplete(TimerEvent)</h5>
-
-</div></div>
-
-<!-- Methods -->
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h5 id="methods" class="panel-title">Methods</h5>
-  </div>
-  <div class="panel-body">
-<h5 id="start__">start()</h5>
-
-<h5 id="stop__">stop()</h5>
-
-<h5 id="reset__">reset()</h5>
-
+Dispatched whenever the <code>Timer</code> object has completed the number of repeats set by <code>repeatCount</code>. If <code>repeatCount</code> is set to 0, this event is never dispatched, as the timer runs an infinity of times.
 </div></div>
 
 </div></body></html>

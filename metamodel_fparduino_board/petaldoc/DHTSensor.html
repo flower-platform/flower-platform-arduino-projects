@@ -15,7 +15,7 @@
 <hr/>
 <p style="margin-bottom: 10px">
 Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> 
-<a href="#events" class="btn btn-info btn-xs">Events</a> <a href="#methods" class="btn btn-primary btn-xs">Methods</a>
+<a href="#methods" class="btn btn-primary btn-xs">Operations</a> <a href="#events" class="btn btn-info btn-xs">Events</a>
 </p>
 
 
@@ -25,11 +25,23 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
     <h5 id="properties" class="panel-title">Properties</h5>
   </div>
   <div class="panel-body">
-<h5>pin:String</h5>
+<h5>pollInterval:String </h5>
 
-<h5>pollInterval:String</h5>
-
+<h5>name:String </h5>
+<b>Mandatory</b>. <i>E.g.: <code>myNewObject</code></i>.<br> The name of the object, which needs to be a valid C++ identifier.
+<h5>pin:String </h5>
+<b>Mandatory</b>. <i>E.g. <code>3</code> or <code>A3</code></i>.<br>The pin of the input. When choosing pins, please see the remark above (about occupied pins). 
+<h5>contributesToState:Boolean </h5>
+<b>Mandatory</b>. <i>Default = <code>true</code></i>.<br>If <code>true</code>, it means this object's state belongs to the global state of the application, which is sent periodically (e.g. to the web interface). I.e. we'll be able to use this object's state (e.g. is it on?) from within the web interface.
 </div></div>
+
+<!-- Methods -->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h5 id="methods" class="panel-title">Operations</h5>
+  </div>
+  <div class="panel-body">
+None.</div></div>
 
 <!-- Events -->
 <div class="panel panel-info">
@@ -42,13 +54,5 @@ Triggered when the value of the input changes. Contains the following informatio
 <h5 id="onHumidityChanged_HumidityChangedEvent_">onHumidityChanged(HumidityChangedEvent)</h5>
 Triggered when the value of the input changes. Contains the following information:<ul><li><code>previousValue:int</code></li><li><code>currentValue:int</code></li></ul>
 </div></div>
-
-<!-- Methods -->
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h5 id="methods" class="panel-title">Methods</h5>
-  </div>
-  <div class="panel-body">
-None.</div></div>
 
 </div></body></html>
