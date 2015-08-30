@@ -1,6 +1,7 @@
 <map version="freeplane 1.3.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="New Mindmap" ID="ID_1128807531" CREATED="1431009512298" MODIFIED="1431009512298"><hook NAME="MapStyle">
+<node TEXT="New Mindmap" ID="ID_1128807531" CREATED="1431009512298" MODIFIED="1440861893186"><hook NAME="MapStyle">
+    <properties show_icon_for_attributes="true"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node">
@@ -49,10 +50,12 @@
 </stylenode>
 </map_styles>
 </hook>
+<attribute_layout NAME_WIDTH="83" VALUE_WIDTH="509"/>
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__root"/>
-<attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_BOARD,$METAMODEL.ARDUINO_UI,$METAMODEL.ARDUINO_DOC"/>
-<node TEXT="" POSITION="right" ID="ID_1040444061" CREATED="1439975752307" MODIFIED="1439975752307">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__Doc"/>
+<attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_BOARD,$METAMODEL.ARDUINO_UI,$METAMODEL.ARDUINO_DOCUMENTATION"/>
+<node TEXT="" POSITION="right" ID="ID_1040444061" CREATED="1439975752307" MODIFIED="1440861921445">
+<attribute_layout NAME_WIDTH="59" VALUE_WIDTH="404"/>
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__documentation"/>
 <attribute NAME="name" VALUE="Doc"/>
 <attribute NAME="title" VALUE="Control lights in a room via browser or buttons. At home or at the office."/>
 <node TEXT="" ID="ID_311197084" CREATED="1439975995435" MODIFIED="1439975995435">

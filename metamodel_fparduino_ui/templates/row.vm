@@ -2,7 +2,7 @@
 <div class="row#printClassNoAttr($row)"#printId($row)>
 #foreach($child in $NodeTemplateUtils.getChildren($row.nodeUri))
 #@indent()
-	#callMacroWithSuffix( $child, "")
+	#callMacroWithSuffix( $child, "" )
 #end
 #end
 </div>

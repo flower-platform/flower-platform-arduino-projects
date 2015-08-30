@@ -56,7 +56,7 @@
 <attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_PETALDOC"/>
 <node TEXT="" POSITION="right" ID="ID_1024190069" CREATED="1439974640416" MODIFIED="1439974640416">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="Doc"/>
+<attribute NAME="name" VALUE="documentation"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
 <attribute NAME="backgroundColor" VALUE="#FFCC00"/>
@@ -87,6 +87,12 @@
 <attribute NAME="childType" VALUE="Block"/>
 <attribute NAME="type" VALUE="addChildDescriptor"/>
 <attribute NAME="icon" VALUE="images/Block.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+</node>
+<node TEXT="" ID="ID_812656494" CREATED="1440875825435" MODIFIED="1440875825435">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="childType" VALUE="MediaItems"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_423846135" CREATED="1439975956658" MODIFIED="1439975956658">
@@ -124,6 +130,91 @@
 <attribute NAME="label" VALUE="Text"/>
 <attribute NAME="propertyEmptyEqualsNull" VALUE="false" OBJECT="java.lang.Boolean|false"/>
 <attribute NAME="propertyLineRenderer" VALUE="Default"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_81020079" CREATED="1440875673802" MODIFIED="1440875673802">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="MediaItems"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<attribute NAME="propertyForLabel" VALUE="itemsPerRow"/>
+<node TEXT="" ID="ID_746086045" CREATED="1440875801505" MODIFIED="1440875801505">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<attribute NAME="childType" VALUE="Image"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
+<node TEXT="" ID="ID_785985115" CREATED="1440927485404" MODIFIED="1440927485404">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="100" OBJECT="java.lang.Integer|100"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="YouTube"/>
+</node>
+<node TEXT="" ID="ID_174152154" CREATED="1440876057467" MODIFIED="1440876057467">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyGroup" VALUE=""/>
+<attribute NAME="propertyType" VALUE="Number"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="name" VALUE="itemsPerRow"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1166068257" CREATED="1440875781467" MODIFIED="1440875781467">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="Image"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<attribute NAME="propertyForLabel" VALUE="url"/>
+<node TEXT="" ID="ID_1012726901" CREATED="1440927413838" MODIFIED="1440927413838">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.mediaItem"/>
+<attribute NAME="type" VALUE="containingCategory"/>
+</node>
+<node TEXT="" ID="ID_998538872" CREATED="1440927760153" MODIFIED="1440927760153">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyGroup" VALUE=""/>
+<attribute NAME="propertyType" VALUE="String"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="name" VALUE="url"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_615801537" CREATED="1440927345753" MODIFIED="1440927345753">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="YouTube"/>
+<attribute NAME="propertyForLabel" VALUE="videoId"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<node TEXT="" ID="ID_1867554463" CREATED="1440927421023" MODIFIED="1440927421023">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.mediaItem"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_852033718" CREATED="1440927762483" MODIFIED="1440927762483">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyGroup" VALUE=""/>
+<attribute NAME="propertyType" VALUE="String"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="name" VALUE="videoId"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_595870387" CREATED="1440927384923" MODIFIED="1440927384923">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="category.mediaItem"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<node TEXT="" ID="ID_1063679794" CREATED="1440927391009" MODIFIED="1440927391009">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="Block"/>
 </node>
 </node>
 </node>

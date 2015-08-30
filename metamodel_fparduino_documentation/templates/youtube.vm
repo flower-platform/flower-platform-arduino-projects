@@ -1,0 +1,15 @@
+#macro( YouTube $node )
+<div class="embed-responsive embed-responsive-16by9">
+	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/$node.getPropertyValue("videoId")?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>#set( $children = $NodeTemplateUtils.getChildren($node.nodeUri))
+#if( !$children.isEmpty() )
+<div class="caption">
+#foreach($child in $children)
+#@indent()
+	#callMacroWithSuffix( $child, "")
+#end
+#end
+</div>
+#end
+#end
+

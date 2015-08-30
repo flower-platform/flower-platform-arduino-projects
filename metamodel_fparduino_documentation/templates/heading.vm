@@ -1,0 +1,4 @@
+#macro(Heading $node)
+##sections($sections)
+<h3>$node.getPropertyValue("text")</h3>
+#end

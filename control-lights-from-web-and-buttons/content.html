@@ -1,0 +1,140 @@
+<h3>Intro</h3>
+<div class="panel-group">
+	<div><b>Controlling lights with an Arduino</b> is probably one of the first things that come into our minds when we think about automating our home or office. It&#39;s relatively simple to integrate into the existing legacy electrical system. I.e. there is no need to install actuators, motors, valves, sensors, etc. Only a nice relay would do a pretty good job.</div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/temp-case-with-circuit.JPG" alt="images/temp-case-with-circuit.JPG">
+      </div>
+    </div>
+  <div class="col-md-12">
+      <div class="thumbnail">
+  	<div class="embed-responsive embed-responsive-16by9">
+  	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EEqh6ZIW3Bs?rel=0" frameborder="0" allowfullscreen></iframe>
+  </div>    </div>
+    </div>
+</div>
+<h3>Utility</h3>
+<div class="panel-group">
+	<div><h4>#1. Switch lights on/off without leaving the comfortable position at desk</h4><p>From our experience, the <b>most interesting use case is at our office</b>. We work in a building with several levels, each level being an open space. During the day, there is no need for artificial light. But as the sun goes down, somebody needs to physically go to the light switch to turn the lights on. This is a physically demanding task, especially after <b>a whole day of intense workout</b> (i.e. fingers continuously hitting keyboard/mouse).</p><p>So now, there is no need to leave the comfortable position at the computer. Everybody can control the lights from a nice web interface, within the browser (desktop, tablet, mobile).</p><h4>#2. For fun: annoy colleagues by turning off lights</h4>A corollary of the above is that now everybody can switch lights on/off. E.g. for the colleagues that work at the level below. However, this works optimally from the mobile, while the author of the prank is visiting the neighbours downstairs (in order to enjoy their reaction). <h4>#3. Verify if we forgot (or not) the lights on when we left home</h4></div>
+</div>
+<h3>Hardware Used</h3>
+<div class="row">
+  <div class="col-md-12">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/required-hardware.JPG" alt="images/required-hardware.JPG">
+  <div class="caption">
+  	<div class="panel-group">
+  		<div><ul><li>Arduino Uno</li><li>Ethernet Shield</li><li>Relay Board</li><li>Nice case for buttons, that can be fixed on the wall</li><li>Nice push buttons (not switches!)</li><li>Wires</li></ul></div>
+  	</div>
+  </div>
+      </div>
+    </div>
+</div>
+<h3>Circuit</h3>
+<div class="row">
+  <div class="col-md-12">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/circuit-fritzing.png" alt="images/circuit-fritzing.png">
+      </div>
+    </div>
+</div>
+<h3>Test Circuit Programmed with Flower Platform</h3>
+<div class="row">
+  <div class="col-md-6">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/test-circuit.JPG" alt="images/test-circuit.JPG">
+  <div class="caption">
+  	<div class="panel-group">
+  		<div>We have built the test circuit. In this phase we didn&#39;t connect the relays to anything.</div>
+  	</div>
+  </div>
+      </div>
+    </div>
+  <div class="col-md-6">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/fp-screenshot.png" alt="images/fp-screenshot.png">
+  <div class="caption">
+  	<div class="panel-group">
+  		<div>And then we have done several iterations with Flower Platform to have working buttons and then a working user interface.</div>
+  	</div>
+  </div>
+      </div>
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/temp-user-interface-screenshot.PNG" alt="images/temp-user-interface-screenshot.PNG">
+  <div class="caption">
+  	<div class="panel-group">
+  		<div>This is the web user interface. </div>
+  	</div>
+  </div>
+      </div>
+    </div>
+</div>
+<h3>Make It Look Good</h3>
+<div class="row">
+  <div class="col-md-6">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/temp-case-with-bolts.JPG" alt="images/temp-case-with-bolts.JPG">
+  <div class="caption">
+  	<div class="panel-group">
+  		<div>We use 5 mm nuts (with plastic washers) to attach the boards to the case. We prefer this method instead of gluing the parts with the hot glue gun. </div>
+  	</div>
+  </div>
+      </div>
+    </div>
+  <div class="col-md-6">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/temp-case-with-circuit.JPG" alt="images/temp-case-with-circuit.JPG">
+  <div class="caption">
+  	<div class="panel-group">
+  		<div>For the Arduino board, although we have drilled 4 holes, we use only 3 nuts. This is because the 4th hole of the Arduino board is very close to a soldered component. </div>
+  	</div>
+  </div>
+      </div>
+    </div>
+  <div class="col-md-6">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/temp-case-mounted-on-wall.JPG" alt="images/temp-case-mounted-on-wall.JPG">
+  <div class="caption">
+  	<div class="panel-group">
+  		<div>We attach the case to the wall, not far from a power outlet. In our case, we had one quite close, that powers a network switch.</div>
+  	</div>
+  </div>
+      </div>
+    </div>
+  <div class="col-md-6">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/temp-case-with-circuit.JPG" alt="images/temp-case-with-circuit.JPG">
+  <div class="caption">
+  	<div class="panel-group">
+  		<div>For the Arduino board, although we have drilled 4 holes, we use only 3 nuts. This is because the 4th hole of the Arduino board is very close to a soldered component. </div>
+  	</div>
+  </div>
+      </div>
+    </div>
+  <div class="col-md-6">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/wires-from-light-switch.JPG" alt="images/wires-from-light-switch.JPG">
+  <div class="caption">
+  	<div class="panel-group">
+  		<div>We connected some wires to the existing switches. <br /><b>WARNING:</b> high voltage! Always turn off power (e.g. from the fuse box of the room/building) when manipulating high voltage circuits. And this includes the relay board as well!</div>
+  	</div>
+  </div>
+      </div>
+    </div>
+  <div class="col-md-6">
+      <div class="thumbnail">
+  	<img src="servlet/load/flower-platform-arduino-projects/control-lights-from-web-and-buttons/images/temp-cables-duct.JPG" alt="images/temp-cables-duct.JPG">
+  <div class="caption">
+  	<div class="panel-group">
+  		<div>And then we installed cable ducts to hide the wires.</div>
+  	</div>
+  </div>
+      </div>
+    </div>
+</div>

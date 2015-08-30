@@ -174,11 +174,6 @@
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="root"/>
 <attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<node TEXT="" ID="ID_1660524331" CREATED="1431681896708" MODIFIED="1431681896708">
-<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
-<attribute NAME="childType" VALUE="test"/>
-<attribute NAME="type" VALUE="addChildDescriptor"/>
-</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1091130042" CREATED="1431424335609" MODIFIED="1431424335609">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>

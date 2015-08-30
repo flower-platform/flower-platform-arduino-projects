@@ -1,0 +1,14 @@
+#macro( MediaItems $node )
+#set( $classSuffix = 12 / $node.getPropertyValue("itemsPerRow") )
+<div class="row">
+#foreach($child in $NodeTemplateUtils.getChildren($node.nodeUri))
+#@indent()
+  <div class="col-md-$classSuffix">
+    <div class="thumbnail">
+	#callMacroWithSuffix( $child, "")
+    </div>
+  </div>
+#end
+#end
+</div>
+#end

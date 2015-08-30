@@ -1,0 +1,13 @@
+#macro( Image $node )
+<img src="$NodeTemplateUtils.getUrlFromNodeRepo($node, $node.getPropertyValue("url"))" alt="$node.getPropertyValue("url")">
+#set( $children = $NodeTemplateUtils.getChildren($node.nodeUri))
+#if( !$children.isEmpty() )
+<div class="caption">
+#foreach($child in $children)
+#@indent()
+	#callMacroWithSuffix( $child, "")
+#end
+#end
+</div>
+#end
+#end
