@@ -232,6 +232,18 @@
 <attribute NAME="propertyType" VALUE="Boolean"/>
 <attribute NAME="orderIndex" VALUE="200" OBJECT="java.lang.Integer|200"/>
 </node>
+<node TEXT="" ID="ID_70766249" CREATED="1441019053006" MODIFIED="1441019053006">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyGroup" VALUE=""/>
+<attribute NAME="propertyType" VALUE="String"/>
+<attribute NAME="orderIndex" VALUE="300" OBJECT="java.lang.Integer|300"/>
+<attribute NAME="name" VALUE="pollInterval"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyDefaultValue" VALUE="200"/>
+<attribute NAME="petaldoc" VALUE="&lt;i&gt;Default = &lt;code&gt;200&lt;/code&gt;.&lt;/i&gt;&lt;br/&gt;Minimum time interval (in milliseconds) between accepted state changes. Changes which occur faster than &lt;code&gt;pollInterval&lt;/code&gt; are ignored."/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_164463813" CREATED="1429197136197" MODIFIED="1429197136197">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -294,6 +306,18 @@
 <attribute NAME="behaviorType" VALUE="dependentLibrary"/>
 <attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.DHT:genericDescriptor"/>
 <attribute NAME="value" VALUE="dependentLibrary.Output"/>
+</node>
+<node TEXT="" ID="ID_1255117949" CREATED="1441019158209" MODIFIED="1441019158209">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyInitialValue" VALUE="0"/>
+<attribute NAME="propertyGroup" VALUE=""/>
+<attribute NAME="propertyType" VALUE="String"/>
+<attribute NAME="orderIndex" VALUE="100" OBJECT="java.lang.Integer|100"/>
+<attribute NAME="name" VALUE="initialValue"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+<attribute NAME="type" VALUE="propertyDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;i&gt;Default = &lt;code&gt;0&lt;/code&gt; (LOW)&lt;/i&gt;.&lt;br&gt;Possible values: &lt;ul&gt;&lt;li&gt;&lt;code&gt;0&lt;/code&gt; (LOW)&lt;/li&gt;&lt;li&gt;&lt;code&gt;1&lt;/code&gt; (HIGH)&lt;/li&gt;&lt;/ul&gt;"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1019192354" CREATED="1431424332719" MODIFIED="1431424332719">
@@ -651,6 +675,14 @@
 <attribute NAME="value" VALUE="invokeIfHigh"/>
 <attribute NAME="type" VALUE="genericDescriptor"/>
 <attribute NAME="petaldoc" VALUE="Invokes the operation only when the value from the event is HIGH."/>
+</node>
+<node TEXT="" ID="ID_1334865848" CREATED="1441019097440" MODIFIED="1441019097440">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="petaldoc" VALUE="Invokes the operation only when the value from the event is LOW."/>
+<attribute NAME="behaviorType" VALUE="invocationTargetSignature."/>
+<attribute NAME="extraInfo.label" VALUE="IF value == LOW =&gt; Invoke"/>
+<attribute NAME="name" VALUE="invocationTargetSignature., invokeIfHigh:genericDescriptor"/>
+<attribute NAME="value" VALUE="invokeIfLow"/>
 </node>
 <node TEXT="" ID="ID_133073038" CREATED="1431513383921" MODIFIED="1431513383921">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>

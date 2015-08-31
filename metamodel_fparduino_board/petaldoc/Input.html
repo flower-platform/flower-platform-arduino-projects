@@ -33,6 +33,8 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
 <b>Mandatory.</b> <i>Default = <code>false</code></i>. Whether this pin is analog or not. Please note that not all pins can be used as analog pins.
 <h5>internalPullUp:Boolean </h5>
 <b>Mandatory</b>. <i>Default = <code>false</code></i>.<br>E.g. for a push button, if our input has a pull-up or pull-down resistor, then we use <code>false</code>. Else, if we don't have a resistor, we'll select<code>true</code> (i.e. we'll use an internal pull-up). In this case, when closing the circuit (e.g. pushing the button), we'll connect the input to ground.<br><b>Note:</b><ul><li>With a pull-up resistor or internal pull-up: if button is NOT pressed => state is <code>HIGH</code> (hence the name, "pull up"); else, if button is pressed => state is <code>LOW</code>.</li><li>With a pull-down resistor, the logic is opposite: if button is NOT pressed => state is <code>LOW</code> (hence the name, "pull down"); else, if button is pressed => state is <code>HIGH</code>.</li></ul>
+<h5>pollInterval:String </h5>
+<i>Default = <code>200</code>.</i><br/>Minimum time interval (in milliseconds) between accepted state changes. Changes which occur faster than <code>pollInterval</code> are ignored.
 <h5>contributesToState:Boolean </h5>
 <b>Mandatory</b>. <i>Default = <code>true</code></i>.<br>If <code>true</code>, it means this object's state belongs to the global state of the application, which is sent periodically (e.g. to the web interface). I.e. we'll be able to use this object's state (e.g. is it on?) from within the web interface.
 </div></div>

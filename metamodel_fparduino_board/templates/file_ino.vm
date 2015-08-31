@@ -1,5 +1,5 @@
 #macro( metadata $node )#end
-#macro( Doc $node )#end
+#macro( documentation $node )#end
 #set( $root = $node )
 #foreach( $import in $imports )
 \#include <$import>

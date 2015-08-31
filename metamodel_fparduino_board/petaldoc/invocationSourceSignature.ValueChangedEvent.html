@@ -16,6 +16,9 @@ Available "<span class="text-success">invocations</span>":
 <h6 id="ValueChangedEvent__invokeIfHigh"><b>"IF value == HIGH => Invoke":</b> converts from <span class="label label-primary">ValueChangedEvent</span> to <span class="label label-primary">()</span> and <span class="text-success">invokes</span> the operation</h5>
 Invokes the operation only when the value from the event is HIGH.
 <hr/>
+<h6 id="ValueChangedEvent__invokeIfLow"><b>"IF value == LOW => Invoke":</b> converts from <span class="label label-primary">ValueChangedEvent</span> to <span class="label label-primary">()</span> and <span class="text-success">invokes</span> the operation</h5>
+Invokes the operation only when the value from the event is LOW.
+<hr/>
 <h6 id="ValueChangedEvent_value_transferValue"><b>"Always => Invoke (relaying "value")":</b> converts from <span class="label label-primary">ValueChangedEvent</span> to <span class="label label-primary">(value)</span> and <span class="text-success">invokes</span> the operation</h5>
 Invokes passing the <code>value</code> from the event. I.e. the <code>value</code> is relayed without any processing.
 <hr/>

@@ -16,3 +16,9 @@ if (castedEvent->currentValue == HIGH) {
 	${targetInstance}.${targetMethodFull};
 }
 #end
+
+#macro( ValueChangedEvent__invokeIfLow )
+if (castedEvent->currentValue == LOW) {
+	${targetInstance}.${targetMethodFull};
+}
+#end
