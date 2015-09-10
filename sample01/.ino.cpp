@@ -1,21 +1,20 @@
 //This is a automatic generated file
 //Please do not modify this file
 //If you touch this file your change will be overwritten during the next build
-//This file has been generated on 2015-05-19 14:17:01
+//This file has been generated on 2015-09-10 10:57:42
 
 #include "Arduino.h"
-#include <FlowerPlatformArduinoRuntime.h>
-#include <Input.h>
-#include <Output.h>
-#include <Ethernet.h>
-#include <SPI.h>
-#include <HttpServer.h>
-#include <DHT.h>
-#include <DHTSensor.h>
 #include <Timer.h>
-#include <SD.h>
+#include <IRCommand.h>
+#include <DHTSensor.h>
+#include <Ethernet.h>
+#include <FlowerPlatformArduinoRuntime.h>
 #include <SPI.h>
-#include <LoggerSD.h>
+#include <DHT.h>
+#include <HttpServer.h>
+#include <IRremote.h>
+#include <Output.h>
+#include <Input.h>
 #include "CustomCode.h"
 void setup() ;
 void loop() ;

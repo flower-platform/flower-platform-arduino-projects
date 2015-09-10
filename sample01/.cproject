@@ -30,6 +30,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/SD}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/SD/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/FlowerPlatformArduino_Runtime2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/IRremote}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.1634542052" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
 							</tool>
@@ -46,6 +47,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/SD}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/SD/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/FlowerPlatformArduino_Runtime2}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/IRremote}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.c.sketch.input.1225092959" name="C Source Files" superClass="it.baeyens.arduino.compiler.c.sketch.input"/>
 							</tool>

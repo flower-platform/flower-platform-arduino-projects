@@ -1,0 +1,8 @@
+################################
+## IRCommand
+################################
+
+#macro( IRCommand_init $node )
+${node.getPropertyValue('name')}.name = "${node.getPropertyValue('name')}";
+${node.getPropertyValue('name')}.setup();
+#end

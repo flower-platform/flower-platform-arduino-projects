@@ -42,6 +42,11 @@
 			<locationURI>ArduinoPivateLibPath/FlowerPlatformArduino_Runtime2</locationURI>
 		</link>
 		<link>
+			<name>Libraries/IRremote</name>
+			<type>2</type>
+			<locationURI>ArduinoPivateLibPath/IRremote</locationURI>
+		</link>
+		<link>
 			<name>Libraries/SD</name>
 			<type>2</type>
 			<locationURI>ArduinoLibPath/SD</locationURI>
