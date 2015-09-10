@@ -83,6 +83,8 @@ public:
 	virtual ~ApplicationGen() { }
 
 	virtual void setup() {
+		pinMode(SS, OUTPUT);
+
 		input5.pin = 5;
 		input5.isAnalog = false;
 		input5.internalPullUp = true;
@@ -152,7 +154,6 @@ public:
 ApplicationGen* app = new ApplicationCustom();
 
 void setup() {
-	Serial.begin(9600);
 	app->setup();
 }
 

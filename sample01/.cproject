@@ -25,8 +25,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/Ethernet}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/Ethernet/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/SPI}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/StandardCplusplus}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/Webduino}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/SD}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/SD/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/FlowerPlatformArduino_Runtime2}&quot;"/>
@@ -42,8 +40,6 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/Ethernet}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/Ethernet/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/SPI}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/StandardCplusplus}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/Webduino}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/SD}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/SD/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sample01/Libraries/FlowerPlatformArduino_Runtime2}&quot;"/>
