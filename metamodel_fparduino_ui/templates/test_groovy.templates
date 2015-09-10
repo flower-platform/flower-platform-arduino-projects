@@ -1,0 +1,4 @@
+useNewTemplates = true
+root = dynamic_fparduino__ui
+label = Test Groovy
+gen_files = test_groovy.txt:test_groovy

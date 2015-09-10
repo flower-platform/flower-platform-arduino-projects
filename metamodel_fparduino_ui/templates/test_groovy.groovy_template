@@ -1,0 +1,32 @@
+<%
+	generationSession.scope.put("utils", new org.flowerplatform.codesync.template_new.TemplateUtils(generationSession) {
+		
+		def printHello(toWho) {
+			out.println("Hello " + toWho);
+		}
+
+	});
+%>
+Salut din Groovy!
+Nodul curent este "<%= node.getPropertyValue("name") %>"
+Copiii sunt:
+<% 
+	for (child in nodeService.getChildren(node.getNodeUri(), null)) {
+%>	copil = $child.nodeUri;
+<%
+	// comentat caci iterez mai jos
+//	utils.callWithTemplateFromNode(child, null, null);
+	utils.printHello("Cristi");
+}
+%>
+
+Iar acum invocam copii, cu metoda util:
+<% utils.iterateNodesAndCall(node, null, [cucu: "bau"]); %>
+Dupa, node = "<%= node.getPropertyValue("name") %>"; deci nested scopes a functionat?
+
+<%
+	// aici incercam prostii:
+//	nodeService.getNode("fpp:flower-platform-arduino-projects/metamodel_fparduino_ui|fp_arduino_ui.metamodel");
+//	out.print(System.getProperties());
+//	System.exit(0);
+%>
