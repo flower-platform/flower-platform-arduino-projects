@@ -1,29 +1,32 @@
 #include <Timer.h>
-#include <LoggerSD.h>
+#include <IRCommand.h>
 #include <DHTSensor.h>
 #include <Ethernet.h>
 #include <FlowerPlatformArduinoRuntime.h>
-#include <SD.h>
-#include <DHT.h>
 #include <SPI.h>
+#include <DHT.h>
 #include <HttpServer.h>
+#include <IRremote.h>
 #include <Output.h>
 #include <Input.h>
 
 class ApplicationGen {
 protected:
-	Input input2;
-	Output output5;
+	Input input5;
+	Output output6;
 	HttpServer httpServer;
 	DHTSensor dhtSensor;
 	Output blueLed;
 	Timer blueLedTimer;
-	LoggerSD<int> loggerTemperature;
+	IRCommand ac24auto;
 
-	virtual void input2_onValueChanged(Event* event) {
+	virtual void input5_onValueChanged(Event* event) {
 		ValueChangedEvent* castedEvent = (ValueChangedEvent*) event;
 		{
-			output5.toggleHighLow();
+			output6.toggleHighLow();
+		}
+		if (castedEvent->currentValue == LOW) {
+			ac24auto.send();
 		}
 	}
 	
@@ -53,7 +56,7 @@ protected:
 		} else if (strcmp_P(command, PSTR("toggleLight")) == 0) {
 			urlFound = true;
 			{
-				output5.toggleHighLow();
+				output6.toggleHighLow();
 			}
 		}
 		
@@ -67,10 +70,6 @@ protected:
 	
 	virtual void dhtSensor_onTemperatureChanged(Event* event) {
 		ValueChangedEvent* castedEvent = (ValueChangedEvent*) event;
-		{
-			int value = castedEvent->currentValue;
-			loggerTemperature.log(value);
-		}
 	}
 	
 	virtual void blueLedTimer_onTimer(Event* event) {
@@ -84,14 +83,16 @@ public:
 	virtual ~ApplicationGen() { }
 
 	virtual void setup() {
-		input2.pin = 2;
-		input2.isAnalog = false;
-		input2.internalPullUp = true;
-		input2.pollInterval = 200;
-		input2.setup();
+		pinMode(SS, OUTPUT);
 
-		output5.pin = 5;
-		output5.setup();
+		input5.pin = 5;
+		input5.isAnalog = false;
+		input5.internalPullUp = true;
+		input5.pollInterval = 200;
+		input5.setup();
+
+		output6.pin = 6;
+		output6.setup();
 
 		uint8_t macAddress[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 		uint8_t ipAddress[] = { 192, 168, 100, 253 };
@@ -111,18 +112,17 @@ public:
 		blueLedTimer.autoStart = true;
 		blueLedTimer.setup();
 
-		loggerTemperature.slaveSelectPin = 4;
-		loggerTemperature.timeInterval = 3000;
-		loggerTemperature.setup();
+		ac24auto.name = "ac24auto";
+		ac24auto.setup();
 
-		input2.onValueChanged = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::input2_onValueChanged);
+		input5.onValueChanged = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::input5_onValueChanged);
 		httpServer.onCommandReceived = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_onCommandReceived);
 		dhtSensor.onTemperatureChanged = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::dhtSensor_onTemperatureChanged);
 		blueLedTimer.onTimer = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::blueLedTimer_onTimer);
 	}
 	
 	virtual void loop() {
-		input2.loop();
+		input5.loop();
 		httpServer.loop();
 		dhtSensor.loop();
 		blueLedTimer.loop();
@@ -131,9 +131,9 @@ public:
 	void printStateAsJson(Print* print) {
 		print->print(F("{"));
 	
-		input2.printStateAsJson(F("input2"), print);
+		input5.printStateAsJson(F("input5"), print);
 		print->print(F(","));
-		output5.printStateAsJson(F("output5"), print);
+		output6.printStateAsJson(F("output6"), print);
 		print->print(F(","));
 		dhtSensor.printStateAsJson(F("dhtSensor"), print);
 		print->print(F(","));

@@ -17,6 +17,8 @@ public:
 	virtual ~ApplicationGen() { }
 
 	virtual void setup() {
+		pinMode(SS, OUTPUT);
+		
 #foreach( $child in $NodeTemplateUtils.getChildren($board.nodeUri) )
 #@indent()
 		#callMacroWithSuffix( $child "_init" )

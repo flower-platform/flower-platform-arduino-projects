@@ -169,6 +169,12 @@
 <attribute NAME="childType" VALUE="note"/>
 <attribute NAME="type" VALUE="addChildDescriptor"/>
 </node>
+<node TEXT="" ID="ID_1285940088" CREATED="1441710592930" MODIFIED="1441710592930">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="childType" VALUE="IRCommand"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1667331062" CREATED="1429111771166" MODIFIED="1429111771166">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -562,6 +568,37 @@
 <attribute NAME="value" VALUE="dependentLibrary.LoggerSD"/>
 </node>
 </node>
+<node TEXT="" POSITION="right" ID="ID_914249262" CREATED="1441710366554" MODIFIED="1441710366554">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;p&gt;Corresponds to an output connected to the board (digital).&lt;/p&gt;&lt;p class=&quot;text-danger&quot;&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for &lt;code&gt;Serial&lt;/code&gt; communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -&gt; 13 (for Arduino Uno) and 4, 10, 50 -&gt; 53 (for Arduino Mega). Etc.&lt;/p&gt;"/>
+<attribute NAME="name" VALUE="IRCommand"/>
+<attribute NAME="icons" VALUE="images/Output.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<attribute NAME="orderForBehaviors" VALUE="1" OBJECT="java.lang.Integer|1"/>
+<node TEXT="" ID="ID_442753560" CREATED="1441710366554" MODIFIED="1441710366554">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.instance"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1564119078" CREATED="1441710366554" MODIFIED="1441710366554">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.element"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_609345767" CREATED="1441710366564" MODIFIED="1441710366564">
+<attribute NAME="nodeType" VALUE="virtualChild"/>
+<attribute NAME="petaldoc" VALUE="Sets the state to &lt;code&gt;LOW&lt;/code&gt;."/>
+<attribute NAME="name" VALUE="send()"/>
+<attribute NAME="childType" VALUE="method"/>
+</node>
+<node TEXT="" ID="ID_264083627" CREATED="1441710366564" MODIFIED="1441710366564">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.IRremote:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.IRCommand"/>
+</node>
+</node>
 <node TEXT="" POSITION="right" ID="ID_528003254" CREATED="1431010889991" MODIFIED="1431010889991">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="onValueChanged(ValueChangedEvent)"/>
@@ -815,6 +852,19 @@
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="SD.h,SPI.h,LoggerSD.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1072382291" CREATED="1441710353115" MODIFIED="1441710353115">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.IRCommand"/>
+<node TEXT="" ID="ID_1372022820" CREATED="1441710353125" MODIFIED="1441710353125">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, IRremote.h:genericDescriptor"/>
+<attribute NAME="extraInfo.description" VALUE="The GitHub repository contains several libs. Copy/paste the &quot;DHTLib&quot; folder"/>
+<attribute NAME="value" VALUE="IRremote.h,IRCommand.h"/>
+<attribute NAME="extraInfo.name" VALUE="DHT"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1324326737" CREATED="1431946245462" MODIFIED="1431946245462">
