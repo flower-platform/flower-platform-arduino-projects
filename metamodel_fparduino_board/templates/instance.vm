@@ -9,7 +9,11 @@ ${NodeTemplateUtils.stripDynamicPrefix(${node.type})} ${node.getPropertyValue('n
 #macro( default_init $node )
 #foreach( $key in $NodeTemplateUtils.getPropertyNames($node) )
 #if ($key != "name" && $key != "contributesToState" && "$!{node.getPropertyValue($key)}" != "")
+#if ($key != "pin" && ${node.getPropertyValue($key).class.simpleName} == "String")
+${node.getPropertyValue('name')}.$key = "${node.getPropertyValue($key)}";
+#else
 ${node.getPropertyValue('name')}.$key = ${node.getPropertyValue($key)};
+#end
 #end
 #end
 ${node.getPropertyValue('name')}.setup();

@@ -1,15 +1,13 @@
 #include <avr/pgmspace.h>
 #include <Arduino.h>
-#include <DHTSensor.h>
 #include <EthernetClient.h>
 #include <FlowerPlatformArduinoRuntime.h>
 #include <HardwareSerial.h>
 #include <HttpServer.h>
 #include <Input.h>
 #include <IRCommand.h>
-#include <Output.h>
+#include <stdbool.h>
 #include <string.h>
-#include <Timer.h>
 #include <WString.h>
 
 class ApplicationGen {
@@ -60,6 +58,10 @@ protected:
 //
 //	void httpServer_onCommandReceived(Event* event) {
 //		HttpCommandEvent* httpCommandEvent = (HttpCommandEvent*) event;
+//
+//		char paramName[32];
+//		httpCommandEvent->server->getParameterValueFromUrl(httpCommandEvent->url, "name", paramName);
+//
 //
 //		char command[32];
 //		httpCommandEvent->server->getCommandFromUrl(httpCommandEvent->url, command);

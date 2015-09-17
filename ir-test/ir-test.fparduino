@@ -1,0 +1,142 @@
+<map version="freeplane 1.3.0">
+<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<node TEXT="New Mindmap" ID="ID_158825017" CREATED="1442314100047" MODIFIED="1442314100047"><hook NAME="MapStyle">
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node">
+<stylenode TEXT="" POSITION="right">
+<stylenode TEXT="" COLOR="#000000" STYLE="fork" MAX_WIDTH="600">
+<edge STYLE="bezier" COLOR="#808080" WIDTH="1"/>
+</stylenode>
+<stylenode TEXT=""/>
+<stylenode TEXT=""/>
+<stylenode TEXT="">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+<stylenode TEXT=""/>
+<stylenode TEXT=""/>
+<stylenode TEXT=""/>
+<stylenode TEXT=""/>
+</stylenode>
+<stylenode TEXT="" POSITION="right">
+<stylenode TEXT=""/>
+<stylenode TEXT=""/>
+<stylenode TEXT=""/>
+<stylenode TEXT=""/>
+<stylenode TEXT=""/>
+<stylenode TEXT=""/>
+<stylenode TEXT=""/>
+<stylenode TEXT=""/>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__root"/>
+<attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_DOCUMENTATION,$METAMODEL.ARDUINO_BOARD,$METAMODEL.ARDUINO_UI"/>
+<node TEXT="" POSITION="right" ID="ID_1050968305" CREATED="1442314100050" MODIFIED="1442314100050">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__metadata"/>
+<attribute NAME="fullProjectDownloadedAtLeastOnce" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<node TEXT="" ID="ID_823094518" CREATED="1442314324074" MODIFIED="1442314324074">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibraries"/>
+<attribute NAME="name" VALUE="Dependent Libraries"/>
+<node TEXT="" ID="ID_1068087966" CREATED="1442314324084" MODIFIED="1442314324084">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.IRLearner"/>
+</node>
+<node TEXT="" ID="ID_1566087648" CREATED="1442314324084" MODIFIED="1442314324084">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.fp-arduino-runtime"/>
+</node>
+<node TEXT="" ID="ID_996537398" CREATED="1442314324084" MODIFIED="1442314324084">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.HttpServer"/>
+</node>
+<node TEXT="" ID="ID_312266829" CREATED="1442479957377" MODIFIED="1442479957377">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.IRCommand"/>
+</node>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_720973361" CREATED="1442314100050" MODIFIED="1442314100050">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__documentation"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1190156424" CREATED="1442314100050" MODIFIED="1442314100050">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__board"/>
+<node TEXT="" ID="ID_576112771" CREATED="1442314171628" MODIFIED="1442314171628">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__HttpServer"/>
+<attribute NAME="port" VALUE="80"/>
+<attribute NAME="name" VALUE="httpServer"/>
+<attribute NAME="macAddress" VALUE="AA:BB:C2:DD:EE:F0"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__HttpServer"/>
+<attribute NAME="y" VALUE="272" OBJECT="java.lang.Integer|272"/>
+<attribute NAME="x" VALUE="148" OBJECT="java.lang.Integer|148"/>
+<attribute NAME="ipAddress" VALUE="192.168.100.253"/>
+<node TEXT="" ID="ID_1075921892" CREATED="1442314206371" MODIFIED="1442314206371">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="irLearnCommand"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_201589308" CREATED="1442315325623" MODIFIED="1442315325623">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="HttpCommandEvent_name_transferParamName"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/ir-test|dynamic_fparduino__method@capture(name)_parentNodeUri=fpp:flower-platform-arduino-projects/ir-test|ir-test.fparduino#ID_1689812120"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+<node TEXT="" ID="ID_571695131" CREATED="1442479690197" MODIFIED="1442479690197">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="acOff"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_363620468" CREATED="1442479696052" MODIFIED="1442479696052">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/ir-test|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/ir-test|ir-test.fparduino#ID_1132755400"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+</node>
+<node TEXT="" ID="ID_1689812120" CREATED="1442314191210" MODIFIED="1442314191210">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRLearner"/>
+<attribute NAME="pin" VALUE="2"/>
+<attribute NAME="name" VALUE="iRLearner"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__IRLearner"/>
+<attribute NAME="y" VALUE="284" OBJECT="java.lang.Integer|284"/>
+<attribute NAME="x" VALUE="792" OBJECT="java.lang.Integer|792"/>
+</node>
+<node TEXT="" ID="ID_1132755400" CREATED="1442479623501" MODIFIED="1442479623501">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="name" VALUE="acOff"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="y" VALUE="421" OBJECT="java.lang.Integer|421"/>
+<attribute NAME="x" VALUE="541" OBJECT="java.lang.Integer|541"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_379107679" CREATED="1442314100050" MODIFIED="1442314100050">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__ui"/>
+<node TEXT="" ID="ID_591355852" CREATED="1442314280336" MODIFIED="1442314280336">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
+<node TEXT="" ID="ID_968285531" CREATED="1442314280336" MODIFIED="1442314280336">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="3"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="md"/>
+<node TEXT="" ID="ID_349661567" CREATED="1442314280336" MODIFIED="1442314280336">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
+<attribute NAME="positions" VALUE="12"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="md"/>
+<node TEXT="" ID="ID_1076398535" CREATED="1442399726589" MODIFIED="1442399726589">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRLearnButton"/>
+<attribute NAME="text" VALUE="Learn IR command"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__IRLearnButton"/>
+</node>
+<node TEXT="" ID="ID_1132551598" CREATED="1442480063333" MODIFIED="1442480063333">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="AC command"/>
+<attribute NAME="onclick" VALUE="acOff"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Button"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</map>

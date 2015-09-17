@@ -1,4 +1,18 @@
-#macro( jslib )
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script>
+var url = "http://192.168.100.253:80/";
+
 var bindingManager = {
 	
 	data : {},
@@ -106,4 +120,36 @@ $(function() {
 
 	});
 });
-#end
+</script>
+
+<style>
+.content {
+	font-size: 21px;
+	font-weight: 300;
+	line-height: 1.4;
+}
+</style>
+</head>
+
+<body class="content">
+<br/>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-primary text-center">
+				<div class="panel-heading"></div>
+				
+				<div class="panel-body">
+			
+					<button class="btn btn-block btn-lg" type="button" onclick="var cmd=window.prompt('Enter command name:'); invoke('irLearnCommand?name='+cmd, function() { alert('Command saved'); }, function() { alert('Error saving command'); });">
+						 Learn IR command
+					</button>
+			
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row"><div class="col-md-12"><span class="label label-default"><span class="glyphicon glyphicon-dashboard"></span> Free memory (SRAM): <span bindToProperty="FREE_MEM"></span> bytes</span></div></div>
+</div>
+</body>

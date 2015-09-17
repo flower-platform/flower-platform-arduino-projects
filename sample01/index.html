@@ -153,36 +153,13 @@ $(function() {
 			
 				</div>
 			</div>
-		</div>
-		<div class="col-md-3">
-			<div class="panel panel-primary text-center" id="bedroom">
-				<div class="panel-heading">Bedroom</div>
+			<div class="panel panel-primary text-center">
+				<div class="panel-heading">IRTest</div>
 				
 				<div class="panel-body">
 			
-					<div class="row">
-						<div class="col-xs-6">
-							<div>
-								Temperature
-							</div>
-							<div id="temperature">
-								<span classToggler='{}' bindToProperty="dhtSensor_temperature" textToggler='{}'></span>
-							</div>
-						</div>
-						<div class="col-xs-6">
-							<div>
-								Humidity
-							</div>
-							<div id="humidity">
-								<span classToggler='{}' bindToProperty="dhtSensor_humidity" textToggler='{}'></span>
-							</div>
-						</div>
-					</div>
-					<div id="light">
-						Light is <span classToggler='{"1":"text-success","0":"text-danger"}' bindToProperty="output5" textToggler='{"1":"ON","0":"OFF"}'></span>
-					</div>
-					<button class="btn btn-block btn-lg lightButton" type="button" onclick="invoke('toggleLight')">
-						<span class="glyphicon glyphicon-flash"></span> LIGHT
+					<button class="btn btn-block btn-lg" type="button" onclick="invoke('irLearn?name=acOff')">
+						 Learn command
 					</button>
 			
 				</div>

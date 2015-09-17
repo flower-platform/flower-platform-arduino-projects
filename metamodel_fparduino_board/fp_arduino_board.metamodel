@@ -113,6 +113,7 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
 <attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. &lt;i&gt;E.g. &lt;code&gt;3&lt;/code&gt; or &lt;code&gt;A3&lt;/code&gt;&lt;/i&gt;.&lt;br&gt;The pin of the input. When choosing pins, please see the remark above (about occupied pins). "/>
+<attribute NAME="propertyType" VALUE="Number"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_574154206" CREATED="1430405925082" MODIFIED="1430405925082">
@@ -173,6 +174,12 @@
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
 <attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
 <attribute NAME="childType" VALUE="IRCommand"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
+<node TEXT="" ID="ID_903765836" CREATED="1442223161765" MODIFIED="1442223161765">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="childType" VALUE="IRLearner"/>
 <attribute NAME="type" VALUE="addChildDescriptor"/>
 </node>
 </node>
@@ -570,7 +577,6 @@
 </node>
 <node TEXT="" POSITION="right" ID="ID_914249262" CREATED="1441710366554" MODIFIED="1441710366554">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="petaldoc" VALUE="&lt;p&gt;Corresponds to an output connected to the board (digital).&lt;/p&gt;&lt;p class=&quot;text-danger&quot;&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for &lt;code&gt;Serial&lt;/code&gt; communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -&gt; 13 (for Arduino Uno) and 4, 10, 50 -&gt; 53 (for Arduino Mega). Etc.&lt;/p&gt;"/>
 <attribute NAME="name" VALUE="IRCommand"/>
 <attribute NAME="icons" VALUE="images/Output.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 <attribute NAME="orderForBehaviors" VALUE="1" OBJECT="java.lang.Integer|1"/>
@@ -597,6 +603,42 @@
 <attribute NAME="behaviorType" VALUE="dependentLibrary"/>
 <attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.IRremote:genericDescriptor"/>
 <attribute NAME="value" VALUE="dependentLibrary.IRCommand"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_239824869" CREATED="1442223037309" MODIFIED="1442223037309">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="IRLearner"/>
+<attribute NAME="icons" VALUE="images/Input.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<attribute NAME="orderForBehaviors" VALUE="1" OBJECT="java.lang.Integer|1"/>
+<node TEXT="" ID="ID_887435641" CREATED="1442223037312" MODIFIED="1442223037312">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.instance"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1074620020" CREATED="1442223037315" MODIFIED="1442223037315">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.element"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1673727233" CREATED="1442313770589" MODIFIED="1442313770589">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="name" VALUE="category.hasPin"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1001097069" CREATED="1442223037318" MODIFIED="1442223037318">
+<attribute NAME="nodeType" VALUE="virtualChild"/>
+<attribute NAME="petaldoc" VALUE="Captures IR command and saves it to SD card"/>
+<attribute NAME="name" VALUE="capture(name)"/>
+<attribute NAME="childType" VALUE="method"/>
+</node>
+<node TEXT="" ID="ID_919137742" CREATED="1442223037321" MODIFIED="1442223037321">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.IRCommand:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.IRLearner"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_528003254" CREATED="1431010889991" MODIFIED="1431010889991">
@@ -685,99 +727,51 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1703602871" CREATED="1431424883841" MODIFIED="1431424883841">
+<node TEXT="" POSITION="right" ID="ID_1703602871" CREATED="1442228348375" MODIFIED="1442228348375">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="onTimerComplete(TimerEvent)"/>
 <attribute NAME="petaldoc" VALUE="Dispatched whenever the &lt;code&gt;Timer&lt;/code&gt; object has completed the number of repeats set by &lt;code&gt;repeatCount&lt;/code&gt;. If &lt;code&gt;repeatCount&lt;/code&gt; is set to 0, this event is never dispatched, as the timer runs an infinity of times."/>
-<node TEXT="" ID="ID_803850194" CREATED="1431424883841" MODIFIED="1431424883841">
+<attribute NAME="name" VALUE="onTimerComplete(TimerEvent)"/>
+<node TEXT="" ID="ID_803850194" CREATED="1442228348375" MODIFIED="1442228348375">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.event"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_1371610777" CREATED="1431424883841" MODIFIED="1431424883841">
+<node TEXT="" ID="ID_1371610777" CREATED="1442228348385" MODIFIED="1442228348385">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="name" VALUE="category.diagram.subElement"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1208453621" CREATED="1429805985114" MODIFIED="1429805985114">
+<node TEXT="" POSITION="right" ID="ID_1595884711" CREATED="1442228301668" MODIFIED="1442228301668">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="invocationSourceSignature.ValueChangedEvent"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<node TEXT="" ID="ID_1118409312" CREATED="1429806143117" MODIFIED="1429806143117">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="invocationTargetSignature."/>
-<attribute NAME="extraInfo.label" VALUE="IF value == HIGH =&gt; Invoke"/>
-<attribute NAME="value" VALUE="invokeIfHigh"/>
-<attribute NAME="type" VALUE="genericDescriptor"/>
-<attribute NAME="petaldoc" VALUE="Invokes the operation only when the value from the event is HIGH."/>
-</node>
-<node TEXT="" ID="ID_1334865848" CREATED="1441019097440" MODIFIED="1441019097440">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="petaldoc" VALUE="Invokes the operation only when the value from the event is LOW."/>
-<attribute NAME="behaviorType" VALUE="invocationTargetSignature."/>
-<attribute NAME="extraInfo.label" VALUE="IF value == LOW =&gt; Invoke"/>
-<attribute NAME="name" VALUE="invocationTargetSignature., invokeIfHigh:genericDescriptor"/>
-<attribute NAME="value" VALUE="invokeIfLow"/>
-</node>
-<node TEXT="" ID="ID_133073038" CREATED="1431513383921" MODIFIED="1431513383921">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="invocationTargetSignature.value"/>
-<attribute NAME="extraInfo.label" VALUE="Always =&gt; Invoke (relaying &quot;value&quot;)"/>
-<attribute NAME="name" VALUE="invocationTargetSignature.value, transferValue:genericDescriptor"/>
-<attribute NAME="value" VALUE="transferValue"/>
-<attribute NAME="extraInfo.invocationType" VALUE="invocation_ConstantKey"/>
-<attribute NAME="petaldoc" VALUE="Invokes passing the &lt;code&gt;value&lt;/code&gt; from the event. I.e. the &lt;code&gt;value&lt;/code&gt; is relayed without any processing."/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1848188547" CREATED="1429882156105" MODIFIED="1429882156105">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="invocationSourceSignature.ALL"/>
-<node TEXT="" ID="ID_1093761460" CREATED="1429882156105" MODIFIED="1429882156105">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="invocationTargetSignature."/>
-<attribute NAME="extraInfo.label" VALUE="Always =&gt; Invoke"/>
-<attribute NAME="name" VALUE="invocationTargetSignature., plainInvocation:genericDescriptor"/>
-<attribute NAME="value" VALUE="plainInvocation"/>
-<attribute NAME="petaldoc" VALUE="Doesn&apos;t perform any other logic."/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1379519850" CREATED="1430149787669" MODIFIED="1430149787669">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="invocationSourceSignature.HttpCommandEvent"/>
-</node>
-<node TEXT="" POSITION="right" ID="ID_735737433" CREATED="1430155130894" MODIFIED="1430155130894">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="invocation_ConstantKey"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<node TEXT="" ID="ID_859952260" CREATED="1430155144196" MODIFIED="1430155144196">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="name" VALUE="key"/>
-<attribute NAME="type" VALUE="propertyDescriptor"/>
-</node>
-<node TEXT="" ID="ID_648639931" CREATED="1430156425733" MODIFIED="1430156425733">
+<attribute NAME="name" VALUE="invocation"/>
+<node TEXT="" ID="ID_186008632" CREATED="1442228301678" MODIFIED="1442228301678">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
 <attribute NAME="name" VALUE="category.invocation"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1595884711" CREATED="1430156328589" MODIFIED="1430156328589">
+<node TEXT="" POSITION="right" ID="ID_735737433" CREATED="1442228300168" MODIFIED="1442228300168">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="invocation"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<node TEXT="" ID="ID_186008632" CREATED="1430156338060" MODIFIED="1430156338060">
+<attribute NAME="name" VALUE="invocation_ConstantKey"/>
+<node TEXT="" ID="ID_859952260" CREATED="1442228300178" MODIFIED="1442228300178">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="key"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+</node>
+<node TEXT="" ID="ID_648639931" CREATED="1442228300178" MODIFIED="1442228300178">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
 <attribute NAME="name" VALUE="category.invocation"/>
-<attribute NAME="type" VALUE="containingCategory"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1341004428" CREATED="1431946994191" MODIFIED="1431946994191">
+<node TEXT="" POSITION="right" ID="ID_1341004428" CREATED="1442229038958" MODIFIED="1442229038958">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="dependentLibrary.fp-arduino-runtime"/>
-<node TEXT="" ID="ID_671482101" CREATED="1431946994194" MODIFIED="1431946994194">
+<node TEXT="" ID="ID_671482101" CREATED="1442229038958" MODIFIED="1442229038958">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, FlowerPlatformArduinoRuntime.h:genericDescriptor"/>
@@ -786,94 +780,20 @@
 <attribute NAME="extraInfo.url" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1132425227" CREATED="1431674569415" MODIFIED="1431674569415">
+<node TEXT="" POSITION="right" ID="ID_1132425227" CREATED="1442228225180" MODIFIED="1442228225180">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="dependentLibrary.DHT"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<node TEXT="" ID="ID_141955360" CREATED="1431674741460" MODIFIED="1431674741460">
+<node TEXT="" ID="ID_141955360" CREATED="1442228225190" MODIFIED="1442228225190">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="DHT.h,DHTSensor.h"/>
-<attribute NAME="type" VALUE="genericDescriptor"/>
 <attribute NAME="extraInfo.description" VALUE="The GitHub repository contains several libs. Copy/paste the &quot;DHTLib&quot; folder"/>
-<attribute NAME="extraInfo.url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
-<attribute NAME="extraInfo.name" VALUE="DHT"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_964092602" CREATED="1431701028079" MODIFIED="1431701028079">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.Timer"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<node TEXT="" ID="ID_1899509768" CREATED="1431701044296" MODIFIED="1431701044296">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="value" VALUE="Timer.h"/>
-<attribute NAME="type" VALUE="genericDescriptor"/>
-<attribute NAME="extraInfo.description" VALUE="Timer bla bla"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1967632752" CREATED="1431945793582" MODIFIED="1431945793582">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.HttpServer"/>
-<node TEXT="" ID="ID_1936073410" CREATED="1431945793587" MODIFIED="1431945793587">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="Ethernet.h,SPI.h,HttpServer.h"/>
-<attribute NAME="extraInfo.name" VALUE="HttpServer"/>
-<attribute NAME="isDirty" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1705561900" CREATED="1431945920114" MODIFIED="1431945920114">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.Input"/>
-<node TEXT="" ID="ID_1526327693" CREATED="1431945920119" MODIFIED="1431945920119">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="Input.h"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_720251765" CREATED="1431945970840" MODIFIED="1431945970840">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.Output"/>
-<node TEXT="" ID="ID_148746734" CREATED="1431945970843" MODIFIED="1431945970843">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="Output.h"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1897624332" CREATED="1431946038263" MODIFIED="1431946038263">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.LoggerSD"/>
-<node TEXT="" ID="ID_1750234584" CREATED="1431946038271" MODIFIED="1431946038271">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, DHT.h,DHTSensor.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="SD.h,SPI.h,LoggerSD.h"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1072382291" CREATED="1441710353115" MODIFIED="1441710353115">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.IRCommand"/>
-<node TEXT="" ID="ID_1372022820" CREATED="1441710353125" MODIFIED="1441710353125">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, IRremote.h:genericDescriptor"/>
-<attribute NAME="extraInfo.description" VALUE="The GitHub repository contains several libs. Copy/paste the &quot;DHTLib&quot; folder"/>
-<attribute NAME="value" VALUE="IRremote.h,IRCommand.h"/>
 <attribute NAME="extraInfo.name" VALUE="DHT"/>
 <attribute NAME="extraInfo.url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1324326737" CREATED="1431946245462" MODIFIED="1431946245462">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="metadata"/>
-<attribute NAME="backgroundColor" VALUE="#CFCFCF"/>
-<attribute NAME="icons" VALUE="images/Metadata.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1225897255" CREATED="1431946220421" MODIFIED="1431946220421">
+<node TEXT="" POSITION="right" ID="ID_1225897255" CREATED="1442228224820" MODIFIED="1442228224820">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="dependentLibrary"/>
 </node>
@@ -893,6 +813,143 @@
 <attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="propertyLineRenderer" VALUE="Default"/>
 </node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1967632752" CREATED="1442223022392" MODIFIED="1442223022392">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.HttpServer"/>
+<node TEXT="" ID="ID_1936073410" CREATED="1442223022395" MODIFIED="1442223022395">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Ethernet.h,SPI.h,HttpServer.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Ethernet.h,SPI.h,HttpServer.h"/>
+<attribute NAME="extraInfo.name" VALUE="HttpServer"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1897624332" CREATED="1442223020332" MODIFIED="1442223020332">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.LoggerSD"/>
+<node TEXT="" ID="ID_1750234584" CREATED="1442223020335" MODIFIED="1442223020335">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, SD.h,SPI.h,LoggerSD.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="SD.h,SPI.h,LoggerSD.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1072382291" CREATED="1442223021900" MODIFIED="1442223021900">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.IRCommand"/>
+<node TEXT="" ID="ID_1372022820" CREATED="1442223021902" MODIFIED="1442223021902">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, IRremote.h,IRCommand.h:genericDescriptor"/>
+<attribute NAME="extraInfo.description" VALUE="The GitHub repository contains several libs. Copy/paste the &quot;DHTLib&quot; folder"/>
+<attribute NAME="value" VALUE="IRremote.h,IRCommand.h"/>
+<attribute NAME="extraInfo.name" VALUE="DHT"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1848188547" CREATED="1442223025413" MODIFIED="1442223025413">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="invocationSourceSignature.ALL"/>
+<node TEXT="" ID="ID_1093761460" CREATED="1442223025416" MODIFIED="1442223025416">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="petaldoc" VALUE="Doesn&apos;t perform any other logic."/>
+<attribute NAME="behaviorType" VALUE="invocationTargetSignature."/>
+<attribute NAME="extraInfo.label" VALUE="Always =&gt; Invoke"/>
+<attribute NAME="name" VALUE="invocationTargetSignature., plainInvocation:genericDescriptor"/>
+<attribute NAME="value" VALUE="plainInvocation"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1208453621" CREATED="1442223026029" MODIFIED="1442223026029">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="invocationSourceSignature.ValueChangedEvent"/>
+<node TEXT="" ID="ID_1118409312" CREATED="1442223026032" MODIFIED="1442223026032">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="petaldoc" VALUE="Invokes the operation only when the value from the event is HIGH."/>
+<attribute NAME="behaviorType" VALUE="invocationTargetSignature."/>
+<attribute NAME="extraInfo.label" VALUE="IF value == HIGH =&gt; Invoke"/>
+<attribute NAME="name" VALUE="invocationTargetSignature., invokeIfHigh:genericDescriptor"/>
+<attribute NAME="value" VALUE="invokeIfHigh"/>
+</node>
+<node TEXT="" ID="ID_1334865848" CREATED="1442223026035" MODIFIED="1442223026035">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="petaldoc" VALUE="Invokes the operation only when the value from the event is LOW."/>
+<attribute NAME="behaviorType" VALUE="invocationTargetSignature."/>
+<attribute NAME="extraInfo.label" VALUE="IF value == LOW =&gt; Invoke"/>
+<attribute NAME="name" VALUE="invocationTargetSignature., invokeIfLow:genericDescriptor"/>
+<attribute NAME="value" VALUE="invokeIfLow"/>
+</node>
+<node TEXT="" ID="ID_133073038" CREATED="1442223026038" MODIFIED="1442223026038">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="petaldoc" VALUE="Invokes passing the &lt;code&gt;value&lt;/code&gt; from the event. I.e. the &lt;code&gt;value&lt;/code&gt; is relayed without any processing."/>
+<attribute NAME="behaviorType" VALUE="invocationTargetSignature.value"/>
+<attribute NAME="extraInfo.label" VALUE="Always =&gt; Invoke (relaying &quot;value&quot;)"/>
+<attribute NAME="name" VALUE="invocationTargetSignature.value, transferValue:genericDescriptor"/>
+<attribute NAME="value" VALUE="transferValue"/>
+<attribute NAME="extraInfo.invocationType" VALUE="invocation_ConstantKey"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1379519850" CREATED="1442228317526" MODIFIED="1442228317526">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="invocationSourceSignature.HttpCommandEvent"/>
+<node TEXT="" ID="ID_398118690" CREATED="1442228317526" MODIFIED="1442228317526">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="petaldoc" VALUE="Invokes passing the &lt;code&gt;name&lt;/code&gt; parameter from the URL."/>
+<attribute NAME="behaviorType" VALUE="invocationTargetSignature.name"/>
+<attribute NAME="extraInfo.label" VALUE="Always =&gt; Invoke (parameter &quot;name&quot;)"/>
+<attribute NAME="name" VALUE="invocationTargetSignature.paramName, transferParamName:genericDescriptor"/>
+<attribute NAME="value" VALUE="transferParamName"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_720251765" CREATED="1442228336047" MODIFIED="1442228336047">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Output"/>
+<node TEXT="" ID="ID_148746734" CREATED="1442228336047" MODIFIED="1442228336047">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Output.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Output.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_964092602" CREATED="1442228335306" MODIFIED="1442228335306">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Timer"/>
+<node TEXT="" ID="ID_1899509768" CREATED="1442228335306" MODIFIED="1442228335306">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Timer.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Timer.h"/>
+<attribute NAME="extraInfo.description" VALUE="Timer bla bla"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1705561900" CREATED="1442228335276" MODIFIED="1442228335276">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Input"/>
+<node TEXT="" ID="ID_1526327693" CREATED="1442228335286" MODIFIED="1442228335286">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Input.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Input.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_877052554" CREATED="1442228336037" MODIFIED="1442228336037">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.IRLearner"/>
+<node TEXT="" ID="ID_1684771012" CREATED="1442228336037" MODIFIED="1442228336037">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, IRLearner.h:genericDescriptor"/>
+<attribute NAME="extraInfo.description" VALUE="The GitHub repository contains several libs. Copy/paste the &quot;DHTLib&quot; folder"/>
+<attribute NAME="value" VALUE="IRLearner.h"/>
+<attribute NAME="extraInfo.name" VALUE="DHT"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1324326737" CREATED="1442228336317" MODIFIED="1442228336317">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="backgroundColor" VALUE="#CFCFCF"/>
+<attribute NAME="name" VALUE="metadata"/>
+<attribute NAME="icons" VALUE="images/Metadata.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 </node>
 </node>
 </map>

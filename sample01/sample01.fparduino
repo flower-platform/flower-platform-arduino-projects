@@ -166,6 +166,10 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
 <attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.IRCommand"/>
 </node>
+<node TEXT="" ID="ID_1882987954" CREATED="1442229240638" MODIFIED="1442229240638">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.IRLearner"/>
+</node>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_726521205" CREATED="1431009512308" MODIFIED="1431009512308">
@@ -202,8 +206,8 @@
 <attribute NAME="pin" VALUE="6"/>
 <attribute NAME="name" VALUE="output6"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Output"/>
-<attribute NAME="y" VALUE="83" OBJECT="java.lang.Integer|83"/>
-<attribute NAME="x" VALUE="449" OBJECT="java.lang.Integer|449"/>
+<attribute NAME="y" VALUE="133" OBJECT="java.lang.Integer|133"/>
+<attribute NAME="x" VALUE="491" OBJECT="java.lang.Integer|491"/>
 <attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 </node>
 <node TEXT="" ID="ID_1796185319" CREATED="1431418522576" MODIFIED="1431418522576">
@@ -211,9 +215,9 @@
 <attribute NAME="port" VALUE="80"/>
 <attribute NAME="name" VALUE="httpServer"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__HttpServer"/>
-<attribute NAME="y" VALUE="41" OBJECT="java.lang.Integer|41"/>
+<attribute NAME="y" VALUE="151" OBJECT="java.lang.Integer|151"/>
 <attribute NAME="ipAddress" VALUE="192.168.100.253"/>
-<attribute NAME="x" VALUE="743" OBJECT="java.lang.Integer|743"/>
+<attribute NAME="x" VALUE="883" OBJECT="java.lang.Integer|883"/>
 <attribute NAME="macAddress" VALUE="DE:AD:BE:EF:FE:ED"/>
 <attribute NAME="color" VALUE="#00ff00"/>
 <node TEXT="" ID="ID_89132691" CREATED="1431418539538" MODIFIED="1431418539538">
@@ -227,14 +231,25 @@
 <attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
 </node>
 </node>
+<node TEXT="" ID="ID_1378492485" CREATED="1442229870693" MODIFIED="1442229870693">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="irLearnCommand"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_1983119645" CREATED="1442307340722" MODIFIED="1442307340722">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="HttpCommandEvent_name_transferParamName"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/sample01|dynamic_fparduino__method@capture(name)_parentNodeUri=fpp:flower-platform-arduino-projects/sample01|sample01.fparduino#ID_1132276805"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
 </node>
 <node TEXT="" ID="ID_821787060" CREATED="1431426484081" MODIFIED="1431426484081">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__DHTSensor"/>
 <attribute NAME="pin" VALUE="A0"/>
 <attribute NAME="name" VALUE="dhtSensor"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__DHTSensor"/>
-<attribute NAME="y" VALUE="379" OBJECT="java.lang.Integer|379"/>
-<attribute NAME="x" VALUE="833" OBJECT="java.lang.Integer|833"/>
+<attribute NAME="y" VALUE="400" OBJECT="java.lang.Integer|400"/>
+<attribute NAME="x" VALUE="890" OBJECT="java.lang.Integer|890"/>
 <attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <node TEXT="" ID="ID_136305828" CREATED="1431512362237" MODIFIED="1431512362237">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onTemperatureChanged(ValueChangedEvent)"/>
@@ -246,8 +261,8 @@
 <attribute NAME="pin" VALUE="8"/>
 <attribute NAME="name" VALUE="blueLed"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Output"/>
-<attribute NAME="y" VALUE="509" OBJECT="java.lang.Integer|509"/>
-<attribute NAME="x" VALUE="448" OBJECT="java.lang.Integer|448"/>
+<attribute NAME="y" VALUE="536" OBJECT="java.lang.Integer|536"/>
+<attribute NAME="x" VALUE="516" OBJECT="java.lang.Integer|516"/>
 </node>
 <node TEXT="" ID="ID_1131641971" CREATED="1431509180186" MODIFIED="1431509180186">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Timer"/>
@@ -274,8 +289,16 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
 <attribute NAME="name" VALUE="ac24auto"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
-<attribute NAME="y" VALUE="267" OBJECT="java.lang.Integer|267"/>
-<attribute NAME="x" VALUE="323" OBJECT="java.lang.Integer|323"/>
+<attribute NAME="y" VALUE="304" OBJECT="java.lang.Integer|304"/>
+<attribute NAME="x" VALUE="260" OBJECT="java.lang.Integer|260"/>
+</node>
+<node TEXT="" ID="ID_1132276805" CREATED="1442225426453" MODIFIED="1442225426453">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRLearner"/>
+<attribute NAME="name" VALUE="iRLearner"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__IRLearner"/>
+<attribute NAME="y" VALUE="340" OBJECT="java.lang.Integer|340"/>
+<attribute NAME="x" VALUE="615" OBJECT="java.lang.Integer|615"/>
+<attribute NAME="pin" VALUE="2"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_733754221" CREATED="1429201407631" MODIFIED="1429201407631">
@@ -350,6 +373,17 @@
 <attribute NAME="onclick" VALUE="toggleLight"/>
 <attribute NAME="glyphicon" VALUE="flash"/>
 <attribute NAME="cssClass" VALUE="lightButton"/>
+</node>
+</node>
+<node TEXT="" ID="ID_1043102809" CREATED="1442308872033" MODIFIED="1442308872033">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
+<attribute NAME="title" VALUE="IRTest"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Panel"/>
+<node TEXT="" ID="ID_665628920" CREATED="1442308910694" MODIFIED="1442308910694">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="Learn command"/>
+<attribute NAME="onclick" VALUE="irLearnCommand?name=acOff"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Button"/>
 </node>
 </node>
 </node>

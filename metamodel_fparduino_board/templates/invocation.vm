@@ -22,3 +22,14 @@ if (castedEvent->currentValue == LOW) {
 	${targetInstance}.${targetMethodFull};
 }
 #end
+
+#macro( HttpCommandEvent_name_transferParamName )
+{
+	char name[32];
+	castedEvent->server->getParameterValueFromUrl(castedEvent->url, "name", name);
+	if (!${targetInstance}.${targetMethodFull}) {
+		castedEvent->server->httpError404();
+		return;
+	}
+}
+#end

@@ -98,6 +98,13 @@
 <attribute NAME="label" VALUE="Button"/>
 <attribute NAME="childType" VALUE="Button"/>
 </node>
+<node TEXT="" ID="ID_377611586" CREATED="1442399329481" MODIFIED="1442399329481">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="label" VALUE="IRLearnButton"/>
+<attribute NAME="childType" VALUE="IRLearnButton"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_937755059" CREATED="1431686780834" MODIFIED="1431686780834">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -272,6 +279,30 @@
 <attribute NAME="name" VALUE="onclick"/>
 <attribute NAME="label" VALUE="On Click"/>
 <attribute NAME="type" VALUE="propertyDescriptor"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1845467663" CREATED="1442399334546" MODIFIED="1442399334546">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="IRLearnButton"/>
+<attribute NAME="propertyForLabel" VALUE="name;EXTRA_INFO_ENTRIES:(valueConverter=addTypeSuffix)"/>
+<attribute NAME="icons" VALUE="images/Button.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<node TEXT="" ID="ID_1881487534" CREATED="1442399334546" MODIFIED="1442399334546">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.element"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1914511538" CREATED="1442399334556" MODIFIED="1442399334556">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="text"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="Text"/>
+<attribute NAME="propertyDefaultValue" VALUE="Learn IR command"/>
+</node>
+<node TEXT="" ID="ID_1696590424" CREATED="1442399334556" MODIFIED="1442399334556">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="glyphicon"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="Glyphicon"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1953022306" CREATED="1429864149309" MODIFIED="1429864149309">

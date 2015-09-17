@@ -95,6 +95,8 @@ public:
 	virtual ~ApplicationGen() { }
 
 	virtual void setup() {
+                pinMode(SS, OUTPUT);
+  
 		input1.pin = 8;
 		input1.internalPullUp = true;
 		input1.pollInterval = 200;
