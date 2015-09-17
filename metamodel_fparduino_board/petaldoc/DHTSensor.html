@@ -29,7 +29,7 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
 
 <h5>name:String </h5>
 <b>Mandatory</b>. <i>E.g.: <code>myNewObject</code></i>.<br> The name of the object, which needs to be a valid C++ identifier.
-<h5>pin:String </h5>
+<h5>pin:Number </h5>
 <b>Mandatory</b>. <i>E.g. <code>3</code> or <code>A3</code></i>.<br>The pin of the input. When choosing pins, please see the remark above (about occupied pins). 
 <h5>contributesToState:Boolean </h5>
 <b>Mandatory</b>. <i>Default = <code>true</code></i>.<br>If <code>true</code>, it means this object's state belongs to the global state of the application, which is sent periodically (e.g. to the web interface). I.e. we'll be able to use this object's state (e.g. is it on?) from within the web interface.

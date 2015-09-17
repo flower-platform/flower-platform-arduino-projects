@@ -1,5 +1,5 @@
 #macro( IRLearnButton $button )
-<button class="btn btn-block btn-lg#printClassNoAttr($button)"#printId($button) type="button" onclick="var cmd=window.prompt('Enter command name:'); invoke('irLearnCommand?name='+cmd, function() { alert('Command saved'); }, function() { alert('Error saving command'); });">
+<button class="btn btn-block btn-lg#printClassNoAttr($button)"#printId($button) type="button" onclick="var cmd=window.prompt('Enter command name:'); invoke('$button.getPropertyValue('onclick')?name='+cmd, function() { alert('Command saved'); }, function() { alert('Error saving command'); });">
 	#if( "$!button.getPropertyValue('glyphicon')" == "" )#else<span class="glyphicon glyphicon-$button.getPropertyValue('glyphicon')"></span>#end ##
 $button.getPropertyValue('text')
 </button>

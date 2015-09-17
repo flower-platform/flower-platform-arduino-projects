@@ -17,7 +17,7 @@
 Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> 
 <a href="#methods" class="btn btn-primary btn-xs">Operations</a> <a href="#events" class="btn btn-info btn-xs">Events</a>
 </p>
-
+<p>Used to send an IR command.<br/>The IR LED must be connected to pin <code>3</code> on most boards, or to pin <code>9</code> on the Mega. For specific chips, please see the <a href="https://github.com/z3t0/Arduino-IRremote">IRremote</a> library.<br/>The <code>name</code> property is also used as the name of the file on the SD card where the command is stored.<br/>Commands are looked up in the <code>/ir-commands</code> folder on the SD card. </p>
 
 <!-- Properties -->
 <div class="panel panel-warning">
@@ -36,7 +36,7 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
   </div>
   <div class="panel-body">
 <h5 id="send__">send()</h5>
-Sets the state to <code>LOW</code>.
+Transmits the IR command sored in the file corresponding to the <code>name</code> property of the petal, under the <code>/ir-commands</code> folder.
 </div></div>
 
 <!-- Events -->

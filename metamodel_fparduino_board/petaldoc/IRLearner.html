@@ -17,7 +17,7 @@
 Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a> 
 <a href="#methods" class="btn btn-primary btn-xs">Operations</a> <a href="#events" class="btn btn-info btn-xs">Events</a>
 </p>
-
+<p>Used for capturing IR commands from theoretically any infrared remote control available on the market and storing them on the SD card, under the <code>/ir-commands</code> folder.<br>Makes use of an IR receiver, which must be connected to one of the pins within <code>0..7</code> range.<br/>An associated <code>IRLearnButton</code> on the UI is needed in order to use this petal.</p>
 
 <!-- Properties -->
 <div class="panel panel-warning">
@@ -27,6 +27,8 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
   <div class="panel-body">
 <h5>name:String </h5>
 <b>Mandatory</b>. <i>E.g.: <code>myNewObject</code></i>.<br> The name of the object, which needs to be a valid C++ identifier.
+<h5>pin:Number </h5>
+<b>Mandatory</b>. <i>E.g. <code>3</code> or <code>A3</code></i>.<br>The pin of the input. When choosing pins, please see the remark above (about occupied pins). 
 </div></div>
 
 <!-- Methods -->
@@ -36,7 +38,7 @@ Jump to: <a href="#properties" class="btn btn-warning btn-xs">Properties</a>
   </div>
   <div class="panel-body">
 <h5 id="capture_name_">capture(name)</h5>
-Captures IR command and saves it to SD card
+Captures IR command and saves it to SD card, under the <code>/ir-commands</code> folder. The <code>name</code> argument is used as the file name. 
 </div></div>
 
 <!-- Events -->

@@ -286,6 +286,7 @@
 <attribute NAME="name" VALUE="IRLearnButton"/>
 <attribute NAME="propertyForLabel" VALUE="name;EXTRA_INFO_ENTRIES:(valueConverter=addTypeSuffix)"/>
 <attribute NAME="icons" VALUE="images/Button.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<attribute NAME="petaldoc" VALUE="&lt;p&gt;Button for the &lt;code&gt;IRLearner&lt;/code&gt; petal. &lt;/p&gt; When pressed, a dialog pops up, asking for the name of the command to be saved. After clicking OK, point the remote towards the IR receiver connected to the Arduino board and press the desired button on the remote, in order to save the command.&lt;/p&gt;"/>
 <node TEXT="" ID="ID_1881487534" CREATED="1442399334546" MODIFIED="1442399334546">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.element"/>
@@ -303,6 +304,13 @@
 <attribute NAME="name" VALUE="glyphicon"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE="Glyphicon"/>
+</node>
+<node TEXT="" ID="ID_446097327" CREATED="1442489393041" MODIFIED="1442489393041">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="name" VALUE="onclick"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="On Click"/>
+<attribute NAME="propertyDefaultValue" VALUE="irLearnCommand"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1953022306" CREATED="1429864149309" MODIFIED="1429864149309">

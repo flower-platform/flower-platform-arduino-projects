@@ -471,6 +471,7 @@
 <attribute NAME="name" VALUE="HttpServer"/>
 <attribute NAME="icons" VALUE="images/HttpServer.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 <attribute NAME="petaldoc" VALUE="It has 3 main responsibilities: &lt;ul&gt;&lt;li&gt;Serves an HTML page with the contents generated from the User Interface Diagram.&lt;/li&gt;&lt;li&gt;Serves state updates for the connected clients. I.e. the clients periodically request state updates; when they do, the server sends a JSON containing information about all the objects that contribute to the state (i.e. their &lt;code&gt;contributesToState&lt;/code&gt; property = &lt;code&gt;true&lt;/code&gt;).&lt;/li&gt;&lt;li&gt;Receives commands (configured from the User Interface Diagram as well). When a command is received, an event is dispatched and operations can be invoked.&lt;/li&gt;&lt;/ul&gt;"/>
+<attribute NAME="isDirty" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <node TEXT="" ID="ID_41190890" CREATED="1430406210574" MODIFIED="1430406210574">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="name" VALUE="category.instance"/>
@@ -580,6 +581,7 @@
 <attribute NAME="name" VALUE="IRCommand"/>
 <attribute NAME="icons" VALUE="images/Output.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 <attribute NAME="orderForBehaviors" VALUE="1" OBJECT="java.lang.Integer|1"/>
+<attribute NAME="petaldoc" VALUE="&lt;p&gt;Used to send an IR command.&lt;br/&gt;The IR LED must be connected to pin &lt;code&gt;3&lt;/code&gt; on most boards, or to pin &lt;code&gt;9&lt;/code&gt; on the Mega. For specific chips, please see the &lt;a href=&quot;https://github.com/z3t0/Arduino-IRremote&quot;&gt;IRremote&lt;/a&gt; library.&lt;br/&gt;The &lt;code&gt;name&lt;/code&gt; property is also used as the name of the file on the SD card where the command is stored.&lt;br/&gt;Commands are looked up in the &lt;code&gt;/ir-commands&lt;/code&gt; folder on the SD card. &lt;/p&gt;"/>
 <node TEXT="" ID="ID_442753560" CREATED="1441710366554" MODIFIED="1441710366554">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
@@ -594,7 +596,7 @@
 </node>
 <node TEXT="" ID="ID_609345767" CREATED="1441710366564" MODIFIED="1441710366564">
 <attribute NAME="nodeType" VALUE="virtualChild"/>
-<attribute NAME="petaldoc" VALUE="Sets the state to &lt;code&gt;LOW&lt;/code&gt;."/>
+<attribute NAME="petaldoc" VALUE="Transmits the IR command sored in the file corresponding to the &lt;code&gt;name&lt;/code&gt; property of the petal, under the &lt;code&gt;/ir-commands&lt;/code&gt; folder."/>
 <attribute NAME="name" VALUE="send()"/>
 <attribute NAME="childType" VALUE="method"/>
 </node>
@@ -604,12 +606,21 @@
 <attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.IRremote:genericDescriptor"/>
 <attribute NAME="value" VALUE="dependentLibrary.IRCommand"/>
 </node>
+<node TEXT="" ID="ID_695366252" CREATED="1442489782351" MODIFIED="1442489782351">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.IRCommand:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.SdFat"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_239824869" CREATED="1442223037309" MODIFIED="1442223037309">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="IRLearner"/>
 <attribute NAME="icons" VALUE="images/Input.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 <attribute NAME="orderForBehaviors" VALUE="1" OBJECT="java.lang.Integer|1"/>
+<attribute NAME="petaldoc" VALUE="&lt;p&gt;Used for capturing IR commands from theoretically any infrared remote control available on the market and storing them on the SD card, under the &lt;code&gt;/ir-commands&lt;/code&gt; folder.&lt;br&gt;Makes use of an IR receiver, which must be connected to one of the pins within &lt;code&gt;0..7&lt;/code&gt; range.&lt;br/&gt;An associated &lt;code&gt;IRLearnButton&lt;/code&gt; on the UI is needed in order to use this petal.&lt;/p&gt;"/>
+<attribute NAME="hasChildren" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="isDirty" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <node TEXT="" ID="ID_887435641" CREATED="1442223037312" MODIFIED="1442223037312">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="false" OBJECT="java.lang.Boolean|false"/>
@@ -630,7 +641,7 @@
 </node>
 <node TEXT="" ID="ID_1001097069" CREATED="1442223037318" MODIFIED="1442223037318">
 <attribute NAME="nodeType" VALUE="virtualChild"/>
-<attribute NAME="petaldoc" VALUE="Captures IR command and saves it to SD card"/>
+<attribute NAME="petaldoc" VALUE="Captures IR command and saves it to SD card, under the &lt;code&gt;/ir-commands&lt;/code&gt; folder. The &lt;code&gt;name&lt;/code&gt; argument is used as the file name. "/>
 <attribute NAME="name" VALUE="capture(name)"/>
 <attribute NAME="childType" VALUE="method"/>
 </node>
@@ -639,6 +650,12 @@
 <attribute NAME="behaviorType" VALUE="dependentLibrary"/>
 <attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.IRCommand:genericDescriptor"/>
 <attribute NAME="value" VALUE="dependentLibrary.IRLearner"/>
+</node>
+<node TEXT="" ID="ID_293533883" CREATED="1442489812095" MODIFIED="1442489812095">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.SdFat:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.SdFat"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_528003254" CREATED="1431010889991" MODIFIED="1431010889991">
@@ -822,7 +839,6 @@
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, Ethernet.h,SPI.h,HttpServer.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="Ethernet.h,SPI.h,HttpServer.h"/>
-<attribute NAME="extraInfo.name" VALUE="HttpServer"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1897624332" CREATED="1442223020332" MODIFIED="1442223020332">
@@ -833,19 +849,6 @@
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, SD.h,SPI.h,LoggerSD.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="SD.h,SPI.h,LoggerSD.h"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1072382291" CREATED="1442223021900" MODIFIED="1442223021900">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.IRCommand"/>
-<node TEXT="" ID="ID_1372022820" CREATED="1442223021902" MODIFIED="1442223021902">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, IRremote.h,IRCommand.h:genericDescriptor"/>
-<attribute NAME="extraInfo.description" VALUE="The GitHub repository contains several libs. Copy/paste the &quot;DHTLib&quot; folder"/>
-<attribute NAME="value" VALUE="IRremote.h,IRCommand.h"/>
-<attribute NAME="extraInfo.name" VALUE="DHT"/>
-<attribute NAME="extraInfo.url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1848188547" CREATED="1442223025413" MODIFIED="1442223025413">
@@ -932,17 +935,38 @@
 <attribute NAME="value" VALUE="Input.h"/>
 </node>
 </node>
+<node TEXT="" POSITION="right" ID="ID_1072382291" CREATED="1442489850909" MODIFIED="1442489850909">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.IRCommand"/>
+<node TEXT="" ID="ID_1372022820" CREATED="1442489850911" MODIFIED="1442489850911">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, IRremote.h,IRCommand.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="IRremote.h,IRCommand.h"/>
+<attribute NAME="extraInfo.name" VALUE="IRremote"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/z3t0/Arduino-IRremote"/>
+</node>
+</node>
 <node TEXT="" POSITION="right" ID="ID_877052554" CREATED="1442228336037" MODIFIED="1442228336037">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="dependentLibrary.IRLearner"/>
-<node TEXT="" ID="ID_1684771012" CREATED="1442228336037" MODIFIED="1442228336037">
+<node TEXT="" ID="ID_209063077" CREATED="1442490148682" MODIFIED="1442490148682">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, IRLearner.h:genericDescriptor"/>
-<attribute NAME="extraInfo.description" VALUE="The GitHub repository contains several libs. Copy/paste the &quot;DHTLib&quot; folder"/>
 <attribute NAME="value" VALUE="IRLearner.h"/>
-<attribute NAME="extraInfo.name" VALUE="DHT"/>
-<attribute NAME="extraInfo.url" VALUE="https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_842439388" CREATED="1442489879862" MODIFIED="1442489879862">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.SdFat"/>
+<node TEXT="" ID="ID_1004740659" CREATED="1442489879865" MODIFIED="1442489879865">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, SdFat.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="SPI.h,SdFat.h"/>
+<attribute NAME="extraInfo.name" VALUE="SdFat"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/greiman/SdFat"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1324326737" CREATED="1442228336317" MODIFIED="1442228336317">

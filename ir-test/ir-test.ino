@@ -2,14 +2,13 @@
 #include <Ethernet.h>
 #include <FlowerPlatformArduinoRuntime.h>
 #include <SPI.h>
-#include <IRLearner.h>
+#include <SdFat.h>
 #include <HttpServer.h>
 #include <IRremote.h>
 
 class ApplicationGen {
 protected:
 	HttpServer httpServer;
-	IRLearner iRLearner;
 	IRCommand acOff;
 
 	virtual void httpServer_onCommandReceived(Event* event) {
@@ -36,14 +35,6 @@ protected:
 			urlFound = true;
 		} else if (strcmp_P(command, PSTR("irLearnCommand")) == 0) {
 			urlFound = true;
-			{
-				char name[32];
-				castedEvent->server->getParameterValueFromUrl(castedEvent->url, "name", name);
-				if (!iRLearner.capture(name)) {
-					castedEvent->server->httpError404();
-					return;
-				}
-			}
 		} else if (strcmp_P(command, PSTR("acOff")) == 0) {
 			urlFound = true;
 			{
@@ -71,9 +62,6 @@ public:
 		memcpy(httpServer.ipAddress, ipAddress, 4);
 		httpServer.port = 80;
 		httpServer.setup();
-
-		iRLearner.pin = 2;
-		iRLearner.setup();
 
 		acOff.name = "acOff";
 		acOff.setup();

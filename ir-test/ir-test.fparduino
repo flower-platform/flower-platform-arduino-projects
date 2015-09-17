@@ -56,6 +56,10 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
 <attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.IRCommand"/>
 </node>
+<node TEXT="" ID="ID_70467420" CREATED="1442490848377" MODIFIED="1442490848377">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.SdFat"/>
+</node>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_720973361" CREATED="1442314100050" MODIFIED="1442314100050">
@@ -76,12 +80,6 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
 <attribute NAME="mapping" VALUE="irLearnCommand"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
-<node TEXT="" ID="ID_201589308" CREATED="1442315325623" MODIFIED="1442315325623">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
-<attribute NAME="template" VALUE="HttpCommandEvent_name_transferParamName"/>
-<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/ir-test|dynamic_fparduino__method@capture(name)_parentNodeUri=fpp:flower-platform-arduino-projects/ir-test|ir-test.fparduino#ID_1689812120"/>
-<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
-</node>
 </node>
 <node TEXT="" ID="ID_571695131" CREATED="1442479690197" MODIFIED="1442479690197">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
@@ -94,14 +92,6 @@
 <attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
 </node>
 </node>
-</node>
-<node TEXT="" ID="ID_1689812120" CREATED="1442314191210" MODIFIED="1442314191210">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRLearner"/>
-<attribute NAME="pin" VALUE="2"/>
-<attribute NAME="name" VALUE="iRLearner"/>
-<attribute NAME="type" VALUE="dynamic_fparduino__IRLearner"/>
-<attribute NAME="y" VALUE="284" OBJECT="java.lang.Integer|284"/>
-<attribute NAME="x" VALUE="792" OBJECT="java.lang.Integer|792"/>
 </node>
 <node TEXT="" ID="ID_1132755400" CREATED="1442479623501" MODIFIED="1442479623501">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
