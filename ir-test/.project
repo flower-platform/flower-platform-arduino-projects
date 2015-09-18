@@ -27,6 +27,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>Libraries/DHT</name>
+			<type>2</type>
+			<locationURI>ArduinoPivateLibPath/DHT</locationURI>
+		</link>
+		<link>
 			<name>Libraries/Ethernet</name>
 			<type>2</type>
 			<locationURI>ArduinoLibPath/Ethernet</locationURI>

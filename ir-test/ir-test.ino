@@ -2,6 +2,7 @@
 #include <Ethernet.h>
 #include <FlowerPlatformArduinoRuntime.h>
 #include <SPI.h>
+#include <IRLearner.h>
 #include <SdFat.h>
 #include <HttpServer.h>
 #include <IRremote.h>
@@ -10,6 +11,8 @@ class ApplicationGen {
 protected:
 	HttpServer httpServer;
 	IRCommand acOff;
+	IRLearner iRLearner1;
+	IRCommand acOn24;
 
 	virtual void httpServer_onCommandReceived(Event* event) {
 		HttpCommandEvent* castedEvent = (HttpCommandEvent*) event;
@@ -29,16 +32,30 @@ protected:
 			castedEvent->client->print(F("ion(){$(\"[bindToProperty]\").each(function(){var b=$(this);var d=b.attr(\"bindToProperty\");var c=b.attr(\"textToggler\");if(c){c=JSON.parse(c)}bindingManager.addListener(d,b,setText,c);var a=b.attr(\"classToggler\");if(a){a=JSON.parse(a);bindingManager.addListener(d,b,toggleClass,a)}})});<\/script><style>."));
 			castedEvent->client->print(F("content{font-size:21px;font-weight:300;line-height:1.4}<\/style><\/head><body class=\"content\"><br\/><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\"><div class=\"panel-heading\"><\/div><div class=\"panel-body\"><button class=\"btn btn-block btn-"));
 			castedEvent->client->print(F("lg\" type=\"button\" onclick=\"var cmd=window.prompt('Enter command name:'); invoke('irLearnCommand?name='+cmd, function() { alert('Command saved'); }, function() { alert('Error saving command'); });\"> Learn IR command <\/button><button class=\"btn btn-block btn-lg\" type=\"button\" onclick=\"invoke('acOff')\""));
-			castedEvent->client->print(F("> AC command <\/button><\/div><\/div><\/div><\/div><div class=\"row\"><div class=\"col-md-12\"><span class=\"label label-default\"><span class=\"glyphicon glyphicon-dashboard\"><\/span> Free memory (SRAM): <span bindToProperty=\"FREE_MEM\"><\/span> bytes<\/span><\/div><\/div><\/div><\/body>"));
+			castedEvent->client->print(F("> AC OFF <\/button><button class=\"btn btn-block btn-lg\" type=\"button\" onclick=\"invoke('acOn24')\"> AC ON 24C <\/button><\/div><\/div><\/div><\/div><div class=\"row\"><div class=\"col-md-12\"><span class=\"label label-default\"><span class=\"glyphicon glyphicon-dashboard\"><\/span> Free memory (SRAM): <span bindToPr"));
+			castedEvent->client->print(F("operty=\"FREE_MEM\"><\/span> bytes<\/span><\/div><\/div><\/div><\/body>"));
 			return;
 		} else if (strcmp_P(command, PSTR("getState")) == 0) {
 			urlFound = true;
 		} else if (strcmp_P(command, PSTR("irLearnCommand")) == 0) {
 			urlFound = true;
+			{
+				char name[32];
+				castedEvent->server->getParameterValueFromUrl(castedEvent->url, "name", name);
+				if (!iRLearner1.capture(name)) {
+					castedEvent->server->httpError404();
+					return;
+				}
+			}
 		} else if (strcmp_P(command, PSTR("acOff")) == 0) {
 			urlFound = true;
 			{
 				acOff.send();
+			}
+		} else if (strcmp_P(command, PSTR("acOn24")) == 0) {
+			urlFound = true;
+			{
+				acOn24.send();
 			}
 		}
 		
@@ -55,6 +72,7 @@ public:
 
 	virtual void setup() {
 		pinMode(SS, OUTPUT);
+		digitalWrite(SS, HIGH);
 		
 		uint8_t macAddress[] = { 0xAA, 0xBB, 0xC2, 0xDD, 0xEE, 0xF0 };
 		uint8_t ipAddress[] = { 192, 168, 100, 253 };
@@ -65,6 +83,12 @@ public:
 
 		acOff.name = "acOff";
 		acOff.setup();
+
+		iRLearner1.pin = 2;
+		iRLearner1.setup();
+
+		acOn24.name = "acOn24";
+		acOn24.setup();
 
 		httpServer.onCommandReceived = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_onCommandReceived);
 	}

@@ -18,6 +18,7 @@ public:
 
 	virtual void setup() {
 		pinMode(SS, OUTPUT);
+		digitalWrite(SS, HIGH);
 		
 #foreach( $child in $NodeTemplateUtils.getChildren($board.nodeUri) )
 #@indent()

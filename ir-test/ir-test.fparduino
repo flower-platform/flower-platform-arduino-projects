@@ -73,13 +73,19 @@
 <attribute NAME="name" VALUE="httpServer"/>
 <attribute NAME="macAddress" VALUE="AA:BB:C2:DD:EE:F0"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__HttpServer"/>
-<attribute NAME="y" VALUE="272" OBJECT="java.lang.Integer|272"/>
-<attribute NAME="x" VALUE="148" OBJECT="java.lang.Integer|148"/>
+<attribute NAME="y" VALUE="275" OBJECT="java.lang.Integer|275"/>
+<attribute NAME="x" VALUE="328" OBJECT="java.lang.Integer|328"/>
 <attribute NAME="ipAddress" VALUE="192.168.100.253"/>
 <node TEXT="" ID="ID_1075921892" CREATED="1442314206371" MODIFIED="1442314206371">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
 <attribute NAME="mapping" VALUE="irLearnCommand"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_640128235" CREATED="1442569830315" MODIFIED="1442569830315">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="HttpCommandEvent_name_transferParamName"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/ir-test|dynamic_fparduino__method@capture(name)_parentNodeUri=fpp:flower-platform-arduino-projects/ir-test|ir-test.fparduino#ID_1707376818"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
 </node>
 <node TEXT="" ID="ID_571695131" CREATED="1442479690197" MODIFIED="1442479690197">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
@@ -92,13 +98,39 @@
 <attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
 </node>
 </node>
+<node TEXT="" ID="ID_60287436" CREATED="1442570241626" MODIFIED="1442570241626">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="acOn24"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_164367171" CREATED="1442570249664" MODIFIED="1442570249664">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/ir-test|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/ir-test|ir-test.fparduino#ID_923589889"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
 </node>
 <node TEXT="" ID="ID_1132755400" CREATED="1442479623501" MODIFIED="1442479623501">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
 <attribute NAME="name" VALUE="acOff"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
-<attribute NAME="y" VALUE="421" OBJECT="java.lang.Integer|421"/>
-<attribute NAME="x" VALUE="541" OBJECT="java.lang.Integer|541"/>
+<attribute NAME="y" VALUE="315" OBJECT="java.lang.Integer|315"/>
+<attribute NAME="x" VALUE="90" OBJECT="java.lang.Integer|90"/>
+</node>
+<node TEXT="" ID="ID_1707376818" CREATED="1442569796708" MODIFIED="1442569796708">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRLearner"/>
+<attribute NAME="pin" VALUE="2" OBJECT="java.lang.Integer|2"/>
+<attribute NAME="name" VALUE="iRLearner1"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__IRLearner"/>
+<attribute NAME="y" VALUE="289" OBJECT="java.lang.Integer|289"/>
+<attribute NAME="x" VALUE="828" OBJECT="java.lang.Integer|828"/>
+</node>
+<node TEXT="" ID="ID_923589889" CREATED="1442570232495" MODIFIED="1442570232495">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="name" VALUE="acOn24"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="y" VALUE="398" OBJECT="java.lang.Integer|398"/>
+<attribute NAME="x" VALUE="71" OBJECT="java.lang.Integer|71"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_379107679" CREATED="1442314100050" MODIFIED="1442314100050">
@@ -120,9 +152,14 @@
 </node>
 <node TEXT="" ID="ID_1132551598" CREATED="1442480063333" MODIFIED="1442480063333">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
-<attribute NAME="text" VALUE="AC command"/>
+<attribute NAME="text" VALUE="AC OFF"/>
 <attribute NAME="onclick" VALUE="acOff"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__Button"/>
+</node>
+<node TEXT="" ID="ID_1604438543" CREATED="1442570111709" MODIFIED="1442570111709">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="AC ON 24C"/>
+<attribute NAME="onclick" VALUE="acOn24"/>
 </node>
 </node>
 </node>

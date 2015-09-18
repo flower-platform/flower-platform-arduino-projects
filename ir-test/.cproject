@@ -30,6 +30,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ir_test/Libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ir_test/Libraries/SdFat}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ir_test/Libraries/SdFat/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ir_test/Libraries/DHT}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.730082003" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
 							</tool>
@@ -46,6 +47,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ir_test/Libraries/SPI}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ir_test/Libraries/SdFat}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ir_test/Libraries/SdFat/utility}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ir_test/Libraries/DHT}&quot;"/>
 								</option>
 								<inputType id="it.baeyens.arduino.compiler.c.sketch.input.742225196" name="C Source Files" superClass="it.baeyens.arduino.compiler.c.sketch.input"/>
 							</tool>
