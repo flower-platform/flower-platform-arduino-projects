@@ -1,0 +1,118 @@
+<map version="freeplane 1.3.0">
+<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<node TEXT="New Mindmap" ID="ID_965413239" CREATED="1443089986635" MODIFIED="1443089986635"><hook NAME="MapStyle">
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node">
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right">
+<stylenode LOCALIZED_TEXT="default" COLOR="#000000" STYLE="fork" MAX_WIDTH="600">
+<font NAME="SansSerif" SIZE="12" BOLD="false" ITALIC="false"/>
+<edge STYLE="bezier" COLOR="#808080" WIDTH="1"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.note"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__root"/>
+<attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_DOCUMENTATION,$METAMODEL.ARDUINO_BOARD,$METAMODEL.ARDUINO_UI"/>
+<node TEXT="" POSITION="right" ID="ID_1007307169" CREATED="1443089986636" MODIFIED="1443089986636">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__metadata"/>
+<attribute NAME="fullProjectDownloadedAtLeastOnce" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<node TEXT="" ID="ID_1303886442" CREATED="1443093677838" MODIFIED="1443093677838">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibraries"/>
+<attribute NAME="name" VALUE="Dependent Libraries"/>
+<node TEXT="" ID="ID_225866603" CREATED="1443093677841" MODIFIED="1443093677841">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.fp-arduino-runtime"/>
+</node>
+<node TEXT="" ID="ID_939061448" CREATED="1443093677844" MODIFIED="1443093677844">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.HttpServer"/>
+</node>
+<node TEXT="" ID="ID_1139381405" CREATED="1443093677847" MODIFIED="1443093677847">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.IRCommand"/>
+</node>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_651851325" CREATED="1443089986636" MODIFIED="1443089986636">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__documentation"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_913273143" CREATED="1443089986636" MODIFIED="1443089986636">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__board"/>
+<node TEXT="" ID="ID_1492111224" CREATED="1443093473152" MODIFIED="1443093473152">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__HttpServer"/>
+<attribute NAME="port" VALUE="80"/>
+<attribute NAME="name" VALUE="httpServer1"/>
+<attribute NAME="macAddress" VALUE="AA:BA:C1:DD:EE:F2"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__HttpServer"/>
+<attribute NAME="y" VALUE="206" OBJECT="java.lang.Integer|206"/>
+<attribute NAME="ipAddress" VALUE="192.168.100.253"/>
+<attribute NAME="x" VALUE="235" OBJECT="java.lang.Integer|235"/>
+<node TEXT="" ID="ID_1650475846" CREATED="1443093567767" MODIFIED="1443093567767">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="acOff"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_1358254694" CREATED="1443093596216" MODIFIED="1443093596216">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project02-infrared-remote-control|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/project02-infrared-remote-control|project02-infrared-remote-control.fparduino#ID_1215396765"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+<node TEXT="" ID="ID_878240475" CREATED="1443093575562" MODIFIED="1443093575562">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="ac24On"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_1433587612" CREATED="1443093601603" MODIFIED="1443093601603">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project02-infrared-remote-control|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/project02-infrared-remote-control|project02-infrared-remote-control.fparduino#ID_396372927"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+<node TEXT="" ID="ID_1609625073" CREATED="1443093584617" MODIFIED="1443093584617">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="acFanHigh"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_1899138129" CREATED="1443093605203" MODIFIED="1443093605203">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project02-infrared-remote-control|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/project02-infrared-remote-control|project02-infrared-remote-control.fparduino#ID_1005370484"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+</node>
+<node TEXT="" ID="ID_1215396765" CREATED="1443093488462" MODIFIED="1443093488462">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="name" VALUE="acOff"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="y" VALUE="139" OBJECT="java.lang.Integer|139"/>
+<attribute NAME="x" VALUE="715" OBJECT="java.lang.Integer|715"/>
+</node>
+<node TEXT="" ID="ID_396372927" CREATED="1443093535833" MODIFIED="1443093535833">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="name" VALUE="acOn24"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="y" VALUE="261" OBJECT="java.lang.Integer|261"/>
+<attribute NAME="x" VALUE="722" OBJECT="java.lang.Integer|722"/>
+</node>
+<node TEXT="" ID="ID_1005370484" CREATED="1443093550429" MODIFIED="1443093550429">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="name" VALUE="acFanHigh"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="y" VALUE="395" OBJECT="java.lang.Integer|395"/>
+<attribute NAME="x" VALUE="750" OBJECT="java.lang.Integer|750"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1822980040" CREATED="1443089986636" MODIFIED="1443089986636">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__ui"/>
+</node>
+</node>
+</map>

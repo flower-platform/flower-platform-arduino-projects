@@ -459,6 +459,13 @@
 <attribute NAME="childType" VALUE="method"/>
 <attribute NAME="petaldoc" VALUE="Stops the timer, if it is running, and sets the &lt;code&gt;currentCount&lt;/code&gt; property back to 0, like the reset button of a stopwatch. Then, when &lt;code&gt;start()&lt;/code&gt; is called, the timer instance runs for the specified number of repetitions, as set by the &lt;code&gt;repeatCount&lt;/code&gt; value. "/>
 </node>
+<node TEXT="" ID="ID_1486238772" CREATED="1443175272602" MODIFIED="1443175272602">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="type" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="value" VALUE="dependentLibrary.Timer"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_31552654" CREATED="1430406210574" MODIFIED="1430406210574">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -916,6 +923,19 @@
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, Input.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="Input.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_416413878" CREATED="1443175374466" MODIFIED="1443175374466">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Timer"/>
+<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<node TEXT="" ID="ID_331797868" CREATED="1443175398808" MODIFIED="1443175398808">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="value" VALUE="Timer.h"/>
+<attribute NAME="type" VALUE="genericDescriptor"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1072382291" CREATED="1442489850909" MODIFIED="1442489850909">
