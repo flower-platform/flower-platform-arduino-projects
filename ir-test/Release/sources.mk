@@ -45,4 +45,5 @@ Libraries/SPI \
 Libraries/IRremote \
 Libraries/Ethernet/src/utility \
 Libraries/Ethernet/src \
+Libraries/DHT \
 

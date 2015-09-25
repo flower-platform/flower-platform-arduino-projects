@@ -73,8 +73,8 @@
 <attribute NAME="name" VALUE="httpServer"/>
 <attribute NAME="macAddress" VALUE="AA:BB:C2:DD:EE:F0"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__HttpServer"/>
-<attribute NAME="y" VALUE="275" OBJECT="java.lang.Integer|275"/>
-<attribute NAME="x" VALUE="328" OBJECT="java.lang.Integer|328"/>
+<attribute NAME="y" VALUE="290" OBJECT="java.lang.Integer|290"/>
+<attribute NAME="x" VALUE="477" OBJECT="java.lang.Integer|477"/>
 <attribute NAME="ipAddress" VALUE="192.168.100.253"/>
 <node TEXT="" ID="ID_1075921892" CREATED="1442314206371" MODIFIED="1442314206371">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
@@ -109,28 +109,46 @@
 <attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
 </node>
 </node>
+<node TEXT="" ID="ID_238437828" CREATED="1442928587812" MODIFIED="1442928587812">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="acFanHigh"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_753246613" CREATED="1442928593318" MODIFIED="1442928593318">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/ir-test|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/ir-test|ir-test.fparduino#ID_834781049"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
 </node>
 <node TEXT="" ID="ID_1132755400" CREATED="1442479623501" MODIFIED="1442479623501">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
 <attribute NAME="name" VALUE="acOff"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
-<attribute NAME="y" VALUE="315" OBJECT="java.lang.Integer|315"/>
-<attribute NAME="x" VALUE="90" OBJECT="java.lang.Integer|90"/>
+<attribute NAME="y" VALUE="75" OBJECT="java.lang.Integer|75"/>
+<attribute NAME="x" VALUE="66" OBJECT="java.lang.Integer|66"/>
 </node>
 <node TEXT="" ID="ID_1707376818" CREATED="1442569796708" MODIFIED="1442569796708">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__IRLearner"/>
 <attribute NAME="pin" VALUE="2" OBJECT="java.lang.Integer|2"/>
 <attribute NAME="name" VALUE="iRLearner1"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__IRLearner"/>
-<attribute NAME="y" VALUE="289" OBJECT="java.lang.Integer|289"/>
-<attribute NAME="x" VALUE="828" OBJECT="java.lang.Integer|828"/>
+<attribute NAME="y" VALUE="304" OBJECT="java.lang.Integer|304"/>
+<attribute NAME="x" VALUE="1243" OBJECT="java.lang.Integer|1243"/>
 </node>
 <node TEXT="" ID="ID_923589889" CREATED="1442570232495" MODIFIED="1442570232495">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
 <attribute NAME="name" VALUE="acOn24"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
-<attribute NAME="y" VALUE="398" OBJECT="java.lang.Integer|398"/>
-<attribute NAME="x" VALUE="71" OBJECT="java.lang.Integer|71"/>
+<attribute NAME="y" VALUE="345" OBJECT="java.lang.Integer|345"/>
+<attribute NAME="x" VALUE="66" OBJECT="java.lang.Integer|66"/>
+</node>
+<node TEXT="" ID="ID_834781049" CREATED="1442928472987" MODIFIED="1442928472987">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="name" VALUE="acFanHigh"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
+<attribute NAME="y" VALUE="509" OBJECT="java.lang.Integer|509"/>
+<attribute NAME="x" VALUE="119" OBJECT="java.lang.Integer|119"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_379107679" CREATED="1442314100050" MODIFIED="1442314100050">
@@ -160,6 +178,11 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
 <attribute NAME="text" VALUE="AC ON 24C"/>
 <attribute NAME="onclick" VALUE="acOn24"/>
+</node>
+<node TEXT="" ID="ID_1064086402" CREATED="1442928603597" MODIFIED="1442928603597">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="onclick" VALUE="acFanHigh"/>
+<attribute NAME="text" VALUE="acFanHigh"/>
 </node>
 </node>
 </node>

@@ -325,7 +325,7 @@
 <attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="y" VALUE="115" OBJECT="java.lang.Integer|115"/>
 <attribute NAME="x" VALUE="681" OBJECT="java.lang.Integer|681"/>
-<attribute NAME="initialValue" VALUE="1"/>
+<attribute NAME="initialValue" VALUE="1" OBJECT="java.lang.Integer|1"/>
 </node>
 <node TEXT="" ID="ID_1849073051" CREATED="1434112767241" MODIFIED="1434112767241">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Output"/>
@@ -335,7 +335,7 @@
 <attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="y" VALUE="292" OBJECT="java.lang.Integer|292"/>
 <attribute NAME="x" VALUE="681" OBJECT="java.lang.Integer|681"/>
-<attribute NAME="initialValue" VALUE="1"/>
+<attribute NAME="initialValue" VALUE="1" OBJECT="java.lang.Integer|1"/>
 </node>
 <node TEXT="" ID="ID_222025093" CREATED="1434112909909" MODIFIED="1434112909909">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__HttpServer"/>

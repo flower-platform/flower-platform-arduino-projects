@@ -51,11 +51,11 @@
  D:\Java\arduino-1.6.1\hardware\arduino\avr\cores\arduino/Stream.h \
  C:\Users\Flower\Documents\Arduino\libraries\FlowerPlatformArduino_Runtime2/FlowerPlatformArduinoRuntime.h \
  D:\Java\arduino-1.6.1\hardware\arduino\avr\libraries\SPI/SPI.h \
- C:\Users\Flower\Documents\Arduino\libraries\FlowerPlatformArduino_Runtime2/IRLearner.h \
  C:\Users\Flower\Documents\Arduino\libraries\FlowerPlatformArduino_Runtime2/HttpServer.h \
  D:\Java\arduino-1.6.1\libraries\Ethernet\src/EthernetServer.h \
  D:\Java\arduino-1.6.1\hardware\arduino\avr\cores\arduino/WString.h \
- ../CustomCode.h ../ir-test.ino
+ ../CustomCode.h ../ir-test.ino \
+ C:\Users\Flower\Documents\Arduino\libraries\FlowerPlatformArduino_Runtime2/IRLearner.h
 
 D:\Java\arduino-1.6.1\hardware\arduino\avr\cores\arduino/Arduino.h:
 
@@ -161,8 +161,6 @@ C:\Users\Flower\Documents\Arduino\libraries\FlowerPlatformArduino_Runtime2/Flowe
 
 D:\Java\arduino-1.6.1\hardware\arduino\avr\libraries\SPI/SPI.h:
 
-C:\Users\Flower\Documents\Arduino\libraries\FlowerPlatformArduino_Runtime2/IRLearner.h:
-
 C:\Users\Flower\Documents\Arduino\libraries\FlowerPlatformArduino_Runtime2/HttpServer.h:
 
 D:\Java\arduino-1.6.1\libraries\Ethernet\src/EthernetServer.h:
@@ -172,3 +170,5 @@ D:\Java\arduino-1.6.1\hardware\arduino\avr\cores\arduino/WString.h:
 ../CustomCode.h:
 
 ../ir-test.ino:
+
+C:\Users\Flower\Documents\Arduino\libraries\FlowerPlatformArduino_Runtime2/IRLearner.h:

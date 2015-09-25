@@ -144,6 +144,15 @@ $(function() {
 					<button class="btn btn-block btn-lg" type="button" onclick="var cmd=window.prompt('Enter command name:'); invoke('irLearnCommand?name='+cmd, function() { alert('Command saved'); }, function() { alert('Error saving command'); });">
 						 Learn IR command
 					</button>
+					<button class="btn btn-block btn-lg" type="button" onclick="invoke('acOff')">
+						 AC OFF
+					</button>
+					<button class="btn btn-block btn-lg" type="button" onclick="invoke('acOn24')">
+						 AC ON 24C
+					</button>
+					<button class="btn btn-block btn-lg" type="button" onclick="invoke('acFanHigh')">
+						 acFanHigh
+					</button>
 			
 				</div>
 			</div>

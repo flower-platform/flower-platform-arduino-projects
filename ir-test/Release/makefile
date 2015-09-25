@@ -16,6 +16,7 @@ RM := rm -rf
 -include Libraries/IRremote/subdir.mk
 -include Libraries/Ethernet/src/utility/subdir.mk
 -include Libraries/Ethernet/src/subdir.mk
+-include Libraries/DHT/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
