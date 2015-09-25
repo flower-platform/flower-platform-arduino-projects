@@ -459,12 +459,6 @@
 <attribute NAME="childType" VALUE="method"/>
 <attribute NAME="petaldoc" VALUE="Stops the timer, if it is running, and sets the &lt;code&gt;currentCount&lt;/code&gt; property back to 0, like the reset button of a stopwatch. Then, when &lt;code&gt;start()&lt;/code&gt; is called, the timer instance runs for the specified number of repetitions, as set by the &lt;code&gt;repeatCount&lt;/code&gt; value. "/>
 </node>
-<node TEXT="" ID="ID_814222365" CREATED="1431701004213" MODIFIED="1431701004213">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
-<attribute NAME="value" VALUE="dependentLibrary.Timer"/>
-<attribute NAME="type" VALUE="genericDescriptor"/>
-</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_31552654" CREATED="1430406210574" MODIFIED="1430406210574">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -794,7 +788,7 @@
 <attribute NAME="name" VALUE="libraryInfo, FlowerPlatformArduinoRuntime.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="FlowerPlatformArduinoRuntime.h"/>
 <attribute NAME="extraInfo.name" VALUE="Flower Platform Arduino Runtime"/>
-<attribute NAME="extraInfo.url" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime2"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1132425227" CREATED="1442228225180" MODIFIED="1442228225180">
@@ -912,17 +906,6 @@
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, Output.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="Output.h"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_964092602" CREATED="1442228335306" MODIFIED="1442228335306">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.Timer"/>
-<node TEXT="" ID="ID_1899509768" CREATED="1442228335306" MODIFIED="1442228335306">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, Timer.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="Timer.h"/>
-<attribute NAME="extraInfo.description" VALUE="Timer bla bla"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1705561900" CREATED="1442228335276" MODIFIED="1442228335276">
