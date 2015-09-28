@@ -26,6 +26,13 @@ public:
 #end
 
 #end
+
+#foreach( $child in $NodeTemplateUtils.getChildren($board.nodeUri) )
+#@indent()
+		#callMacroWithSuffix( $child "_setup" )
+#end
+#end
+
 #foreach( $child in $NodeTemplateUtils.getChildren($board.nodeUri) )
 #@indent()
 		#callMacroWithSuffix( $child "_addListeners" )

@@ -9,5 +9,4 @@ LoggerSD<${node.getPropertyValue('valueType')}> ${node.getPropertyValue('name')}
 #macro( LoggerSD_init $node )
 ${node.getPropertyValue('name')}.slaveSelectPin = ${node.getPropertyValue('slaveSelectPin')};
 ${node.getPropertyValue('name')}.timeInterval = ${node.getPropertyValue('timeInterval')};
-${node.getPropertyValue('name')}.setup();
 #end
