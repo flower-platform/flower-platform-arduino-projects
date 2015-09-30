@@ -57,6 +57,11 @@
 			<locationURI>ArduinoPivateLibPath/SdFat</locationURI>
 		</link>
 		<link>
+			<name>Libraries/WiFi</name>
+			<type>2</type>
+			<locationURI>ArduinoLibPath/WiFi</locationURI>
+		</link>
+		<link>
 			<name>arduino/core</name>
 			<type>2</type>
 			<locationURI>ArduinoPlatformPath/cores/arduino</locationURI>
