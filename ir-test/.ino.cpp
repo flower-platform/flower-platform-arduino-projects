@@ -1,12 +1,13 @@
 //This is a automatic generated file
 //Please do not modify this file
 //If you touch this file your change will be overwritten during the next build
-//This file has been generated on 2015-09-30 12:40:59
+//This file has been generated on 2015-10-16 13:43:57
 
 #include "Arduino.h"
 #include <avr/pgmspace.h>
 #include <Arduino.h>
 #include <Client.h>
+#include <ESP8266NetworkAdapter.h>
 #include <FlowerPlatformArduinoRuntime.h>
 #include <HardwareSerial.h>
 #include <HttpServer.h>
@@ -16,7 +17,6 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <string.h>
-#include <WiFiNetworkAdapter.h>
 #include <WString.h>
 #include "CustomCode.h"
 void setup() ;

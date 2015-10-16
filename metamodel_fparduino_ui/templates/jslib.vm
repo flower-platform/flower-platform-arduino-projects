@@ -80,14 +80,6 @@ var invoke = function(path, successHandler, errorHandler) {
 	});
 };
 
-setInterval(function() {
-	if (bindingManager.activeRequests > 0) {
-		return;
-	}
-	invoke("getState");
-}, 1000);
-
-
 $(function() {
 	$("[bindToProperty]").each(function() {
 		var elt = $(this);
@@ -105,5 +97,13 @@ $(function() {
 		}
 
 	});
+
+	setInterval(function() {
+		if (bindingManager.activeRequests > 0) {
+			return;
+		}
+		invoke("getState");
+	}, 1000);
+	
 });
 #end
