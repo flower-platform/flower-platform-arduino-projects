@@ -182,6 +182,12 @@
 <attribute NAME="childType" VALUE="IRLearner"/>
 <attribute NAME="type" VALUE="addChildDescriptor"/>
 </node>
+<node TEXT="" ID="ID_1975951167" CREATED="1445452636133" MODIFIED="1445452636133">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.root"/>
+<attribute NAME="type" VALUE="containingCategory"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1590319719" CREATED="1429111771166" MODIFIED="1429111771166">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
