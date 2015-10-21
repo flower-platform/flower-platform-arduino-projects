@@ -32,9 +32,9 @@ protected:
 			castedEvent->client->print(F("ngManager.activeRequests++;$.get(url+c,function(e){bindingManager.activeRequests--;for(var d in e){bindingManager.set(d,e[d])}if(b){b()}}).fail(function(){bindingManager.activeRequests--;if(a){a()}})};setInterval(function(){if(bindingManager.activeRequests>0){return}invoke(\"getState\")},1000);$(funct"));
 			castedEvent->client->print(F("ion(){$(\"[bindToProperty]\").each(function(){var b=$(this);var d=b.attr(\"bindToProperty\");var c=b.attr(\"textToggler\");if(c){c=JSON.parse(c)}bindingManager.addListener(d,b,setText,c);var a=b.attr(\"classToggler\");if(a){a=JSON.parse(a);bindingManager.addListener(d,b,toggleClass,a)}})});<\/script><style>."));
 			castedEvent->client->print(F("content{font-size:21px;font-weight:300;line-height:1.4}<\/style><\/head><body class=\"content\"><br\/><div class=\"container-fluid\"><div class=\"row\"><div class=\"col-md-3\"><div class=\"panel panel-primary text-center\"><div class=\"panel-heading\"><\/div><div class=\"panel-body\"><button class=\"btn btn-block btn-"));
-			castedEvent->client->print(F("lg\" type=\"button\" onclick=\"var cmd=window.prompt('Enter command name:'); invoke('irLearnCommand?name='+cmd, function() { alert('Command saved'); }, function() { alert('Error saving command'); });\"> Learn IR command <\/button><button class=\"btn btn-block btn-lg\" type=\"button\" onclick=\"invoke('acOff')\""));
-			castedEvent->client->print(F("> AC OFF <\/button><button class=\"btn btn-block btn-lg\" type=\"button\" onclick=\"invoke('acOn24')\"> AC ON 24C <\/button><button class=\"btn btn-block btn-lg\" type=\"button\" onclick=\"invoke('acFanHigh')\"> $button.getPropertyValue('text') <\/button><\/div><\/div><\/div><\/div><div class=\"row\"><div class=\"col-md-"));
-			castedEvent->client->print(F("12\"><span class=\"label label-default\"><span class=\"glyphicon glyphicon-dashboard\"><\/span> Free memory (SRAM): <span bindToProperty=\"FREE_MEM\"><\/span> bytes<\/span><\/div><\/div><\/div><\/body>"));
+			castedEvent->client->print(F("lg\" type=\"button\" onclick=\"var cmd=window.prompt('Enter command name and push the desired button on the IR remote after pressing OK:'); if (!cmd) return; invoke('irLearnCommand?name='+cmd, function() { alert('Command saved'); }, function() { alert('Error saving command'); });\"> Learn IR command <\/bu"));
+			castedEvent->client->print(F("tton><button class=\"btn btn-block btn-lg\" type=\"button\" onclick=\"invoke('acOff')\"> AC OFF <\/button><button class=\"btn btn-block btn-lg\" type=\"button\" onclick=\"invoke('acOn24')\"> AC ON 24C <\/button><button class=\"btn btn-block btn-lg\" type=\"button\" onclick=\"invoke('acFanHigh')\"> acFanHigh <\/button><\/"));
+			castedEvent->client->print(F("div><\/div><\/div><\/div><div class=\"row\"><div class=\"col-md-12\"><span class=\"label label-default\"><span class=\"glyphicon glyphicon-dashboard\"><\/span> Free memory (SRAM): <span bindToProperty=\"FREE_MEM\"><\/span> bytes<\/span><\/div><\/div><\/div><\/body>"));
 			return;
 		} else if (strcmp_P(command, PSTR("getState")) == 0) {
 			urlFound = true;
@@ -85,18 +85,20 @@ public:
 		memcpy(httpServer.macAddress, macAddress, 6);
 		memcpy(httpServer.ipAddress, ipAddress, 4);
 		httpServer.port = 80;
-		httpServer.setup();
 
 		acOff.name = "acOff";
-		acOff.setup();
 
-		iRLearner1.pin = 2;
-		iRLearner1.setup();
+		iRLearner1.pin = A2;
 
 		acOn24.name = "acOn24";
-		acOn24.setup();
 
 		acFanHigh.name = "acFanHigh";
+
+
+		httpServer.setup();
+		acOff.setup();
+		iRLearner1.setup();
+		acOn24.setup();
 		acFanHigh.setup();
 
 		httpServer.onCommandReceived = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_onCommandReceived);

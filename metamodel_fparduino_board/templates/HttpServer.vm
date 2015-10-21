@@ -8,7 +8,6 @@ uint8_t ipAddress[] = { ${node.getPropertyValue('ipAddress').replaceAll("\.", ",
 memcpy(${node.getPropertyValue('name')}.macAddress, macAddress, 6);
 memcpy(${node.getPropertyValue('name')}.ipAddress, ipAddress, 4);
 ${node.getPropertyValue('name')}.port = ${node.getPropertyValue('port')};
-${node.getPropertyValue('name')}.setup();
 #end
 
 #####

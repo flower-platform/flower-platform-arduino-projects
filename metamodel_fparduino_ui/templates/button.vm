@@ -1,6 +1,6 @@
 #macro( Button $button )
 <button class="btn btn-block btn-lg#printClassNoAttr($button)"#printId($button) type="button" onclick="invoke('$button.getPropertyValue('onclick')')">
 	#if( "$!button.getPropertyValue('glyphicon')" == "" )#else<span class="glyphicon glyphicon-$button.getPropertyValue('glyphicon')"></span>#end ##
-$button.getPropertyValue('text')
+$!button.getPropertyValue('text')
 </button>
 #end

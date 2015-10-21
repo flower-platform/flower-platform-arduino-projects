@@ -125,12 +125,12 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
 <attribute NAME="name" VALUE="acOff"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
-<attribute NAME="y" VALUE="75" OBJECT="java.lang.Integer|75"/>
-<attribute NAME="x" VALUE="66" OBJECT="java.lang.Integer|66"/>
+<attribute NAME="y" VALUE="221" OBJECT="java.lang.Integer|221"/>
+<attribute NAME="x" VALUE="61" OBJECT="java.lang.Integer|61"/>
 </node>
 <node TEXT="" ID="ID_1707376818" CREATED="1442569796708" MODIFIED="1442569796708">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__IRLearner"/>
-<attribute NAME="pin" VALUE="2" OBJECT="java.lang.Integer|2"/>
+<attribute NAME="pin" VALUE="2"/>
 <attribute NAME="name" VALUE="iRLearner1"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__IRLearner"/>
 <attribute NAME="y" VALUE="304" OBJECT="java.lang.Integer|304"/>
@@ -147,8 +147,8 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__IRCommand"/>
 <attribute NAME="name" VALUE="acFanHigh"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__IRCommand"/>
-<attribute NAME="y" VALUE="509" OBJECT="java.lang.Integer|509"/>
-<attribute NAME="x" VALUE="119" OBJECT="java.lang.Integer|119"/>
+<attribute NAME="y" VALUE="494" OBJECT="java.lang.Integer|494"/>
+<attribute NAME="x" VALUE="61" OBJECT="java.lang.Integer|61"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_379107679" CREATED="1442314100050" MODIFIED="1442314100050">

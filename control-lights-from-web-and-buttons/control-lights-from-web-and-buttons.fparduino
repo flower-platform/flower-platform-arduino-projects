@@ -488,6 +488,12 @@
 <attribute NAME="text" VALUE="Turn Off"/>
 <attribute NAME="onclick" VALUE="light2Off"/>
 </node>
+<node TEXT="" ID="ID_1623851193" CREATED="1443698826190" MODIFIED="1443698826190">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRLearnButton"/>
+<attribute NAME="text" VALUE="Learn IR command"/>
+<attribute NAME="onclick" VALUE="irLearnCommand"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__IRLearnButton"/>
+</node>
 </node>
 </node>
 </node>

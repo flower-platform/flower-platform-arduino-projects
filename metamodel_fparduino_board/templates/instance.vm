@@ -16,6 +16,9 @@ ${node.getPropertyValue('name')}.$key = ${node.getPropertyValue($key)};
 #end
 #end
 #end
+#end
+
+#macro( default_setup $node )
 ${node.getPropertyValue('name')}.setup();
 #end
 
