@@ -49,7 +49,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__root"/>
+<attribute NAME="nodeType" VALUE="dynamic_root"/>
 <attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_BOARD,$METAMODEL.ARDUINO_UI,$METAMODEL.ARDUINO_DOCUMENTATION"/>
 <node TEXT="" POSITION="right" ID="ID_1368506467" CREATED="1434112248850" MODIFIED="1434112248850">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__metadata"/>
