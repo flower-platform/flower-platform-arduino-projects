@@ -27,6 +27,8 @@ virtual void httpServer_onCommandReceived(Event* event) {
 	castedEvent->server->getCommandFromUrl(castedEvent->url, command);
 	bool urlFound = false;
 	
+	BufferedPrint out(castedEvent->client);
+	
 	if (strcmp_P(command, PSTR("")) == 0) {
 		urlFound = true;
 #set( $url = "" )
@@ -86,7 +88,7 @@ ${node.getPropertyValue('name')}.onCommandReceived = new DelegatingListener<Appl
 #set( $ui = "#compressHtml()#parse('index.vm')#end" )
 	castedEvent->server->httpSuccess(HttpServer::CONTENT_TYPE_HTML);
 #foreach( $section in $TemplateUtils.split($ui) )
-write_P(castedEvent->client, PSTR("$section"));
+write_P(&out, PSTR("$section"));
 #end
 return;
 #end
