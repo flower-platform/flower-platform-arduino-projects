@@ -113,7 +113,7 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
 <attribute NAME="label" VALUE=""/>
 <attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory&lt;/b&gt;. &lt;i&gt;E.g. &lt;code&gt;3&lt;/code&gt; or &lt;code&gt;A3&lt;/code&gt;&lt;/i&gt;.&lt;br&gt;The pin of the input. When choosing pins, please see the remark above (about occupied pins). "/>
-<attribute NAME="propertyType" VALUE="Number"/>
+<attribute NAME="propertyType" VALUE="String"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_539096227" CREATED="1430405925082" MODIFIED="1430405925082">
@@ -199,6 +199,12 @@
 <attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
 <attribute NAME="childType" VALUE="IRLearner"/>
 <attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
+<node TEXT="" ID="ID_1975951167" CREATED="1445452636133" MODIFIED="1445452636133">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.root"/>
+<attribute NAME="type" VALUE="containingCategory"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1590319719" CREATED="1429111771166" MODIFIED="1429111771166">

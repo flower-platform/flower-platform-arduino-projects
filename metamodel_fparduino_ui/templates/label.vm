@@ -26,6 +26,6 @@
 #end
 #set( $classToggler = $classToggler + "}" )
 <div#printId($label)#printClass($label)>
-	$label.getPropertyValue('text').replaceAll("\{\{(.*?)\}\}", "<span bindToProperty=""$1"" textToggler='$textToggler'></span>").replaceFirst("<span", "<span classToggler='$classToggler'")
+	$!label.getPropertyValue('text').replaceAll("\{\{(.*?)\}\}", "<span bindToProperty=""$1"" textToggler='$textToggler'></span>").replaceFirst("<span", "<span classToggler='$classToggler'")
 </div>
 #end
