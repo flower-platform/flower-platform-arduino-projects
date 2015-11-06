@@ -2,6 +2,3 @@
 ## Input
 ################################
 
-#macro( Input_loop $node )
-${node.getPropertyValue('name')}.loop();
-#end

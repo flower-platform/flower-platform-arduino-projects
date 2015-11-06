@@ -10,3 +10,5 @@ LoggerSD<${node.getPropertyValue('valueType')}> ${node.getPropertyValue('name')}
 ${node.getPropertyValue('name')}.slaveSelectPin = ${node.getPropertyValue('slaveSelectPin')};
 ${node.getPropertyValue('name')}.timeInterval = ${node.getPropertyValue('timeInterval')};
 #end
+
+#macro( LoggerSD_loop $node )#end

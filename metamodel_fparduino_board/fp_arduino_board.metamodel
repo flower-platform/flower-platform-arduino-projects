@@ -157,6 +157,24 @@
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
 <attribute NAME="childType" VALUE="HttpServer"/>
 </node>
+<node TEXT="" ID="ID_1289232853" CREATED="1446803519004" MODIFIED="1446803519004">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="EthernetNetworkAdapter"/>
+</node>
+<node TEXT="" ID="ID_841051818" CREATED="1446803519004" MODIFIED="1446803519004">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="WiFiNetworkAdapter"/>
+</node>
+<node TEXT="" ID="ID_498626640" CREATED="1446803519014" MODIFIED="1446803519014">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
+<attribute NAME="childType" VALUE="ESP8266NetworkAdapter"/>
+</node>
 <node TEXT="" ID="ID_1972709787" CREATED="1431680995795" MODIFIED="1431680995795">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="dependentLibrary"/>
@@ -505,16 +523,6 @@
 <attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory.&lt;/b&gt; &lt;i&gt;Initial: &lt;code&gt;80&lt;/code&gt;.&lt;/i&gt;&lt;br&gt;The server port. "/>
 </node>
-<node TEXT="" ID="ID_1327613674" CREATED="1431506380061" MODIFIED="1431506380061">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="name" VALUE="macAddress"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
-<attribute NAME="label" VALUE=""/>
-<attribute NAME="orderIndex" VALUE="200" OBJECT="java.lang.Integer|200"/>
-<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="propertyInitialValue" VALUE="AA:BB:CC:DD:EE:FF"/>
-<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory.&lt;/b&gt; &lt;i&gt;Initial: &lt;code&gt;AA:BB:CC:DD:EE:FF&lt;/code&gt;.&lt;/i&gt;&lt;br&gt;Some network boards/shields have a label with the MAC address. In this case, we can use it. Otherwise, we can leave the default value (which is very probably unique in our network)."/>
-</node>
 <node TEXT="" ID="ID_1570828224" CREATED="1430406210575" MODIFIED="1430406210575">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/add.png"/>
@@ -676,6 +684,157 @@
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="name" VALUE="category.diagram.subElement"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_385001250" CREATED="1446801189996" MODIFIED="1446801189996">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="petaldoc" VALUE="It has 3 main responsibilities: &lt;ul&gt;&lt;li&gt;Serves an HTML page with the contents generated from the User Interface Diagram.&lt;/li&gt;&lt;li&gt;Serves state updates for the connected clients. I.e. the clients periodically request state updates; when they do, the server sends a JSON containing information about all the objects that contribute to the state (i.e. their &lt;code&gt;contributesToState&lt;/code&gt; property = &lt;code&gt;true&lt;/code&gt;).&lt;/li&gt;&lt;li&gt;Receives commands (configured from the User Interface Diagram as well). When a command is received, an event is dispatched and operations can be invoked.&lt;/li&gt;&lt;/ul&gt;"/>
+<attribute NAME="name" VALUE="EthernetNetworkAdapter"/>
+<attribute NAME="icons" VALUE="images/HttpServer.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<node TEXT="" ID="ID_617385410" CREATED="1446801189996" MODIFIED="1446801189996">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.instance"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1739773032" CREATED="1446801190006" MODIFIED="1446801190006">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.element"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_299489972" CREATED="1446801190006" MODIFIED="1446801190006">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory.&lt;/b&gt; &lt;i&gt;Initial: &lt;code&gt;AA:BB:CC:DD:EE:FF&lt;/code&gt;.&lt;/i&gt;&lt;br&gt;Some network boards/shields have a label with the MAC address. In this case, we can use it. Otherwise, we can leave the default value (which is very probably unique in our network)."/>
+<attribute NAME="propertyInitialValue" VALUE="AA:BB:CC:DD:EE:FF"/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="orderIndex" VALUE="200" OBJECT="java.lang.Integer|200"/>
+<attribute NAME="name" VALUE="macAddress"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_149800018" CREATED="1446801694652" MODIFIED="1446801694652">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyType" VALUE="String"/>
+<attribute NAME="propertyGroup" VALUE=""/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="name" VALUE="httpServerInstanceName"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="HTTP server instance name"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+<attribute NAME="propertyDefaultValue" VALUE="httpServer"/>
+</node>
+<node TEXT="" ID="ID_164262448" CREATED="1446801190016" MODIFIED="1446801190016">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.HttpServer:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.EthernetNetworkAdapter"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_224668356" CREATED="1446803393904" MODIFIED="1446803393904">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="petaldoc" VALUE="It has 3 main responsibilities: &lt;ul&gt;&lt;li&gt;Serves an HTML page with the contents generated from the User Interface Diagram.&lt;/li&gt;&lt;li&gt;Serves state updates for the connected clients. I.e. the clients periodically request state updates; when they do, the server sends a JSON containing information about all the objects that contribute to the state (i.e. their &lt;code&gt;contributesToState&lt;/code&gt; property = &lt;code&gt;true&lt;/code&gt;).&lt;/li&gt;&lt;li&gt;Receives commands (configured from the User Interface Diagram as well). When a command is received, an event is dispatched and operations can be invoked.&lt;/li&gt;&lt;/ul&gt;"/>
+<attribute NAME="name" VALUE="WiFiNetworkAdapter"/>
+<attribute NAME="icons" VALUE="images/HttpServer.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<node TEXT="" ID="ID_1289173028" CREATED="1446803393904" MODIFIED="1446803393904">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.instance"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_152086559" CREATED="1446803393904" MODIFIED="1446803393904">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.element"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1355816985" CREATED="1446803393904" MODIFIED="1446803393904">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory.&lt;/b&gt; &lt;i&gt;Initial: &lt;code&gt;AA:BB:CC:DD:EE:FF&lt;/code&gt;.&lt;/i&gt;&lt;br&gt;Some network boards/shields have a label with the MAC address. In this case, we can use it. Otherwise, we can leave the default value (which is very probably unique in our network)."/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="orderIndex" VALUE="200" OBJECT="java.lang.Integer|200"/>
+<attribute NAME="name" VALUE="ssid"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_359985635" CREATED="1446803393904" MODIFIED="1446803393904">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory.&lt;/b&gt; &lt;i&gt;Initial: &lt;code&gt;AA:BB:CC:DD:EE:FF&lt;/code&gt;.&lt;/i&gt;&lt;br&gt;Some network boards/shields have a label with the MAC address. In this case, we can use it. Otherwise, we can leave the default value (which is very probably unique in our network)."/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="orderIndex" VALUE="200" OBJECT="java.lang.Integer|200"/>
+<attribute NAME="name" VALUE="password"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_1290702200" CREATED="1446803393904" MODIFIED="1446803393904">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyType" VALUE="String"/>
+<attribute NAME="propertyGroup" VALUE=""/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="name" VALUE="httpServerInstanceName"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="HTTP server instance name"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+<attribute NAME="propertyDefaultValue" VALUE="httpServer"/>
+</node>
+<node TEXT="" ID="ID_1815067491" CREATED="1446803393904" MODIFIED="1446803393904">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.WiFiNetworkAdapter:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.WiFiNetworkAdapter"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1873355488" CREATED="1446803393914" MODIFIED="1446803393914">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="petaldoc" VALUE="It has 3 main responsibilities: &lt;ul&gt;&lt;li&gt;Serves an HTML page with the contents generated from the User Interface Diagram.&lt;/li&gt;&lt;li&gt;Serves state updates for the connected clients. I.e. the clients periodically request state updates; when they do, the server sends a JSON containing information about all the objects that contribute to the state (i.e. their &lt;code&gt;contributesToState&lt;/code&gt; property = &lt;code&gt;true&lt;/code&gt;).&lt;/li&gt;&lt;li&gt;Receives commands (configured from the User Interface Diagram as well). When a command is received, an event is dispatched and operations can be invoked.&lt;/li&gt;&lt;/ul&gt;"/>
+<attribute NAME="name" VALUE="ESP8266NetworkAdapter"/>
+<attribute NAME="icons" VALUE="images/HttpServer.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<node TEXT="" ID="ID_704095374" CREATED="1446803393914" MODIFIED="1446803393914">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.instance"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_653123924" CREATED="1446803393914" MODIFIED="1446803393914">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.element"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_57699700" CREATED="1446803393914" MODIFIED="1446803393914">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory.&lt;/b&gt; &lt;i&gt;Initial: &lt;code&gt;AA:BB:CC:DD:EE:FF&lt;/code&gt;.&lt;/i&gt;&lt;br&gt;Some network boards/shields have a label with the MAC address. In this case, we can use it. Otherwise, we can leave the default value (which is very probably unique in our network)."/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="orderIndex" VALUE="200" OBJECT="java.lang.Integer|200"/>
+<attribute NAME="name" VALUE="ssid"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_359803030" CREATED="1446803393914" MODIFIED="1446803393914">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="petaldoc" VALUE="&lt;b&gt;Mandatory.&lt;/b&gt; &lt;i&gt;Initial: &lt;code&gt;AA:BB:CC:DD:EE:FF&lt;/code&gt;.&lt;/i&gt;&lt;br&gt;Some network boards/shields have a label with the MAC address. In this case, we can use it. Otherwise, we can leave the default value (which is very probably unique in our network)."/>
+<attribute NAME="propertyMandatory" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="orderIndex" VALUE="200" OBJECT="java.lang.Integer|200"/>
+<attribute NAME="name" VALUE="password"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE=""/>
+</node>
+<node TEXT="" ID="ID_1157020286" CREATED="1446803393924" MODIFIED="1446803393924">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyType" VALUE="String"/>
+<attribute NAME="propertyGroup" VALUE=""/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="name" VALUE="httpServerInstanceName"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="label" VALUE="HTTP server instance name"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+<attribute NAME="propertyDefaultValue" VALUE="httpServer"/>
+</node>
+<node TEXT="" ID="ID_220262495" CREATED="1446803393924" MODIFIED="1446803393924">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.ESP8266NetworkAdapter:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.ESP8266NetworkAdapter"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_284973963" CREATED="1431512606689" MODIFIED="1431512606689">
@@ -842,7 +1001,7 @@
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, Ethernet.h,SPI.h,HttpServer.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="Ethernet.h,SPI.h,HttpServer.h"/>
+<attribute NAME="value" VALUE="HttpServer.h"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1897624332" CREATED="1442223020332" MODIFIED="1442223020332">
@@ -908,61 +1067,6 @@
 <attribute NAME="value" VALUE="transferParamName"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_720251765" CREATED="1442228336047" MODIFIED="1442228336047">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.Output"/>
-<node TEXT="" ID="ID_148746734" CREATED="1442228336047" MODIFIED="1442228336047">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, Output.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="Output.h"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1705561900" CREATED="1442228335276" MODIFIED="1442228335276">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.Input"/>
-<node TEXT="" ID="ID_1526327693" CREATED="1442228335286" MODIFIED="1442228335286">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, Input.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="Input.h"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_416413878" CREATED="1443175374466" MODIFIED="1443175374466">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.Timer"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
-<node TEXT="" ID="ID_331797868" CREATED="1443175398808" MODIFIED="1443175398808">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
-<attribute NAME="value" VALUE="Timer.h"/>
-<attribute NAME="type" VALUE="genericDescriptor"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1072382291" CREATED="1442489850909" MODIFIED="1442489850909">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.IRCommand"/>
-<node TEXT="" ID="ID_1372022820" CREATED="1442489850911" MODIFIED="1442489850911">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, IRremote.h,IRCommand.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="IRremote.h,IRCommand.h"/>
-<attribute NAME="extraInfo.name" VALUE="IRremote"/>
-<attribute NAME="extraInfo.url" VALUE="https://github.com/z3t0/Arduino-IRremote"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_877052554" CREATED="1442228336037" MODIFIED="1442228336037">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.IRLearner"/>
-<node TEXT="" ID="ID_209063077" CREATED="1442490148682" MODIFIED="1442490148682">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, IRLearner.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="IRLearner.h"/>
-</node>
-</node>
 <node TEXT="" POSITION="right" ID="ID_842439388" CREATED="1442489879862" MODIFIED="1442489879862">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="dependentLibrary.SdFat"/>
@@ -980,6 +1084,90 @@
 <attribute NAME="backgroundColor" VALUE="#CFCFCF"/>
 <attribute NAME="name" VALUE="metadata"/>
 <attribute NAME="icons" VALUE="images/Metadata.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1705561900" CREATED="1446801166918" MODIFIED="1446801166918">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Input"/>
+<node TEXT="" ID="ID_1526327693" CREATED="1446801166918" MODIFIED="1446801166918">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Input.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Input.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_416413878" CREATED="1446801164838" MODIFIED="1446801164838">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Timer"/>
+<attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<node TEXT="" ID="ID_331797868" CREATED="1446801164838" MODIFIED="1446801164838">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="name" VALUE="libraryInfo, Timer.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Timer.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1072382291" CREATED="1446801165598" MODIFIED="1446801165598">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.IRCommand"/>
+<node TEXT="" ID="ID_1372022820" CREATED="1446801165598" MODIFIED="1446801165598">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, IRremote.h,IRCommand.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="IRremote.h,IRCommand.h"/>
+<attribute NAME="extraInfo.name" VALUE="IRremote"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/z3t0/Arduino-IRremote"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_877052554" CREATED="1446801166598" MODIFIED="1446801166598">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.IRLearner"/>
+<node TEXT="" ID="ID_209063077" CREATED="1446801166608" MODIFIED="1446801166608">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, IRLearner.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="IRLearner.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_720251765" CREATED="1446801166268" MODIFIED="1446801166268">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Output"/>
+<node TEXT="" ID="ID_148746734" CREATED="1446801166268" MODIFIED="1446801166268">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Output.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Output.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1383573042" CREATED="1446801436692" MODIFIED="1446801436692">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.EthernetNetworkAdapter"/>
+<node TEXT="" ID="ID_946618350" CREATED="1446801436702" MODIFIED="1446801436702">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Ethernet.h,SPI.h,HttpServer.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Ethernet.h,SPI.h,EthernetNetworkAdapter.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1112062950" CREATED="1446802667356" MODIFIED="1446802667356">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.WiFiNetworkAdapter"/>
+<node TEXT="" ID="ID_946976022" CREATED="1446802667366" MODIFIED="1446802667366">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Ethernet.h,SPI.h,EthernetNetworkAdapter.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="WiFi.h,WiFiNetworkAdapter.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_556150561" CREATED="1446802671286" MODIFIED="1446802671286">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.ESP8266NetworkAdapter"/>
+<node TEXT="" ID="ID_1160029882" CREATED="1446802671286" MODIFIED="1446802671286">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Ethernet.h,SPI.h,EthernetNetworkAdapter.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="ESP8266NetworkAdapter.h"/>
+</node>
 </node>
 </node>
 </map>

@@ -3,20 +3,12 @@
 ################################
 
 #macro( HttpServer_init $node )
-uint8_t macAddress[] = { 0x${node.getPropertyValue('macAddress').replaceAll(":", ", 0x")} };
 uint8_t ipAddress[] = { ${node.getPropertyValue('ipAddress').replaceAll("\.", ", ")} };
-memcpy(${node.getPropertyValue('name')}.macAddress, macAddress, 6);
 memcpy(${node.getPropertyValue('name')}.ipAddress, ipAddress, 4);
 ${node.getPropertyValue('name')}.port = ${node.getPropertyValue('port')};
 #end
 
-#####
-
-#macro( HttpServer_loop $node )
-${node.getPropertyValue('name')}.loop();
-#end
-
-#####
+#macro( IRLearner_loop $node )#end
 
 #macro( HttpServer_handlers $node )
 #set ($serverNode = $node)
