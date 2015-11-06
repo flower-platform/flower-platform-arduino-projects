@@ -6,4 +6,4 @@
 ${node.getPropertyValue('name')}.name = "${node.getPropertyValue('name')}";
 #end
 
-#macro( IRLearner_loop $node )#end
+#macro( IRCommand_loop $node )#end

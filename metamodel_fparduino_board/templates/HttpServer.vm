@@ -8,7 +8,7 @@ memcpy(${node.getPropertyValue('name')}.ipAddress, ipAddress, 4);
 ${node.getPropertyValue('name')}.port = ${node.getPropertyValue('port')};
 #end
 
-#macro( IRLearner_loop $node )#end
+#macro( HttpServer_loop $node )#end
 
 #macro( HttpServer_handlers $node )
 #set ($serverNode = $node)
@@ -47,11 +47,12 @@ virtual void httpServer_onCommandReceived(Event* event) {
 	}
 	
 	if (urlFound) {
-		castedEvent->server->httpSuccess();
-		printStateAsJson(castedEvent->client);
+		castedEvent->server->httpSuccess(&out);
+		printStateAsJson(&out);
 	} else {
-		castedEvent->server->httpError404();
+		castedEvent->server->httpError404(&out);
 	}
+	out.flush();
 }
 
 #set( $instance = $node )
@@ -78,9 +79,10 @@ ${node.getPropertyValue('name')}.onCommandReceived = new DelegatingListener<Appl
 
 #macro( HttpServer_ui $node )
 #set( $ui = "#compressHtml()#parse('index.vm')#end" )
-	castedEvent->server->httpSuccess(HttpServer::CONTENT_TYPE_HTML);
+	castedEvent->server->httpSuccess(&out, HttpServer::CONTENT_TYPE_HTML);
 #foreach( $section in $TemplateUtils.split($ui) )
 write_P(&out, PSTR("$section"));
 #end
+out.flush();
 return;
 #end

@@ -2,4 +2,4 @@
 ## Output
 ################################
 
-#macro( IRLearner_loop $node )#end
+#macro( Output_loop $node )#end

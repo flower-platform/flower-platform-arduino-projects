@@ -5,5 +5,5 @@
 #macro( EthernetNetworkAdapter_init $node )
 uint8_t macAddress[] = { 0x${node.getPropertyValue('macAddress').replaceAll(":", ", 0x")} };
 memcpy(${node.getPropertyValue('name')}.macAddress, macAddress, 6);
-${node.getPropertyValue('name')}.httpServer = ${node.getPropertyValue('httpServerInstanceName')};
+${node.getPropertyValue('name')}.httpServer = &${node.getPropertyValue('httpServerInstanceName')};
 #end

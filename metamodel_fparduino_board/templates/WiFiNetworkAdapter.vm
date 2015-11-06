@@ -5,5 +5,5 @@
 #macro( WiFiNetworkAdapter_init $node )
 ${node.getPropertyValue('name')}.ssid = "${node.getPropertyValue('ssid')}";
 ${node.getPropertyValue('name')}.password = "${node.getPropertyValue('password')}";
-${node.getPropertyValue('name')}.httpServer = ${node.getPropertyValue('httpServerInstanceName')};
+${node.getPropertyValue('name')}.httpServer = &${node.getPropertyValue('httpServerInstanceName')};
 #end
