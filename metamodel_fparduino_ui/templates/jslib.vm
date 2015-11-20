@@ -64,19 +64,24 @@ var setText = function(elt, propertyValue, options) {
 
 var invoke = function(path, successHandler, errorHandler) {
 	bindingManager.activeRequests++;
-	$.get(url + path, function(data) {
-		bindingManager.activeRequests--;
-		for (var key in data) {
-			bindingManager.set(key, data[key]);
-		};
-		if (successHandler) {
-			successHandler();
-		}
-	}).fail(function() {
-		bindingManager.activeRequests--;
-		if (errorHandler) {
-			errorHandler();
-		}
+	$.ajax({
+		url: url + path, 
+		success: function(data) {
+			bindingManager.activeRequests--;
+			for (var key in data) {
+				bindingManager.set(key, data[key]);
+			};
+			if (successHandler) {
+				successHandler();
+			}
+		},
+		error: function() {
+			bindingManager.activeRequests--;
+			if (errorHandler) {
+				errorHandler();
+			}
+		},
+		timeout: 10000
 	});
 };
 
