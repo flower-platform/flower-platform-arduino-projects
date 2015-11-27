@@ -200,17 +200,23 @@
 <attribute NAME="childType" VALUE="IRCommand"/>
 <attribute NAME="type" VALUE="addChildDescriptor"/>
 </node>
-<node TEXT="" ID="ID_1975951167" CREATED="1448008187602" MODIFIED="1448008187602">
-<attribute NAME="nodeType" VALUE="containingCategory"/>
-<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="name" VALUE="category.diagram.root"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
-</node>
 <node TEXT="" ID="ID_320425431" CREATED="1442223161765" MODIFIED="1442223161765">
 <attribute NAME="nodeType" VALUE="addChildDescriptor"/>
 <attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
 <attribute NAME="childType" VALUE="IRLearner"/>
 <attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
+<node TEXT="" ID="ID_839445641" CREATED="1448372548406" MODIFIED="1448372548406">
+<attribute NAME="nodeType" VALUE="addChildDescriptor"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="childType" VALUE="MotorController"/>
+<attribute NAME="type" VALUE="addChildDescriptor"/>
+</node>
+<node TEXT="" ID="ID_1975951167" CREATED="1448372556156" MODIFIED="1448372556156">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.root"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1590319719" CREATED="1429111771166" MODIFIED="1429111771166">
@@ -682,20 +688,66 @@
 <attribute NAME="value" VALUE="dependentLibrary.SdFat"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_654357068" CREATED="1431010889991" MODIFIED="1431010889991">
+<node TEXT="" POSITION="right" ID="ID_347020436" CREATED="1448372492776" MODIFIED="1448372492776">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="onValueChanged(ValueChangedEvent)"/>
-<attribute NAME="petaldoc" VALUE="Triggered when the value of the input changes. Contains the following information: &lt;ul&gt;&lt;li&gt;&lt;code&gt;previousValue:int&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;currentValue:int&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;If digital, then &lt;code&gt;previousValue&lt;/code&gt; and &lt;code&gt;currentValue&lt;/code&gt; may be &lt;code&gt;HIGH&lt;/code&gt; or &lt;code&gt;LOW&lt;/code&gt;."/>
-<node TEXT="" ID="ID_407974833" CREATED="1431010890001" MODIFIED="1431010890001">
+<attribute NAME="petaldoc" VALUE="&lt;p&gt;Corresponds to an input connected to the board (digital or analog).&lt;/p&gt;&lt;p class=&quot;text-danger&quot;&gt;&lt;strong&gt;WARNING:&lt;/strong&gt; Be careful when you choose the pins! Some pins may already be in use by different modules. E.g. pin 0 and 1 are used for &lt;code&gt;Serial&lt;/code&gt; communication. If you use the Ethernet shield, some pins are already taken: 4, 10 -&gt; 13 (for Arduino Uno) and 4, 10, 50 -&gt; 53 (for Arduino Mega). Etc.&lt;/p&gt;"/>
+<attribute NAME="name" VALUE="MotorController"/>
+<attribute NAME="icons" VALUE="images/Input.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+<node TEXT="" ID="ID_1749939172" CREATED="1448372492776" MODIFIED="1448372492776">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
-<attribute NAME="name" VALUE="category.event"/>
+<attribute NAME="name" VALUE="category.instance"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
-<node TEXT="" ID="ID_235410301" CREATED="1431010890001" MODIFIED="1431010890001">
+<node TEXT="" ID="ID_581236273" CREATED="1448372492776" MODIFIED="1448372492776">
 <attribute NAME="nodeType" VALUE="containingCategory"/>
 <attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="name" VALUE="category.diagram.subElement"/>
+<attribute NAME="name" VALUE="category.diagram.element"/>
 <attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_1103955481" CREATED="1448372492776" MODIFIED="1448372492776">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="dependentLibrary"/>
+<attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.MotorController:genericDescriptor"/>
+<attribute NAME="value" VALUE="dependentLibrary.MotorController"/>
+</node>
+<node TEXT="" ID="ID_1155500088" CREATED="1448372492786" MODIFIED="1448372492786">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyType" VALUE="Number"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="name" VALUE="controlPin1"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="label" VALUE="Control pin 1"/>
+<attribute NAME="propertyReadOnly" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+</node>
+<node TEXT="" ID="ID_1164929071" CREATED="1448372492786" MODIFIED="1448372492786">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyType" VALUE="Number"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="name" VALUE="controlPin2"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="label" VALUE="Control pin 2"/>
+<attribute NAME="propertyReadOnly" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+</node>
+<node TEXT="" ID="ID_93001237" CREATED="1448372492786" MODIFIED="1448372492786">
+<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
+<attribute NAME="propertyType" VALUE="Number"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="name" VALUE="enablePin"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
+<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="label" VALUE="Enable pin (PWM)"/>
+<attribute NAME="propertyReadOnly" VALUE="false" OBJECT="java.lang.Boolean|false"/>
+<attribute NAME="propertyLineRenderer" VALUE="Default"/>
+</node>
+<node TEXT="" ID="ID_1398344591" CREATED="1448374801505" MODIFIED="1448374801505">
+<attribute NAME="nodeType" VALUE="virtualChild"/>
+<attribute NAME="petaldoc" VALUE="Captures IR command and saves it to SD card, under the &lt;code&gt;/ir-commands&lt;/code&gt; folder. The &lt;code&gt;name&lt;/code&gt; argument is used as the file name. "/>
+<attribute NAME="name" VALUE="setSpeed(forward,speed)"/>
+<attribute NAME="childType" VALUE="method"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_385001250" CREATED="1446801189996" MODIFIED="1446801189996">
@@ -840,7 +892,7 @@
 <attribute NAME="label" VALUE="HTTP server instance name"/>
 <attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="propertyLineRenderer" VALUE="Default"/>
-<attribute NAME="propertyDefaultValue" VALUE="httpServer"/>
+<attribute NAME="propertyDefaultValue" VALUE="httpServer1"/>
 </node>
 <node TEXT="" ID="ID_220262495" CREATED="1446803393924" MODIFIED="1446803393924">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
@@ -900,6 +952,22 @@
 <attribute NAME="behaviorType" VALUE="dependentLibrary"/>
 <attribute NAME="name" VALUE="dependentLibrary, dependentLibrary.ESP8266NetworkAdapter:genericDescriptor"/>
 <attribute NAME="value" VALUE="dependentLibrary.ESP8266NativeNetworkAdapter"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_654357068" CREATED="1448372504986" MODIFIED="1448372504986">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="petaldoc" VALUE="Triggered when the value of the input changes. Contains the following information: &lt;ul&gt;&lt;li&gt;&lt;code&gt;previousValue:int&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;currentValue:int&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;If digital, then &lt;code&gt;previousValue&lt;/code&gt; and &lt;code&gt;currentValue&lt;/code&gt; may be &lt;code&gt;HIGH&lt;/code&gt; or &lt;code&gt;LOW&lt;/code&gt;."/>
+<attribute NAME="name" VALUE="onValueChanged(ValueChangedEvent)"/>
+<node TEXT="" ID="ID_407974833" CREATED="1448372504986" MODIFIED="1448372504986">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="name" VALUE="category.event"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
+</node>
+<node TEXT="" ID="ID_235410301" CREATED="1448372504986" MODIFIED="1448372504986">
+<attribute NAME="nodeType" VALUE="containingCategory"/>
+<attribute NAME="doNotAddMetamodelPrefix" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="name" VALUE="category.diagram.subElement"/>
+<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/folder.gif"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_284973963" CREATED="1431512606689" MODIFIED="1431512606689">
@@ -1132,6 +1200,12 @@
 <attribute NAME="value" VALUE="transferParamName"/>
 </node>
 </node>
+<node TEXT="" POSITION="right" ID="ID_1324326737" CREATED="1448372631356" MODIFIED="1448372631356">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="backgroundColor" VALUE="#CFCFCF"/>
+<attribute NAME="name" VALUE="metadata"/>
+<attribute NAME="icons" VALUE="images/Metadata.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
+</node>
 <node TEXT="" POSITION="right" ID="ID_842439388" CREATED="1442489879862" MODIFIED="1442489879862">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="dependentLibrary.SdFat"/>
@@ -1143,12 +1217,6 @@
 <attribute NAME="extraInfo.name" VALUE="SdFat"/>
 <attribute NAME="extraInfo.url" VALUE="https://github.com/greiman/SdFat"/>
 </node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1324326737" CREATED="1442228336317" MODIFIED="1442228336317">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="backgroundColor" VALUE="#CFCFCF"/>
-<attribute NAME="name" VALUE="metadata"/>
-<attribute NAME="icons" VALUE="images/Metadata.png;EXTRA_INFO_ENTRIES:(valueConverter=metamodelImagesListToList)"/>
 </node>
 <node TEXT="" POSITION="right" ID="ID_416413878" CREATED="1446801164838" MODIFIED="1446801164838">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
@@ -1214,30 +1282,40 @@
 <attribute NAME="extraInfo.url" VALUE="https://github.com/z3t0/Arduino-IRremote"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_720251765" CREATED="1448007551414" MODIFIED="1448007551414">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.Output"/>
-<node TEXT="" ID="ID_148746734" CREATED="1448007551417" MODIFIED="1448007551417">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, Output.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="Output.h"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_877052554" CREATED="1448007551352" MODIFIED="1448007551352">
+<node TEXT="" POSITION="right" ID="ID_877052554" CREATED="1448372444406" MODIFIED="1448372444406">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="dependentLibrary.IRLearner"/>
-<node TEXT="" ID="ID_209063077" CREATED="1448007551354" MODIFIED="1448007551354">
+<node TEXT="" ID="ID_209063077" CREATED="1448372444406" MODIFIED="1448372444406">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, IRLearner.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="IRLearner.h"/>
 </node>
 </node>
-<node TEXT="" POSITION="right" ID="ID_1705561900" CREATED="1448007552066" MODIFIED="1448007552066">
+<node TEXT="" POSITION="right" ID="ID_720251765" CREATED="1448372444376" MODIFIED="1448372444376">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Output"/>
+<node TEXT="" ID="ID_148746734" CREATED="1448372444386" MODIFIED="1448372444386">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Output.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Output.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1439364579" CREATED="1448372446736" MODIFIED="1448372446736">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.MotorController"/>
+<node TEXT="" ID="ID_553168742" CREATED="1448372446736" MODIFIED="1448372446736">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, MotorController.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="MotorController.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1705561900" CREATED="1448372449126" MODIFIED="1448372449126">
 <attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
 <attribute NAME="name" VALUE="dependentLibrary.Input"/>
-<node TEXT="" ID="ID_1526327693" CREATED="1448007552068" MODIFIED="1448007552068">
+<node TEXT="" ID="ID_1526327693" CREATED="1448372449126" MODIFIED="1448372449126">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
 <attribute NAME="behaviorType" VALUE="libraryInfo"/>
 <attribute NAME="name" VALUE="libraryInfo, Input.h:genericDescriptor"/>

@@ -1,0 +1,250 @@
+<map version="freeplane 1.3.0">
+<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<node TEXT="New Mindmap" ID="ID_812210718" CREATED="1448373740025" MODIFIED="1448373740025"><hook NAME="MapStyle">
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node">
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right">
+<stylenode LOCALIZED_TEXT="default" COLOR="#000000" STYLE="fork" MAX_WIDTH="600">
+<font NAME="SansSerif" SIZE="12" BOLD="false" ITALIC="false"/>
+<edge STYLE="bezier" COLOR="#808080" WIDTH="1"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.note"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<attribute NAME="nodeType" VALUE="dynamic_root"/>
+<attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_BOARD,$METAMODEL.ARDUINO_UI"/>
+<node TEXT="" POSITION="right" ID="ID_728357837" CREATED="1448373740291" MODIFIED="1448373740291">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__metadata"/>
+<attribute NAME="hasCustomCode" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="fullProjectDownloadedAtLeastOnce" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<node TEXT="" ID="ID_1739512384" CREATED="1448611665150" MODIFIED="1448611665150">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibraries"/>
+<attribute NAME="name" VALUE="Dependent Libraries"/>
+<node TEXT="" ID="ID_750794722" CREATED="1448611665160" MODIFIED="1448611665160">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.ESP8266NetworkAdapter"/>
+</node>
+<node TEXT="" ID="ID_1698557721" CREATED="1448611665160" MODIFIED="1448611665160">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.fp-arduino-runtime"/>
+</node>
+<node TEXT="" ID="ID_1094562842" CREATED="1448611665170" MODIFIED="1448611665170">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.HttpServer"/>
+</node>
+<node TEXT="" ID="ID_1237630594" CREATED="1448611665170" MODIFIED="1448611665170">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.MotorController"/>
+</node>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1664241023" CREATED="1448373740295" MODIFIED="1448373740295">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__board"/>
+<node TEXT="" ID="ID_1239523918" CREATED="1448374242143" MODIFIED="1448374242143">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__HttpServer"/>
+<attribute NAME="port" VALUE="80"/>
+<attribute NAME="name" VALUE="httpServer"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__HttpServer"/>
+<attribute NAME="y" VALUE="480" OBJECT="java.lang.Integer|480"/>
+<attribute NAME="x" VALUE="362" OBJECT="java.lang.Integer|362"/>
+<attribute NAME="ipAddress" VALUE="192.168.100.253"/>
+<node TEXT="" ID="ID_426198463" CREATED="1448612582817" MODIFIED="1448612582817">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="f"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+</node>
+<node TEXT="" ID="ID_1145878872" CREATED="1448612587767" MODIFIED="1448612587767">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="b"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+</node>
+<node TEXT="" ID="ID_1786002047" CREATED="1448612591267" MODIFIED="1448612591267">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="s"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+</node>
+<node TEXT="" ID="ID_670340390" CREATED="1448621311234" MODIFIED="1448621311234">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="l"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+</node>
+<node TEXT="" ID="ID_88441079" CREATED="1448621316934" MODIFIED="1448621316934">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="r"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+</node>
+<node TEXT="" ID="ID_1944720210" CREATED="1448621322336" MODIFIED="1448621322336">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="fl"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+</node>
+<node TEXT="" ID="ID_824802775" CREATED="1448621326116" MODIFIED="1448621326116">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="fr"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+</node>
+<node TEXT="" ID="ID_488941493" CREATED="1448621333528" MODIFIED="1448621333528">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="bl"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+</node>
+<node TEXT="" ID="ID_126036498" CREATED="1448621338118" MODIFIED="1448621338118">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="br"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+</node>
+</node>
+<node TEXT="" ID="ID_226073168" CREATED="1448453789327" MODIFIED="1448453789327">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__ESP8266NetworkAdapter"/>
+<attribute NAME="name" VALUE="eSP8266NetworkAdapter1"/>
+<attribute NAME="httpServerInstanceName" VALUE="httpServer"/>
+<attribute NAME="ssid" VALUE="wifi-work"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__ESP8266NetworkAdapter"/>
+<attribute NAME="password" VALUE="wifi-work-pass-123"/>
+<attribute NAME="y" VALUE="400" OBJECT="java.lang.Integer|400"/>
+<attribute NAME="x" VALUE="361" OBJECT="java.lang.Integer|361"/>
+</node>
+<node TEXT="" ID="ID_968815587" CREATED="1448613785383" MODIFIED="1448613785383">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__MotorController"/>
+<attribute NAME="name" VALUE="motorController1"/>
+<attribute NAME="controlPin2" VALUE="5" OBJECT="java.lang.Integer|5"/>
+<attribute NAME="controlPin1" VALUE="3" OBJECT="java.lang.Integer|3"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__MotorController"/>
+<attribute NAME="y" VALUE="409" OBJECT="java.lang.Integer|409"/>
+<attribute NAME="x" VALUE="861" OBJECT="java.lang.Integer|861"/>
+</node>
+<node TEXT="" ID="ID_1121402963" CREATED="1448613800215" MODIFIED="1448613800215">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__MotorController"/>
+<attribute NAME="name" VALUE="motorController2"/>
+<attribute NAME="controlPin2" VALUE="9" OBJECT="java.lang.Integer|9"/>
+<attribute NAME="controlPin1" VALUE="6" OBJECT="java.lang.Integer|6"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__MotorController"/>
+<attribute NAME="y" VALUE="547" OBJECT="java.lang.Integer|547"/>
+<attribute NAME="x" VALUE="869" OBJECT="java.lang.Integer|869"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1206666183" CREATED="1448373740298" MODIFIED="1448373740298">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__ui"/>
+<node TEXT="" ID="ID_1840873002" CREATED="1448453761483" MODIFIED="1448453761483">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
+<node TEXT="" ID="ID_1483871836" CREATED="1448453761493" MODIFIED="1448453761493">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="4"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="md"/>
+<node TEXT="" ID="ID_1431867844" CREATED="1448453761493" MODIFIED="1448453761493">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
+<attribute NAME="positions" VALUE="4"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="md"/>
+<node TEXT="" ID="ID_380047325" CREATED="1448614090257" MODIFIED="1448614090257">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
+<node TEXT="" ID="ID_1120573298" CREATED="1448614090267" MODIFIED="1448614090267">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="4"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="xs"/>
+<node TEXT="" ID="ID_265782352" CREATED="1448621083560" MODIFIED="1448621083560">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="onclick" VALUE="fl"/>
+<attribute NAME="text" VALUE="FL"/>
+</node>
+</node>
+<node TEXT="" ID="ID_811120988" CREATED="1448614090267" MODIFIED="1448614090267">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="4"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="xs"/>
+<node TEXT="" ID="ID_908468260" CREATED="1448614148803" MODIFIED="1448614148803">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="onclick" VALUE="f"/>
+<attribute NAME="glyphicon" VALUE="arrow-up"/>
+</node>
+</node>
+<node TEXT="" ID="ID_1314737996" CREATED="1448614090267" MODIFIED="1448614090267">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="4"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="xs"/>
+<node TEXT="" ID="ID_1253280973" CREATED="1448621085270" MODIFIED="1448621085270">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="FR"/>
+<attribute NAME="onclick" VALUE="fr"/>
+</node>
+</node>
+</node>
+<node TEXT="" ID="ID_1812759480" CREATED="1448614090267" MODIFIED="1448614090267">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
+<node TEXT="" ID="ID_154694659" CREATED="1448614090267" MODIFIED="1448614090267">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="4"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="xs"/>
+<node TEXT="" ID="ID_263279128" CREATED="1448621088740" MODIFIED="1448621088740">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="onclick" VALUE="l"/>
+<attribute NAME="glyphicon" VALUE="arrow-left"/>
+</node>
+</node>
+<node TEXT="" ID="ID_1189289523" CREATED="1448614090267" MODIFIED="1448614090267">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="4"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="xs"/>
+<node TEXT="" ID="ID_734476984" CREATED="1448614178154" MODIFIED="1448614178154">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="onclick" VALUE="s"/>
+<attribute NAME="glyphicon" VALUE="stop"/>
+</node>
+</node>
+<node TEXT="" ID="ID_13860946" CREATED="1448614090277" MODIFIED="1448614090277">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="4"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="xs"/>
+<node TEXT="" ID="ID_599072705" CREATED="1448621090110" MODIFIED="1448621090110">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="onclick" VALUE="r"/>
+<attribute NAME="glyphicon" VALUE="arrow-right"/>
+</node>
+</node>
+</node>
+<node TEXT="" ID="ID_256418599" CREATED="1448614090277" MODIFIED="1448614090277">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
+<node TEXT="" ID="ID_648292067" CREATED="1448614090277" MODIFIED="1448614090277">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="4"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="xs"/>
+<node TEXT="" ID="ID_1761671417" CREATED="1448621097354" MODIFIED="1448621097354">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="BL"/>
+<attribute NAME="onclick" VALUE="bl"/>
+</node>
+</node>
+<node TEXT="" ID="ID_1572678749" CREATED="1448614090277" MODIFIED="1448614090277">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="4"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="xs"/>
+<node TEXT="" ID="ID_956937949" CREATED="1448614170534" MODIFIED="1448614170534">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="onclick" VALUE="b"/>
+<attribute NAME="glyphicon" VALUE="arrow-down"/>
+</node>
+</node>
+<node TEXT="" ID="ID_275587692" CREATED="1448614090277" MODIFIED="1448614090277">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="4"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="xs"/>
+<node TEXT="" ID="ID_1502049337" CREATED="1448621099014" MODIFIED="1448621099014">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="BR"/>
+<attribute NAME="onclick" VALUE="br"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</map>

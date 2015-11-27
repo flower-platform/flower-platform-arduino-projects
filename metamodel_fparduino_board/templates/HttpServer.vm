@@ -81,7 +81,7 @@ ${node.getPropertyValue('name')}.onCommandReceived = new DelegatingListener<Appl
 #set( $ui = "#compressHtml()#parse('index.vm')#end" )
 	castedEvent->server->httpSuccess(&out, HttpServer::CONTENT_TYPE_HTML);
 #foreach( $section in $TemplateUtils.split($ui) )
-write_P(&out, PSTR("$section"));
+out.write_P(PSTR("$section"));
 #end
 out.flush();
 return;
