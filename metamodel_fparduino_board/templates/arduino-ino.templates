@@ -1,0 +1,3 @@
+root = dynamic_root
+label = arduino-ino
+gen_files = $PARENT_DIR.ino:file_ino.vm

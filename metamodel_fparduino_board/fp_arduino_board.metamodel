@@ -804,7 +804,52 @@
 <attribute NAME="name" VALUE="libraryInfo, FlowerPlatformArduinoRuntime.h:genericDescriptor"/>
 <attribute NAME="value" VALUE="FlowerPlatformArduinoRuntime.h"/>
 <attribute NAME="extraInfo.name" VALUE="Flower Platform Arduino Runtime"/>
-<attribute NAME="extraInfo.url" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime2"/>
+<attribute NAME="extraInfo.url" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime2/archive/master.zip"/>
+<attribute NAME="extraInfo.website" VALUE="https://github.com/flower-platform/FlowerPlatformArduino_Runtime2"/>
+<attribute NAME="extraInfo.otherHeaderFilesInLib" VALUE="Input.h, Output.h, Timer.h, HttpServer.h"/>
+<attribute NAME="extraInfo.minVersion" VALUE="1.1.0"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1705561900" CREATED="1447421310477" MODIFIED="1447421310477">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Input"/>
+<node TEXT="" ID="ID_1526327693" CREATED="1447421310487" MODIFIED="1447421310487">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Input.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Input.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_720251765" CREATED="1447421316677" MODIFIED="1447421316677">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Output"/>
+<node TEXT="" ID="ID_148746734" CREATED="1447421316677" MODIFIED="1447421316677">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Output.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Output.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_416413878" CREATED="1447421310487" MODIFIED="1447421310487">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.Timer"/>
+<attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
+<node TEXT="" ID="ID_331797868" CREATED="1447421310487" MODIFIED="1447421310487">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
+<attribute NAME="name" VALUE="libraryInfo, Timer.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Timer.h"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1967632752" CREATED="1447421379922" MODIFIED="1447421379922">
+<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
+<attribute NAME="name" VALUE="dependentLibrary.HttpServer"/>
+<node TEXT="" ID="ID_1936073410" CREATED="1447421379932" MODIFIED="1447421379932">
+<attribute NAME="nodeType" VALUE="genericDescriptor"/>
+<attribute NAME="behaviorType" VALUE="libraryInfo"/>
+<attribute NAME="name" VALUE="libraryInfo, Ethernet.h,SPI.h,HttpServer.h:genericDescriptor"/>
+<attribute NAME="value" VALUE="Ethernet.h,SPI.h,HttpServer.h"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1132425227" CREATED="1442228225180" MODIFIED="1442228225180">
@@ -839,16 +884,6 @@
 <attribute NAME="label" VALUE="Color"/>
 <attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="propertyLineRenderer" VALUE="Default"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1967632752" CREATED="1442223022392" MODIFIED="1442223022392">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.HttpServer"/>
-<node TEXT="" ID="ID_1936073410" CREATED="1442223022395" MODIFIED="1442223022395">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, Ethernet.h,SPI.h,HttpServer.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="Ethernet.h,SPI.h,HttpServer.h"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1897624332" CREATED="1442223020332" MODIFIED="1442223020332">
@@ -912,39 +947,6 @@
 <attribute NAME="extraInfo.label" VALUE="Always =&gt; Invoke (parameter &quot;name&quot;)"/>
 <attribute NAME="name" VALUE="invocationTargetSignature.paramName, transferParamName:genericDescriptor"/>
 <attribute NAME="value" VALUE="transferParamName"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_720251765" CREATED="1442228336047" MODIFIED="1442228336047">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.Output"/>
-<node TEXT="" ID="ID_148746734" CREATED="1442228336047" MODIFIED="1442228336047">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, Output.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="Output.h"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_1705561900" CREATED="1442228335276" MODIFIED="1442228335276">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.Input"/>
-<node TEXT="" ID="ID_1526327693" CREATED="1442228335286" MODIFIED="1442228335286">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="name" VALUE="libraryInfo, Input.h:genericDescriptor"/>
-<attribute NAME="value" VALUE="Input.h"/>
-</node>
-</node>
-<node TEXT="" POSITION="right" ID="ID_416413878" CREATED="1443175374466" MODIFIED="1443175374466">
-<attribute NAME="nodeType" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="name" VALUE="dependentLibrary.Timer"/>
-<attribute NAME="type" VALUE="typeOrCategoryDescriptor"/>
-<attribute NAME="orderForBehaviors" VALUE="0" OBJECT="java.lang.Integer|0"/>
-<node TEXT="" ID="ID_331797868" CREATED="1443175398808" MODIFIED="1443175398808">
-<attribute NAME="nodeType" VALUE="genericDescriptor"/>
-<attribute NAME="behaviorType" VALUE="libraryInfo"/>
-<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
-<attribute NAME="value" VALUE="Timer.h"/>
-<attribute NAME="type" VALUE="genericDescriptor"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1072382291" CREATED="1442489850909" MODIFIED="1442489850909">

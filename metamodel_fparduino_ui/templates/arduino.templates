@@ -1,3 +1,3 @@
 root = dynamic_fparduino__ui
-label = Smart Home UI
+label = arduino-ui
 gen_files = index.html:index.vm

@@ -1,4 +1,4 @@
 root = dynamic_root
-label = Smart Home
+label = arduino-full
 gen_files = $PARENT_DIR.ino:file_ino.vm
 gen_files_once = CustomCode.h:file_custom_code.vm
