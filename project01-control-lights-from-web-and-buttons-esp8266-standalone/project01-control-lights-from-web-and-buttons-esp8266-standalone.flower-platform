@@ -1,0 +1,249 @@
+<map version="freeplane 1.3.0">
+<!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<node TEXT="New Mindmap" ID="ID_1987235836" CREATED="1447059963830" MODIFIED="1447059963830"><hook NAME="MapStyle">
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node">
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right">
+<stylenode LOCALIZED_TEXT="default" COLOR="#000000" STYLE="fork" MAX_WIDTH="600">
+<font NAME="SansSerif" SIZE="12" BOLD="false" ITALIC="false"/>
+<edge STYLE="bezier" COLOR="#808080" WIDTH="1"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.note"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
+<attribute NAME="nodeType" VALUE="dynamic_root"/>
+<attribute NAME="metamodelDirs" VALUE="$METAMODEL.ARDUINO_BOARD,$METAMODEL.ARDUINO_UI"/>
+<node TEXT="" POSITION="right" ID="ID_939695796" CREATED="1447059964630" MODIFIED="1447059964630">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__metadata"/>
+<attribute NAME="fullProjectDownloadedAtLeastOnce" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<node TEXT="" ID="ID_1300623632" CREATED="1447067582624" MODIFIED="1447067582624">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibraries"/>
+<attribute NAME="name" VALUE="Dependent Libraries"/>
+<node TEXT="" ID="ID_570485921" CREATED="1447067582634" MODIFIED="1447067582634">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.Input"/>
+</node>
+<node TEXT="" ID="ID_1215479254" CREATED="1447067582634" MODIFIED="1447067582634">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.ESP8266NetworkAdapter"/>
+</node>
+<node TEXT="" ID="ID_981074496" CREATED="1447067582634" MODIFIED="1447067582634">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.Output"/>
+</node>
+<node TEXT="" ID="ID_1760635991" CREATED="1447067582644" MODIFIED="1447067582644">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.fp-arduino-runtime"/>
+</node>
+<node TEXT="" ID="ID_110818596" CREATED="1447067582644" MODIFIED="1447067582644">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.HttpServer"/>
+</node>
+<node TEXT="" ID="ID_833504157" CREATED="1448009050815" MODIFIED="1448009050815">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.ESP8266NativeNetworkAdapter"/>
+</node>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_401029699" CREATED="1447059964639" MODIFIED="1447059964639">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__board"/>
+<node TEXT="" ID="ID_1434181300" CREATED="1447060085475" MODIFIED="1447060085475">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Output"/>
+<attribute NAME="pin" VALUE="12"/>
+<attribute NAME="name" VALUE="output12"/>
+<attribute NAME="initialValue" VALUE="1" OBJECT="java.lang.Integer|1"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Output"/>
+<attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="y" VALUE="21" OBJECT="java.lang.Integer|21"/>
+<attribute NAME="x" VALUE="22" OBJECT="java.lang.Integer|22"/>
+</node>
+<node TEXT="" ID="ID_196578219" CREATED="1447060103615" MODIFIED="1447060103615">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Output"/>
+<attribute NAME="pin" VALUE="14"/>
+<attribute NAME="name" VALUE="output14"/>
+<attribute NAME="initialValue" VALUE="1" OBJECT="java.lang.Integer|1"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__Output"/>
+<attribute NAME="contributesToState" VALUE="true" OBJECT="java.lang.Boolean|true"/>
+<attribute NAME="y" VALUE="164" OBJECT="java.lang.Integer|164"/>
+<attribute NAME="x" VALUE="22" OBJECT="java.lang.Integer|22"/>
+</node>
+<node TEXT="" ID="ID_1273784663" CREATED="1447060245212" MODIFIED="1447060245212">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__HttpServer"/>
+<attribute NAME="port" VALUE="80"/>
+<attribute NAME="name" VALUE="httpServer"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__HttpServer"/>
+<attribute NAME="y" VALUE="73" OBJECT="java.lang.Integer|73"/>
+<attribute NAME="ipAddress" VALUE="192.168.100.253"/>
+<attribute NAME="x" VALUE="474" OBJECT="java.lang.Integer|474"/>
+<node TEXT="" ID="ID_380840549" CREATED="1447060283415" MODIFIED="1447060283415">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="light1Toggle"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_263874972" CREATED="1447060468197" MODIFIED="1447060468197">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|dynamic_fparduino__method@toggleHighLow()_parentNodeUri=fpp:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|project01-control-lights-from-web-and-buttons-esp8266-standalone.flower-platform#ID_1434181300"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+<node TEXT="" ID="ID_1166723017" CREATED="1447060299135" MODIFIED="1447060299135">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="light1Off"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_1490368740" CREATED="1447060517047" MODIFIED="1447060517047">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|dynamic_fparduino__method@setHigh()_parentNodeUri=fpp:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|project01-control-lights-from-web-and-buttons-esp8266-standalone.flower-platform#ID_1434181300"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+<node TEXT="" ID="ID_58912641" CREATED="1447060292135" MODIFIED="1447060292135">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="light1On"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_759399335" CREATED="1447060495407" MODIFIED="1447060495407">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|dynamic_fparduino__method@setLow()_parentNodeUri=fpp:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|project01-control-lights-from-web-and-buttons-esp8266-standalone.flower-platform#ID_1434181300"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+<node TEXT="" ID="ID_868843933" CREATED="1447060321583" MODIFIED="1447060321583">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="light2Toggle"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_1661044702" CREATED="1447060528107" MODIFIED="1447060528107">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|dynamic_fparduino__method@toggleHighLow()_parentNodeUri=fpp:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|project01-control-lights-from-web-and-buttons-esp8266-standalone.flower-platform#ID_196578219"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+<node TEXT="" ID="ID_1782733677" CREATED="1447060342503" MODIFIED="1447060342503">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="light2Off"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_350964932" CREATED="1447060549737" MODIFIED="1447060549737">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|dynamic_fparduino__method@setHigh()_parentNodeUri=fpp:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|project01-control-lights-from-web-and-buttons-esp8266-standalone.flower-platform#ID_196578219"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+<node TEXT="" ID="ID_179014375" CREATED="1447060334453" MODIFIED="1447060334453">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<attribute NAME="mapping" VALUE="light2On"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
+<node TEXT="" ID="ID_483737028" CREATED="1447060558667" MODIFIED="1447060558667">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
+<attribute NAME="template" VALUE="ALL__plainInvocation"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|dynamic_fparduino__method@setLow()_parentNodeUri=fpp:flower-platform-arduino-projects/project01-control-lights-from-web-and-buttons-esp8266-standalone|project01-control-lights-from-web-and-buttons-esp8266-standalone.flower-platform#ID_196578219"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
+</node>
+</node>
+</node>
+<node TEXT="" ID="ID_1938976848" CREATED="1448009041874" MODIFIED="1448009041874">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__ESP8266NativeNetworkAdapter"/>
+<attribute NAME="name" VALUE="eSP8266NativeNetworkAdapter"/>
+<attribute NAME="ssid" VALUE="wifi-work"/>
+<attribute NAME="httpServerInstanceName" VALUE="httpServer"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__ESP8266NativeNetworkAdapter"/>
+<attribute NAME="password" VALUE="wifi-work-pass-123"/>
+<attribute NAME="y" VALUE="134" OBJECT="java.lang.Integer|134"/>
+<attribute NAME="x" VALUE="830" OBJECT="java.lang.Integer|830"/>
+</node>
+</node>
+<node TEXT="" POSITION="right" ID="ID_1033497404" CREATED="1447059964649" MODIFIED="1447059964649">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__ui"/>
+<node TEXT="" ID="ID_1425202529" CREATED="1447067636563" MODIFIED="1447067636563">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Row"/>
+<node TEXT="" ID="ID_578738394" CREATED="1447067636567" MODIFIED="1447067636567">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="2"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="md"/>
+<node TEXT="" ID="ID_1386763480" CREATED="1447067636572" MODIFIED="1447067636572">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
+<attribute NAME="positions" VALUE="12"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="md"/>
+<attribute NAME="title" VALUE="Light 1"/>
+<node TEXT="" ID="ID_897855709" CREATED="1447067694177" MODIFIED="1447067694177">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="classIfLow" VALUE="label-success"/>
+<attribute NAME="text" VALUE="State: {{output12}}"/>
+<attribute NAME="textIfLow" VALUE="ON"/>
+<attribute NAME="textIfHigh" VALUE="OFF"/>
+<attribute NAME="classIfHigh" VALUE="label-warning"/>
+<attribute NAME="cssClass" VALUE="label"/>
+</node>
+<node TEXT="" ID="ID_20909049" CREATED="1447833740636" MODIFIED="1447833740636">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="text" VALUE="Commands"/>
+</node>
+<node TEXT="" ID="ID_1959646343" CREATED="1447067661814" MODIFIED="1447067661814">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="Toggle"/>
+<attribute NAME="onclick" VALUE="light1Toggle"/>
+</node>
+<node TEXT="" ID="ID_749121119" CREATED="1447067736368" MODIFIED="1447067736368">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="Turn on"/>
+<attribute NAME="onclick" VALUE="light1On"/>
+</node>
+<node TEXT="" ID="ID_413081002" CREATED="1447067749369" MODIFIED="1447067749369">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="Turn off"/>
+<attribute NAME="onclick" VALUE="light1Off"/>
+</node>
+</node>
+</node>
+<node TEXT="" ID="ID_506587597" CREATED="1447067933196" MODIFIED="1447067933196">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Column"/>
+<attribute NAME="positions" VALUE="2"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="md"/>
+<node TEXT="" ID="ID_1507538839" CREATED="1447067933196" MODIFIED="1447067933196">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Panel"/>
+<attribute NAME="positions" VALUE="12"/>
+<attribute NAME="title" VALUE="Light 2"/>
+<attribute NAME="mobileModeIfLessThan" VALUE="md"/>
+<node TEXT="" ID="ID_1366057780" CREATED="1447067933206" MODIFIED="1447067933206">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="classIfLow" VALUE="label-success"/>
+<attribute NAME="text" VALUE="State: {{output14}}"/>
+<attribute NAME="textIfLow" VALUE="ON"/>
+<attribute NAME="textIfHigh" VALUE="OFF"/>
+<attribute NAME="classIfHigh" VALUE="label-warning"/>
+<attribute NAME="cssClass" VALUE="label"/>
+</node>
+<node TEXT="" ID="ID_1888735540" CREATED="1447833728603" MODIFIED="1447833728603">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Label"/>
+<attribute NAME="text" VALUE="Commands"/>
+</node>
+<node TEXT="" ID="ID_168395780" CREATED="1447067933206" MODIFIED="1447067933206">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="Toggle"/>
+<attribute NAME="onclick" VALUE="light2Toggle"/>
+</node>
+<node TEXT="" ID="ID_84735490" CREATED="1447067933206" MODIFIED="1447067933206">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="Turn on"/>
+<attribute NAME="onclick" VALUE="light2On"/>
+</node>
+<node TEXT="" ID="ID_796900097" CREATED="1447067933216" MODIFIED="1447067933216">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
+<attribute NAME="text" VALUE="Turn off"/>
+<attribute NAME="onclick" VALUE="light2Off"/>
+</node>
+</node>
+</node>
+</node>
+</node>
+</node>
+</map>

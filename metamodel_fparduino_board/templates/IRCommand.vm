@@ -5,3 +5,5 @@
 #macro( IRCommand_init $node )
 ${node.getPropertyValue('name')}.name = "${node.getPropertyValue('name')}";
 #end
+
+#macro( IRCommand_loop $node )#end

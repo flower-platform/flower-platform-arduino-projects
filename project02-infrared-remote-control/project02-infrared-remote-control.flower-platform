@@ -62,7 +62,7 @@
 <node TEXT="" ID="ID_1358254694" CREATED="1443093596216" MODIFIED="1443093596216">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
 <attribute NAME="template" VALUE="ALL__plainInvocation"/>
-<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project02-infrared-remote-control|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/project02-infrared-remote-control|project02-infrared-remote-control.fparduino#ID_1215396765"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project02-infrared-remote-control|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/project02-infrared-remote-control|project02-infrared-remote-control.flower-platform#ID_1215396765"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
 </node>
 </node>
@@ -73,7 +73,7 @@
 <node TEXT="" ID="ID_1433587612" CREATED="1443093601603" MODIFIED="1443093601603">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
 <attribute NAME="template" VALUE="ALL__plainInvocation"/>
-<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project02-infrared-remote-control|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/project02-infrared-remote-control|project02-infrared-remote-control.fparduino#ID_396372927"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project02-infrared-remote-control|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/project02-infrared-remote-control|project02-infrared-remote-control.flower-platform#ID_396372927"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
 </node>
 </node>
@@ -84,7 +84,7 @@
 <node TEXT="" ID="ID_1899138129" CREATED="1443093605203" MODIFIED="1443093605203">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__invocation"/>
 <attribute NAME="template" VALUE="ALL__plainInvocation"/>
-<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project02-infrared-remote-control|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/project02-infrared-remote-control|project02-infrared-remote-control.fparduino#ID_1005370484"/>
+<attribute NAME="target" VALUE="virtual:flower-platform-arduino-projects/project02-infrared-remote-control|dynamic_fparduino__method@send()_parentNodeUri=fpp:flower-platform-arduino-projects/project02-infrared-remote-control|project02-infrared-remote-control.flower-platform#ID_1005370484"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__invocation"/>
 </node>
 </node>

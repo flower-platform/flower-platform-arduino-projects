@@ -9,10 +9,13 @@
 #callMacroWithSuffix( $child, "")
 #end
 
-\#define SHOULD_INCLUDE_CUSTOM_CODE
+#if ($hasCustomCode)
 \#include "CustomCode.h"
 
 ApplicationGen* app = new ApplicationCustom();
+#else
+ApplicationGen* app = new ApplicationGen();
+#end
 
 void setup() {
 	app->setup();

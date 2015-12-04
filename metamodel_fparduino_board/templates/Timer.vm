@@ -2,6 +2,3 @@
 ## Timer
 ################################
 
-#macro( Timer_loop $node )
-${node.getPropertyValue('name')}.loop();
-#end

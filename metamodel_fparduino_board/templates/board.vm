@@ -58,9 +58,9 @@ public:
 #end
 #end
 
-		print->print(F("\"FREE_MEM\": "));
+		write_P(print, PSTR("\"FREE_MEM\": "));
 		print->print(freeRam());
-		print->print(F("}"));
+		print->print("}");
 	}
 
 };
