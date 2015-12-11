@@ -44,6 +44,10 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
 <attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.MotorController"/>
 </node>
+<node TEXT="" ID="ID_875693472" CREATED="1449832843152" MODIFIED="1449832843152">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.ESP8266NativeNetworkAdapter"/>
+</node>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1664241023" CREATED="1448373740295" MODIFIED="1448373740295">
@@ -102,16 +106,6 @@
 <attribute NAME="type" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
 </node>
 </node>
-<node TEXT="" ID="ID_226073168" CREATED="1448453789327" MODIFIED="1448453789327">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__ESP8266NetworkAdapter"/>
-<attribute NAME="name" VALUE="eSP8266NetworkAdapter1"/>
-<attribute NAME="httpServerInstanceName" VALUE="httpServer"/>
-<attribute NAME="ssid" VALUE="wifi-work"/>
-<attribute NAME="type" VALUE="dynamic_fparduino__ESP8266NetworkAdapter"/>
-<attribute NAME="password" VALUE="wifi-work-pass-123"/>
-<attribute NAME="y" VALUE="400" OBJECT="java.lang.Integer|400"/>
-<attribute NAME="x" VALUE="361" OBJECT="java.lang.Integer|361"/>
-</node>
 <node TEXT="" ID="ID_968815587" CREATED="1448613785383" MODIFIED="1448613785383">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__MotorController"/>
 <attribute NAME="name" VALUE="motorController1"/>
@@ -129,6 +123,16 @@
 <attribute NAME="type" VALUE="dynamic_fparduino__MotorController"/>
 <attribute NAME="y" VALUE="547" OBJECT="java.lang.Integer|547"/>
 <attribute NAME="x" VALUE="869" OBJECT="java.lang.Integer|869"/>
+</node>
+<node TEXT="" ID="ID_517335480" CREATED="1449832826072" MODIFIED="1449832826072">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__ESP8266NativeNetworkAdapter"/>
+<attribute NAME="name" VALUE="eSP8266NativeNetworkAdapter1"/>
+<attribute NAME="ssid" VALUE="wifi-work"/>
+<attribute NAME="httpServerInstanceName" VALUE="httpServer"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__ESP8266NativeNetworkAdapter"/>
+<attribute NAME="password" VALUE="wifi-work-pass-123"/>
+<attribute NAME="y" VALUE="381" OBJECT="java.lang.Integer|381"/>
+<attribute NAME="x" VALUE="329" OBJECT="java.lang.Integer|329"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1206666183" CREATED="1448373740298" MODIFIED="1448373740298">

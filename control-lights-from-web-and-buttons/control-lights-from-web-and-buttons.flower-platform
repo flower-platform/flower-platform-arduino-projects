@@ -73,6 +73,10 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
 <attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.HttpServer"/>
 </node>
+<node TEXT="" ID="ID_98277419" CREATED="1449048831595" MODIFIED="1449048831595">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__dependentLibrary"/>
+<attribute NAME="name" VALUE="dynamic_fparduino__dependentLibrary.EthernetNetworkAdapter"/>
+</node>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1246502669" CREATED="1440863025969" MODIFIED="1440863025969">
@@ -407,6 +411,15 @@
 </node>
 </node>
 </node>
+<node TEXT="" ID="ID_1330308947" CREATED="1449048809022" MODIFIED="1449048809022">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__EthernetNetworkAdapter"/>
+<attribute NAME="name" VALUE="ethernetNetworkAdapter1"/>
+<attribute NAME="httpServerInstanceName" VALUE="httpServer1"/>
+<attribute NAME="macAddress" VALUE="0E:BB:CC:D5:E2:F4"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__EthernetNetworkAdapter"/>
+<attribute NAME="y" VALUE="380" OBJECT="java.lang.Integer|380"/>
+<attribute NAME="x" VALUE="1101" OBJECT="java.lang.Integer|1101"/>
+</node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_15981542" CREATED="1434112248850" MODIFIED="1434112248850">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__ui"/>
@@ -487,12 +500,6 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__Button"/>
 <attribute NAME="text" VALUE="Turn Off"/>
 <attribute NAME="onclick" VALUE="light2Off"/>
-</node>
-<node TEXT="" ID="ID_1623851193" CREATED="1443698826190" MODIFIED="1443698826190">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__IRLearnButton"/>
-<attribute NAME="text" VALUE="Learn IR command"/>
-<attribute NAME="onclick" VALUE="irLearnCommand"/>
-<attribute NAME="type" VALUE="dynamic_fparduino__IRLearnButton"/>
 </node>
 </node>
 </node>
