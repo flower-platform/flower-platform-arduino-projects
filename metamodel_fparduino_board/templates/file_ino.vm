@@ -12,15 +12,15 @@
 #if ($hasCustomCode)
 \#include "CustomCode.h"
 
-ApplicationGen* app = new ApplicationCustom();
+ApplicationCustom app;
 #else
-ApplicationGen* app = new ApplicationGen();
+ApplicationGen app;
 #end
 
 void setup() {
-	app->setup();
+	app.setup();
 }
 
 void loop() {
-	app->loop();
+	app.loop();
 }

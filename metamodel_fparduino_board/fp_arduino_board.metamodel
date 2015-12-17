@@ -732,17 +732,6 @@
 <attribute NAME="propertyReadOnly" VALUE="false" OBJECT="java.lang.Boolean|false"/>
 <attribute NAME="propertyLineRenderer" VALUE="Default"/>
 </node>
-<node TEXT="" ID="ID_93001237" CREATED="1448372492786" MODIFIED="1448372492786">
-<attribute NAME="nodeType" VALUE="propertyDescriptor"/>
-<attribute NAME="propertyType" VALUE="Number"/>
-<attribute NAME="orderIndex" VALUE="-2.147483648E9" OBJECT="java.lang.Double|-2.147483648E9"/>
-<attribute NAME="name" VALUE="enablePin"/>
-<attribute NAME="icons" VALUE="servlet/public-resources/org.flowerplatform.resources/images/core/edit.png"/>
-<attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
-<attribute NAME="label" VALUE="Enable pin (PWM)"/>
-<attribute NAME="propertyReadOnly" VALUE="false" OBJECT="java.lang.Boolean|false"/>
-<attribute NAME="propertyLineRenderer" VALUE="Default"/>
-</node>
 <node TEXT="" ID="ID_1398344591" CREATED="1448374801505" MODIFIED="1448374801505">
 <attribute NAME="nodeType" VALUE="virtualChild"/>
 <attribute NAME="petaldoc" VALUE="Captures IR command and saves it to SD card, under the &lt;code&gt;/ir-commands&lt;/code&gt; folder. The &lt;code&gt;name&lt;/code&gt; argument is used as the file name. "/>
@@ -786,7 +775,7 @@
 <attribute NAME="label" VALUE="HTTP server instance name"/>
 <attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="propertyLineRenderer" VALUE="Default"/>
-<attribute NAME="propertyDefaultValue" VALUE="httpServer"/>
+<attribute NAME="propertyDefaultValue" VALUE="httpServer1"/>
 </node>
 <node TEXT="" ID="ID_164262448" CREATED="1446801190016" MODIFIED="1446801190016">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
@@ -839,7 +828,7 @@
 <attribute NAME="label" VALUE="HTTP server instance name"/>
 <attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="propertyLineRenderer" VALUE="Default"/>
-<attribute NAME="propertyDefaultValue" VALUE="httpServer"/>
+<attribute NAME="propertyDefaultValue" VALUE="httpServer1"/>
 </node>
 <node TEXT="" ID="ID_1815067491" CREATED="1446803393904" MODIFIED="1446803393904">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
@@ -957,7 +946,7 @@
 <attribute NAME="label" VALUE="HTTP server instance name"/>
 <attribute NAME="propertyEmptyEqualsNull" VALUE="true" OBJECT="java.lang.Boolean|true"/>
 <attribute NAME="propertyLineRenderer" VALUE="Default"/>
-<attribute NAME="propertyDefaultValue" VALUE="httpServer"/>
+<attribute NAME="propertyDefaultValue" VALUE="httpServer1"/>
 </node>
 <node TEXT="" ID="ID_1533155832" CREATED="1448007596005" MODIFIED="1448007596005">
 <attribute NAME="nodeType" VALUE="genericDescriptor"/>
