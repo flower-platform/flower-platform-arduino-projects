@@ -1,4 +1,5 @@
-#include <ESP8266NetworkAdapter.h>
+#include <ESP8266NativeNetworkAdapter.h>
+#include <ESP8266WiFi.h>
 #include <FlowerPlatformArduinoRuntime.h>
 #include <MotorController.h>
 #include <HttpServer.h>
@@ -8,7 +9,7 @@ protected:
 	HttpServer httpServer1;
 	MotorController motorController1;
 	MotorController motorController2;
-	ESP8266NetworkAdapter eSP8266NetworkAdapter1;
+	ESP8266NativeNetworkAdapter eSP8266NativeNetworkAdapter1;
 
 	virtual void httpServer_onCommandReceived(Event* event) {
 		HttpCommandEvent* castedEvent = (HttpCommandEvent*) event;
@@ -79,28 +80,27 @@ public:
 		memcpy(httpServer1.ipAddress, ipAddress, 4);
 		httpServer1.port = 80;
 
-		motorController1.controlPin1 = 3;
+		motorController1.controlPin1 = 4;
 		motorController1.controlPin2 = 5;
 
-		motorController2.controlPin1 = 6;
-		motorController2.controlPin2 = 9;
+		motorController2.controlPin1 = 12;
+		motorController2.controlPin2 = 13;
 
-		eSP8266NetworkAdapter1.ssid = "wifi-work";
-		eSP8266NetworkAdapter1.password = "wifi-work-pass-123";
-		eSP8266NetworkAdapter1.accessPointMode = false;
-		eSP8266NetworkAdapter1.httpServer = &httpServer1;
+		eSP8266NativeNetworkAdapter1.ssid = "wifi-work";
+		eSP8266NativeNetworkAdapter1.password = "wifi-work-pass-123";
+		eSP8266NativeNetworkAdapter1.httpServer = &httpServer1;
 
 
 		httpServer1.setup();
 		motorController1.setup();
 		motorController2.setup();
-		eSP8266NetworkAdapter1.setup();
+		eSP8266NativeNetworkAdapter1.setup();
 
 		httpServer1.onCommandReceived = new DelegatingListener<ApplicationGen>(this, &ApplicationGen::httpServer_onCommandReceived);
 	}
 	
 	virtual void loop() {
-		eSP8266NetworkAdapter1.loop();
+		eSP8266NativeNetworkAdapter1.loop();
 	}
 	
 	void printStateAsJson(Print* print) {
