@@ -57,8 +57,8 @@
 <attribute NAME="port" VALUE="80"/>
 <attribute NAME="name" VALUE="httpServer1"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__HttpServer"/>
-<attribute NAME="y" VALUE="142" OBJECT="java.lang.Integer|142"/>
-<attribute NAME="x" VALUE="362" OBJECT="java.lang.Integer|362"/>
+<attribute NAME="y" VALUE="141" OBJECT="java.lang.Integer|141"/>
+<attribute NAME="x" VALUE="318" OBJECT="java.lang.Integer|318"/>
 <attribute NAME="ipAddress" VALUE="192.168.100.253"/>
 <node TEXT="" ID="ID_426198463" CREATED="1448612582817" MODIFIED="1448612582817">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__onCommandReceived(HttpCommandEvent)"/>
@@ -110,30 +110,29 @@
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__MotorController"/>
 <attribute NAME="name" VALUE="motorController1"/>
 <attribute NAME="controlPin2" VALUE="5" OBJECT="java.lang.Integer|5"/>
-<attribute NAME="controlPin1" VALUE="3" OBJECT="java.lang.Integer|3"/>
+<attribute NAME="controlPin1" VALUE="4" OBJECT="java.lang.Integer|4"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__MotorController"/>
-<attribute NAME="y" VALUE="142" OBJECT="java.lang.Integer|142"/>
-<attribute NAME="x" VALUE="741" OBJECT="java.lang.Integer|741"/>
+<attribute NAME="y" VALUE="140" OBJECT="java.lang.Integer|140"/>
+<attribute NAME="x" VALUE="677" OBJECT="java.lang.Integer|677"/>
 </node>
 <node TEXT="" ID="ID_1121402963" CREATED="1448613800215" MODIFIED="1448613800215">
 <attribute NAME="nodeType" VALUE="dynamic_fparduino__MotorController"/>
 <attribute NAME="name" VALUE="motorController2"/>
-<attribute NAME="controlPin2" VALUE="9" OBJECT="java.lang.Integer|9"/>
-<attribute NAME="controlPin1" VALUE="6" OBJECT="java.lang.Integer|6"/>
+<attribute NAME="controlPin2" VALUE="13" OBJECT="java.lang.Integer|13"/>
+<attribute NAME="controlPin1" VALUE="12" OBJECT="java.lang.Integer|12"/>
 <attribute NAME="type" VALUE="dynamic_fparduino__MotorController"/>
-<attribute NAME="y" VALUE="262" OBJECT="java.lang.Integer|262"/>
-<attribute NAME="x" VALUE="742" OBJECT="java.lang.Integer|742"/>
+<attribute NAME="y" VALUE="241" OBJECT="java.lang.Integer|241"/>
+<attribute NAME="x" VALUE="678" OBJECT="java.lang.Integer|678"/>
 </node>
-<node TEXT="" ID="ID_1373220784" CREATED="1450089064307" MODIFIED="1450089064307">
-<attribute NAME="nodeType" VALUE="dynamic_fparduino__ESP8266NetworkAdapter"/>
-<attribute NAME="accessPointMode" VALUE="false" OBJECT="java.lang.Boolean|false"/>
-<attribute NAME="name" VALUE="eSP8266NetworkAdapter1"/>
-<attribute NAME="httpServerInstanceName" VALUE="httpServer1"/>
+<node TEXT="" ID="ID_517335480" CREATED="1449832826072" MODIFIED="1449832826072">
+<attribute NAME="nodeType" VALUE="dynamic_fparduino__ESP8266NativeNetworkAdapter"/>
+<attribute NAME="name" VALUE="eSP8266NativeNetworkAdapter1"/>
 <attribute NAME="ssid" VALUE="wifi-work"/>
-<attribute NAME="type" VALUE="dynamic_fparduino__ESP8266NetworkAdapter"/>
+<attribute NAME="httpServerInstanceName" VALUE="httpServer1"/>
+<attribute NAME="type" VALUE="dynamic_fparduino__ESP8266NativeNetworkAdapter"/>
 <attribute NAME="password" VALUE="wifi-work-pass-123"/>
-<attribute NAME="y" VALUE="42" OBJECT="java.lang.Integer|42"/>
-<attribute NAME="x" VALUE="362" OBJECT="java.lang.Integer|362"/>
+<attribute NAME="y" VALUE="41" OBJECT="java.lang.Integer|41"/>
+<attribute NAME="x" VALUE="319" OBJECT="java.lang.Integer|319"/>
 </node>
 </node>
 <node TEXT="" POSITION="right" ID="ID_1206666183" CREATED="1448373740298" MODIFIED="1448373740298">

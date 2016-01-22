@@ -5,5 +5,6 @@
 #macro( ESP8266NetworkAdapter_init $node )
 ${node.getPropertyValue('name')}.ssid = "${node.getPropertyValue('ssid')}";
 ${node.getPropertyValue('name')}.password = "${node.getPropertyValue('password')}";
+${node.getPropertyValue('name')}.accessPointMode = ${node.getPropertyValue('accessPointMode')};
 ${node.getPropertyValue('name')}.httpServer = &${node.getPropertyValue('httpServerInstanceName')};
 #end
